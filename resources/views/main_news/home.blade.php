@@ -99,7 +99,7 @@
 		<!--Seccion de Anuncios-->
 		<div class="col-md-3">
 			<br>
-			@include('columnpublicidad');
+			<!--include('columnpublicidad');-->
 		</div>
 	</div>
 
