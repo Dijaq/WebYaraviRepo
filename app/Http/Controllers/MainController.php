@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\Publicidad;
-use app\News;
-use app\Label;
+use App\Publicidad;
+use App\News;
+use App\Label;
 use App\Empresarial;
 use Config;
 

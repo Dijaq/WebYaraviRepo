@@ -3,10 +3,10 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use app\Label;
-use app\User;
-use app\ContentNews;
-use app\Prioridad;
+use App\Label;
+use App\User;
+use App\ContentNews;
+use App\Prioridad;
 
 class News extends Model
 {

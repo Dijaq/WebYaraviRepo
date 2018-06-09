@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\User;
-use app\Role;
+use App\User;
+use App\Role;
 
 class UserController extends Controller
 {

@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\Label;
-use app\Http\Requests\CreateLabelRequest;
+use App\Label;
+use App\Http\Requests\CreateLabelRequest;
 use Config;
 
 class LabelController extends Controller

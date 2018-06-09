@@ -4,10 +4,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\News;
-use app\Label;
-use app\Prioridad;
-use app\ContentNews;
+use App\News;
+use App\Label;
+use App\Prioridad;
+use App\ContentNews;
 use Config;
 
 class AdminNewsController extends Controller

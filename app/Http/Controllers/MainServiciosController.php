@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\Publicidad;
-use app\label;
+use App\Publicidad;
+use App\label;
 use Config;
 
 class MainServiciosController extends Controller

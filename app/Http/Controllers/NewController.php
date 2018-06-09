@@ -5,9 +5,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\News;
-use app\ContentNews;
-use app\Label;
+use App\News;
+use App\ContentNews;
+use App\Label;
 use Config;
 
 class NewController extends Controller

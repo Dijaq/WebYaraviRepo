@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use app\News;
+use App\News;
 
 class ContentNews extends Model
 {

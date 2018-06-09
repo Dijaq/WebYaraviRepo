@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\Publicidad;
-use app\Label;
+use App\Publicidad;
+use App\Label;
 
 class MetodosGlobales extends Controller
 {

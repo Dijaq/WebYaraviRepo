@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use DB;
-use app\Publicidad;
-use app\User;
+use App\Publicidad;
+use App\User;
 use Illuminate\Http\Request;
 use Config;
-use app\Http\Requests\CreatePublicityRequest;
+use App\Http\Requests\CreatePublicityRequest;
 use Intervention\Image\ImageManager;
 
 class PublicityController extends Controller
