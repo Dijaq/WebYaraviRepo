@@ -1,6 +1,6 @@
 <?php
 
-namespace radioyaravi\Http\Controllers;
+namespace App\Http\Controllers;
 
 use DB;
 use app\Publicidad;

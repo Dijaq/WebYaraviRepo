@@ -2,7 +2,7 @@
 
 
 //Controlador que administra el contenido de una noticia (Vista de USARIO de UNA NOTICIA)
-namespace radioyaravi\Http\Controllers;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use app\News;
