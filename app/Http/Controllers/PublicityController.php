@@ -60,13 +60,13 @@ class PublicityController extends Controller
             $image_resize->resize($newWidth, $newHeight);
         }
 
-        if (!file_exists(storage_path('app\public\publicity\\')))
+        if (!file_exists(storage_path('app/public/publicity/')))
         {
              //mkdir(public_path('publicity\\'), 777, true);
              return 'El directorio no existe';
         }
         //return public_path('publicity');
-        $image_resize->save(storage_path('app\public\publicity\\'. $filename));
+        $image_resize->save(storage_path('app/public/publicity/'. $filename));
 
         //$directorio = $request->file('dir_image')->store('public/publicity'); 
         $directorio = 'public/publicity/'.$filename; 
