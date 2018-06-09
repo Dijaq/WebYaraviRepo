@@ -22,7 +22,7 @@ class MainController extends Controller
     	$publicidades = Publicidad::all()->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now());
         //$publicidades = Publicidad::all()->where('fechaFin','>', now());
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
-        //$idPublicidad = $publicidades->first()->id;
+        $idPublicidad = $publicidades->first()->id;
     	//$contentnews = News::with('contentnews')->get();
     	$contentnews = News::with('label')->with('contentnews')->get();
 
