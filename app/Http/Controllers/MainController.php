@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use app\Publicidad;
 use app\News;
 use app\Label;
-use app\Empresarial;
+use App\Empresarial;
 use Config;
 
 class MainController extends Controller
