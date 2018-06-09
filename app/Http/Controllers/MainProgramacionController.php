@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Publicidad;
-use App\label;
+use App\Label;
 use Config;
 
 class MainProgramacionController extends Controller
