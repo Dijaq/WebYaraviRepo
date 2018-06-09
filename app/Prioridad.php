@@ -1,6 +1,6 @@
 <?php
 
-namespace radioyaravi;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use app\News;
