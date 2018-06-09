@@ -1,6 +1,6 @@
 <?php
 
-namespace radioyaravi\Http\Middleware;
+namespace App\Http\Middleware;
 
 use Closure;
 
