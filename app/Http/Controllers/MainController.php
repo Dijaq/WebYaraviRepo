@@ -18,7 +18,9 @@ class MainController extends Controller
     
     public function home()
     {
-        $empresariales = Empresarial::all();
+        //$empresariales = Empresarial::all();
+        $empresariales = new Empresarial();
+        return "Return";
     	$publicidades = Publicidad::all()->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now());
         //$publicidades = Publicidad::all()->where('fechaFin','>', now());
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
