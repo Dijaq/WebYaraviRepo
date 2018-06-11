@@ -14,7 +14,7 @@
 								<a href="" ><i class="fa fa-facebook" style="background: #A4A4A4; position: absolute; right: 5px; top: 5px; border-radius: 80px; width: 22px; text-align: center;"></i></a>
 							</div>
 							<img src="{{asset('storage/'.$new->contentnews[0]->dir_image)}}" style="width:100%;" alt="Planeta Marte" /> <br />
-							<div class="article-contenido"><a style="color: white;" href="{{route('newcontent.show', [$new->label->name, $new->id])}}">{{$new->title}}</a></div>
+							<div class="article-contenido"><a style="color: white;" href="{{route('newcontent.show', [$new->label->name, $new->titleUrl])}}">{{$new->title}}</a></div>
 						</div>
 					</article>
 				</div>
@@ -40,7 +40,7 @@
 				</div>
 				<div class="col-md-8">
 					<div style="font-size: 21px; font-weight: bold; font-family: sans-serif;">
-						<a style="color: black;" href="{{route('newcontent.show', [$new->label->name, $new->id])}}">{{$new->title}}</a>
+						<a style="color: black;" href="{{route('newcontent.show', [$new->label->name, $new->titleUrl])}}">{{$new->title}}</a>
 					</div>
 					<label>{{$new->summary}}</label>
 					<div class="fecha_article">

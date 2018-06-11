@@ -19,6 +19,7 @@ class CreateNewsTable extends Migration
             $table->integer('idPrioridad');
             $table->integer('idLabelNews');
             $table->string('title');
+            $table->string('titleUrl');
             $table->string('summary');
             $table->timestamp('fechaPublicacion')->nullable();
             $table->integer('estado');

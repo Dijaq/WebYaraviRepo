@@ -49,7 +49,7 @@
 						<img class="image" src="{{asset('storage/'.$moreNew->contentnews[0]->dir_image)}}" alt="Planeta Marte" / width="100%">
 					</div>
 					<div class="title_more_article col-md-7">
-						<a style="color: black;" href="{{route('newcontent.show', [$moreNew->label->name, $moreNew->id])}}">{{$moreNew->title}}</a>
+						<a style="color: black;" href="{{route('newcontent.show', [$moreNew->label->name, $moreNew->titleUrl])}}">{{$moreNew->title}}</a>
 					</div>
 				</div>
 				<br>

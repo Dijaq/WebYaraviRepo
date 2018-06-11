@@ -28,7 +28,7 @@ Route::get('empresarial/{id}', ['as' => 'empresarial.detail', 'uses' => 'MainCon
 //Route::get('noticias/{kind_of_new}', ['as' => 'kind_of_new.show', 'uses' => 'MainController@show']);
 
 //Prueba
-Route::get('nota/{name}/{id}', ['as' => 'newcontent.show', 'uses' => 'NewController@index']);
+Route::get('noticia/{name}/{titleUrl}', ['as' => 'newcontent.show', 'uses' => 'NewController@index']);
 
 //Publicidad Contenido
 Route::get('publicidad', ['as' => 'publicity.index', 'uses' => 'PublicityController@index']);

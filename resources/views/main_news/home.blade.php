@@ -16,7 +16,7 @@
 					<img src="{{asset('storage/'.$new_principal->contentnews[0]->dir_image)}}" style="width:100%;" alt="Planeta Marte" /> <br />
 					<div class="article-principal" style="position: absolute; bottom: 0px; ">
 						<!--opacity: 0.4;-->
-					<h3><a style="color: white;" href="{{route('newcontent.show', [$new_principal->label->name, $new_principal->id])}}">{{$new_principal->title}}</a></h3></div>
+					<h3><a style="color: white;" href="{{route('newcontent.show', [$new_principal->label->name, $new_principal->titleUrl])}}">{{$new_principal->title}}</a></h3></div>
 				</div>
 				<div>
 						{{$new_principal->summary}}
@@ -35,7 +35,7 @@
 						</a>
 					</div>
 					<img src="{{asset('storage/'.$new_secundaria->contentnews[0]->dir_image)}}" style="width:100%;" alt="Planeta Marte" /> <br />
-					<div class="article-contenido"><a style="color: white;" href="{{route('newcontent.show', [$new_secundaria->label->name, $new_secundaria->id])}}">{{$new_secundaria->title}}</a></div>
+					<div class="article-contenido"><a style="color: white;" href="{{route('newcontent.show', [$new_secundaria->label->name, $new_secundaria->titleUrl])}}">{{$new_secundaria->title}}</a></div>
 				</div>
 				<div>
 					{{$new_secundaria->summary}}
@@ -62,7 +62,7 @@
 								</a>
 							</div>
 							<img src="{{asset('storage/'.$new->contentnews[0]->dir_image)}}" style="width:100%;" alt="Planeta Marte" /> <br />
-							<div class="article-contenido"><a style="color: white;" href="{{route('newcontent.show', [$new->label->name, $new->id])}}">{{$new->title}}</a></div>
+							<div class="article-contenido"><a style="color: white;" href="{{route('newcontent.show', [$new->label->name, $new->titleUrl])}}">{{$new->title}}</a></div>
 						</div>
 					</article>
 				</div>
@@ -115,7 +115,7 @@
 				</div>
 				<div class="col-md-8">
 					<div style="font-size: 21px; font-weight: bold; font-family: sans-serif;">
-						<a style="color: black;" href="{{route('newcontent.show', [$new->label->name, $new->id])}}">{{$new->title}}</a>
+						<a style="color: black;" href="{{route('newcontent.show', [$new->label->name, $new->titleUrl])}}">{{$new->title}}</a>
 					</div>
 					<label>{{$new->summary}}</label>
 					<div class="fecha_article">

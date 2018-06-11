@@ -49,16 +49,45 @@ class AdminNewsController extends Controller
      */
     public function store(Request $request)
     {
+        //Creacion de la Noticia
         $new = new News;
         $new->title = $request->input('titulo');
+        $new->titleUrl = "";
         $new->summary = $request->input('resumen');
         $new->idUser = auth()->user()->id;
         $new->idLabelNews = $request->input('label');
-        $new->idPrioridad = $request->input('prioridad');;
+        $new->idPrioridad = $request->input('prioridad');
         $new->fechaPublicacion = now();
         $new->estado = Config::get('constantes.estado_habilitado');
         $new->save();
 
+        //Creacion del nombre de la noticia
+        $showTitleUrl = $request->input('titulo');
+        $_showTitleUrl = "";
+        $showTitleUrl = mb_strtolower($showTitleUrl);
+        for($i = 0; $i<strlen($showTitleUrl); $i++)
+        {
+            $vocal = ord(substr($showTitleUrl, $i, 1));
+            if(!(($vocal >= 97 && $vocal<= 122)||($vocal >= 48 && $vocal <= 57)))
+            {
+                if($vocal ==195)
+                {
+                    $_showTitleUrl .= substr($showTitleUrl, $i, 2); //Una vocal con tilde ocupa dos espacios
+                    $i++;
+                }
+                else
+                    $_showTitleUrl .= "-";
+            }
+            else
+                $_showTitleUrl .= substr($showTitleUrl, $i, 1);
+
+        }
+        $_showTitleUrl .= "-".$new->id;
+
+        $new->titleUrl = $_showTitleUrl;
+        $new->update();
+
+        //Creacion del detalle de la noticia
         $contentNew = new ContentNews;
         $contentNew->dir_image = $request->input('dir_image');
         $contentNew->content = $request->input('contenido');
@@ -145,5 +174,34 @@ class AdminNewsController extends Controller
         $new->update();
 
         return redirect()->route('new.index');
+    }
+
+    function updateTitleGuion($showTitleUrl)
+    {
+        $_showTitleUrl = "";
+
+        $showTitleUrl = mb_strtolower($showTitleUrl);
+
+        for($i = 0; $i<strlen($showTitleUrl); $i++)
+        {
+            $vocal = ord(substr($showTitleUrl, $i, 1));
+            if(!(($vocal >= 97 && $vocal<= 122)||($vocal >= 48 && $vocal <= 57)))
+            {
+                if($vocal ==195)
+                {
+                    $_showTitleUrl .= substr($showTitleUrl, $i, 2); //Una vocal con tilde ocupa dos espacios
+                    $i++;
+                }
+                else
+                    $_showTitleUrl .= "-";
+         
+                //if(ord(substr($showTitleUrl, $i, 1)))
+                
+            }
+            else
+                $_showTitleUrl .= substr($showTitleUrl, $i, 1);
+
+        }
+        return $_showTitleUrl;
     }
 }

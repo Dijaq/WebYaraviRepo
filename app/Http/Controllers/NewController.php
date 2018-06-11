@@ -22,10 +22,10 @@ class NewController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($name, $id)
+    public function index($name, $titleUrl)
     {
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
-        $detailnew = News::with('label')->with('contentnews')->get()->where('id', $id)->first();
+        $detailnew = News::with('label')->with('contentnews')->get()->where('titleUrl', $titleUrl)->first();
         
         $moreNews = News::with('contentnews')->take(Config::get('constantes.numero_noticias_relacionadas'))->where('idLabelNews', $detailnew->idLabelNews)->get();
 
