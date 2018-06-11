@@ -3,14 +3,14 @@
 @section('contenido')		
 
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-12" itemscope>
 			<div class="tipo_noticia">
 				<h3>
 					<label for="" style="background-color: #690; color: white; padding: 2px; font-family: Gremoria;">{{$detailnew->label->name}}</label>
 				</h3>
 			</div>
 			
-			<div class="title_article"><h1>{{$detailnew->title}}</h1></div>
+			<div class="title_article"><h1 itemprop="title">{{$detailnew->title}}</h1></div>
 
 			<div class="summary_article">
 				{{$detailnew->summary}}
