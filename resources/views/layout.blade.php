@@ -18,7 +18,7 @@
 	@include('navbarYaravi')
 
 	<div class="container" style="background: #EFF5FB;">
-		@include('navBarNoticias')
+		
 		<br>
 		@yield('contenido')
 
