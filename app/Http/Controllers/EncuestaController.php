@@ -3,8 +3,8 @@
 namespace radioyaravi\Http\Controllers;
 
 use Illuminate\Http\Request;
-use radioyaravi\Encuesta;
-use radioyaravi\EncuestaOpciones;
+use App\Encuesta;
+use App\EncuestaOpciones;
 use Config;
 
 class EncuestaController extends Controller

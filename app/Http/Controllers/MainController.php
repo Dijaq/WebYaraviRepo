@@ -7,6 +7,7 @@ use App\Publicidad;
 use App\News;
 use App\Label;
 use App\Empresarial;
+use App\Encuesta;
 use Config;
 
 class MainController extends Controller
