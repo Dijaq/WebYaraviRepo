@@ -127,6 +127,24 @@ Route::get('yaravi/nosotros/historia', ['as' => 'nosotros.historia', 'uses' => '
 Route::get('yaravi/nosotros/quienessomos', ['as' => 'nosotros.quienessomos', 'uses' => 'MainNosotrosController@quienessomos']);
 
 
+//Rutas de Encuestas
+Route::get('encuestas', ['as' => 'encuesta.index', 'uses' => 'EncuestaController@index']);
+
+Route::get('encuestas/crear', ['as' => 'encuesta.create', 'uses' => 'EncuestaController@create']);
+
+Route::post('encuestas', ['as' => 'encuesta.store', 'uses' => 'EncuestaController@store']);
+
+Route::get('encuestas/{id}/editar', ['as' => 'encuesta.edit', 'uses' => 'EncuestaController@edit']);
+
+Route::put('encuestas/{id}', ['as' => 'encuesta.update', 'uses' => 'EncuestaController@update']);
+
+Route::delete('encuestas/deshabilitar/{id}', ['as' => 'encuesta.deshabilitar', 'uses' => 'EncuestaController@deshabilitar']);
+
+Route::delete('encuestas/habilitar/{id}', ['as' => 'encuesta.habilitar', 'uses' => 'EncuestaController@habilitar']);
+
+Route::put('encuestas/votocrear/{id}', ['as' => 'encuesta.votoStore', 'uses' => 'EncuestaController@votoStore']);
+
+
 Route::get('login', 'Auth\LoginController@showLoginForm');
 
 Route::post('login', 'Auth\LoginController@login');

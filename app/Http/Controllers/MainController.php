@@ -18,6 +18,7 @@ class MainController extends Controller
     
     public function home()
     {
+        $encuesta = Encuesta::with('encuestaOpciones')->orderBy('created_at','desc')->get()->first();
         $empresariales = Empresarial::all();
     	$publicidades = Publicidad::all()->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now());
         //$publicidades = Publicidad::all()->where('fechaFin','>', now());
@@ -31,7 +32,7 @@ class MainController extends Controller
 
         $new_secundaria = News::with('label')->with('contentnews')->where('idPrioridad', Config::get('constantes.prioridad_secundaria'))->orderBy('fechaPublicacion', 'desc')->get()->first();
 
-		return view('main_news.home', compact('publicidades', 'contentnews', 'idPublicidad', 'new_principal', 'new_secundaria', 'labels', 'empresariales'));
+		return view('main_news.home', compact('publicidades', 'contentnews', 'idPublicidad', 'new_principal', 'new_secundaria', 'labels', 'empresariales', 'encuesta'));
 	}
 
     //CLASSIFIED FILE
