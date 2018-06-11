@@ -4,9 +4,9 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="Radio Yaravi con Todas las Voces"/>
+    <meta property="og:title" content="{{$detailnew->title}}"/>
     <meta property="og:type" content="article" />
-    <meta property="og:image" content={{asset('storage/yaravi.png')}}/>
+    <meta property="og:image" content={{asset('storage/'.$detailnew->contentnews[0]->dir_image)}}/>
 
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
@@ -39,4 +39,3 @@
 
 </body>
 </html>
-
