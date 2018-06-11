@@ -63,7 +63,7 @@
 			<h1>Coméntanos</h1>
 		</div>
 		<div class="col-md-8">
-			<div class="fb-comments" data-href="http://localhost:8000/yaravi/programacion"  data-width="100%"  data-numposts="5"></div>
+			<div class="fb-comments" data-href="http://www.radioyaravi.org.pe/servicios"  data-width="100%"  data-numposts="5"></div>
 		</div>
 	</div>
 	<br>

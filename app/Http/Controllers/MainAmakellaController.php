@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Publicidad;
 use App\Label;
+use App\Encuesta;
 use Config;
 
 
@@ -17,10 +18,11 @@ class MainAmakellaController extends Controller
      */
     public function index()
     {
+        $encuesta = Encuesta::with('encuestaOpciones')->orderBy('created_at','desc')->get()->first();
         $publicidades = Publicidad::all()->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now());
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
         $idPublicidad = $publicidades->first()->id;
-        return view('maininformation.amakella.index', compact('publicidades','labels','idPublicidad'));
+        return view('maininformation.amakella.index', compact('publicidades','labels','idPublicidad', 'encuesta'));
     }
 
     /**

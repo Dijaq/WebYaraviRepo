@@ -46,7 +46,7 @@
 			@foreach($moreNews as $moreNew)
 				<div class="row more_article">					
 					<div class="col-md-5" style="padding: 0px">
-						<img class="image" src="{{asset('storage/'.$moreNew->contentnews[0]->dir_image)}}" alt="Planeta Marte" / width="100%">
+						<img class="image" src="{{asset('storage/'.$moreNew->contentnews[0]->dir_image)}}" alt="No se pudo cargar" / width="100%">
 					</div>
 					<div class="title_more_article col-md-7">
 						<a style="color: black;" href="{{route('newcontent.show', [$moreNew->label->name, $moreNew->titleUrl])}}">{{$moreNew->title}}</a>
@@ -60,13 +60,10 @@
 	<div class="row">
 
 		<div class="col-md-8">
-			<br>
-			<br>
-			<br>
-			<h1>Coméntanos</h1>
+			<h1 style="margin-top: 20px;">Coméntanos</h1>
 		</div>
 		<div class="col-md-8">
-			<div class="fb-comments" data-href="http://localhost:8000/nota/{{$detailnew->label->name}}/{{$detailnew->id}}"  data-width="100%"  data-numposts="5"></div>
+			<div class="fb-comments" data-href="http://localhost:8000/noticia/{{$detailnew->label->name}}/{{$detailnew->id}}"  data-width="100%"  data-numposts="5"></div>
 		</div>
 
 

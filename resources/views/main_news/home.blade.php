@@ -50,27 +50,79 @@
 			<br>
 
 			<div class="row">
-			@foreach($contentnews as $new)
-				<div class="col-md-4" style="margin-bottom: 15px; padding-right: 5px;">
-					<article>
-						<div class="picture left" style="width:100%; position: relative;"> 
-							<div class="nota_etiqueta">{{$new->label->name}}</div>
-							<div class="redes_etiqueta">
-								<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.pachamamaradio.org%2F&amp;src=sdkpreparse"" ><i style=" position: absolute; right: 5px; top: 5px;   text-align: center;">
-									<img src="https://www.facebook.com/images/fb_icon_325x325.png" class="img-responsive" width="22px">
-								</i>
-								</a>
+				@foreach($contentnews as $new)
+					<!--<div class="col-md-4" style="margin-bottom: 15px; padding-right: 5px;">
+						<article>
+							<div class="picture left" style="width:100%; position: relative;"> 
+								<div class="nota_etiqueta">{{$new->label->name}}</div>
+								<div class="redes_etiqueta">
+									<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.pachamamaradio.org%2F&amp;src=sdkpreparse"" ><i style=" position: absolute; right: 5px; top: 5px;   text-align: center;">
+										<img src="https://www.facebook.com/images/fb_icon_325x325.png" class="img-responsive" width="22px">
+									</i>
+									</a>
+								</div>
+								<img src="{{asset('storage/'.$new->contentnews[0]->dir_image)}}" style="width:100%;" alt="Planeta Marte" /> <br />
+								<div class="article-contenido"><a style="color: white;" href="{{route('newcontent.show', [$new->label->name, $new->titleUrl])}}">{{$new->title}}</a></div>
 							</div>
-							<img src="{{asset('storage/'.$new->contentnews[0]->dir_image)}}" style="width:100%;" alt="Planeta Marte" /> <br />
-							<div class="article-contenido"><a style="color: white;" href="{{route('newcontent.show', [$new->label->name, $new->titleUrl])}}">{{$new->title}}</a></div>
-						</div>
-					</article>
-				</div>
-			@endforeach
+						</article>
+					</div>-->
+				@endforeach
 
 				<div class="col-md-12">
-					<div class="empresarial_etiqueta">
-						Empresariales
+					<div class="empresarial_etiqueta" style="border-radius: 10px 30px; text-align: center; font-size: 25px;">
+						<strong>Política</strong>
+					</div>
+					<br>
+					<div class="row">
+						@foreach($contentnews as $new)
+							<div class="col-md-4" style="margin-bottom: 15px; padding-right: 5px;">
+								<article>
+									<div class="picture left" style="width:100%; position: relative;"> 
+										<div class="nota_etiqueta">{{$new->label->name}}</div>
+										<div class="redes_etiqueta">
+											<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.pachamamaradio.org%2F&amp;src=sdkpreparse"" ><i style=" position: absolute; right: 5px; top: 5px;   text-align: center;">
+												<img src="https://www.facebook.com/images/fb_icon_325x325.png" class="img-responsive" width="22px">
+											</i>
+											</a>
+										</div>
+										<img src="{{asset('storage/'.$new->contentnews[0]->dir_image)}}" style="width:100%;" alt="Planeta Marte" /> <br />
+										<div class="article-contenido"><a style="color: white;" href="{{route('newcontent.show', [$new->label->name, $new->titleUrl])}}">{{$new->title}}</a></div>
+									</div>
+								</article>
+							</div>
+						@endforeach
+					</div>
+				</div>
+
+				<div class="col-md-12">
+					<div class="empresarial_etiqueta" style="border-radius: 10px 30px; text-align: center; font-size: 25px;">
+						<strong>Deportes</strong>
+					</div>
+					<br>
+					<div class="row">
+						@foreach($contentnews as $new)
+							<div class="col-md-6" style="margin-bottom: 15px; padding-right: 5px;">
+								<article>
+									<div class="picture left" style="width:100%; position: relative;"> 
+										<div class="nota_etiqueta">{{$new->label->name}}</div>
+										<div class="redes_etiqueta">
+											<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.pachamamaradio.org%2F&amp;src=sdkpreparse"" ><i style=" position: absolute; right: 5px; top: 5px;   text-align: center;">
+												<img src="https://www.facebook.com/images/fb_icon_325x325.png" class="img-responsive" width="22px">
+											</i>
+											</a>
+										</div>
+										<img src="{{asset('storage/'.$new->contentnews[0]->dir_image)}}" style="width:100%;" alt="Planeta Marte" /> <br />
+										<div class="article-contenido"><a style="color: white;" href="{{route('newcontent.show', [$new->label->name, $new->titleUrl])}}">{{$new->title}}</a></div>
+									</div>
+								</article>
+							</div>
+						@endforeach
+					</div>
+				</div>
+
+				<div class="col-md-12">
+					<div class="empresarial_etiqueta" style="border-radius: 10px 30px; text-align: center; font-size: 25px;">
+						<strong>Empresariales</strong>
 					</div>
 					<br>
 					@foreach($empresariales as $empresarial)
@@ -89,7 +141,7 @@
 							</div>
 						</div>
 						<br>
-						@endforeach
+					@endforeach
 				</div>
 
 			</div>

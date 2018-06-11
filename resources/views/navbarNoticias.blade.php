@@ -6,7 +6,7 @@
 		<div class="col-md-5"></div>
 	</div>
 
-	<nav class="navbar navbar-expand-sm" role="navigation" style="background: #537CD5; height: 40px; ">
+	<nav class="navbar navbar-expand-sm" role="navigation" style="background: #537CD5; height: 40px; margin-bottom: 5px">
 		<div class="container">
 			
 			<div class="collapse navbar-collapse" id="navegacion_fm">

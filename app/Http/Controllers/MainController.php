@@ -39,6 +39,8 @@ class MainController extends Controller
     //CLASSIFIED FILE
     public function show($labelName)
     {
+        $tipoNoticia = Label::findOrFail($labelName);
+        $tipoNoticia->name = mb_strtoupper($tipoNoticia->name);
         $encuesta = Encuesta::with('encuestaOpciones')->orderBy('created_at','desc')->get()->first();
         $publicidades = Publicidad::all()->where('estado', Config::get('constantes.estado_habilitado'));
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
@@ -46,7 +48,7 @@ class MainController extends Controller
         //$contentnews = News::with('contentnews')->get();
         $contentnews = News::with('label')->with('contentnews')->where('idLabelNews', $labelName)->get();
 
-        return view('main_news.classified', compact('publicidades', 'contentnews', 'idPublicidad', 'new_principal', 'new_secundaria', 'labels', 'encuesta'));
+        return view('main_news.classified', compact('publicidades', 'contentnews', 'idPublicidad', 'new_principal', 'new_secundaria', 'labels', 'encuesta', 'tipoNoticia'));
     }
 
     public function empresarialDetail($id)
