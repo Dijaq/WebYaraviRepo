@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:title" content="{{$detailnew->title}}"/>
+    <meta property="og:type" content="article" />
     <meta property="og:image" content={{asset('storage/'.$moreNew->contentnews[0]->dir_image)}}/>
 
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
