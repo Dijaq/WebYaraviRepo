@@ -4,7 +4,7 @@
 
 	<div class="row">
 		<div class="col-md-12">
-			<div style="margin-top: 15px; margin-bottom: 15px; font-size: 35px; font-family: Gremoria; font-weight: 600; text-align: center; color: #6E6E6E" >{{$tipoNoticia->name}}</div>
+			<div style="margin-top: 15px; margin-bottom: 15px; font-size: 30px; font-family: Gremoria; font-weight: 600; text-align: center; color: #6E6E6E" >{{$tipoNoticia->name}}</div>
 		</div>
 	</div>
 	<div class="row">

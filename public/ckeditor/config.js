@@ -25,6 +25,8 @@ CKEDITOR.editorConfig = function( config ) {
 		{ name: 'colors' },
 		{ name: 'about' }
 	];
+	
+	
 
 	// Remove some buttons provided by the standard plugins, which are
 	// not needed in the Standard(s) toolbar.
@@ -35,4 +37,17 @@ CKEDITOR.editorConfig = function( config ) {
 
 	// Simplify the dialog windows.
 	config.removeDialogTabs = 'image:advanced;link:advanced';
+	
+	//Image 2
+//	config.extraPlugins = 'image2';
+	// Plugin de video
+	config.extraPlugins = 'youtube,image2';
+	config.youtube_width = '720';
+	config.youtube_height = '450';
+	config.youtube_responsive = true;
+	config.youtube_disabled_fields = ['txtWidth', 'chkResponsive'];
+	
+	
+	//Widget
+	//config.extraPlugins = 'widget';
 };
