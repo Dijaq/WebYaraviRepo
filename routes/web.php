@@ -145,6 +145,22 @@ Route::delete('encuestas/habilitar/{id}', ['as' => 'encuesta.habilitar', 'uses' 
 Route::put('encuestas/votocrear/{id}', ['as' => 'encuesta.votoStore', 'uses' => 'EncuestaController@votoStore']);
 
 
+//Upload Image
+Route::get('imagenes', ['as' => 'imagen.index', 'uses' => 'AdminUploadImage@index']);
+
+Route::get('imagenes/crear', ['as' => 'imagen.create', 'uses' => 'AdminUploadImage@create']);
+
+Route::post('imagenes', ['as' => 'imagen.store', 'uses' => 'AdminUploadImage@store']);
+
+Route::get('imagenes/{id}/editar', ['as' => 'imagen.edit', 'uses' => 'AdminUploadImage@edit']);
+
+Route::put('imagenes/{id}', ['as' => 'imagen.update', 'uses' => 'AdminUploadImage@update']);
+
+Route::delete('imagenes/deshabilitar/{id}', ['as' => 'imagen.deshabilitar', 'uses' => 'AdminUploadImage@deshabilitar']);
+
+Route::delete('imagenes/habilitar/{id}', ['as' => 'imagen.habilitar', 'uses' => 'AdminUploadImage@habilitar']);
+
+
 Route::get('login', 'Auth\LoginController@showLoginForm');
 
 Route::post('login', 'Auth\LoginController@login');

@@ -57,7 +57,7 @@ class MainController extends Controller
 		return view('main_news.home', compact('publicidades', 'contentnews', 'idPublicidad', 'new_principal', 'new_secundaria', 'labels', 'empresariales', 'encuesta', 'listaUltimasNoticias', 'listaNoticiasLocales', 'listaNoticiasPorTipo', 'idEmpresarial'));
 	}
 
-    //CLASSIFIED FILE
+    //LISTA DE NOTICIAS POR ETIQUETA
     public function show($labelName)
     {
         $tipoNoticia = Label::findOrFail($labelName);
@@ -67,7 +67,7 @@ class MainController extends Controller
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
         $idPublicidad = $publicidades->first()->id;
         //$contentnews = News::with('contentnews')->get();
-        $contentnews = News::with('label')->with('contentnews')->where('idLabelNews', $labelName)->get();
+        $contentnews = News::with('label')->with('contentnews')->where('idLabelNews', $labelName)->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_noticias_clasificado_label'))->get();
 
         return view('main_news.classified', compact('publicidades', 'contentnews', 'idPublicidad', 'new_principal', 'new_secundaria', 'labels', 'encuesta', 'tipoNoticia'));
     }

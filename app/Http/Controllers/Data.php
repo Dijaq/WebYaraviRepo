@@ -8,6 +8,7 @@ use App\Role;
 use App\Prioridad;
 use App\Label;
 use App\TipoGaleria;
+use App\TipoDirectorio;
 
 class Data extends Controller
 {
@@ -20,7 +21,8 @@ class Data extends Controller
     {
         $user = new User;
         $user->name = 'Diego';
-        $user->email = 'dijaq089@gmail.com';
+        $user->lastName = 'Javier';
+        $user->email = 'dijaq08@gmail.com';
         $user->password = bcrypt('123456');
         $user->idRole = 1;
         $user->estado = 2;
@@ -79,6 +81,20 @@ class Data extends Controller
         $tipoGaleria->name = 'Audio';
         $tipoGaleria->estado = 2;
         $tipoGaleria->save();
+
+        $tipoDirectorio = new TipoDirectorio;
+        $tipoDirectorio->name = 'news';
+        $tipoDirectorio->displayName = 'Noticias';
+        $tipoDirectorio->estado = 2;
+        $tipoDirectorio->save();
+        
+        $tipoDirectorio = new TipoDirectorio;
+        $tipoDirectorio->name = 'publicity';
+        $tipoDirectorio->displayName = 'Publicidad';
+        $tipoDirectorio->estado = 2;
+        $tipoDirectorio->save();
+        
+
 
         return "Data cargada";
     }
