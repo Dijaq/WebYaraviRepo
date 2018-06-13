@@ -44,6 +44,34 @@ class EmpresarialController extends Controller
      */
     public function store(Request $request)
     {
+         //return $request;
+        $image       = $request->file('dir_image');
+        $filename    = $image->getClientOriginalName();
+        
+        $image_resize = \Image::make($image->getRealPath());
+        list($width, $height) = getimagesize($image);
+
+        if($width >= 800)
+        {
+            $newWidth = 800;
+            $lessWidth = ($width-$newWidth)/$width;
+            $newHeight = $height-$lessWidth*$height; 
+            $image_resize->resize($newWidth, $newHeight);
+        }
+
+        if (!file_exists(storage_path('app/public/business/')))
+        {
+             //mkdir(public_path('publicity\\'), 777, true);
+             return 'El directorio no existe';
+        }
+        //return public_path('publicity');
+        $image_resize->save(storage_path('app/public/business/'. $filename));
+
+        //$directorio = $request->file('dir_image')->store('public/publicity'); 
+        $directorio = 'business/'.$filename; 
+
+
+
         $empresarial = new Empresarial;
         $empresarial->title = $request->input('titulo');
         $empresarial->titleUrl = "";
@@ -52,7 +80,7 @@ class EmpresarialController extends Controller
         $empresarial->idTipoGaleria = $request->input('tipogaleria');
         $empresarial->nameEditor = $request->input('nombreEditor');
         $empresarial->fechaPublicacion = now();
-        $empresarial->dirImagePortada = $request->input('dir_image');
+        $empresarial->dirImagePortada = $directorio;
         $empresarial->estado = Config::get('constantes.estado_habilitado');
         $empresarial->save();
 
@@ -85,7 +113,7 @@ class EmpresarialController extends Controller
 
         $contentEmpresarial = new ContentEmpresarial;
         $contentEmpresarial->idEmpresarial = $empresarial->id;
-        $contentEmpresarial->galeria = $request->input('dir_image');
+        $contentEmpresarial->galeria = $directorio;
         $contentEmpresarial->content = $request->input('contenido');
         $contentEmpresarial->estado = Config::get('constantes.estado_habilitado');
         $contentEmpresarial->save();
