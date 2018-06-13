@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:title" content="Radio Yaraví con Todas las Voces"/>
     <meta property="og:type" content="article" />
-    <meta property="og:image" content={{asset('storage/yaravi.png')}}/>
+    <meta property="og:image" content={{asset('storage/PortadaYaravi.jpg')}}/>
     <meta property="og:site_name" content="Radio Yaraví" />
 
     <link rel="stylesheet" href="{{asset('css/app.css')}}">

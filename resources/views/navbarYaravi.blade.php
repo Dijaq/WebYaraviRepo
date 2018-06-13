@@ -1,4 +1,4 @@
-	<nav class="navbar navbar-expand-sm" role="navigation" style="background: #74AB72;">
+	<nav class="navbar navbar-expand-sm" role="navigation" style="background: #537CD5;">
 		<div class="container">				
 			<div class="collapse navbar-collapse" id="navegacion_fm">
 				<ul class="navbar-nav">

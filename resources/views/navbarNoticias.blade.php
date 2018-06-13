@@ -1,9 +1,7 @@
 	<div class="row">			
-		<div class="col-md-5"></div>
-		<div class="col-md-2">
-			<img src={{asset('storage/Yaravi.png')}} style="width:100%;" alt="Radio Yaravi" />
+		<div class="col-md-12">
+			<img src={{asset('storage/PortadaYaravi.jpg')}} style="width:100%;" alt="Radio Yaravi" />
 		</div>
-		<div class="col-md-5"></div>
 	</div>
 
 	<nav class="navbar navbar-expand-sm" role="navigation" style="background: #537CD5; height: 40px; margin-bottom: 5px">
