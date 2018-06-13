@@ -31,14 +31,44 @@
          
             <div class="col-md-3">
               <label for="resumen" style="text-align:left;">
-                Resumen:
+                Bajada:
               </label>
             </div>
-              <div class="col-md-9">
-                <input class="form-control" type="text" name="resumen" value="{{old('resumen')}}">
-                {!! $errors->first('resumen', '<span class="error">:message</span>') !!}
-              </div>
-                  <br><br>
+            <div class="col-md-9">
+              <input class="form-control" type="text" name="resumen" value="{{old('resumen')}}">
+              {!! $errors->first('resumen', '<span class="error">:message</span>') !!}
+            </div>
+                <br><br>
+
+            <div class="col-md-3">
+              <label for="nombreEditor" style="text-align:left;">
+                Editor:
+              </label>
+            </div>
+            <div class="col-md-3">  
+              <select class="form-control" name="nombreEditor" required>
+                <option value="">[Seleccion una opción]</option>
+                @foreach($listUsers as $user)     
+                    <option value="{{$user->name}}">{{$user->name}}</option>
+                @endforeach
+              </select>
+            </div>
+
+            <div class="col-md-3">
+              <label for="tipogaleria" style="text-align:left;">
+                Video/Imagen/Audio:
+              </label>
+            </div>
+            <div class="col-md-3">  
+              <select class="form-control" name="tipogaleria" required>
+                <option value="">[Seleccion una opción]</option>
+                @foreach($listTipoGaleria as $tipoGeleria)     
+                    <option value="{{$tipoGeleria->id}}">{{$tipoGeleria->name}}</option>
+                @endforeach
+              </select>
+            </div>
+            <br><br>
+
             <div class="col-md-3">
               <label for="dir_imagen" style="text-align:left;">
                 Directorio de la imagen:

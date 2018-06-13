@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEmpresarialTable extends Migration
+class CreateInformeespecialTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateEmpresarialTable extends Migration
      */
     public function up()
     {
-        Schema::create('empresariales', function (Blueprint $table) {
+        Schema::create('informeespecial', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('idUser');
             $table->integer('idTipoGaleria');
@@ -35,6 +35,6 @@ class CreateEmpresarialTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('empresarial');
+        Schema::dropIfExists('informeespecial');
     }
 }

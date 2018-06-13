@@ -6,6 +6,6 @@
 </head>
 <body>
 	<h1>No se pudo encontrar esta página</h1>
-	<a href="{{ route('login')}}">Regresar a home</a>
+	<a href="{{ route('home')}}">Regresar a la página principal de Radio Yaravi</a>
 </body>
 </html>

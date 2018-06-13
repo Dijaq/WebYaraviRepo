@@ -1,10 +1,11 @@
 <?php
 
 
-//Controlador que administra el contenido de una noticia (Vista de USARIO de UNA NOTICIA)
+//Controlador que administra el contenido de una noticia (Vista de USUARIO de UNA NOTICIA)
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use App\News;
 use App\ContentNews;
 use App\Label;
@@ -26,6 +27,10 @@ class NewController extends Controller
     {
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
         $detailnew = News::with('label')->with('contentnews')->get()->where('titleUrl', $titleUrl)->first();
+
+
+        //$fecha = date('l jS \of F Y h:i:s A',strtotime($detailnew->fechaPublicacion));
+        //$fecha = strftime('%A, %d de %B de %Y',strtotime($detailnew->fechaPublicacion));
         
         $moreNews = News::with('contentnews')->take(Config::get('constantes.numero_noticias_relacionadas'))->where('idLabelNews', $detailnew->idLabelNews)->get();
 

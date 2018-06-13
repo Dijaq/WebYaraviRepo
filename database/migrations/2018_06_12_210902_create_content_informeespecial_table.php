@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateContentNewTable extends Migration
+class CreateContentInformeespecialTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateContentNewTable extends Migration
      */
     public function up()
     {
-        Schema::create('contentnews', function (Blueprint $table) {
+        Schema::create('content_informeespecial', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('idNews');
-            //$table->string('dir_image');
+            $table->integer('idInformeEspecial');
             $table->text('galeria');
             $table->mediumtext('content');
             $table->integer('estado');
@@ -31,6 +30,6 @@ class CreateContentNewTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contentNews');
+        Schema::dropIfExists('content_informeespecial');
     }
 }

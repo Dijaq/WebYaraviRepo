@@ -17,7 +17,7 @@ class CreatePublicidadesTable extends Migration
             $table->increments('id');
             $table->integer('idUser');
             $table->string('name');
-            $table->string('url_page');
+            $table->string('url_page')->nullable();
             $table->string('dir_image');
             $table->timestamp('fechaInicio')->nullable();
             $table->timestamp('fechaFin')->nullable();

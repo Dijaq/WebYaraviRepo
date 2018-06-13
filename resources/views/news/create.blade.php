@@ -28,37 +28,68 @@
               <div class="col-md-9"><input class="form-control" type="text" name="titulo" value="{{old('titulo')}}">
                 {!! $errors->first('titulo', '<span class="error">:message</span>') !!}</div>
             <br><br>
+
             <div class="col-md-3">
-              <label for="label" style="text-align:left;">
-                Prioridad:
+              <label for="nombreEditor" style="text-align:left;">
+                Editor:
               </label>
             </div>
             <div class="col-md-3">  
-              <select class="form-control" name="prioridad">
-                <option value="0">[Seleccion una opción]</option>
+              <select class="form-control" name="nombreEditor" required>
+                <option value="">[Seleccion una opción]</option>
+                @foreach($listUsers as $user)     
+                    <option value="{{$user->name}}">{{$user->name}}</option>
+                @endforeach
+              </select>
+            </div>
+
+            <div class="col-md-3">
+              <label for="distribucion" style="text-align:left;">
+                Distribución:
+              </label>
+            </div>
+            <div class="col-md-3">  
+              <select class="form-control" name="distribucion" required>
+                <option value="">[Seleccion una opción]</option>
                 @foreach($prioridades as $prioridad)     
                     <option value="{{$prioridad->id}}">{{$prioridad->name}}</option>
                 @endforeach
               </select>
             </div>
             <br><br>
+
             <div class="col-md-3">
               <label for="label" style="text-align:left;">
                 Tipo de noticia:
               </label>
             </div>
             <div class="col-md-3">  
-              <select class="form-control" name="label">
-                <option value="0">[Seleccion una opción]</option>
+              <select class="form-control" name="label" required>
+                <option value="">[Seleccion una opción]</option>
                 @foreach($labels as $label)     
                     <option value="{{$label->id}}">{{$label->name}}</option>
                 @endforeach
               </select>
             </div>
             <br><br>
+
+            <div class="col-md-3">
+              <label for="tipogaleria" style="text-align:left;">
+                Video/Imagen/Audio:
+              </label>
+            </div>
+            <div class="col-md-3">  
+              <select class="form-control" name="tipogaleria" required>
+                <option value="">[Seleccion una opción]</option>
+                @foreach($listTipoGaleria as $tipoGeleria)     
+                    <option value="{{$tipoGeleria->id}}">{{$tipoGeleria->name}}</option>
+                @endforeach
+              </select>
+            </div>
+
             <div class="col-md-3">
               <label for="resumen" style="text-align:left;">
-                Resumen:
+                Bajada:
               </label>
             </div>
               <div class="col-md-9">
@@ -68,7 +99,7 @@
                   <br><br>
             <div class="col-md-3">
               <label for="dir_imagen" style="text-align:left;">
-                Directorio de la imagen:
+                Imagen en Portada:
               </label>
             </div>
             <div class="col-md-9">

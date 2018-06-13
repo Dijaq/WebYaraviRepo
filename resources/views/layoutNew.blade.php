@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:title" content="{{$detailnew->title}}"/>
     <meta property="og:type" content="article" />
-    <meta property="og:image" content={{asset('storage/'.$detailnew->contentnews[0]->dir_image)}}/>
+    <meta property="og:image" content={{asset('storage/'.$detailnew->dirImagePortada)}}/>
 
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Publicidad;
 use App\Label;
+use App\Encuesta;
 use Config;
 
 class MainNosotrosController extends Controller
@@ -17,29 +18,32 @@ class MainNosotrosController extends Controller
     
     public function quienessomos()
     {
+        $encuesta = Encuesta::with('encuestaOpciones')->orderBy('created_at','desc')->get()->first();
         $publicidades = Publicidad::all()->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now());
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
         $idPublicidad = $publicidades->first()->id;
 
-        return view('maininformation.nosotros.quienessomos', compact('publicidades','labels','idPublicidad'));
+        return view('maininformation.nosotros.quienessomos', compact('publicidades','labels','idPublicidad', 'encuesta'));
     }
 
     public function historia()
     {
+        $encuesta = Encuesta::with('encuestaOpciones')->orderBy('created_at','desc')->get()->first();
         $publicidades = Publicidad::all()->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now());
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
         $idPublicidad = $publicidades->first()->id;
 
-        return view('maininformation.nosotros.historia', compact('publicidades','labels','idPublicidad'));
+        return view('maininformation.nosotros.historia', compact('publicidades','labels','idPublicidad', 'encuesta'));
     }
 
     public function equipotrabajo()
     {
+        $encuesta = Encuesta::with('encuestaOpciones')->orderBy('created_at','desc')->get()->first();
         $publicidades = Publicidad::all()->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now());
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
         $idPublicidad = $publicidades->first()->id;
         
-        return view('maininformation.nosotros.equipotrabajo', compact('publicidades','labels','idPublicidad'));
+        return view('maininformation.nosotros.equipotrabajo', compact('publicidades','labels','idPublicidad', 'encuesta'));
     }
 
     public function index()

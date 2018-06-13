@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreatePublicityRequest extends FormRequest
+class CreateEncuestaRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,10 +24,8 @@ class CreatePublicityRequest extends FormRequest
     public function rules()
     {
         return [
-            'nombre' => 'required',
-            //'url_publicidad' => 'required',
-            'dir_image' => 'required|max:2000000',
-            'fechaInicio' => 'required',
+            'name'=> 'required',
+            'fechaInicio'=> 'required',
             'fechaFin' => 'required'
         ];
     }

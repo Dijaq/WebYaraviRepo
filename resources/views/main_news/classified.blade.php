@@ -21,7 +21,7 @@
 								</i>
 								</a>
 							</div>
-							<img src="{{asset('storage/'.$new->contentnews[0]->dir_image)}}" style="width:100%;" alt="Planeta Marte" /> <br />
+							<img src="{{asset('storage/'.$new->dirImagePortada)}}" style="width:100%;" alt="Planeta Marte" /> <br />
 							<div class="article-contenido"><a style="color: white;" href="{{route('newcontent.show', [$new->label->name, $new->titleUrl])}}">{{$new->title}}</a></div>
 						</div>
 					</article>
@@ -44,7 +44,7 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div class="nota_etiqueta">{{$new->label->name}}</div>
-					<img src="{{asset('storage/'.$new->contentnews[0]->dir_image)}}" style="width:100%;" alt="Planeta Marte" />
+					<img src="{{asset('storage/'.$new->dirImagePortada)}}" style="width:100%;" alt="Planeta Marte" />
 				</div>
 				<div class="col-md-8">
 					<div style="font-size: 21px; font-weight: bold; font-family: sans-serif;">

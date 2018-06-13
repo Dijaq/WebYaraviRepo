@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateContentNewTable extends Migration
+class CreateTipoGaleriaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateContentNewTable extends Migration
      */
     public function up()
     {
-        Schema::create('contentnews', function (Blueprint $table) {
+        Schema::create('tipogaleria', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('idNews');
-            //$table->string('dir_image');
-            $table->text('galeria');
-            $table->mediumtext('content');
+            $table->string('name');
             $table->integer('estado');
             $table->timestamps();
         });
@@ -31,6 +28,6 @@ class CreateContentNewTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contentNews');
+        Schema::dropIfExists('tipogaleria');
     }
 }

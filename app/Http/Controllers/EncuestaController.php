@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Encuesta;
 use App\EncuestaOpciones;
 use Config;
+use App\Http\Requests\CreateEncuestaRequest;
 
 class EncuestaController extends Controller
 {
@@ -36,7 +37,7 @@ class EncuestaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateEncuestaRequest $request)
     {
         $encuesta = new Encuesta;
         $encuesta->name = $request->input('name');
@@ -90,7 +91,7 @@ class EncuestaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CreateEncuestaRequest $request, $id)
     {
         $encuesta = Encuesta::findOrFail($id);
         $encuesta->name = $request->input('name');

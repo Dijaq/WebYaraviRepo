@@ -7,6 +7,7 @@ use App\User;
 use App\Role;
 use App\Prioridad;
 use App\Label;
+use App\TipoGaleria;
 
 class Data extends Controller
 {
@@ -43,6 +44,11 @@ class Data extends Controller
         $prioridad->save();
 
         $prioridad = new Prioridad;
+        $prioridad->name = 'Local';
+        $prioridad->estado = 2;
+        $prioridad->save();
+
+        $prioridad = new Prioridad;
         $prioridad->name = 'Sin Prioridad';
         $prioridad->estado = 2;
         $prioridad->save();
@@ -50,8 +56,29 @@ class Data extends Controller
         $label = new Label;
         $label->name = 'Politica';
         $label->color = '#690';
+        $label->orden = 1;
         $label->estado = 2;
         $label->save();
+
+        $tipoGaleria = new TipoGaleria;
+        $tipoGaleria->name = 'Foto';
+        $tipoGaleria->estado = 2;
+        $tipoGaleria->save();
+
+        $tipoGaleria = new TipoGaleria;
+        $tipoGaleria->name = 'Galeria de Fotos';
+        $tipoGaleria->estado = 2;
+        $tipoGaleria->save();
+
+        $tipoGaleria = new TipoGaleria;
+        $tipoGaleria->name = 'Video';
+        $tipoGaleria->estado = 2;
+        $tipoGaleria->save();
+
+        $tipoGaleria = new TipoGaleria;
+        $tipoGaleria->name = 'Audio';
+        $tipoGaleria->estado = 2;
+        $tipoGaleria->save();
 
         return "Data cargada";
     }

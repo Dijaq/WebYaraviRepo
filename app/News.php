@@ -24,7 +24,7 @@ class News extends Model
 
     public function contentnews()
     {
-    	return $this->hasMany(ContentNews::class, 'idNews');
+    	return $this->hasOne(ContentNews::class, 'idNews');
     }
 
     public function prioridad()

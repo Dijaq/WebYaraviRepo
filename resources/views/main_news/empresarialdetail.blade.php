@@ -25,7 +25,7 @@
 				<div class="col-md-12">					
 					
 					<div class="picture left" style="width:100%;"> 
-						<img src="{{asset('storage/'.$empresarial->dir_image)}}" style="width:100%;" alt="Planeta Marte" /> <br />
+						<img src="{{asset('storage/'.$empresarial->contentEmpresarial->galeria)}}" style="width:100%;" alt="Planeta Marte" /> <br />
 					</div>
 					
 				</div>					
@@ -33,7 +33,7 @@
 
 			<div class="row">
 				<div class="content_article col-md-12">
-					{!!$empresarial->content!!}
+					{!!$empresarial->contentEmpresarial->content!!}
 				</div>
 			</div>
 			

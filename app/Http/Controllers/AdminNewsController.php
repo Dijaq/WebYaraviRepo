@@ -7,7 +7,10 @@ use Illuminate\Http\Request;
 use App\News;
 use App\Label;
 use App\Prioridad;
+use App\User;
 use App\ContentNews;
+use App\TipoGaleria;
+use App\Http\Requests\CreateNoticiasRequest;
 use Config;
 
 class AdminNewsController extends Controller
@@ -37,8 +40,10 @@ class AdminNewsController extends Controller
     {
         $labels = Label::all();
         $prioridades = Prioridad::all();
+        $listUsers = User::all(); 
+        $listTipoGaleria = TipoGaleria::all();
 
-        return view('news.create', compact('labels', 'prioridades'));
+        return view('news.create', compact('labels', 'prioridades', 'listUsers', 'listTipoGaleria'));
     }
 
     /**
@@ -47,7 +52,7 @@ class AdminNewsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateNoticiasRequest $request)
     {
         //Creacion de la Noticia
         $new = new News;
@@ -56,12 +61,15 @@ class AdminNewsController extends Controller
         $new->summary = $request->input('resumen');
         $new->idUser = auth()->user()->id;
         $new->idLabelNews = $request->input('label');
-        $new->idPrioridad = $request->input('prioridad');
+        $new->idPrioridad = $request->input('distribucion');
+        $new->idTipoGaleria = $request->input('tipogaleria');
+        $new->dirImagePortada = $request->input('dir_image');
+        $new->nameEditor = $request->input('nombreEditor');
         $new->fechaPublicacion = now();
         $new->estado = Config::get('constantes.estado_habilitado');
         $new->save();
 
-        //Creacion del nombre de la noticia
+        //Creacion de ruta de la noticia
         $showTitleUrl = $request->input('titulo');
         $_showTitleUrl = "";
         $showTitleUrl = mb_strtolower($showTitleUrl);
@@ -86,12 +94,13 @@ class AdminNewsController extends Controller
 
         $new->titleUrl = $_showTitleUrl;
         $new->update();
+        //Termino de creacion de ruta de la noticia
 
         //Creacion del detalle de la noticia
         $contentNew = new ContentNews;
-        $contentNew->dir_image = $request->input('dir_image');
-        $contentNew->content = $request->input('contenido');
         $contentNew->idNews = $new->id;
+        $contentNew->galeria = $request->input('dir_image');
+        $contentNew->content = $request->input('contenido');
         $contentNew->estado = Config::get('constantes.estado_habilitado');
         $contentNew->save();
 
@@ -131,7 +140,7 @@ class AdminNewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CreateNoticiasRequest $request, $id)
     {
         $new = News::findOrFail($id);
 
