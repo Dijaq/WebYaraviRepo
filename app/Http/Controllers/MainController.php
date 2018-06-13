@@ -41,7 +41,7 @@ class MainController extends Controller
         foreach($labels as $label)
         {
             $NoticiasPorTipo =  new \stdClass();
-            $noticias = News::with('contentnews')->where('idLabelNews', $label->id)->where('idPrioridad', Config::get('constantes.prioridad_general'))->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_noticias_por_label'))->get();
+            $noticias = News::with('contentnews')->where('idLabelNews', $label->id)->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_noticias_por_label'))->get();
 
             $NoticiasPorTipo->labelName = $label->name;
             $NoticiasPorTipo->noticias =  $noticias;

@@ -16,7 +16,7 @@
 	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 	<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
 
-	<title>Yaravi</title>
+	<title>Radio Yaraví</title>
 </head>
 <body>
 	<nav class="navbar navbar-expand-sm" role="navigation" style="background: #5caceb;">

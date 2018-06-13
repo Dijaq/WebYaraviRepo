@@ -15,7 +15,7 @@ class CreateEncuestaTable extends Migration
     {
         Schema::create('encuestas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->text('name');
             $table->timestamp('fechaInicio')->nullable();
             $table->timestamp('fechaFin')->nullable();
             $table->integer('estado');

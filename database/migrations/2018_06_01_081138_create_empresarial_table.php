@@ -17,9 +17,9 @@ class CreateEmpresarialTable extends Migration
             $table->increments('id');
             $table->integer('idUser');
             $table->integer('idTipoGaleria');
-            $table->string('title');
-            $table->string('titleUrl');
-            $table->string('summary');
+            $table->text('title');
+            $table->text('titleUrl');
+            $table->text('summary');
             $table->string('dirImagePortada');
             $table->string('nameEditor');
             $table->timestamp('fechaPublicacion')->nullable();

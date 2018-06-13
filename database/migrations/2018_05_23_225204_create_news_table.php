@@ -20,9 +20,9 @@ class CreateNewsTable extends Migration
             $table->integer('idLabelNews');
             $table->integer('idTipoGaleria');
             $table->string('nameEditor');
-            $table->string('title');
-            $table->string('titleUrl');
-            $table->string('summary');
+            $table->text('title');
+            $table->text('titleUrl');
+            $table->text('summary');
             $table->string('dirImagePortada');
             $table->timestamp('fechaPublicacion')->nullable();
             $table->integer('estado');
