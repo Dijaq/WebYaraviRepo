@@ -12,6 +12,7 @@ use App\ContentNews;
 use App\TipoGaleria;
 use App\Http\Requests\CreateNoticiasRequest;
 use Config;
+use Intervention\Image\ImageManager;
 
 class AdminNewsController extends Controller
 {
@@ -52,8 +53,35 @@ class AdminNewsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CreateNoticiasRequest $request)
+    public function store(Request $request)
     {
+        //return $request;
+        $image       = $request->file('dir_image');
+        $filename    = $image->getClientOriginalName();
+        
+        $image_resize = \Image::make($image->getRealPath());
+        list($width, $height) = getimagesize($image);
+
+        if($width >= 800)
+        {
+            $newWidth = 800;
+            $lessWidth = ($width-$newWidth)/$width;
+            $newHeight = $height-$lessWidth*$height; 
+            $image_resize->resize($newWidth, $newHeight);
+        }
+
+        if (!file_exists(storage_path('app/public/news/')))
+        {
+             //mkdir(public_path('publicity\\'), 777, true);
+             return 'El directorio no existe';
+        }
+        //return public_path('publicity');
+        $image_resize->save(storage_path('app/public/news/'. $filename));
+
+        //$directorio = $request->file('dir_image')->store('public/publicity'); 
+        $directorio = 'news/'.$filename; 
+
+
         //Creacion de la Noticia
         $new = new News;
         $new->title = $request->input('titulo');
@@ -63,7 +91,7 @@ class AdminNewsController extends Controller
         $new->idLabelNews = $request->input('label');
         $new->idPrioridad = $request->input('distribucion');
         $new->idTipoGaleria = $request->input('tipogaleria');
-        $new->dirImagePortada = $request->input('dir_image');
+        $new->dirImagePortada = $directorio;
         $new->nameEditor = $request->input('nombreEditor');
         $new->fechaPublicacion = now();
         $new->estado = Config::get('constantes.estado_habilitado');
@@ -99,7 +127,7 @@ class AdminNewsController extends Controller
         //Creacion del detalle de la noticia
         $contentNew = new ContentNews;
         $contentNew->idNews = $new->id;
-        $contentNew->galeria = $request->input('dir_image');
+        $contentNew->galeria = $directorio;
         $contentNew->content = $request->input('contenido');
         $contentNew->estado = Config::get('constantes.estado_habilitado');
         $contentNew->save();

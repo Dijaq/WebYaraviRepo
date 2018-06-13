@@ -14,12 +14,12 @@
       </form>-->
 
       <div align="center">
-        <form method="POST"  style="width: 90%;" action="{{route('new.store')}}">
+        <form method="POST"  style="width: 90%;" action="{{route('new.store')}}" enctype="multipart/form-data">
         
           {!!csrf_field()!!}
         
           <div class="row">
-        
+
             <div class="col-md-3">
               <label for="titulo" style="text-align:left;">
                 Titulo: 
@@ -97,16 +97,24 @@
                 {!! $errors->first('resumen', '<span class="error">:message</span>') !!}
               </div>
                   <br><br>
+
             <div class="col-md-3">
-              <label for="dir_imagen" style="text-align:left;">
-                Imagen en Portada:
-              </label>
-            </div>
-            <div class="col-md-9">
-                <input class="form-control" type="text" name="dir_image" value="{{old('dir_image')}}">
-                {!! $errors->first('dir_image', '<span class="error">:message</span>') !!}
-                  <br>
-            </div>
+                <label for="dir_image">
+                  Imagen de Portada:
+                </label>
+              </div>
+              <div class="col-md-9">
+                 <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="validatedCustomFile" name="dir_image">
+                    <label class="custom-file-label" for="validatedCustomFile">Elige una imagen</label>
+                    <div class="invalid-feedback">Example invalid custom file feedback</div>
+                    {!! $errors->first('dir_image', '<span class="error">:message</span>') !!}
+                  </div>
+              </div> 
+
+            <br><br>
+
+
             <div class="col-md-3">
               <label for="contenido" style="text-align:left;">
                 Contenido:
