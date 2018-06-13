@@ -28,6 +28,53 @@ class Data extends Controller
         $user->estado = 2;
         $user->save();
 
+        $user = new User;
+        $user->name = 'Maria Luisa';
+        $user->lastName = 'Alvarez Vera';
+        $user->email = 'marlui1686@gmail.com';
+        $user->password = bcrypt('123456');
+        $user->idRole = 1;
+        $user->estado = 2;
+        $user->save();
+
+        $user = new User;
+        $user->name = 'Christian';
+        $user->lastName = 'Lupaca Huamaní';
+        $user->email = 'christluh@outlook.com';
+        $user->password = bcrypt('123456');
+        $user->idRole = 1;
+        $user->estado = 2;
+        $user->save();
+
+        $user = new User;
+        $user->name = 'Leslie';
+        $user->lastName = 'Navinta Alfaro';
+        $user->email = 'leskarenalfaro@gmail.com';
+        $user->password = bcrypt('123456');
+        $user->idRole = 1;
+        $user->estado = 2;
+        $user->save();
+
+        $user = new User;
+        $user->name = 'Rosario';
+        $user->lastName = 'Alarizo';
+        $user->email = 'charo_ala@yahoo.com';
+        $user->password = bcrypt('123456');
+        $user->idRole = 1;
+        $user->estado = 2;
+        $user->save();
+
+        $user = new User;
+        $user->name = 'Maria Luz';
+        $user->lastName = 'Cruz Arosquipa';
+        $user->email = 'Marialuz_ca@gmail.com';
+        $user->password = bcrypt('123456');
+        $user->idRole = 1;
+        $user->estado = 2;
+        $user->save();
+
+
+
         $role = new Role;
         $role->name = 'admin';
         $role->displayName = 'Administrador';
