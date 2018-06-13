@@ -62,7 +62,7 @@
 									<div class="picture left" style="width:100%; position: relative;"> 
 										<div class="nota_etiqueta">{{$new->label->name}}</div>
 										<div class="redes_etiqueta">
-											<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.pachamamaradio.org%2F&amp;src=sdkpreparse"" ><i style=" position: absolute; right: 5px; top: 5px;   text-align: center;">
+											<a target="_blank" href={{'https://www.facebook.com/sharer/sharer.php?u=http://192.241.130.19/noticia/Deportes/'.$new->titleUrl.'&amp;src=sdkpreparse'}} ><i style=" position: absolute; right: 5px; top: 5px;   text-align: center;">
 												<img src="https://www.facebook.com/images/fb_icon_325x325.png" class="img-responsive" width="22px">
 											</i>
 											</a>

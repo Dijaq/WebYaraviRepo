@@ -89,7 +89,7 @@ Route::put('noticias/{id}', ['as' => 'new.update', 'uses' => 'AdminNewsControlle
 
 Route::delete('noticias/deshabilitar/{id}', ['as' => 'new.deshabilitar', 'uses' => 'AdminNewsController@deshabilitar']);
 
-//Route::delete('etiquetas/habilitar/{id}', ['as' => 'new.habilitar', 'uses' => 'AdminNewsController@habilitar']);
+Route::delete('noticias/habilitar/{id}', ['as' => 'new.habilitar', 'uses' => 'AdminNewsController@habilitar']);
 
 
 Route::get('empresariales', ['as' => 'empresarial.index', 'uses' => 'EmpresarialController@index']);
