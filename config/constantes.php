@@ -15,7 +15,7 @@ return array(
 	'numero_empresariales' => 3,
 	'numero_noticias_clasificado_label' => 10,
 	//'ruta_directorio' => 'https://localhost:8000/'
-	'ruta_directorio' => 'https://www.radioyaravi.org.pe'
+	'ruta_directorio' => 'www.radioyaravi.org.pe'
 );
 
 ?>
