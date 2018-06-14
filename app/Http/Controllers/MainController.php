@@ -32,8 +32,6 @@ class MainController extends Controller
 
         $listaNoticiasLocales = News::with('label')->with('contentnews')->where('idPrioridad', Config::get('constantes.prioridad_local'))->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_noticias_local'))->get();
 
-        //return $listaNoticiasLocales;
-
         $listaUltimasNoticias = News::with('label')->with('contentnews')->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_ultimas_noticias'))->get();
 
 //        $NoticiasPorTipo =  new \stdClass();
@@ -71,7 +69,9 @@ class MainController extends Controller
         //$contentnews = News::with('contentnews')->get();
         $contentnews = News::with('label')->with('contentnews')->where('idLabelNews', $labelName)->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_noticias_clasificado_label'))->get();
 
-        return view('main_news.classified', compact('publicidades', 'contentnews', 'idPublicidad', 'new_principal', 'new_secundaria', 'labels', 'encuesta', 'tipoNoticia'));
+        $listaUltimasNoticias = News::with('label')->with('contentnews')->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_ultimas_noticias'))->get();
+
+        return view('main_news.classified', compact('publicidades', 'contentnews', 'idPublicidad', 'new_principal', 'new_secundaria', 'labels', 'encuesta', 'tipoNoticia', 'listaUltimasNoticias'));
     }
 
     //DETALLE DE UNA NOTICIA EMPRESARIAL

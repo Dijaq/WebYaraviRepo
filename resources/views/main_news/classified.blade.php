@@ -40,7 +40,7 @@
 	<div class="row">
 		<div class="col-md-9">
 			<h2 style="text-decoration: underline #6E6E6E;">Últimas Noticias</h2>
-			@foreach($contentnews as $new)
+			@foreach($listaUltimasNoticias as $new)
 			<div class="row">
 				<div class="col-md-4">
 					<div class="nota_etiqueta">{{$new->label->name}}</div>
