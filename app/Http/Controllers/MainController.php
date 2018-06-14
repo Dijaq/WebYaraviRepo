@@ -32,7 +32,7 @@ class MainController extends Controller
 
         $listaNoticiasLocales = News::with('label')->with('contentnews')->where('idPrioridad', Config::get('constantes.prioridad_local'))->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_noticias_local'))->get();
 
-        return $listaNoticiasLocales;
+        //return $listaNoticiasLocales;
 
         $listaUltimasNoticias = News::with('label')->with('contentnews')->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_ultimas_noticias'))->get();
 
