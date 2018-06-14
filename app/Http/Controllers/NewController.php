@@ -31,10 +31,10 @@ class NewController extends Controller
 
         //$fecha = date('l jS \of F Y h:i:s A',strtotime($detailnew->fechaPublicacion));
         //$fecha = strftime('%A, %d de %B de %Y',strtotime($detailnew->fechaPublicacion));
-        
+        $urlServidor = Config::get('constantes.ruta_directorio');
         $moreNews = News::with('contentnews')->take(Config::get('constantes.numero_noticias_relacionadas'))->where('idLabelNews', $detailnew->idLabelNews)->get();
 
-        return view('main_news.detailnew', compact('detailnew', 'contentNew', 'moreNews', 'labels'));
+        return view('main_news.detailnew', compact('detailnew', 'contentNew', 'moreNews', 'labels', 'urlServidor'));
     }
 
     /**
