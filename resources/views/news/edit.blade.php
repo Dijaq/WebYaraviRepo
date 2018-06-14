@@ -39,10 +39,10 @@
             <div class="col-md-3">  
               <select class="form-control" name="nombreEditor" required>
                 @foreach($listUsers as $user) 
-                  @if($new->idUser == $user->id)       
-                    <option value="{{$user->name}}">{{$user->name}}</option>
+                  @if($new->nameEditor == $user->name.' '.$user->lastName)       
+                    <option value="{{$user->name}} {{$user->lastName}}">{{$user->name}} {{$user->lastName}}</option>
                   @else
-                     <option value="{{$user->name}}">{{$user->name}}</option>
+                     <option value="{{$user->name}} {{$user->lastName}}">{{$user->name}} {{$user->lastName}}</option>
                   @endif
                 @endforeach
               </select>

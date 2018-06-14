@@ -12,12 +12,12 @@
 			
 			<div class="title_article"><h1>{{$detailnew->title}}</h1></div>
 
-			<div class="summary_article">
+			<div class="summary_article" style="margin-bottom: 10px;">
 				{{$detailnew->summary}}
 			</div>
 
 			<div class="fecha_article">
-				{{$detailnew->fechaPublicacion}}
+				<label for="">{{$detailnew->fechaPublicacion}} / </label>
 			</div>
 		</div>
 		<div class="col-md-8">

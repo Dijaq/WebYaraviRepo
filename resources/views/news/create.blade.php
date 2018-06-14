@@ -38,7 +38,7 @@
               <select class="form-control" name="nombreEditor" required>
                 <option value="">[Seleccion una opción]</option>
                 @foreach($listUsers as $user)     
-                    <option value="{{$user->name}}">{{$user->name}}</option>
+                    <option value="{{$user->name}} {{$user->lastName}}">{{$user->name}} {{$user->lastName}}</option>
                 @endforeach
               </select>
             </div>
