@@ -10,15 +10,15 @@
       <tr>
         <th>Url Imagen</th>
         <th>Imagen</th>
-        <th>Acciones</th>
+        <!--<th>Acciones</th>-->
       </tr>
     </thead>
     <tbody>
       @foreach($imagenes as $imagen)
         <tr>
-          <td>{{$imagen->dirImage}}</td>
+          <td>{{$urlServidor}}{{$imagen->dirImage}}</td>
           <td></td>
-          @if($imagen->estado == 2)
+          <!--@if($imagen->estado == 2)
             <td align="center">
               <a class="btn btn-info btn-sm" href="{{route('imagen.edit', $imagen->id)}}">Editar</a>
               <form style="display: inline" method="POST" action={{route('publicity.deshabilitar', $imagen->id)}}>
@@ -35,7 +35,7 @@
                 <button class="btn btn-danger btn-sm">Habilitar</button>
               </form>
             </td>
-          @endif
+          @endif-->
         </tr>
       @endforeach
     </tbody>

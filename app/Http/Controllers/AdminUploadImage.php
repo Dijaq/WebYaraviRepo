@@ -18,7 +18,8 @@ class AdminUploadImage extends Controller
     public function index()
     {
         $imagenes = DirectoryImage::all();
-        return view('uploadImage.index', compact('imagenes'));
+        $urlServidor = Config::get('constantes.ruta_directorio');
+        return view('uploadImage.index', compact('imagenes', 'urlServidor'));
     }
 
     /**
@@ -60,7 +61,7 @@ class AdminUploadImage extends Controller
         $image_resize->save(storage_path('app/public/news/'. $filename));
 
         //$directorio = $request->file('dir_image')->store('public/publicity'); 
-        $directorio =  Config::get('constantes.ruta_directorio').'storage/news/'.$filename; 
+        $directorio = 'storage/news/'.$filename; 
         //FIN DE UPLOAD IMAGE
 
         $uploadBloque = new UploadBloque;
