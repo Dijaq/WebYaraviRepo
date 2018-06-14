@@ -8,7 +8,8 @@
 	<table class="table table-striped">
     <thead>
       <tr>
-        <th>Nombre</th>
+        <th>Nombres</th>
+        <th>Apellidos</th>
         <th>Email</th>
         <th>Role</th>
         <!--<th>Acciones</th>-->
@@ -18,6 +19,7 @@
       @foreach($users as $user)
         <tr>
           <td>{{$user->name}}</td>
+          <td>{{$user->lastName}}</td>
           <td>{{$user->email}}</td>
           <td>{{$user->role->displayName}}</td>
           <!--<td>

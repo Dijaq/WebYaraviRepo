@@ -20,9 +20,9 @@
               <label for="nombre">
                 Nombres: 
               </label>
-            </div>
-              <div class="col-md-8"><input class="form-control" type="text" name="nombre" value="{{$user->name}}">
-                {!! $errors->first('nombre', '<span class="error">:message</span>') !!}</div>
+          </div>
+          <div class="col-md-8"><input class="form-control" type="text" name="nombre" value="{{$user->name}}">
+            {!! $errors->first('nombre', '<span class="error">:message</span>') !!}</div>
           <br><br>
           <div class="col-md-4">
             <label for="email">
