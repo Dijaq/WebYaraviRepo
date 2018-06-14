@@ -127,16 +127,18 @@
             </div> 
             
           </div>
+          <br>
           <div class="row">
             <div class="col-md-12"><input class="btn btn-primary" type="submit" value="Crear Noticia"></div>
           </div>
+          <br><br>
         
         </form>
       </div>
 
       <script src={{asset('ckeditor/ckeditor.js')}}></script>
       <script>
-        CKEDITOR.config.height = 400;
+        CKEDITOR.config.height = 600;
         CKEDITOR.config.width = 'auto';
         CKEDITOR.replace('contenido');
       </script>

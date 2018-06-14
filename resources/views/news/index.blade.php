@@ -23,7 +23,7 @@
               <td><div style="padding: 3px; background-color: {{$new->label->color}}">{{$new->label->name}}</div></td>       
                  @if($new->estado == 2)
                   <td align="center">
-                    <!--<a class="btn btn-info btn-sm" href="{{route('new.edit', $new->id)}}">Editar</a>-->
+                    <a class="btn btn-info btn-sm" href="{{route('new.edit', $new->id)}}">Editar</a>
                     <form style="display: inline" method="POST" action={{route('new.deshabilitar', $new->id)}}>
                       {!! csrf_field() !!}
                       {!! method_field('DELETE') !!}

@@ -30,43 +30,81 @@
               <div class="col-md-9"><input class="form-control" type="text" name="titulo" value="{{$new->title}}">
                 {!! $errors->first('titulo', '<span class="error">:message</span>') !!}</div>
             <br><br>
+            
             <div class="col-md-3">
-              <label for="label" style="text-align:left;">
-                Prioridad:
+              <label for="nombreEditor" style="text-align:left;">
+                Editor:
               </label>
             </div>
             <div class="col-md-3">  
-              <select class="form-control" name="prioridad">
-                @foreach($prioridades as $prioridad)
-                    @if($prioridad->id == $new->idPrioridad)
-                      <option value="{{$prioridad->id}}" selected>{{$prioridad->name}}</option>
-                    @else
-                      <option value="{{$prioridad->id}}">{{$prioridad->name}}</option>
-                    @endif
+              <select class="form-control" name="nombreEditor" required>
+                @foreach($listUsers as $user) 
+                  @if($new->idUser == $user->id)       
+                    <option value="{{$user->name}}">{{$user->name}}</option>
+                  @else
+                     <option value="{{$user->name}}">{{$user->name}}</option>
+                  @endif
+                @endforeach
+              </select>
+            </div>
+
+            <div class="col-md-3">
+              <label for="distribucion" style="text-align:left;">
+                Distribución:
+              </label>
+            </div>
+            <div class="col-md-3">  
+              <select class="form-control" name="distribucion" required>
+                @foreach($prioridades as $prioridad) 
+                  @if($new->idPrioridad == $prioridad->id)    
+                    <option value="{{$prioridad->id}}" selected="selected">{{$prioridad->name}}</option>
+                  @else
+                     <option value="{{$prioridad->id}}">{{$prioridad->name}}</option>
+                  @endif
                 @endforeach
               </select>
             </div>
             <br><br>
+
             <div class="col-md-3">
               <label for="label" style="text-align:left;">
                 Tipo de noticia:
               </label>
             </div>
             <div class="col-md-3">  
-              <select class="form-control" name="label">
-                @foreach($labels as $label) 
-                  @if($label->id == $new->idLabelNews)    
-                    <option value="{{$label->id}}" selected="">{{$label->name}}</option>
+              <select class="form-control" name="label" required>
+                @foreach($labels as $label)     
+                  @if($new->idLabelNews == $label->id)    
+                    <option value="{{$label->id}}" selected="selected">{{$label->name}}</option>
                   @else
-                    <option value="{{$label->id}}">{{$label->name}}</option>
+                     <option value="{{$label->id}}">{{$label->name}}</option>
                   @endif
                 @endforeach
               </select>
             </div>
             <br><br>
+
+            <div class="col-md-3">
+              <label for="tipogaleria" style="text-align:left;">
+                Video/Imagen/Audio:
+              </label>
+            </div>
+            <div class="col-md-3">  
+              <select class="form-control" name="tipogaleria" required>
+                @foreach($listTipoGaleria as $tipoGeleria)     
+                  @if($new->idTipoGaleria == $tipoGeleria->id)    
+                    <option value="{{$tipoGeleria->id}}" selected="selected">{{$tipoGeleria->name}}</option>
+                  @else
+                     <option value="{{$tipoGeleria->id}}">{{$tipoGeleria->name}}</option>
+                  @endif
+                @endforeach
+              </select>
+            </div>
+
+            <br><br>
             <div class="col-md-3">
               <label for="resumen" style="text-align:left;">
-                Resumen:
+                Bajada:
               </label>
             </div>
               <div class="col-md-9">
@@ -74,23 +112,23 @@
                 {!! $errors->first('resumen', '<span class="error">:message</span>') !!}
               </div>
                   <br><br>
-            <div class="col-md-3">
+            <!--<div class="col-md-3">
               <label for="dir_imagen" style="text-align:left;">
                 Directorio de la imagen:
               </label>
             </div>
             <div class="col-md-9">
-                <input class="form-control" type="text" name="dir_image" value="{{$new->contentnews[0]->dir_image}}">
+                <input class="form-control" type="text" name="dir_image" value="{{$new->dir_image}}">
                 {!! $errors->first('dir_image', '<span class="error">:message</span>') !!}
                   <br>
-            </div>
+            </div>-->
             <div class="col-md-3">
               <label for="contenido" style="text-align:left;">
                 Contenido:
               </label>
             </div>
             <div class="col-md-9">
-                <textarea rows="15" class="form-control"  name="contenido">{{$new->contentnews[0]->content}}  
+                <textarea rows="15" class="form-control"  name="contenido">{{$new->contentnews->content}}  
                 </textarea>
                 {!! $errors->first('contenido', '<span class="error">:message</span>') !!}
             </div> 
@@ -105,7 +143,7 @@
 
       <script src={{asset('ckeditor/ckeditor.js')}}></script>
       <script>
-        CKEDITOR.config.height = 400;
+        CKEDITOR.config.height = 600;
         CKEDITOR.config.width = 'auto';
         CKEDITOR.replace('contenido');
       </script>

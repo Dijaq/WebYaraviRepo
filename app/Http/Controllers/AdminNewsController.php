@@ -154,11 +154,13 @@ class AdminNewsController extends Controller
      */
     public function edit($id)
     {
+        $listUsers = User::all(); 
+        $listTipoGaleria = TipoGaleria::all();
         $new = News::with('contentnews')->where('id', $id)->get()->first();
         $labels = Label::all();
         $prioridades = Prioridad::all();
 
-        return view('news.edit', compact('new','labels', 'prioridades'));
+        return view('news.edit', compact('new','labels', 'prioridades', 'listUsers', 'listTipoGaleria'));
     }
 
     /**
@@ -170,17 +172,22 @@ class AdminNewsController extends Controller
      */
     public function update(CreateNoticiasRequest $request, $id)
     {
-        $new = News::findOrFail($id);
 
-        return $new;
+       $new = News::findOrFail($id);
+
         $new->title = $request->input('titulo');
         $new->summary = $request->input('resumen');
-        $new->idUser = auth()->user()->id;
+        $new->nameEditor = $request->input('nombreEditor');
+        $new->idPrioridad = $request->input('distribucion');;
         $new->idLabelNews = $request->input('label');
-        $new->idPrioridad = $request->input('prioridad');;
-        $new->fechaPublicacion = now();
-        $new->estado = Config::get('constantes.estado_habilitado');
-        $new->save();
+        $new->idTipoGaleria = $request->input('tipogaleria');
+        $new->update();
+
+        $newContent = ContentNews::where('idNews', $id)->get()->first();
+        $newContent->content = $request->input('contenido');
+        $newContent->update();
+
+        return redirect()->route('new.index');
 
     }
 
