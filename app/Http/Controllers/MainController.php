@@ -54,7 +54,8 @@ class MainController extends Controller
 
         $new_secundaria = News::with('label')->with('contentnews')->where('idPrioridad', Config::get('constantes.prioridad_secundaria'))->orderBy('fechaPublicacion', 'desc')->get()->first();
 
-		return view('main_news.home', compact('publicidades', 'contentnews', 'idPublicidad', 'new_principal', 'new_secundaria', 'labels', 'empresariales', 'encuesta', 'listaUltimasNoticias', 'listaNoticiasLocales', 'listaNoticiasPorTipo', 'idEmpresarial'));
+        $urlServidor = Config::get('constantes.ruta_directorio');
+		return view('main_news.home', compact('publicidades', 'contentnews', 'idPublicidad', 'new_principal', 'new_secundaria', 'labels', 'empresariales', 'encuesta', 'listaUltimasNoticias', 'listaNoticiasLocales', 'listaNoticiasPorTipo', 'idEmpresarial', 'urlServidor'));
 	}
 
     //LISTA DE NOTICIAS POR ETIQUETA
