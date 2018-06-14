@@ -18,7 +18,7 @@ class AdminUploadImage extends Controller
     public function index()
     {
         $imagenes = DirectoryImage::all();
-        $urlServidor = Config::get('constantes.ruta_directorio');
+        $urlServidor = Config::get('constantes.ruta_directorio_archivos');
         return view('uploadImage.index', compact('imagenes', 'urlServidor'));
     }
 
