@@ -30,7 +30,9 @@ class MainController extends Controller
     	//$contentnews = News::with('contentnews')->get();
     	$contentnews = News::with('label')->with('contentnews')->get();
 
-        $listaNoticiasLocales = News::with('label')->with('contentnews')->where('idPrioridad', Config::get('constantes.prioridad_local'))->orderBy('fechaPublicacion', 'desc')->take(Config::get('numero_noticias_local'))->get();
+        $listaNoticiasLocales = News::with('label')->with('contentnews')->where('idPrioridad', Config::get('constantes.prioridad_local'))->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_noticias_local'))->get();
+
+        return $listaNoticiasLocales;
 
         $listaUltimasNoticias = News::with('label')->with('contentnews')->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_ultimas_noticias'))->get();
 
