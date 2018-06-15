@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:url" content="{{$urlServidor.'/noticia/'.$detailnew->label->name.'/'.$detailnew->titleUrl}}"/>
+    <meta property="og:app_id" content="85061d1efd0be8aa4d76a2db7f546999" />
     <meta property="og:title" content="{{$detailnew->title}}"/>
     <meta property="og:type" content="article" />
     <meta property="og:image" content={{asset('storage/'.$detailnew->dirImagePortada)}}/>
