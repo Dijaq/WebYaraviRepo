@@ -7,6 +7,7 @@
     <meta property="og:url" content="{{$urlServidor.'/noticia/'.$detailnew->label->name.'/'.$detailnew->titleUrl}}"/>
     <meta property="fb:app_id" content="85061d1efd0be8aa4d76a2db7f546999" />
     <meta property="og:title" content="{{$detailnew->title}}"/>
+    <meta property="og:description" content="{{$detailnew->summary}}"/>
     <meta property="og:type" content="article" />
     <meta property="og:image" content={{asset('storage/'.$detailnew->dirImagePortada)}}/>
     <meta property="og:type" content="article" />
