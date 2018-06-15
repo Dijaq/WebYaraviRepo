@@ -34,7 +34,9 @@ class NewController extends Controller
         $urlServidor = Config::get('constantes.ruta_directorio');
         $moreNews = News::with('contentnews')->take(Config::get('constantes.numero_noticias_relacionadas'))->where('idLabelNews', $detailnew->idLabelNews)->get();
 
-        return view('main_news.detailnew', compact('detailnew', 'contentNew', 'moreNews', 'labels', 'urlServidor'));
+        $urlServidorComentarios = Config::get('constantes.ruta_directorio_archivos');
+
+        return view('main_news.detailnew', compact('detailnew', 'contentNew', 'moreNews', 'labels', 'urlServidor','urlServidorComentarios'));
     }
 
     /**
