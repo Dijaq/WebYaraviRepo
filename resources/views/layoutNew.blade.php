@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:url" content="{{$urlServidor.'/noticia/'.$detailnew->label->name.'/'.$detailnew->titleUrl}}"/>
-    <meta property="fb:app_id" content="85061d1efd0be8aa4d76a2db7f546999" />
+    <meta property="fb:app_id" content="629367300738154" />
     <meta property="og:title" content="{{$detailnew->title}}"/>
     <meta property="og:description" content="{{$detailnew->summary}}"/>
     <meta property="og:type" content="article" />
