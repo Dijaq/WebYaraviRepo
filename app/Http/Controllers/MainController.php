@@ -71,8 +71,9 @@ class MainController extends Controller
         $contentnews = News::with('label')->with('contentnews')->where('idLabelNews', $labelName)->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_noticias_clasificado_label'))->get();
 
         $listaUltimasNoticias = News::with('label')->with('contentnews')->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_ultimas_noticias'))->get();
+        $urlServidor = Config::get('constantes.ruta_directorio');
 
-        return view('main_news.classified', compact('publicidades', 'contentnews', 'idPublicidad', 'new_principal', 'new_secundaria', 'labels', 'encuesta', 'tipoNoticia', 'listaUltimasNoticias'));
+        return view('main_news.classified', compact('publicidades', 'contentnews', 'idPublicidad', 'new_principal', 'new_secundaria', 'labels', 'encuesta', 'tipoNoticia', 'listaUltimasNoticias', 'urlServidor'));
     }
 
     //DETALLE DE UNA NOTICIA EMPRESARIAL
