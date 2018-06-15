@@ -16,13 +16,13 @@
 				{{$detailnew->summary}}
 			</div>
 
-			<div class="fecha_article">
-				<label for="">{{$detailnew->fechaPublicacion}} / </label>
+			<div class="fecha_article" style="font-weight: bold; ">
+				<label for="">{{$detailnew->fechaPublicacion}} / Publicado por: {{$detailnew->nameEditor}}</label>
 			</div>
 		</div>
 		<div class="col-md-8">
 			<div class="row">
-				<div class="col-md-12">						
+				<div class="col-md-12" >						
 					<div class="picture left" style="width:100%;"> 
 						<img src="{{asset('storage/'.$detailnew->contentnews->galeria)}}" style="width:100%;" alt="Planeta Marte" /> <br />
 					</div>
