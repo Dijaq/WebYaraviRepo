@@ -42,16 +42,16 @@
 			</div>
 		</div>
 		<!--Seccion de Anuncios-->
-		<div class="col-md-4">
+		<div class="col-xs-12 col-sm-12 col-md-4">
 			<div class="row" style="font-weight: bold;">
-				<div class="col-md-12">Más de {{$detailnew->label->name}}</div>
+				<div class="col-xs-12 col-sm-12 col-md-12">Más de {{$detailnew->label->name}}</div>
 			</div>
 			@foreach($moreNews as $moreNew)
 				<div class="row more_article">					
-					<div class="col-md-6" style="">
+					<div class="col-6 col-sm-6 col-md-6" style="">
 						<img class="image" src="{{asset('storage/'.$moreNew->contentnews->galeria)}}" alt="No se pudo cargar" / width="100%">
 					</div>
-					<div class="title_more_article col-md-6" style="padding-left: 0px;">
+					<div class="title_more_article col-6 col-sm-6 col-md-6" style="padding-left: 0px;">
 						<a style="color: #34597F; font-weight: bold; font-size: 16px; font-family:'Gremoria';" href="{{route('newcontent.show', [$moreNew->label->name, $moreNew->titleUrl])}}">{{$moreNew->title}}</a>
 					</div>
 				</div>
