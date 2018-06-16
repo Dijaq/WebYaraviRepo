@@ -1,6 +1,10 @@
 	<nav class="navbar navbar-expand-sm" role="navigation" style="background: #537CD5;">
+			<!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navegacion_fmYaravi" aria-controls="navegacion_fmYaravi" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			</button>-->
+
 		<div class="container">				
-			<div class="collapse navbar-collapse" id="navegacion_fm">
+			<div class="collapse navbar-collapse" id="navegacion_fmYaravi">
 				<ul class="navbar-nav" style="font-weight: bold; font-size: 17px;">
 					<!--<li class="nav-item" class="active"><a class="nav-link nav-link-c" href="#">Nosotros</a></li>-->
 

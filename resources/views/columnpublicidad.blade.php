@@ -21,23 +21,25 @@
 	</div>
 	<br>
 	<div class="publicidad_etiqueta">Encuesta</div>
-		<form method="POST" action="{{route('encuesta.votoStore', $encuesta->id)}}">
-			{!! method_field('PUT') !!}
-			{!!csrf_field()!!}
-			<div style="border-style: dashed; border-width: 1px; padding: 10px">
-				@if(session()->has('info'))
-    				<h3>{{session('info')}}</h3>
-  				@else
-					<strong><label for="">{{$encuesta->name}}</label></strong>
-					<label for="">Opciones:</label><br>
-					@foreach($encuesta->encuestaOpciones as $encuestaOpcion)
-						<input type="radio" name="opcion" value={{$encuestaOpcion->id}}><label style="padding-left: 5px">{{$encuestaOpcion->nameOption}}</label><br>
-					@endforeach
-					<input class="btn" type="submit" value="Votar">
-					<!--<label for=""><a href="">Vea todas nuestra encuestas</a></label>-->
-				@endif
-			</div>
-		</form>
+		<div>
+			<form method="POST" action="{{route('encuesta.votoStore', $encuesta->id)}}">
+				{!! method_field('PUT') !!}
+				{!!csrf_field()!!}
+				<div style="border-style: dashed; border-width: 1px; padding: 10px">
+					@if(session()->has('info'))
+			    				<h3>{{session('info')}}</h3>
+			  				@else
+						<strong><label for="">{{$encuesta->name}}</label></strong>
+						<label for="">Opciones:</label><br>
+						@foreach($encuesta->encuestaOpciones as $encuestaOpcion)
+							<input type="radio" name="opcion" value={{$encuestaOpcion->id}}><label style="padding-left: 5px">{{$encuestaOpcion->nameOption}}</label><br>
+						@endforeach
+						<input class="btn" type="submit" value="Votar">
+						<!--<label for=""><a href="">Vea todas nuestra encuestas</a></label>-->
+					@endif
+				</div>
+			</form>
+		</div>
 	<br>
 
 	<div class="clima">

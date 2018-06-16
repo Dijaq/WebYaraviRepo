@@ -164,7 +164,7 @@ Route::delete('imagenes/habilitar/{id}', ['as' => 'imagen.habilitar', 'uses' => 
 Route::get('politicadeprivacidad', ['as' => 'politicaprivacidad.index', 'uses' => 'PoliticaPrivacidad@index']);
 
 
-Route::get('login', 'Auth\LoginController@showLoginForm');
+Route::get('login', ['as' => 'login', 'uses' => 'Auth\LoginController@showLoginForm']);
 
 Route::post('login', 'Auth\LoginController@login');
 
