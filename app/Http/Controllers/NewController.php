@@ -32,7 +32,7 @@ class NewController extends Controller
         //$fecha = date('l jS \of F Y h:i:s A',strtotime($detailnew->fechaPublicacion));
         //$fecha = strftime('%A, %d de %B de %Y',strtotime($detailnew->fechaPublicacion));
         $urlServidor = Config::get('constantes.ruta_directorio');
-        $moreNews = News::with('contentnews')->take(Config::get('constantes.numero_noticias_relacionadas'))->where('idLabelNews', $detailnew->idLabelNews)->get();
+        $moreNews = News::with('contentnews')->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_noticias_relacionadas'))->where('estado', Config::get('constantes.estado_habilitado'))->where('idLabelNews', $detailnew->idLabelNews)->get();
 
         $urlServidorComentarios = Config::get('constantes.ruta_directorio_archivos');
 
