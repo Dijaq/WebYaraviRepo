@@ -1,7 +1,7 @@
 	<nav class="navbar navbar-expand-sm" role="navigation" style="background: #537CD5;">
 		<div class="container">				
 			<div class="collapse navbar-collapse" id="navegacion_fm">
-				<ul class="navbar-nav">
+				<ul class="navbar-nav" style="font-weight: bold; font-size: 17px;">
 					<!--<li class="nav-item" class="active"><a class="nav-link nav-link-c" href="#">Nosotros</a></li>-->
 
 					<li class="nav-item dropdown">
@@ -24,7 +24,7 @@
 			<div class="col-md-3" align="right" style="position: relative;">
 				<div class="row">
 					<div class="col-md-2"></div>
-					<div class="col-md-7"  align="left" style="color: white">
+					<div class="col-md-7"  align="left" style="color: white; font-weight: bold;">
 						En vivo ahora<br>	
 						106.3FM - 930AM
 					</div>
