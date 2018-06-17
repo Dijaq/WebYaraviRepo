@@ -38,7 +38,7 @@
               <select class="form-control" name="nombreEditor" required>
                 <option value="">[Seleccion una opción]</option>
                 @foreach($listUsers as $user)     
-                    <option value="{{$user->name}} {{$user->lastName}}">{{$user->name}} {{$user->lastName}}</option>
+                    <option value="{{$user->id}}" {{old('nombreEditor') == $user->id ? 'selected':''}}>{{$user->name}} {{$user->lastName}}</option>
                 @endforeach
               </select>
             </div>
@@ -51,8 +51,8 @@
             <div class="col-md-3">  
               <select class="form-control" name="distribucion" required>
                 <option value="">[Seleccion una opción]</option>
-                @foreach($prioridades as $prioridad)     
-                    <option value="{{$prioridad->id}}">{{$prioridad->name}}</option>
+                @foreach($prioridades as $distribucion)     
+                    <option value="{{$distribucion->id}}" {{old('distribucion') == $distribucion->id ? 'selected':''}}>{{$distribucion->name}}</option>
                 @endforeach
               </select>
             </div>
@@ -67,7 +67,7 @@
               <select class="form-control" name="label" required>
                 <option value="">[Seleccion una opción]</option>
                 @foreach($labels as $label)     
-                    <option value="{{$label->id}}">{{$label->name}}</option>
+                    <option value="{{$label->id}}" {{old('label') == $label->id ? 'selected':''}}>{{$label->name}}</option>
                 @endforeach
               </select>
             </div>
@@ -82,9 +82,10 @@
               <select class="form-control" name="tipogaleria" required>
                 <option value="">[Seleccion una opción]</option>
                 @foreach($listTipoGaleria as $tipoGeleria)     
-                    <option value="{{$tipoGeleria->id}}">{{$tipoGeleria->name}}</option>
+                    <option value="{{$tipoGeleria->id}}" {{old('tipogaleria') == $tipoGeleria->id ? 'selected':''}}>{{$tipoGeleria->name}}</option>
                 @endforeach
               </select>
+              {!! $errors->first('tipogaleria', '<span class="error">:message</span>') !!}
             </div>
 
             <div class="col-md-3">

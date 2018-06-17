@@ -12,7 +12,6 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navegacion_fm">
 				<ul class="navbar-nav">
-					<li class="nav-item" style="border-right: solid 1px #D8D8D8;  font-weight: bold; font-size: 17px;" class="active"><a class="nav-link nav-link-c" href={{route('home')}}>Principal</a></li>
 					@foreach($labels as $label)
 						<li class="nav-item" style="border-right: solid 1px #D8D8D8; font-weight: bold; font-size: 17px; "><a class="nav-link nav-link-c" href={{route('classified.show', $label->id)}}>{{$label->name}}</a></li>
 					@endforeach

@@ -25,7 +25,7 @@
 				<ul class="navbar-nav">
 					
 					@if(auth()->guest())
-						<li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+						<li class="nav-item"><a class="nav-link" href="/login" style="color: #D8D8D8">Login</a></li>
 					@endif
 					@if(auth()->check())
 						<li class="nav-item"><a class="nav-link nav-link-c" href="{{route('user.index')}}">Usuarios</a></li>
@@ -35,7 +35,7 @@
 						<li class="nav-item"><a class="nav-link nav-link-c" href={{route('empresarial.index')}}>Empresariales</a></li>
 						<li class="nav-item"><a class="nav-link nav-link-c" href={{route('encuesta.index')}}>Encuestas</a></li>
 						<li class="nav-item"><a class="nav-link nav-link-c" href={{route('imagen.index')}}>Galeria de Imagenes</a></li>
-						<li class="nav-item"><a class="nav-link" href="/logout">Cerrar Sesion de {{auth()->user()->email}}</a></li>
+						<li class="nav-item"><a class="nav-link" href="/logout" style="color: #D8D8D8">Cerrar Sesion de {{auth()->user()->email}}</a></li>
 					@endif					
 				</ul>
 			</div>

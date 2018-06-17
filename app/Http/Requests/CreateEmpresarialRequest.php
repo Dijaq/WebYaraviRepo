@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateNoticiasRequest extends FormRequest
+class CreateEmpresarialRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -28,8 +28,6 @@ class CreateNoticiasRequest extends FormRequest
             'resumen' => 'required',
             'dir_image' => 'required',
             'tipogaleria' => 'required',
-            'label' => 'required',
-            'distribucion' => 'required',
             'nombreEditor' => 'required'
         ];
     }

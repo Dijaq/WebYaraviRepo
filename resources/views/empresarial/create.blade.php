@@ -49,7 +49,7 @@
               <select class="form-control" name="nombreEditor" required>
                 <option value="">[Seleccion una opción]</option>
                 @foreach($listUsers as $user)     
-                    <option value="{{$user->name}}">{{$user->name}}</option>
+                    <option value="{{$user->id}}" {{old('nombreEditor') == $user->id ? 'selected':''}}>{{$user->name}} {{$user->lastName}}</option>
                 @endforeach
               </select>
             </div>
@@ -63,7 +63,8 @@
               <select class="form-control" name="tipogaleria" required>
                 <option value="">[Seleccion una opción]</option>
                 @foreach($listTipoGaleria as $tipoGeleria)     
-                    <option value="{{$tipoGeleria->id}}">{{$tipoGeleria->name}}</option>
+                    <option value="{{$tipoGeleria->id}}" {{old('tipogaleria') == $tipoGeleria->id ? 'selected':''}}>{{$tipoGeleria->name}}</option>
+                @endforeac>{{$tipoGeleria->name}}</option>
                 @endforeach
               </select>
             </div>

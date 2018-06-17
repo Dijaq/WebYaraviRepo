@@ -7,6 +7,7 @@ use App\Empresarial;
 use App\User;
 use App\TipoGaleria;
 use App\ContentEmpresarial;
+use App\Http\Requests\CreateEmpresarialRequest;
 use Config;
 
 class EmpresarialController extends Controller
@@ -46,7 +47,7 @@ class EmpresarialController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateEmpresarialRequest $request)
     {
          //return $request;
         $image       = $request->file('dir_image');
@@ -82,7 +83,8 @@ class EmpresarialController extends Controller
         $empresarial->summary = $request->input('resumen');
         $empresarial->idUser = auth()->user()->id;
         $empresarial->idTipoGaleria = $request->input('tipogaleria');
-        $empresarial->nameEditor = $request->input('nombreEditor');
+        $user = User::findOrFail($request->input('nombreEditor'));
+        $empresarial->nameEditor = $user->name.' '.$user->lastName;
         $empresarial->fechaPublicacion = now();
         $empresarial->dirImagePortada = $directorio;
         $empresarial->estado = Config::get('constantes.estado_habilitado');

@@ -42,6 +42,12 @@ class AdminNewsController extends Controller
         $labels = Label::all();
         $prioridades = Prioridad::all();
         $listUsers = User::all(); 
+        /*$listUsersCompleteName = array();
+        foreach($listUsers as $user)
+        {
+            array_push($listUsersCompleteName, $user->name.' '.$user->lastName);
+        }*/
+        //return $listUsersCompleteName;
         $listTipoGaleria = TipoGaleria::all();
 
         return view('news.create', compact('labels', 'prioridades', 'listUsers', 'listTipoGaleria'));
@@ -53,9 +59,8 @@ class AdminNewsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateNoticiasRequest $request)
     {
-        //return $request;
         $image       = $request->file('dir_image');
         $filename    = $image->getClientOriginalName();
         
@@ -92,7 +97,8 @@ class AdminNewsController extends Controller
         $new->idPrioridad = $request->input('distribucion');
         $new->idTipoGaleria = $request->input('tipogaleria');
         $new->dirImagePortada = $directorio;
-        $new->nameEditor = $request->input('nombreEditor');
+        $user = User::findOrFail($request->input('nombreEditor'));
+        $new->nameEditor = $user->name.' '.$user->lastName;
         $new->fechaPublicacion = now();
         $new->estado = Config::get('constantes.estado_habilitado');
         $new->save();
