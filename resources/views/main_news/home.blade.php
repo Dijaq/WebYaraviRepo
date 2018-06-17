@@ -79,7 +79,7 @@
 				@foreach($listaNoticiasPorTipo as $NoticiasPorTipo)
 					<div class="col-md-12">
 						<div class="empresarial_etiqueta" style="border-radius: 10px 30px; text-align: center; font-size: 25px;">
-							<strong>{{$NoticiasPorTipo->labelName}}</strong>
+							<strong><a style="color: white" href={{route('classified.show', $NoticiasPorTipo->idLabel)}}>{{$NoticiasPorTipo->labelName}}</a></strong>
 						</div>
 						<br>
 						<div class="row">

@@ -45,6 +45,7 @@ class MainController extends Controller
             $noticias = News::with('contentnews')->where('idLabelNews', $label->id)->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_noticias_por_label'))->get();
 
             $NoticiasPorTipo->labelName = $label->name;
+            $NoticiasPorTipo->idLabel = $label->id;
             $NoticiasPorTipo->noticias =  $noticias;
             array_push($listaNoticiasPorTipo,  $NoticiasPorTipo);
         }
