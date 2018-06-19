@@ -11,6 +11,7 @@ use App\User;
 use App\ContentNews;
 use App\TipoGaleria;
 use App\Http\Requests\CreateNoticiasRequest;
+use App\Http\Requests\EditNoticiasRequest;
 use Config;
 use Intervention\Image\ImageManager;
 
@@ -176,7 +177,7 @@ class AdminNewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(CreateNoticiasRequest $request, $id)
+    public function update(EditNoticiasRequest $request, $id)
     {
 
        $new = News::findOrFail($id);

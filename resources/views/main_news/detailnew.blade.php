@@ -18,6 +18,10 @@
 
 			<div class="fecha_article" style="font-weight: bold; ">
 				<label for="">{{$detailnew->fechaPublicacion}} / Publicado por: {{$detailnew->nameEditor}}</label>
+				<!--<label for="">
+				<div >
+					<img style="width: 40px;" src="{{asset('storage/facebook.png')}}" alt="">
+				</div></label>-->
 			</div>
 		</div>
 		<div class="col-md-8">
@@ -44,7 +48,9 @@
 		<!--Seccion de Anuncios-->
 		<div class="col-xs-12 col-sm-12 col-md-4">
 			<div class="row" style="font-weight: bold;">
-				<div class="col-xs-12 col-sm-12 col-md-12">Más de {{$detailnew->label->name}}</div>
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<div style="font-size: 22px; font-family: 'Gremoria';">Más de {{$detailnew->label->name}}</div>
+				</div>
 			</div>
 			@foreach($moreNews as $moreNew)
 				<div class="row more_article">					
