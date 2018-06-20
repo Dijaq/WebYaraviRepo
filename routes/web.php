@@ -126,6 +126,9 @@ Route::get('yaravi/nosotros/historia', ['as' => 'nosotros.historia', 'uses' => '
 
 Route::get('yaravi/nosotros/quienessomos', ['as' => 'nosotros.quienessomos', 'uses' => 'MainNosotrosController@quienessomos']);
 
+Route::get('yaravi/audioenvivo', ['as' => 'audioenvivo.index', 'uses' => 'MainAudioEnVivo@index']);
+
+
 
 //Rutas de Encuestas
 Route::get('encuestas', ['as' => 'encuesta.index', 'uses' => 'EncuestaController@index']);
