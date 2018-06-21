@@ -20,15 +20,15 @@ class Data extends Controller
     public function index()
     {
         $user = new User;
-        $user->name = 'Diego';
-        $user->lastName = 'Javier';
-        $user->email = 'dijaq08@gmail.com';
+        $user->name = 'Hugo';
+        $user->lastName = 'Condori Chambilla';
+        $user->email = 'Hugo.condori@hotmail.com';
         $user->password = bcrypt('123456');
         $user->idRole = 1;
         $user->estado = 2;
         $user->save();
 
-        $user = new User;
+        /*$user = new User;
         $user->name = 'Maria Luisa';
         $user->lastName = 'Alvarez Vera';
         $user->email = 'marlui1686@gmail.com';
@@ -140,7 +140,7 @@ class Data extends Controller
         $tipoDirectorio->displayName = 'Publicidad';
         $tipoDirectorio->estado = 2;
         $tipoDirectorio->save();
-        
+        */
 
 
         return "Data cargada";

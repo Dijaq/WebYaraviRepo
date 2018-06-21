@@ -22,7 +22,8 @@
 				<br><br>
 			</div>
 			<div>
-				<audio  controls style="width: 100%;" autoplay playsinline>
+				<audio  controls style="width: 100%;" autoplay loop>
+					<!-- playsinline loop played allow="autoplay"-->
 					<source src="http://99.198.110.162:7012/;stream.nsv&amp;type=mp3" type="audio/mp3">
 					<source src="http://99.198.110.162:7012/;stream.nsv&amp;type=ogg" type="audio/ogg">
 				</audio>
