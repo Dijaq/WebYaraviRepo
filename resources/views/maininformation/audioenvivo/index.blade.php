@@ -2,8 +2,8 @@
 
 @section('contenido')
 
+	<h2>Estamos en vivo</h1>
 	<div class="row">
-		<h1 >Estamos en vivo</h1>
 		<!--<audio preload="auto" controls>
 			 <source src="http://99.198.110.162:7012/;stream.nsv&type=ogg" type="audio/ogg">
 			 <source src="http://99.198.110.162:7012/;stream.nsv&type=mp3" type="audio/mp3">
@@ -18,16 +18,16 @@
 		
 		<div class="col-md-4 offset-md-4">
 			<div style = "background-color: white; border-radius: 10px 10px;">
-				<div style="">
-					<img src="{{asset('storage/RadioYaravi.jpg')}}" alt="Logo Yaravi" style="width: 100%; vertical-align: middle; border-radius: 10px 10px;">
-					<br><br>
-				</div>
 				<div>
 					<audio  controls style="width: 100%;" id="myAudio">
 						<!-- playsinline loop played allow="autoplay"-->
 						<source src="http://99.198.110.162:7012/;stream.nsv&amp;type=mp3" type="audio/mp3">
 						<source src="http://99.198.110.162:7012/;stream.nsv&amp;type=ogg" type="audio/ogg">
 					</audio>
+				</div>
+				<br>
+				<div style="">
+					<img src="{{asset('storage/RadioYaravi.jpg')}}" alt="Logo Yaravi" style="width: 100%; vertical-align: middle; border-radius: 10px 10px;">
 				</div>
 			</div>
 		      </div>
