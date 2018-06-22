@@ -2,7 +2,7 @@
 
 @section('contenido')
 
-	<h1>Estamos en vivo</h1>
+	<h1 >Estamos en vivo</h1>
 	<!--<audio preload="auto" controls>
 		 <source src="http://99.198.110.162:7012/;stream.nsv&type=ogg" type="audio/ogg">
 		 <source src="http://99.198.110.162:7012/;stream.nsv&type=mp3" type="audio/mp3">
@@ -22,7 +22,7 @@
 				<br><br>
 			</div>
 			<div>
-				<audio  controls style="width: 100%;" autoplay loop>
+				<audio  controls style="width: 100%;" id="myAudio">
 					<!-- playsinline loop played allow="autoplay"-->
 					<source src="http://99.198.110.162:7012/;stream.nsv&amp;type=mp3" type="audio/mp3">
 					<source src="http://99.198.110.162:7012/;stream.nsv&amp;type=ogg" type="audio/ogg">
@@ -40,5 +40,16 @@
 		</div>
 	</div>
 	<br>
+
+	<script type="text/javascript">
+		window.onload=function()
+		{
+			let audio = document.getElementById("myAudio");
+			audio.autoplay = true;
+			audio.loop = true;
+			audio.load();
+		}
+	</script>
+
 
 @stop

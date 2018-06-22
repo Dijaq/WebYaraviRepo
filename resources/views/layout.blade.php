@@ -29,6 +29,17 @@
 
 	  gtag('config', 'UA-121070627-1');
 	</script>
+
+	<!--<script type="text/javascript">
+		function enableAutplay()
+		{
+			let audio = document.getElementById("myAudio");
+			audio.autoplay = true;
+			audio.load();
+
+		};
+	</script>-->
+
 	<title>Radio Yaraví Arequipa</title>
 </head>
 <body>
