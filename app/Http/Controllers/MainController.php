@@ -21,7 +21,7 @@ class MainController extends Controller
     public function home()
     {
         $encuesta = Encuesta::with('encuestaOpciones')->orderBy('created_at','desc')->get()->first();
-        $empresariales = Empresarial::all()->where('estado', Config::get('constantes.estado_habilitado'));
+        $empresariales = Empresarial::orderBy('fechaPublicacion','desc')->where('estado', Config::get('constantes.estado_habilitado'))->take(Config::get('constantes.numero_empresariales'))->get();
     	$publicidades = Publicidad::all()->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now());
 
         //$publicidades = Publicidad::all()->where('fechaFin','>', now());
