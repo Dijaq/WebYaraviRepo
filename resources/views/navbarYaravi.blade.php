@@ -1,4 +1,4 @@
-	<nav class="navbar navbar-expand-sm" role="navigation" style="background: #537CD5;">
+	<nav class="navbar navbar-expand-sm" role="navigation" style="background: #081377;">
 			<!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navegacion_fmYaravi" aria-controls="navegacion_fmYaravi" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
 			</button>-->
