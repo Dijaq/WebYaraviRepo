@@ -14,7 +14,7 @@
 						</a>
 					</div>
 					<img src="{{asset('storage/'.$new_principal->dirImagePortada)}}" style="width:100%;" alt="Planeta Marte" /> <br />
-					<div class="article-principal" style="position: absolute; bottom: 0px; background-color: rgba(171,178,185,0.5)">
+					<div class="article-principal" style="position: absolute; bottom: 0px; background-color: rgba(171,178,185,0.5); width: 100%">
 						<!--opacity: 0.4;-->
 					<h3><a style="color: white;" href="{{route('newcontent.show', [$new_principal->label->name, $new_principal->titleUrl])}}">{{$new_principal->title}}</a></h3></div>
 				</div>
