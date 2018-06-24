@@ -19,18 +19,20 @@
 		<div class="col-md-4 offset-md-4">
 			<div style = "background-color: white; border-radius: 10px 10px;">
 				<div>
-					<audio  controls style="width: 100%;" id="myAudio">
+					<audio allow="autoplay" preload controls style="width: 100%;" id="myAudio" >
 						<!-- playsinline loop played allow="autoplay"-->
 						<source src="http://99.198.110.162:7012/;stream.nsv&amp;type=mp3" type="audio/mp3">
 						<source src="http://99.198.110.162:7012/;stream.nsv&amp;type=ogg" type="audio/ogg">
 					</audio>
 				</div>
 				<br>
-				<div style="">
+				<div style="" onclick="presionar()" name="btn1" id="btn1">
 					<img src="{{asset('storage/RadioYaravi.jpg')}}" alt="Logo Yaravi" style="width: 100%; vertical-align: middle; border-radius: 10px 10px;">
 				</div>
 			</div>
-		      </div>
+
+			<!--<button onclick="presionar()" name="btn1" id="btn1">Presionar</button>-->
+		</div>
 		
 		<div class="col-md-12">
 			<h1 style="margin-top: 20px;">Coméntanos</h1>
@@ -43,14 +45,40 @@
 	</div>
 	<br>
 
-	<script type="text/javascript">
+	<!--<script type="text/javascript">
 		window.onload=function()
 		{
-			let audio = document.getElementById("myAudio");
-			audio.autoplay = true;
-			audio.loop = true;
-			audio.load();
+			setTimeout(function(){
+				let audio = document.getElementById("myAudio");
+				audio.autoplay = true;
+				audio.loop = true;
+				audio.played = true;
+				audio.load();
+				audio.play();
+				document.getElementById("btn1").click();
+			},5000);
 		}
+	</script>
+	<script>
+		function presionar()
+		{
+			setTimeout(function(){
+				let audio = document.getElementById("myAudio");
+				audio.autoplay = true;
+				audio.load();
+			},5000);
+		}
+
+	</script>-->
+
+	<script type="text/javascript">
+		$("#btn1").click(function() { 
+   			let audio = document.getElementById("myAudio");
+			audio.autoplay = true;
+			audio.load();
+		});	
+
+		$("#btn1").click();
 	</script>
 
 

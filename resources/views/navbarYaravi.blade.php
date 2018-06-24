@@ -33,9 +33,21 @@
 						106.3FM - 930AM
 					</div>
 					<div class="play_en_vivo" align="right"  style="position: absolute; right: 20px; top: 5px;">
-						<a href="http://www.radios.com.pe/yaravi-arequipa/" target="_blank"><img height="40px" src="{{asset('storage/play_button.png')}}" alt=""></a>
+						<a href="{{route('audioenvivo.index')}}" target="_blank"><img height="40px" src="{{asset('storage/play_button.png')}}" alt=""></a>
 					</div>
 				</div>
 			</div>			
 		</div>
+
+		<!--<script>
+			function presionar()
+			{
+				setTimeout(function(){
+					let audio = document.getElementById("myAudio");
+					audio.autoplay = true;
+					audio.load();
+				},5000);
+			}
+
+		</script>-->
 	</nav>
