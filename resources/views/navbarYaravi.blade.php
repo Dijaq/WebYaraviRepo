@@ -32,8 +32,8 @@
 						En vivo ahora<br>	
 						106.3FM - 930AM
 					</div>
-					<div class="play_en_vivo" align="right"  style="position: absolute; right: 20px; top: 5px;">
-						<a href="{{route('audioenvivo.index')}}" target="_blank"><img height="40px" src="{{asset('storage/play_button.png')}}" alt=""></a>
+					<div class="play_en_vivo" align="right"  style="position: absolute; right: 20px; top: 0px;">
+						<a href="{{route('audioenvivo.index')}}" target="_blank"><img height="50px" src="{{asset('storage/Playv7.gif')}}" alt=""></a>
 					</div>
 				</div>
 			</div>			
