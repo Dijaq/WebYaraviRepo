@@ -103,15 +103,15 @@
                 <label for="dir_image">
                   Imagen de Portada:
                 </label>
-              </div>
-              <div class="col-md-9">
-                 <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="validatedCustomFile" name="dir_image">
-                    <label class="custom-file-label" for="validatedCustomFile">Elige una imagen</label>
-                    <div class="invalid-feedback">Example invalid custom file feedback</div>
-                    {!! $errors->first('dir_image', '<span class="error">:message</span>') !!}
-                  </div>
-              </div> 
+            </div>
+            <div class="col-md-9">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="validatedCustomFile" name="dir_image">
+                  <label class="custom-file-label" for="validatedCustomFile">Elige una imagen</label>
+                  <div class="invalid-feedback">Example invalid custom file feedback</div>
+                  {!! $errors->first('dir_image', '<span class="error">:message</span>') !!}
+                </div>
+            </div> 
 
             <br><br>
 

@@ -14,7 +14,7 @@
       </form>-->
 
       <div align="center">
-        <form method="POST"  style="width: 90%;" action="{{route('new.update', $new->id)}}">
+        <form method="POST"  style="width: 90%;" action="{{route('new.update', $new->id)}}" enctype="multipart/form-data">
 
           {!! method_field('PUT') !!}
         
@@ -122,6 +122,24 @@
                 {!! $errors->first('dir_image', '<span class="error">:message</span>') !!}
                   <br>
             </div>-->
+
+          <div class="col-md-3">
+                <label for="dir_image">
+                  Imagen de Portada:
+                </label>
+            </div>
+            <div class="col-md-9">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="validatedCustomFile" name="dir_image">
+                  <label class="custom-file-label" for="validatedCustomFile">Elige una imagen</label>
+                  <div class="invalid-feedback">Example invalid custom file feedback</div>
+                  {!! $errors->first('dir_image', '<span class="error">:message</span>') !!}
+                </div>
+            </div> 
+
+            <br><br>
+
+
             <div class="col-md-3">
               <label for="contenido" style="text-align:left;">
                 Contenido:
