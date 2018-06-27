@@ -67,7 +67,7 @@
 											</i>
 											</a>
 										</div>
-										<img src="{{asset('storage/'.$new->dirImagePortada)}}" style="width:100%;" alt="Planeta Marte" /> <br />
+										<img src="{{asset('storage/'.$new->dirImagePortada)}}" style="width:100%; height: 160px;" alt="Planeta Marte" /> <br />
 										<div class="article-contenido"><a style="color: white;" href="{{route('newcontent.show', [$new->label->name, $new->titleUrl])}}">{{$new->title}}</a></div>
 									</div>
 								</article>
@@ -94,7 +94,7 @@
 												</i>
 												</a>
 											</div>
-											<img src="{{asset('storage/'.$new->dirImagePortada)}}" style="width:100%;" alt="Planeta Marte" /> <br />
+											<img src="{{asset('storage/'.$new->dirImagePortada)}}" style="width:100%; height: 160px;" alt="Planeta Marte" /> <br />
 											<div class="article-contenido"><a style="color: white;" href="{{route('newcontent.show', [$new->label->name, $new->titleUrl])}}">{{$new->title}}</a></div>
 										</div>
 									</article>
