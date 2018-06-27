@@ -145,7 +145,8 @@ Route::delete('encuestas/deshabilitar/{id}', ['as' => 'encuesta.deshabilitar', '
 
 Route::delete('encuestas/habilitar/{id}', ['as' => 'encuesta.habilitar', 'uses' => 'EncuestaController@habilitar']);
 
-Route::put('encuestas/votocrear/{id}', ['as' => 'encuesta.votoStore', 'uses' => 'EncuestaController@votoStore']);
+//Usa un diferente controlador
+Route::put('encuestas/votocrear/{id}', ['as' => 'encuesta.votoStore', 'uses' => 'MainController@votoStore']);
 
 
 //Upload Image

@@ -8,6 +8,7 @@ use App\News;
 use App\Label;
 use App\Empresarial;
 use App\Encuesta;
+use App\EncuestaOpciones;
 use App\EstructuraNoticia;
 use Config;
 
@@ -88,6 +89,14 @@ class MainController extends Controller
         //return $empresarial;
 
         return view('main_news.empresarialdetail', compact('empresarial','labels'));
+    }
+
+    public function votoStore($id, Request $request)
+    {
+        $encuesta = EncuestaOpciones::findOrFail($request->input('opcion'));
+        $encuesta->value += 1;
+        $encuesta->update(); 
+        return redirect()->route('home')->with('info', 'Gracias por votar.');
     }
 
 }

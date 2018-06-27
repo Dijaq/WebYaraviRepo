@@ -27,8 +27,16 @@
 				{!!csrf_field()!!}
 				<div style="border-style: dashed; border-width: 1px; padding: 10px">
 					@if(session()->has('info'))
-			    				<h3>{{session('info')}}</h3>
-			  				@else
+			    		<h3>{{session('info')}}</h3>
+			    		<!--<h6>Resultados actuales:</h6>
+			    		@foreach($encuesta->encuestaOpciones as $encuestaOpcion)
+			    			<label style="padding-left: 5px">{{$encuestaOpcion->nameOption}}</label>
+				    		<div class="progress">
+	    						<div class="progress-bar" style="width:70%">{{$encuestaOpcion->value}}</div>
+	  						</div>
+						@endforeach-->
+			    		
+			  		@else
 						<strong><label for="">{{$encuesta->name}}</label></strong>
 						<label for="">Opciones:</label><br>
 						@foreach($encuesta->encuestaOpciones as $encuestaOpcion)
