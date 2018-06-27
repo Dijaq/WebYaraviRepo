@@ -1,5 +1,5 @@
 
-	<div class="publicidad_etiqueta">Publicidad</div>
+	<div class="publicidad_etiqueta"><h5 style="margin-bottom: 0px; padding: 3px;">Publicidad</h5></div>
 
 	<div class="carousel slide" id="carousel-1" data-ride="carousel">
 	<!--Indicadores-->
@@ -20,7 +20,7 @@
 		</div>
 	</div>
 	<br>
-	<div class="publicidad_etiqueta">Encuesta</div>
+	<div class="publicidad_etiqueta"><h5 style="margin-bottom: 0px; padding: 3px;">Encuesta</h5></div>
 		<div>
 			<form method="POST" action="{{route('encuesta.votoStore', $encuesta->id)}}">
 				{!! method_field('PUT') !!}
@@ -28,16 +28,16 @@
 				<div style="border-style: dashed; border-width: 1px; padding: 10px">
 					@if(session()->has('info'))
 			    		<h3>{{session('info')}}</h3>
-			    		<!--<h6>Resultados actuales:</h6>
+			    		<h6>Así va la encuesta:</h6>
 			    		@foreach($encuesta->encuestaOpciones as $encuestaOpcion)
 			    			<label style="padding-left: 5px">{{$encuestaOpcion->nameOption}}</label>
 				    		<div class="progress">
-	    						<div class="progress-bar" style="width:70%">{{$encuestaOpcion->value}}</div>
+	    						<div class="progress-bar" style="width:{{100*$encuestaOpcion->value/$maxvalueEncuesta}}%">{{$encuestaOpcion->value}} voto(s)</div>
 	  						</div>
-						@endforeach-->
+						@endforeach
 			    		
 			  		@else
-						<strong><label for="">{{$encuesta->name}}</label></strong>
+						<strong><label style="font-size: 18px;">{{$encuesta->name}}</label></strong><br>
 						<label for="">Opciones:</label><br>
 						@foreach($encuesta->encuestaOpciones as $encuestaOpcion)
 							<input type="radio" name="opcion" value={{$encuestaOpcion->id}}><label style="padding-left: 5px">{{$encuestaOpcion->nameOption}}</label><br>
