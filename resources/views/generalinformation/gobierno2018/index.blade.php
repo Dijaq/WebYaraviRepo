@@ -255,7 +255,7 @@
 			       		<td>15</td>
 			       		<td>AREQUIPA TRANSFORMACIÓN</td>
 			       		<td>Germán Torres Chambi</td>
-			       		<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."AREQUIPA TRANSFORMACION - Germán Torres Chambi.pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
+			       		<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."AREQUIPA TRANSFORMACION - Germán Torres Chambi..pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
 			       </tr>
 			       <tr>
 			       		<td>16</td>
