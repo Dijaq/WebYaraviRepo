@@ -173,3 +173,7 @@ Route::get('login', ['as' => 'login', 'uses' => 'Auth\LoginController@showLoginF
 Route::post('login', 'Auth\LoginController@login');
 
 Route::get('logout', 'Auth\LoginController@logout');
+
+
+//Information General estatica incluida en la web
+Route::get('yaravi/general/elecciones2018', ['as' => 'elecciones2018.index', 'uses' => 'GeneralInformationController@elecciones2018']);
