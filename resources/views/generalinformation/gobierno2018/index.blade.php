@@ -33,121 +33,121 @@
 			        	<td>2</td>
 			        	<td>ALIANZA PARA EL PROGRESO</td>
 			        	<td>Leonel Cabrera Pino</td>
-			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
+			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."ALIANZA PARA EL PROGRESO - Leonel Cabrera Pino.pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
 			        </tr>
 			        <tr>
 			        	<td>3</td>  	
 			        	<td>AREQUIPA  UNIDOS POR EL GRAN CAMBIO</td>
 			        	<td>Elmer Cáceres Llica</td>
-			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
+			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."AREQUIPA - UNIDOS POR EL GRAN CAMBIO- Elmer Cáceres Llica.pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
 			        </tr>
 			        <tr>
 			        	<td>4</td>
 			        	<td>AREQUIPA TRANSFORMACIÓN</td>
 			        	<td>Javier Ismodes Talavera</td>
-			        	<td style="text-align: center;  padding-bottom: 5px; padding-top: 5px; "><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
+			        	<td style="text-align: center;  padding-bottom: 5px; padding-top: 5px; "><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."AREQUIPA TRANSFORMACION - Javier Ismodes Talavera.pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
 			        </tr>
 			        <tr>
 			        	<td>5</td>
 			        	<td>EL FRENTE AMPLIO</td>
 			        	<td>Héctor Herrera Herrera</td>
-			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
+			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."EL FRENTE AMPLIO POR JUSTICIA, VIDA Y LIBERTAD - Hector Herrera Herrera.pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
 			        </tr>
 			        <tr>
 			        	<td>6</td>
-			        	<td>FRENTE POPULAR  FREPAP</td>
+			        	<td>FRENTE POPULAR FREPAP</td>
 			        	<td>Flaubert Ataucuri Mollenedo</td>
-			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
+			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."FRENTE POPULAR AGRICOLA FIA DEL PERU - FREPAP - Flaubert Ataucuri Mollenedo.pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
 			        </tr>
 			        <tr>
 			        	<td>7</td>
 			        	<td>FUERZA AREQUIPEÑA</td>
 			        	<td>Gustavo Rondón Fudinaga</td>
-			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
+			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."FUERZA AREQUIPEÑA - Gustavo Rondon Fudinaga.pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
 			        </tr>
 			        <tr>
 			        	<td>8</td>
 			        	<td>JUNTOS POR EL DESARROLLO DE AREQUIPA</td>
 			        	<td>Antonio Gamero Márquez</td>
-			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
+			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."JUNTOS POR EL DESARROLLO DE AREQUIPA - Antonio Gamero Márquez.pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
 			        </tr>
 			        <tr>
 			        	<td>9</td>
 			        	<td>JUNTOS POR EL SUR</td>
 			        	<td>Eleana Vela Ramos</td>
-			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
+			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."JUNTOS POR EL SUR - Eleana Vela Ramos.pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
 			        </tr>
 			        <tr>
 			        	<td>10</td>
 			        	<td>MOVIMIENTO REGIONAL AREQUIPA AVANCEMOS</td>
 			        	<td>Freddy Lozano Benique</td>
-			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
+			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."MOVIMIENTO REGIONAL AREQUIPA AVANCEMOS - Freddy Lozano Benique.pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
 			        </tr>
 			        <tr>
 			        	<td>11</td>
 			        	<td>MOVIMIENTO REGIONAL INDEPENDIENTE AREQUIPA MIA</td>
 			        	<td>Hipólito Chaiña Contreras</td>
-			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
+			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."MOVIMIENTO REGIONAL INDEPENDIENTE AREQUIPA MIA - Hipolito Chaiña Contreras.pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
 			        </tr>
 			        <tr>
 			        	<td>12</td>
 			        	<td>PARTIDO APRISTA PERUANO</td>
 			        	<td>Jorge Chirinos Chávez</td>
-			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
+			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."PARTIDO APRISTA PERUANO- Jorge Chirinos Chávez.pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
 			        </tr>
 			        <tr>
 			        	<td>13</td>
 			        	<td>PARTIDO DEMOCRÁTICO SOMOS PERÚ</td>
 			        	<td>Luis Chirinos Chirinos</td>
-			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
+			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."PARTIDO DEMOCRATICO SOMOS PERU - Luis Chirinos Chirinos.pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
 			        </tr>
 			        <tr>
 			        	<td>14</td>
 			        	<td>PARTIDO POPULAR CRISTIANO - PPC</td>
 			        	<td>César Abarca Fernández</td>
-			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
+			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."PARTIDO POPULAR CRISTIANO - PPC- Cesar Abarca Fernandez.pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
 			        </tr>
 			         <tr>
 			         	<td>15</td>
 			        	<td>PERÚ LIBERTARIO</td>
 			        	<td>Juan Valencia Postigo</td>
-			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
+			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."PERU LIBERTARIO - Juan Valencia Postigo.pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
 			        </tr>
 			         <tr>
 			         	<td>16</td>
 			        	<td>PODEMOS POR EL PROGRESO DEL PERÚ</td>
 			        	<td>Carmen Casani Barbachan</td>
-			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
+			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."PODEMOS POR EL PROGRESO DEL PERU - Carmen A. Casani Barbachan .pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
 			        </tr>
 			        <tr>
 			        	<td>17</td>
 			        	<td>RESTAURACIÓN NACIONAL</td>
 			        	<td>Jorge Reyes Luján</td>
-			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
+			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."RESTAURACION NACIONAL - Jorge Reyes Lujan.pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
 			        </tr>
 			        <tr>
 			        	<td>18</td>
 			        	<td>SIEMPRE UNIDOS</td>
 			        	<td>Javier Cáceres Pérez</td>
-			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
+			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."SIEMPRE UNIDOS - Javier Cáceres Pérez.pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
 			        </tr>
 			        <tr>
 			        	<td>19</td>
 			        	<td>TODOS POR EL PERÚ</td>
 			        	<td>Justo Mayta Livisi</td>
-			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
+			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."TODOS POR EL PERU - Justo Mayta Livisi.pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
 			        </tr>
 			        <tr>
 			        	<td>20</td>
 			        	<td>VAMOS PERÚ</td>
 			        	<td>James Posso Sánchez</td>
-			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
+			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."VAMOS PERU - James Posso Sánchez.pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
 			        </tr>
 			        <tr>
 			        	<td>21</td>
 			        	<td>AREQUIPA RENACE</td>
 			        	<td>Alfredo Zegarra Tejada</td>
-			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
+			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."AREQUIPA RENACE - Alfredo Zegarra Tejada.pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
 			        </tr>
 			    </tbody>
 			  </table>

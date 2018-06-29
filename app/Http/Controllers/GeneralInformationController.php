@@ -10,7 +10,7 @@ use Config;
 
 class GeneralInformationController extends Controller
 {
-    public function elecciones2018()
+    public function planesdegobierno2018()
     {
         $encuesta = Encuesta::with('encuestaOpciones')->orderBy('created_at','desc')->get()->first();
         $publicidades = Publicidad::all()->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now());

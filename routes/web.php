@@ -176,4 +176,4 @@ Route::get('logout', 'Auth\LoginController@logout');
 
 
 //Information General estatica incluida en la web
-Route::get('yaravi/general/elecciones2018', ['as' => 'elecciones2018.index', 'uses' => 'GeneralInformationController@elecciones2018']);
+Route::get('yaravi/general/elecciones2018/planesdegobierno', ['as' => 'planesdegobierno2018.index', 'uses' => 'GeneralInformationController@planesdegobierno2018']);
