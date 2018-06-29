@@ -13,7 +13,7 @@
 						</i>
 						</a>
 					</div>
-					<img src="{{asset('storage/'.$new_principal->dirImagePortada)}}" style="width:100%;" alt="Planeta Marte" /> <br />
+					<img src="{{asset('storage/'.$new_principal->dirImagePortada)}}" style="width:100%;" alt="No se pudo cargar" /> <br />
 					<div class="article-principal" style="position: absolute; bottom: 0px; background-color: rgba(171,178,185,0.5); width: 100%">
 						<!--opacity: 0.4;-->
 					<h3><a style="color: white;" href="{{route('newcontent.show', [$new_principal->label->name, $new_principal->titleUrl])}}">{{$new_principal->title}}</a></h3></div>
@@ -34,7 +34,7 @@
 						</i>
 						</a>
 					</div>
-					<img src="{{asset('storage/'.$new_secundaria->dirImagePortada)}}" style="width:100%;" alt="Planeta Marte" /> <br />
+					<img src="{{asset('storage/'.$new_secundaria->dirImagePortada)}}" style="width:100%;" alt="No se pudo cargar" /> <br />
 					<div class="article-contenido"><a style="color: white;" href="{{route('newcontent.show', [$new_secundaria->label->name, $new_secundaria->titleUrl])}}">{{$new_secundaria->title}}</a></div>
 				</div>
 				<div>
@@ -67,7 +67,7 @@
 											</i>
 											</a>
 										</div>
-										<img src="{{asset('storage/'.$new->dirImagePortada)}}" style="width:100%; height: 180px;" alt="Planeta Marte" /> <br />
+										<img src="{{asset('storage/'.$new->dirImagePortada)}}" style="width:100%; height: 180px;" alt="No se pudo cargar" /> <br />
 										<div class="article-contenido"><a style="color: white;" href="{{route('newcontent.show', [$new->label->name, $new->titleUrl])}}">{{$new->title}}</a></div>
 									</div>
 								</article>
@@ -94,7 +94,7 @@
 												</i>
 												</a>
 											</div>
-											<img src="{{asset('storage/'.$new->dirImagePortada)}}" style="width:100%; height: 180px;" alt="Planeta Marte" /> <br />
+											<img src="{{asset('storage/'.$new->dirImagePortada)}}" style="width:100%; height: 180px;" alt="No se pudo cargar" /> <br />
 											<div class="article-contenido"><a style="color: white;" href="{{route('newcontent.show', [$new->label->name, $new->titleUrl])}}">{{$new->title}}</a></div>
 										</div>
 									</article>
@@ -116,7 +116,7 @@
 									<div class="carousel-item active">
 										<div class="row">
 											<div class="col-md-5">
-												<img src="{{asset('storage/'.$empresarial->dirImagePortada)}}" style="width:100%;" alt="Planeta Marte" />
+												<img src="{{asset('storage/'.$empresarial->dirImagePortada)}}" style="width:100%;" alt="No se pudo cargar" />
 											</div>
 											<div class="col-md-7">
 												<div style="font-size: 21px; font-weight: bold; font-family: sans-serif;">
@@ -133,7 +133,7 @@
 									<div class="carousel-item">
 										<div class="row">
 											<div class="col-md-5">
-												<img src="{{asset('storage/'.$empresarial->dirImagePortada)}}" style="width:100%;" alt="Planeta Marte" />
+												<img src="{{asset('storage/'.$empresarial->dirImagePortada)}}" style="width:100%;" alt="No se pudo cargar" />
 											</div>
 											<div class="col-md-7">
 												<div style="font-size: 21px; font-weight: bold; font-family: sans-serif;">
@@ -171,7 +171,7 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div class="nota_etiqueta">{{$new->label->name}}</div>
-					<img src="{{asset('storage/'.$new->dirImagePortada)}}" style="width:100%;" alt="Planeta Marte" />
+					<img src="{{asset('storage/'.$new->dirImagePortada)}}" style="width:100%;" alt="No se pudo cargar" />
 				</div>
 				<div class="col-md-8">
 					<div style="font-size: 21px; font-weight: bold; font-family: sans-serif;">
