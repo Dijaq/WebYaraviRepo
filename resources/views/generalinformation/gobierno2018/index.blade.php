@@ -207,13 +207,13 @@
 			        	<td>7</td>
 			        	<td>SIEMPRE UNIDOS</td>
 			        	<td>Ricardo Medina Minaya</td>
-			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."SIEMPRE UNIDOS - Ricardo Medina Minaya.")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
+			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."SIEMPRE UNIDOS - Ricardo Medina Minaya..pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
 			        </tr>
 			        <tr>
 			        	<td>8</td>
 			        	<td>FUERZA AREQUIPEÑA</td>
 			        	<td>Marco Falconí Picard</td>
-			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."FUERZA AREQUIPEÑA - Marco Falconí Picardo.pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
+			        	<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."FUERZA AREQUIPEÑA - Marco Falconí Picardo..pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
 			        </tr>
 			        <tr>
 			        	<td>9</td>
@@ -267,7 +267,7 @@
 			       		<td>17</td>
 			       		<td>AREQUIPA RENACE</td>
 			       		<td>Omar Candia Aguilar</td>
-			       		<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."AREQUIPA RENACE - Omar Candia Aguilar.pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
+			       		<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."AREQUIPA RENACE - Omar Candia Aguilar..pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
 			       </tr>
 			       <tr>
 			       		<td>18</td>
@@ -285,7 +285,7 @@
 			       		<td>20</td>
 			       		<td>DEMOCRACIA DIRECTA</td>
 			       		<td>Mario Arias León</td>
-			       		<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."DEMOCRACIA DIRECTA - Mario Arias León.pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
+			       		<td style="text-align: center; padding-bottom: 5px; padding-top: 5px;"><a target="_blank" href="{{asset('storage/general/planesgobierno2018/'."DEMOCRACIA DIRECTA - Mario Arias León..pdf")}}"><img src="{{asset('storage/planv3.png')}}" style="width: 50px;"></a></td>
 			       </tr>
 			       <tr>
 			       		<td>21</td>
