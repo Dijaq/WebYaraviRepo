@@ -9,7 +9,8 @@
     <table id="example" class="table table-striped">
         <thead>
           <tr>
-            <th>Fecha Publicación</th>
+            <th style="width: 15%;">Fecha Publicación</th>
+            <th style="width: 16%;">Editor</th>
             <th>Títuto</th>
             <th>Tipo de Noticia</th>
             <th style="width: 16%;">Acciones</th>
@@ -19,6 +20,7 @@
           @foreach($news as $new)
             <tr>
               <td>{{$new->fechaPublicacion}}</td>
+              <td>{{$new->nameEditor}}</td>
               <td>{{$new->title}}</td>
               <td><div style="padding: 3px; background-color: {{$new->label->color}}">{{$new->label->name}}</div></td>       
                  @if($new->estado == 2)

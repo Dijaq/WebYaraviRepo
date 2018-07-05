@@ -44,7 +44,7 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div class="nota_etiqueta">{{$new->label->name}}</div>
-					<img src="{{asset('storage/'.$new->dirImagePortada)}}" style="width:100%;" alt="Planeta Marte" />
+					<img src="{{asset('storage/'.$new->dirImagePortada)}}" style="width:100%;" alt="No se pudo cargar" />
 				</div>
 				<div class="col-md-8">
 					<div style="font-size: 21px; font-weight: bold; font-family: sans-serif;">
