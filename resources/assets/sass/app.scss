@@ -6,7 +6,8 @@
 @import "variables";
 
 // Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+//@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "~bootstrap/scss/bootstrap";
 
 
 .article-contenido{
@@ -171,6 +172,12 @@ p
 {
 	color: red;
 	font-size: 13px;
+}
+
+p img
+{
+	width: 100%;
+	height: auto;
 }
 
 /*Seccion de FOOTER*/
