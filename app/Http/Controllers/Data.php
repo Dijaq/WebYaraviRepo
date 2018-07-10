@@ -20,9 +20,9 @@ class Data extends Controller
     public function index()
     {
         $user = new User;
-        $user->name = 'Karol';
-        $user->lastName = 'Macetas';
-        $user->email = 'karol.macetas@gmail.com';
+        $user->name = 'Redacción';
+        $user->lastName = 'Yaravi';
+        $user->email = 'radaccion.yaravi@gmail.com';
         $user->password = bcrypt('123456');
         $user->idRole = 1;
         $user->estado = 2;
