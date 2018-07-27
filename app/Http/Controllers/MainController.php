@@ -10,6 +10,7 @@ use App\Empresarial;
 use App\Encuesta;
 use App\EncuestaOpciones;
 use App\EstructuraNoticia;
+use App\Videos;
 use Config;
 
 class MainController extends Controller
@@ -57,10 +58,19 @@ class MainController extends Controller
 
         $new_principal = News::with('label')->with('contentnews')->where('idPrioridad', Config::get('constantes.prioridad_principal'))->where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion', 'desc')->get()->first();
 
+        $video = Videos::orderBy('created_at','desc')->get()->first();
+        $neworvideo = 1;
+
+        /*if($video->created_at > $new_principal->fechaPublicacion)
+        {
+            $new_principal = $video;
+            $neworvideo = 2;
+        }*/
+
         $new_secundaria = News::with('label')->with('contentnews')->where('idPrioridad', Config::get('constantes.prioridad_secundaria'))->where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion', 'desc')->get()->first();
 
         $urlServidor = Config::get('constantes.ruta_directorio');
-		return view('main_news.home', compact('publicidades', 'contentnews', 'idPublicidad', 'new_principal', 'new_secundaria', 'labels', 'empresariales', 'encuesta', 'listaUltimasNoticias', 'listaNoticiasLocales', 'listaNoticiasPorTipo', 'idEmpresarial', 'urlServidor','maxvalueEncuesta'));
+		return view('main_news.home', compact('publicidades', 'contentnews', 'idPublicidad', 'new_principal', 'new_secundaria', 'labels', 'empresariales', 'encuesta', 'listaUltimasNoticias', 'listaNoticiasLocales', 'listaNoticiasPorTipo', 'idEmpresarial', 'urlServidor','maxvalueEncuesta','neworvideo'));
 	}
 
     //LISTA DE NOTICIAS POR ETIQUETA

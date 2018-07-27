@@ -175,5 +175,23 @@ Route::post('login', 'Auth\LoginController@login');
 Route::get('logout', 'Auth\LoginController@logout');
 
 
+
+
+//Videos contenido
+Route::get('videos', ['as' => 'video.index', 'uses' => 'VideosController@index']);
+
+Route::get('videos/crear', ['as' => 'video.create', 'uses' => 'VideosController@create']);
+
+Route::post('videos', ['as' => 'video.store', 'uses' => 'VideosController@store']);
+
+Route::get('videos/{id}/editar', ['as' => 'video.edit', 'uses' => 'VideosController@edit']);
+
+Route::put('videos/{id}', ['as' => 'video.update', 'uses' => 'VideosController@update']);
+
+Route::delete('videos/deshabilitar/{id}', ['as' => 'video.deshabilitar', 'uses' => 'VideosController@deshabilitar']);
+
+Route::delete('videos/habilitar/{id}', ['as' => 'video.habilitar', 'uses' => 'VideosController@habilitar']);
+
+
 //Information General estatica incluida en la web
 Route::get('yaravi/general/elecciones2018/planesdegobierno', ['as' => 'planesdegobierno2018.index', 'uses' => 'GeneralInformationController@planesdegobierno2018']);

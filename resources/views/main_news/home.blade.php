@@ -7,24 +7,29 @@
 			<!--<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F231060803576406%2Fvideos%2F2268754023140397%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>-->
 		</div>
 		<div class="col-md-7">
-			<article>
-				<div class="picture left" style="width:100%; position: relative;" > 
-					<div class="nota_etiqueta">{{$new_principal->label->name}}</div>
-					<div class="redes_etiqueta">
-						<a target="_blank" href={{'https://www.facebook.com/sharer/sharer.php?u='.$urlServidor.'noticia/'.$new_principal->label->name.'/'.$new_principal->titleUrl.'&amp;src=sdkpreparse'}} ><i style=" position: absolute; right: 5px; top: 5px;   text-align: center;">
-							<img src="https://www.facebook.com/images/fb_icon_325x325.png" class="img-responsive" width="22px">
-						</i>
-						</a>
+			@if($neworvideo == 2)
+				<div>{{$new_principal->title}}</div>
+				<div class="video-responsive">{!!$new_principal->embebedVideo!!}</div>
+			@else
+				<article>
+					<div class="picture left" style="width:100%; position: relative;" > 
+						<div class="nota_etiqueta">{{$new_principal->label->name}}</div>
+						<div class="redes_etiqueta">
+							<a target="_blank" href={{'https://www.facebook.com/sharer/sharer.php?u='.$urlServidor.'noticia/'.$new_principal->label->name.'/'.$new_principal->titleUrl.'&amp;src=sdkpreparse'}} ><i style=" position: absolute; right: 5px; top: 5px;   text-align: center;">
+								<img src="https://www.facebook.com/images/fb_icon_325x325.png" class="img-responsive" width="22px">
+							</i>
+							</a>
+						</div>
+						<img src="{{asset('storage/'.$new_principal->dirImagePortada)}}" style="width:100%;" alt="No se pudo cargar" /> <br />
+						<div class="article-principal" style="position: absolute; bottom: 0px; background-color: rgba(171,178,185,0.5); width: 100%">
+							<!--opacity: 0.4;-->
+						<h3><a style="color: white;" href="{{route('newcontent.show', [$new_principal->label->name, $new_principal->titleUrl])}}">{{$new_principal->title}}</a></h3></div>
 					</div>
-					<img src="{{asset('storage/'.$new_principal->dirImagePortada)}}" style="width:100%;" alt="No se pudo cargar" /> <br />
-					<div class="article-principal" style="position: absolute; bottom: 0px; background-color: rgba(171,178,185,0.5); width: 100%">
-						<!--opacity: 0.4;-->
-					<h3><a style="color: white;" href="{{route('newcontent.show', [$new_principal->label->name, $new_principal->titleUrl])}}">{{$new_principal->title}}</a></h3></div>
-				</div>
-				<div>
-						{{$new_principal->summary}}
-				</div>
-			</article>
+					<div>
+							{{$new_principal->summary}}
+					</div>
+				</article>
+			@endif
 		</div>
 
 		<div class="col-md-5">			
