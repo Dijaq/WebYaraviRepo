@@ -20,7 +20,9 @@
 		</div>
 	</div>
 	<br>
-		<div style=" background-color: #BD2A2A; color: white; font-family: Gremoria; padding: 5px; font-size: 22px; border-radius: 5px;"><a style="color: white;" href="{{route('planesdegobierno2018.index')}}">Planes de Gobierno 2018</a></div>
+		<div style=" background-color: #BD2A2A; color: white; font-family: Gremoria; padding: 5px; font-size: 22px; border-radius: 5px;"><a style="color: white;" href="{{route('planesdegobierno2018.index')}}">
+		<div><img src="{{asset('storage/Elecciones2018.jpg')}}" style="width:100%;" alt="No se pudo cargar" /> <br /></div></a>
+		</div>
 	<br>
 	<div class="publicidad_etiqueta"><h5 style="margin-bottom: 0px; padding: 3px;">Encuesta</h5></div>
 		<div>
