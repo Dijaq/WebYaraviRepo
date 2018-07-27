@@ -9,7 +9,7 @@
     <thead>
       <tr>
         <th>Url Imagen</th>
-        <th>Imagen</th>
+        <th width="30%">Imagen</th>
         <!--<th>Acciones</th>-->
       </tr>
     </thead>
@@ -17,7 +17,9 @@
       @foreach($imagenes as $imagen)
         <tr>
           <td>{{$urlServidor}}{{$imagen->dirImage}}</td>
-          <td></td>
+          <td>
+            <img src="{{$imagen->dirImage}}" alt="">
+          </td>
           <!--@if($imagen->estado == 2)
             <td align="center">
               <a class="btn btn-info btn-sm" href="{{route('imagen.edit', $imagen->id)}}">Editar</a>
