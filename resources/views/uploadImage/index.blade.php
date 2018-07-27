@@ -8,8 +8,8 @@
 
   <div class="row">
     @foreach($imagenes as $imagen)
-      <div class="col-md-8">{{$urlServidor}}{{$imagen->dirImage}}</div>
-      <div class="col-md-4"><img src="{{$imagen->dirImage}}" width="100%" alt=""></div>    
+      <div class="col-md-8" style="border: solid 1px; padding: 5px;">{{$urlServidor}}{{$imagen->dirImage}}</div>
+      <div class="col-md-4" style="border: solid 1px; padding: 5px;"><img src="{{$imagen->dirImage}}" width="100%" alt=""></div>    
     @endforeach
   </div>
 
