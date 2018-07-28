@@ -180,6 +180,8 @@ Route::get('logout', 'Auth\LoginController@logout');
 //Videos contenido
 Route::get('videos', ['as' => 'video.index', 'uses' => 'VideosController@index']);
 
+Route::get('galeriavideos', ['as' => 'galeriavideos.index', 'uses' => 'VideosController@publicindex']);
+
 Route::get('videos/crear', ['as' => 'video.create', 'uses' => 'VideosController@create']);
 
 Route::post('videos', ['as' => 'video.store', 'uses' => 'VideosController@store']);
