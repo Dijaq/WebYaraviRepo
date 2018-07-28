@@ -8,7 +8,7 @@
 		</div>
 		<div class="col-md-7">
 			@if($neworvideo == 2)
-				<div>{{$new_principal->title}}</div>
+				<div class="article-contenido">{{$new_principal->title}}</div>
 				<div class="video-responsive">{!!$new_principal->embebedVideo!!}</div>
 			@else
 				<article>
