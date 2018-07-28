@@ -10,7 +10,8 @@
         <thead>
           <tr>
             <th>Id</th>
-            <th>Title</th>
+            <th>Título</th>
+            <th style="text-align: center">En vivo</th>
             <th style="text-align: center">Acciones</th>
           </tr>
         </thead>
@@ -19,7 +20,24 @@
             <tr>  
                 <td>{{$video->id}}</td>
                 <td>{{$video->title}}</td>
-                <td><div width="20px" style="background-color: {{$video->color}}">{{$video->color}}</div>
+              @if($video->finalizado == 1)
+                <td align="center">
+                  <form style="display: inline" method="POST" action={{route('video.finalizar', $video->id)}}>
+                    {!! csrf_field() !!}
+                    {!! method_field('DELETE') !!}
+                    <button class="btn btn-info btn-sm">Finalizar Video</button>
+                  </form>
+                </td>
+              @else
+                <td align="center">
+                  <form style="display: inline" method="POST" action={{route('video.desfinalizar', $video->id)}}>
+                    {!! csrf_field() !!}
+                    {!! method_field('DELETE') !!}
+                    <button class="btn btn-danger btn-sm">Activar Video</button>
+                  </form>
+                </td>
+              @endif
+
                 </td>
               @if($video->estado == 2)
                 <td align="center">

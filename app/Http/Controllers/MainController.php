@@ -58,14 +58,18 @@ class MainController extends Controller
 
         $new_principal = News::with('label')->with('contentnews')->where('idPrioridad', Config::get('constantes.prioridad_principal'))->where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion', 'desc')->get()->first();
 
-        $video = Videos::orderBy('created_at','desc')->get()->first();
+        //Incluir video en la sección Principal
+        $video = Videos::where('estado', Config::get('constantes.estado_habilitado'))->where('finalizado', Config::get('constantes.video_nofinalizado'))->orderBy('created_at','desc')->get()->first();
+
+        //return $video;
         $neworvideo = 1;
 
-        if($video->created_at > $new_principal->fechaPublicacion)
-        {
-            $new_principal = $video;
-            $neworvideo = 2;
-        }
+        if(!is_null($video))
+            if($video->created_at > $new_principal->fechaPublicacion)
+            {
+                $new_principal = $video;
+                $neworvideo = 2;
+            }
 
         $new_secundaria = News::with('label')->with('contentnews')->where('idPrioridad', Config::get('constantes.prioridad_secundaria'))->where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion', 'desc')->get()->first();
 

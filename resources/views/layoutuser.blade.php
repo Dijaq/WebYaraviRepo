@@ -34,7 +34,8 @@
 						<li class="nav-item"><a class="nav-link nav-link-c" href="{{route('new.index')}}">Noticias</a></li>
 						<li class="nav-item"><a class="nav-link nav-link-c" href={{route('empresarial.index')}}>Empresariales</a></li>
 						<li class="nav-item"><a class="nav-link nav-link-c" href={{route('encuesta.index')}}>Encuestas</a></li>
-						<li class="nav-item"><a class="nav-link nav-link-c" href={{route('imagen.index')}}>Galeria de Imagenes</a></li>
+						<li class="nav-item"><a class="nav-link nav-link-c" href={{route('video.index')}}>Videos</a></li>
+						<li class="nav-item"><a class="nav-link nav-link-c" href={{route('imagen.index')}}>Galeria Imágenes</a></li>
 						<li class="nav-item"><a class="nav-link" href="/logout" style="color: #D8D8D8">Cerrar Sesion de {{auth()->user()->email}}</a></li>
 					@endif					
 				</ul>

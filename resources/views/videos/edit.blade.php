@@ -14,8 +14,10 @@
       </form>-->
 
       <div align="center">
-        <form method="POST"  style="width: 90%;" action="{{route('video.store')}}" enctype="multipart/form-data">
+        <form method="POST"  style="width: 90%;" action="{{route('video.update', $video->id)}}" enctype="multipart/form-data">
         
+         {!! method_field('PUT') !!}
+      
           {!!csrf_field()!!}
         
           <div class="row">
@@ -25,7 +27,7 @@
                 Titulo: 
               </label>
             </div>
-              <div class="col-md-9"><input class="form-control" type="text" name="titulo" value="{{old('titulo')}}">
+              <div class="col-md-9"><input class="form-control" type="text" name="titulo" value="{{$video->title}}">
                 {!! $errors->first('titulo', '<span class="error">:message</span>') !!}</div>
             <br><br>
 
@@ -36,9 +38,12 @@
             </div>
             <div class="col-md-9">  
               <select class="form-control" name="distribucion" required>
-                <option value="">[Seleccion una opción]</option>
-                @foreach($prioridades as $distribucion)     
-                    <option value="{{$distribucion->id}}" {{old('distribucion') == $distribucion->id ? 'selected':''}}>{{$distribucion->name}}</option>
+                @foreach($prioridades as $prioridad) 
+                  @if($video->idPrioridad == $prioridad->id)    
+                    <option value="{{$prioridad->id}}" selected="selected">{{$prioridad->name}}</option>
+                  @else
+                     <option value="{{$prioridad->id}}">{{$prioridad->name}}</option>
+                  @endif
                 @endforeach
               </select>
             </div>
@@ -50,7 +55,7 @@
               </label>
             </div>
             <div class="col-md-9">
-                <textarea rows="8" class="form-control"  name="contenido">{{old('contenido')}}  
+                <textarea rows="8" class="form-control"  name="contenido">{{old('contenido')}}  {{$video->embebedVideo}}
                 </textarea>
                 {!! $errors->first('contenido', '<span class="error">:message</span>') !!}
             </div> 
