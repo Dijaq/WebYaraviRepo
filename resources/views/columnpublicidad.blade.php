@@ -6,16 +6,10 @@
 		
 		<!--Contenedor de los slide-->
 		<div class="carousel-inner">
-			@foreach($publicidades as $publicidad)
-				@if($idPublicidad === $publicidad->id)
-					<div class="carousel-item active">
-						<a href="{{$publicidad->url_page}}" target="_blank"><img src="{{Storage::url($publicidad->dir_image)}}" alt="" class="img-responsive" style="width:100%;"></a>
-					</div>
-				@else
-					<div class="carousel-item">
-						<a href="{{$publicidad->url_page}}" target="_blank"><img src="{{Storage::url($publicidad->dir_image)}}" alt="" class="img-responsive" style="width:100%;"></a>
-					</div>
-				@endif
+			@foreach($publicidades as $key => $publicidad)	
+				<div class="carousel-item item{{ $key == 0 ? ' active' : '' }}">
+					<a href="{{$publicidad->url_page}}" target="_blank"><img src="{{Storage::url($publicidad->dir_image)}}" alt="" class="img-responsive" style="width:100%;"></a>
+				</div>
 			@endforeach
 		</div>
 	</div>

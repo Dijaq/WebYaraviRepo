@@ -30,8 +30,6 @@ class MainController extends Controller
 
         //$publicidades = Publicidad::all()->where('fechaFin','>', now());
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
-        $idPublicidad = $publicidades->first()->id;
-        $idEmpresarial = $empresariales->first()->id;
     	//$contentnews = News::with('contentnews')->get();
     	$contentnews = News::with('label')->with('contentnews')->get();
 
@@ -74,7 +72,7 @@ class MainController extends Controller
         $new_secundaria = News::with('label')->with('contentnews')->where('idPrioridad', Config::get('constantes.prioridad_secundaria'))->where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion', 'desc')->get()->first();
 
         $urlServidor = Config::get('constantes.ruta_directorio');
-		return view('main_news.home', compact('publicidades', 'contentnews', 'idPublicidad', 'new_principal', 'new_secundaria', 'labels', 'empresariales', 'encuesta', 'listaUltimasNoticias', 'listaNoticiasLocales', 'listaNoticiasPorTipo', 'idEmpresarial', 'urlServidor','maxvalueEncuesta','neworvideo'));
+		return view('main_news.home', compact('publicidades', 'contentnews', 'new_principal', 'new_secundaria', 'labels', 'empresariales', 'encuesta', 'listaUltimasNoticias', 'listaNoticiasLocales', 'listaNoticiasPorTipo', 'urlServidor','maxvalueEncuesta','neworvideo'));
 	}
 
     //LISTA DE NOTICIAS POR ETIQUETA

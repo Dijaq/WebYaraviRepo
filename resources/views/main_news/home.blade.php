@@ -119,9 +119,9 @@
 					<br>
 					<div class="carousel slide" id="carousel-1" data-ride="carousel">
 						<div class="carousel-inner">
-							@foreach($empresariales as $empresarial)
-								@if($idEmpresarial === $empresarial->id)
-									<div class="carousel-item active">
+							@foreach($empresariales as $key => $empresarial)
+								
+									<div class="carousel-item item{{ $key == 0 ? ' active' : '' }}">
 										<div class="row">
 											<div class="col-md-5">
 												<img src="{{asset('storage/'.$empresarial->dirImagePortada)}}" style="width:100%;" alt="No se pudo cargar" />
@@ -137,26 +137,21 @@
 											</div>
 										</div>
 									</div>
-								@else
-									<div class="carousel-item">
-										<div class="row">
-											<div class="col-md-5">
-												<img src="{{asset('storage/'.$empresarial->dirImagePortada)}}" style="width:100%;" alt="No se pudo cargar" />
-											</div>
-											<div class="col-md-7">
-												<div style="font-size: 21px; font-weight: bold; font-family: sans-serif;">
-													<a style="color: black;" href="{{route('empresarial.detail', $empresarial->id)}}">{{$empresarial->title}}</a>
-												</div>
-												<label>{{$empresarial->summary}}</label>
-												<div class="fecha_article">
-													{{$empresarial->fechaPublicacion}}
-												</div>
-											</div>
-										</div>
-									</div>
-								@endif
+								
 							@endforeach
 						</div>
+						<a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev">
+						    <div style="padding: 7px; padding-bottom: 2px; position: absolute; left: 1px; background-color: rgba(42,122,202,0.7);">
+							    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							    <span class="sr-only">Previous</span>
+						    </div>
+						  </a>
+						  <a class="carousel-control-next" href="#carousel-1" role="button" data-slide="next">
+						    <div style="padding: 7px; padding-bottom: 2px; position: absolute; right: 1px; background-color: rgba(42,122,202,0.7);">
+						    	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						    </div>
+						    <span class="sr-only">Next</span>
+						  </a>
 					</div>
 				</div>
 
