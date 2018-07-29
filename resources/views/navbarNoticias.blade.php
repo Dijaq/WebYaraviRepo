@@ -21,3 +21,14 @@
 			</div>
 		</div>
 	</nav>
+
+	<div class="carousel slide" id="carousel-1" data-ride="carousel">
+
+		<div class="carousel-inner">
+			@foreach($publicidadesPrincipal as $key => $publicidad)	
+				<div class="carousel-item item{{ $key == 0 ? ' active' : '' }}" style="margin-bottom: 10px;">
+					<a href="{{$publicidad->url_page}}" target="_blank"><img src="{{Storage::url($publicidad->dir_image)}}" alt="" class="img-responsive" style="width:100%;"></a>
+				</div>
+			@endforeach
+		</div>
+	</div>

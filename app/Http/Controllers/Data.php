@@ -9,6 +9,7 @@ use App\Prioridad;
 use App\Label;
 use App\TipoGaleria;
 use App\TipoDirectorio;
+use App\DistribucionPublicidad;
 
 class Data extends Controller
 {
@@ -19,6 +20,16 @@ class Data extends Controller
      */
     public function index()
     {
+        $distro = new DistribucionPublicidad;
+        $distro->name = 'Principal';
+        $distro->estado = 2;
+        $distro->save();
+
+        $distro = new DistribucionPublicidad;
+        $distro->name = 'Secundaria';
+        $distro->estado = 2;
+        $distro->save();
+
         /*$user = new User;
         $user->name = 'Héctor';
         $user->lastName = 'Tintaya Feria';
@@ -151,9 +162,11 @@ class Data extends Controller
         $tipoDirectorio->save();
         */
 
+        return 'Datos cargados';
+/*
         $listImagenes = new \stdClass();
 
 
-        return view('main_news.prueba',compact('listImagenes'));
+        return view('main_news.prueba',compact('listImagenes'));*/
     }
 }

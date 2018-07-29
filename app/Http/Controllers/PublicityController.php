@@ -6,9 +6,10 @@ use DB;
 use App\Publicidad;
 use App\User;
 use Illuminate\Http\Request;
-use Config;
 use App\Http\Requests\CreatePublicityRequest;
 use Intervention\Image\ImageManager;
+use App\DistribucionPublicidad;
+use Config;
 
 class PublicityController extends Controller
 {
@@ -34,7 +35,8 @@ class PublicityController extends Controller
      */
     public function create()
     {
-        return view('publicity.create');
+        $distribuciones = DistribucionPublicidad::all();
+        return view('publicity.create', compact('distribuciones'));
     }
 
     /**
@@ -72,6 +74,7 @@ class PublicityController extends Controller
         $directorio = 'public/publicity/'.$filename; 
         $publicity = new Publicidad;
         $publicity->idUser = auth()->user()->id;
+        $publicity->idDistribucionPublicidad = $request->input('distribucion');
         $publicity->name = $request->input('nombre');
         $publicity->url_page = $request->input('url_publicidad');
         $publicity->dir_image = $directorio;

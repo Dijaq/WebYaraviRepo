@@ -56,6 +56,21 @@
               <br><br>
 
               <div class="col-md-4">
+                <label for="distribucion" style="text-align:left;">
+                  Distribución:
+                </label>
+              </div>
+              <div class="col-md-8">  
+                <select class="form-control" name="distribucion" required>
+                  <option value="">[Seleccion una opción]</option>
+                  @foreach($distribuciones as $distribucion)     
+                      <option value="{{$distribucion->id}}" {{old('distribucion') == $distribucion->id ? 'selected':''}}>{{$distribucion->name}}</option>
+                  @endforeach
+                </select>
+              </div>
+              <br><br>
+
+              <div class="col-md-4">
                 <label for="dir_image">
                   Imagen de publicidad:
                 </label>
@@ -70,7 +85,7 @@
               </div> 
 
               <br><br>
-             <div class="col-md-12"><input class="btn btn-primary" type="submit" value="Crear"></div>
+             <div class="col-md-12"><input class="btn btn-primary" type="submit" value="Crear Publicidad"></div>
            </div>
          
          </form>
