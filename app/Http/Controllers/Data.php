@@ -19,7 +19,7 @@ class Data extends Controller
      */
     public function index()
     {
-        $user = new User;
+        /*$user = new User;
         $user->name = 'Héctor';
         $user->lastName = 'Tintaya Feria';
         $user->email = 'elescribidor3@hotmail.com';
@@ -35,7 +35,7 @@ class Data extends Controller
         $user->password = bcrypt('123456');
         $user->idRole = 1;
         $user->estado = 2;
-        $user->save();
+        $user->save();*/
 
         /*$user = new User;
         $user->name = 'Maria Luisa';
@@ -151,7 +151,9 @@ class Data extends Controller
         $tipoDirectorio->save();
         */
 
+        $listImagenes = new \stdClass();
 
-        return "Data cargada";
+
+        return view('main_news.prueba',compact('listImagenes'));
     }
 }

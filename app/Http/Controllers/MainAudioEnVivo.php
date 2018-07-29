@@ -20,10 +20,10 @@ class MainAudioEnVivo extends Controller
         $encuesta = Encuesta::with('encuestaOpciones')->orderBy('created_at','desc')->get()->first();
         $publicidades = Publicidad::all()->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now());
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
-        $idPublicidad = $publicidades->first()->id;
+
         $urlServidorComentarios = Config::get('constantes.ruta_directorio_archivos');
 
-        return view('maininformation.audioenvivo.index', compact('publicidades','labels','idPublicidad', 'encuesta','urlServidorComentarios'));
+        return view('maininformation.audioenvivo.index', compact('publicidades','labels', 'encuesta','urlServidorComentarios'));
     }
 
     /**

@@ -30,8 +30,7 @@ class VideosController extends Controller
         $encuesta = Encuesta::with('encuestaOpciones')->orderBy('created_at','desc')->get()->first();
         $publicidades = Publicidad::all()->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now());
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
-        $idPublicidad = $publicidades->first()->id;
-        return view('videos.publicindex', compact('videos','publicidades','labels','idPublicidad','encuesta'));
+        return view('videos.publicindex', compact('videos','publicidades','labels','encuesta'));
     }
 
     /**

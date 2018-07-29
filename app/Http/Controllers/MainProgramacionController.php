@@ -18,8 +18,8 @@ class MainProgramacionController extends Controller
     {
         $publicidades = Publicidad::all()->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now());
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
-        $idPublicidad = $publicidades->first()->id;
-        return view('maininformation.programacion.index', compact('publicidades','labels','idPublicidad'));
+
+        return view('maininformation.programacion.index', compact('publicidades','labels'));
     }
 
     /**
