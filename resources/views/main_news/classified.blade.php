@@ -28,6 +28,9 @@
 				</div>
 			@endforeach
 			</div>
+			<nav aria-label="Page navigation example">
+				{!!$contentnews->links()!!}
+			</nav>
 
 		</div>
 
