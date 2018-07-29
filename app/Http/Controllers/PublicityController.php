@@ -109,7 +109,8 @@ class PublicityController extends Controller
         $publicidad = Publicidad::findOrFail($id);
         $publicidad->fechaInicio =  date("Y-m-d", strtotime($publicidad->fechaInicio));
         $publicidad->fechaFin =  date("Y-m-d", strtotime($publicidad->fechaFin));
-        return view('publicity.edit', compact('publicidad'));
+        $distribuciones = DistribucionPublicidad::all();
+        return view('publicity.edit', compact('publicidad','distribuciones'));
     }
 
     /**
@@ -122,7 +123,7 @@ class PublicityController extends Controller
     public function update(CreatePublicityRequest $request, $id)
     {
         $publicidad = Publicidad::findOrFail($id);
-
+        $publicidad->idDistribucionPublicidad = $request->input('distribucion');
         $publicidad->name = $request->input('nombre');
         $publicidad->url_page = $request->input('url_publicidad');
         $publicidad->fechaInicio = $request->input('fechaInicio');

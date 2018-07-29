@@ -56,6 +56,24 @@
           </div>
           <br><br>
           <div class="col-md-4">
+            <label for="distribucion" style="text-align:left;">
+              Distribución:
+            </label>
+          </div>
+          <div class="col-md-8">  
+            <select class="form-control" name="distribucion" required>
+              @foreach($distribuciones as $distribucion) 
+                @if($publicidad->idDistribucionPublicidad == $distribucion->id)    
+                  <option value="{{$distribucion->id}}" selected="selected">{{$distribucion->name}}</option>
+                @else
+                   <option value="{{$distribucion->id}}">{{$distribucion->name}}</option>
+                @endif
+              @endforeach
+            </select>
+          </div>
+          <br><br>
+
+          <div class="col-md-4">
             <label for="dir_imagen">
               Directorio de la imagen
             </label>
