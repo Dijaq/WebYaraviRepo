@@ -47,7 +47,7 @@
 			</form>
 		</div>
 	<br>
-
+	
 	<div class="clima">
 		<a class="weatherwidget-io" href="https://forecast7.com/es/n16d41n71d54/arequipa/" data-label_1="AREQUIPA" data-label_2="Clima" data-days="3" data-theme="tile_wood" >AREQUIPA Clima</a>
 		<script>
