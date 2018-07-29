@@ -27,7 +27,7 @@ class MainAudioEnVivo extends Controller
 
         $urlServidorComentarios = Config::get('constantes.ruta_directorio_archivos');
 
-        return view('maininformation.audioenvivo.index', compact('publicidades','labels', 'encuesta','urlServidorComentarios'));
+        return view('maininformation.audioenvivo.index', compact('publicidades', 'publicidadesPrincipal','labels', 'encuesta','urlServidorComentarios'));
     }
 
     /**

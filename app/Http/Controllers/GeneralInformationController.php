@@ -20,6 +20,6 @@ class GeneralInformationController extends Controller
         $publicidadesPrincipal = Publicidad::where('idDistribucionPublicidad', 1)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
         
-        return view('generalinformation.gobierno2018.index', compact('publicidades','labels', 'encuesta'));
+        return view('generalinformation.gobierno2018.index', compact('publicidades', 'publicidadesPrincipal','labels', 'encuesta'));
     }
 }

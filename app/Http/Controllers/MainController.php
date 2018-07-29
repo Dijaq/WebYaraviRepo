@@ -40,8 +40,9 @@ class MainController extends Controller
 
         $listaNoticiasLocales = News::with('label')->with('contentnews')->where('idPrioridad', Config::get('constantes.prioridad_local'))->where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_noticias_local'))->get();
 
-        $listaUltimasNoticias = News::with('label')->with('contentnews')->where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_ultimas_noticias'))->get();
+        //$listaUltimasNoticias = News::with('label')->with('contentnews')->where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_ultimas_noticias'))->get();
 
+        $listaUltimasNoticias = News::with('label')->with('contentnews')->where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion', 'desc')->paginate(8);
 //        $NoticiasPorTipo =  new \stdClass();
 
         $listaNoticiasPorTipo = array();
@@ -96,10 +97,10 @@ class MainController extends Controller
         //$contentnews = News::with('contentnews')->get();
         $contentnews = News::with('label')->with('contentnews')->where('idLabelNews', $labelName)->where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_noticias_clasificado_label'))->get();
 
-        $listaUltimasNoticias = News::with('label')->with('contentnews')->where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_ultimas_noticias'))->get();
+        $listaUltimasNoticias = News::with('label')->with('contentnews')->where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_ultimas_noticias'))->paginate(8);
         $urlServidor = Config::get('constantes.ruta_directorio');
 
-        return view('main_news.classified', compact('publicidades', 'contentnews', 'new_principal', 'new_secundaria', 'labels', 'encuesta', 'tipoNoticia', 'listaUltimasNoticias', 'urlServidor'));
+        return view('main_news.classified', compact('publicidades', 'publicidadesPrincipal','contentnews', 'new_principal', 'new_secundaria', 'labels', 'encuesta', 'tipoNoticia', 'listaUltimasNoticias', 'urlServidor'));
     }
 
     //DETALLE DE UNA NOTICIA EMPRESARIAL

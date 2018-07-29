@@ -8,11 +8,11 @@
 				<ul class="navbar-nav" style="font-weight: bold; font-size: 17px;">
 					<!--<li class="nav-item" class="active"><a class="nav-link nav-link-c" href="#">Nosotros</a></li>-->
 
-					<li class="nav-item dropdown">
-				        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+					<li class="nav-item dropdown show">
+				        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="color: white;">
 				          Nosotros
 				        </a>
-				        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				        <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
 				          <a class="dropdown-item" href={{route('nosotros.quienessomos')}}>Quienes Somos</a>
 				          <a class="dropdown-item" href={{route('nosotros.historia')}}>Historia</a>
 				          <a class="dropdown-item" href={{route('nosotros.equipotrabajo')}}>Equipo de Trabajo</a>

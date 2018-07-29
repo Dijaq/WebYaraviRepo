@@ -9,6 +9,7 @@ use Illuminate\Support\Carbon;
 use App\News;
 use App\ContentNews;
 use App\Label;
+use App\Publicidad;
 use Config;
 
 class NewController extends Controller
@@ -28,6 +29,7 @@ class NewController extends Controller
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
         $detailnew = News::with('label')->with('contentnews')->get()->where('titleUrl', $titleUrl)->first();
 
+        $publicidadesPrincipal = Publicidad::where('idDistribucionPublicidad', 1)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
 
         //$fecha = date('l jS \of F Y h:i:s A',strtotime($detailnew->fechaPublicacion));
         //$fecha = strftime('%A, %d de %B de %Y',strtotime($detailnew->fechaPublicacion));
@@ -36,7 +38,7 @@ class NewController extends Controller
 
         $urlServidorComentarios = Config::get('constantes.ruta_directorio_archivos');
 
-        return view('main_news.detailnew', compact('detailnew', 'contentNew', 'moreNews', 'labels', 'urlServidor','urlServidorComentarios'));
+        return view('main_news.detailnew', compact('detailnew', 'publicidadesPrincipal', 'contentNew', 'moreNews', 'labels', 'urlServidor','urlServidorComentarios'));
     }
 
     /**

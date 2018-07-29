@@ -34,7 +34,7 @@ class VideosController extends Controller
         //Publicidad Principal
         $publicidadesPrincipal = Publicidad::where('idDistribucionPublicidad', 1)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
-        return view('videos.publicindex', compact('videos','publicidades','labels','encuesta'));
+        return view('videos.publicindex', compact('videos','publicidades', 'publicidadesPrincipal', 'labels','encuesta'));
     }
 
     /**

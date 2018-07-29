@@ -26,7 +26,7 @@ class MainNosotrosController extends Controller
         $publicidadesPrincipal = Publicidad::where('idDistribucionPublicidad', 1)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
 
-        return view('maininformation.nosotros.quienessomos', compact('publicidades','labels', 'encuesta'));
+        return view('maininformation.nosotros.quienessomos', compact('publicidades', 'publicidadesPrincipal','labels', 'encuesta'));
     }
 
     public function historia()
@@ -39,7 +39,7 @@ class MainNosotrosController extends Controller
         $publicidadesPrincipal = Publicidad::where('idDistribucionPublicidad', 1)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
 
-        return view('maininformation.nosotros.historia', compact('publicidades','labels', 'encuesta'));
+        return view('maininformation.nosotros.historia', compact('publicidades', 'publicidadesPrincipal', 'labels', 'encuesta'));
     }
 
     public function equipotrabajo()
@@ -52,7 +52,7 @@ class MainNosotrosController extends Controller
         $publicidadesPrincipal = Publicidad::where('idDistribucionPublicidad', 1)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
         
-        return view('maininformation.nosotros.equipotrabajo', compact('publicidades','labels','encuesta'));
+        return view('maininformation.nosotros.equipotrabajo', compact('publicidades', 'publicidadesPrincipal', 'labels','encuesta'));
     }
 
     public function index()

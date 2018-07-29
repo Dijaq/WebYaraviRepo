@@ -188,6 +188,9 @@
 			</div>
 			<br>
 			@endforeach
+			<nav aria-label="Page navigation example">
+				{!!$listaUltimasNoticias->links()!!}
+			</nav>
 		</div>
 	</div>		
 
