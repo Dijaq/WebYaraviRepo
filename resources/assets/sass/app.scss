@@ -57,8 +57,15 @@
 .title_article
 {
 	font-family: "Georgia";
-	text-align: justify;
+	font-size: 2.2rem;
 }
+
+@media(max-width:768px){
+.title_article h1{
+		font-size: 1.7rem;
+	}
+}
+
 
 .summary_article
 {
