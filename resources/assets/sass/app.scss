@@ -62,11 +62,16 @@
 }
 
 @media(max-width:768px){
-.title_article h1{
+	.title_article h1{
 		font-size: 1.7rem;
 		font-family: "Georgia";
 		font-weight: bold;
 	}
+
+	.article-principal h3
+  	{
+    	font-size: 1.3rem;
+  	}
 }
 
 
