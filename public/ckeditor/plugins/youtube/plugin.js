@@ -317,7 +317,7 @@
 							}
 						}
 
-						var element = CKEDITOR.dom.element.createFromHtml(content);
+						var element = CKEDITOR.dom.element.createFromHtml('<div class="video-responsive">'+content);
 						var instance = this.getParentEditor();
 						instance.insertElement(element);
 					}
