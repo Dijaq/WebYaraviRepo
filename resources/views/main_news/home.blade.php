@@ -59,7 +59,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="empresarial_etiqueta" style="border-radius: 10px 30px; text-align: center; font-size: 25px;">
-						<strong>Locales</strong>
+						<strong>Actualidad</strong>
 					</div>
 					<br>
 					<div class="row">
