@@ -21,7 +21,7 @@
 								</i>
 								</a>
 							</div>
-							<img src="{{asset('storage/'.$new->dirImagePortada)}}" style="width:100%;" alt="No se pudo cargar" /> <br />
+							<img src="{{asset('storage/'.$new->dirImagePortada)}}" style="width:100%; height: 240px;" alt="No se pudo cargar" /> <br />
 							<div class="article-contenido"><a style="color: white;" href="{{route('newcontent.show', [$new->label->name, $new->titleUrl])}}">{{$new->title}}</a></div>
 						</div>
 					</article>
@@ -35,7 +35,7 @@
 		</div>
 
 		<div class="col-md-3">
-			@include('columnpublicidad');
+			@include('columnpublicidad')
 		</div>
 	</div>
 

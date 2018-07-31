@@ -55,8 +55,7 @@
 
 	<div class="row">
 		<div class="col-md-9">
-			<br>
-
+			
 			<div class="row">
 				<div class="col-md-12">
 					<div class="empresarial_etiqueta" style="border-radius: 10px 30px; text-align: center; font-size: 25px;">
