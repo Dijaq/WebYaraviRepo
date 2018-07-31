@@ -123,7 +123,7 @@
 									<div class="carousel-item item{{ $key == 0 ? ' active' : '' }}">
 										<div class="row">
 											<div class="col-md-5">
-												<img src="{{asset('storage/'.$empresarial->dirImagePortada)}}" style="width:100%;" alt="No se pudo cargar" />
+												<img src="{{asset('storage/'.$empresarial->dirImagePortada)}}" style="width:100%; height: 190px;" alt="No se pudo cargar" />
 											</div>
 											<div class="col-md-7">
 												<div style="font-size: 21px; font-weight: bold; font-family: sans-serif;">
