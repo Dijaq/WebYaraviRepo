@@ -23,8 +23,6 @@ Route::get('/', ['as' => 'home', 'uses' => 'MainController@home']);
 
 Route::get('nota/{labelName}', ['as' => 'classified.show', 'uses' => 'MainController@show']);
 
-Route::get('empresarial/{id}', ['as' => 'empresarial.detail', 'uses' => 'MainController@empresarialDetail']);
-
 //Route::get('noticias/{kind_of_new}', ['as' => 'kind_of_new.show', 'uses' => 'MainController@show']);
 
 //Prueba
@@ -105,6 +103,28 @@ Route::put('empresariales/{id}', ['as' => 'empresarial.update', 'uses' => 'Empre
 Route::delete('empresariales/deshabilitar/{id}', ['as' => 'empresarial.deshabilitar', 'uses' => 'EmpresarialController@deshabilitar']);
 
 Route::delete('empresariales/habilitar/{id}', ['as' => 'empresarial.habilitar', 'uses' => 'EmpresarialController@habilitar']);
+
+Route::get('empresarial/{id}', ['as' => 'empresarial.detail', 'uses' => 'MainController@empresarialDetail']);
+
+
+//Informe especial
+
+Route::get('informesespeciales', ['as' => 'informeespecial.index', 'uses' => 'InformeEspecialController@index']);
+
+Route::get('informesespeciales/crear', ['as' => 'informeespecial.create', 'uses' => 'InformeEspecialController@create']);
+
+Route::post('informesespeciales', ['as' => 'informeespecial.store', 'uses' => 'InformeEspecialController@store']);
+
+Route::get('informesespeciales/{id}/editar', ['as' => 'informeespecial.edit', 'uses' => 'InformeEspecialController@edit']);
+
+Route::put('informesespeciales/{id}', ['as' => 'informeespecial.update', 'uses' => 'InformeEspecialController@update']);
+
+Route::delete('informesespeciales/deshabilitar/{id}', ['as' => 'informeespecial.deshabilitar', 'uses' => 'InformeEspecialController@deshabilitar']);
+
+Route::delete('informesespeciales/habilitar/{id}', ['as' => 'informeespecial.habilitar', 'uses' => 'InformeEspecialController@habilitar']);
+
+Route::get('informesespeciales/{id}', ['as' => 'informeespecial.detail', 'uses' => 'MainController@informeEspecialDetail']);
+
 
 
 

@@ -154,6 +154,50 @@
 					</div>
 				</div>
 
+
+				<div class="col-md-12">
+					<div class="empresarial_etiqueta" style="border-radius: 10px 30px; text-align: center; font-size: 25px;">
+						<strong>Informes Especiales</strong>
+					</div>
+					<br>
+					<div class="carousel slide" id="carousel-e" data-ride="carousel">
+						<div class="carousel-inner">
+							@foreach($informesespeciales as $key => $informeespecial)
+								
+									<div class="carousel-item item{{ $key == 0 ? ' active' : '' }}">
+										<div class="row">
+											<div class="col-md-5">
+												<img src="{{asset('storage/'.$informeespecial->dirImagePortada)}}" style="width:100%; height: 190px;" alt="No se pudo cargar" />
+											</div>
+											<div class="col-md-7">
+												<div style="font-size: 21px; font-weight: bold; font-family: sans-serif;">
+													<a style="color: black;" href="{{route('informeespecial.detail', $informeespecial->id)}}">{{$informeespecial->title}}</a>
+												</div>
+												<label>{{$informeespecial->summary}}</label>
+												<div class="fecha_article">
+													{{$informeespecial->fechaPublicacion}}
+												</div>
+											</div>
+										</div>
+									</div>
+								
+							@endforeach
+						</div>
+						<!--<a class="carousel-control-prev" href="#carousel-e" role="button" data-slide="prev">
+						    <div style="padding: 7px; padding-bottom: 2px; position: absolute; left: 1px; background-color: rgba(42,122,202,0.7);">
+							    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							    <span class="sr-only">Previous</span>
+						    </div>
+						  </a>
+						  <a class="carousel-control-next" href="#carousel-e" role="button" data-slide="next">
+						    <div style="padding: 7px; padding-bottom: 2px; position: absolute; right: 1px; background-color: rgba(42,122,202,0.7);">
+						    	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						    </div>
+						    <span class="sr-only">Next</span>
+						  </a>-->
+					</div>
+				</div>
+
 			</div>
 
 		</div>

@@ -3,7 +3,7 @@
 @section('contenido')
 
   <div align="center">
-  <h1 style="text-align:center;">Nueva Empresarial</h1>
+  <h1 style="text-align:center;">Nuevo Informe Especial</h1>
   <br>
   @if(session()->has('info'))
     <h3>{{session('info')}}</h3>
@@ -14,7 +14,7 @@
       </form>-->
 
       <div align="center">
-        <form method="POST"  style="width: 90%;" action="{{route('empresarial.store')}}" enctype="multipart/form-data">
+        <form method="POST"  style="width: 90%;" action="{{route('informeespecial.store')}}" enctype="multipart/form-data">
         
           {!!csrf_field()!!}
         
@@ -99,7 +99,7 @@
             
           </div>
           <div class="row">
-            <div class="col-md-12"><input class="btn btn-primary" type="submit" value="Crear Empresarial"></div>
+            <div class="col-md-12"><input class="btn btn-primary" type="submit" value="Crear Informe Especial"></div>
           </div>
         
         </form>

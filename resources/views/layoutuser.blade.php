@@ -34,6 +34,7 @@
 						<li class="nav-item"><a class="nav-link nav-link-c" href="{{route('publicity.index')}}">Publicidad</a></li>
 						<li class="nav-item"><a class="nav-link nav-link-c" href="{{route('new.index')}}">Noticias</a></li>
 						<li class="nav-item"><a class="nav-link nav-link-c" href={{route('empresarial.index')}}>Empresariales</a></li>
+						<li class="nav-item"><a class="nav-link nav-link-c" href={{route('informeespecial.index')}}>InformeEspecial</a></li>
 						<li class="nav-item"><a class="nav-link nav-link-c" href={{route('encuesta.index')}}>Encuestas</a></li>
 						<li class="nav-item"><a class="nav-link nav-link-c" href={{route('video.index')}}>Videos</a></li>
 						<li class="nav-item"><a class="nav-link nav-link-c" href={{route('imagen.index')}}>Galeria Imágenes</a></li>

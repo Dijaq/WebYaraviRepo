@@ -6,18 +6,18 @@
 		<div class="col-md-12">
 			<div class="tipo_noticia">
 				<h3>
-					Empresarial
+					Informe Especial
 				</h3>
 			</div>
 			
-			<div class="title_article"><h1>{{$empresarial->title}}</h1></div>
+			<div class="title_article"><h1>{{$informeEspecial->title}}</h1></div>
 
 			<div class="summary_article">
-				{{$empresarial->summary}}
+				{{$informeEspecial->summary}}
 			</div>
 
 			<div class="fecha_article">
-				{{$empresarial->fechaPublicacion}}
+				{{$informeEspecial->fechaPublicacion}}
 			</div>
 		</div>
 		<div class="col-md-8">
@@ -25,7 +25,7 @@
 				<div class="col-md-12">					
 					
 					<div class="picture left" style="width:100%;"> 
-						<img src="{{asset('storage/'.$empresarial->contentEmpresarial->galeria)}}" style="width:100%;" alt="No se pudo cargar" /> <br />
+						<img src="{{asset('storage/'.$informeEspecial->contentInformeEspecial->galeria)}}" style="width:100%;" alt="No se pudo cargar" /> <br />
 					</div>
 					
 				</div>					
@@ -33,7 +33,7 @@
 
 			<div class="row">
 				<div class="content_article col-md-12">
-					{!!$empresarial->contentEmpresarial->content!!}
+					{!!$informeEspecial->contentInformeEspecial->content!!}
 				</div>
 			</div>
 			
@@ -52,7 +52,7 @@
 			<h1>Coméntanos</h1>
 		</div>
 		<div class="col-md-8">
-			<div class="fb-comments" data-href="http://localhost:8000/empresarial/{{$empresarial->id}}"  data-width="100%"  data-numposts="5"></div>
+			<div class="fb-comments" data-href="http://localhost:8000/empresarial/{{$informeEspecial->id}}"  data-width="100%"  data-numposts="5"></div>
 		</div>
 
 
