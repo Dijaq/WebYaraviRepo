@@ -38,7 +38,11 @@ class NewController extends Controller
 
         $urlServidorComentarios = Config::get('constantes.ruta_directorio_archivos');
 
-        return view('main_news.detailnew', compact('detailnew', 'publicidadesPrincipal', 'contentNew', 'moreNews', 'labels', 'urlServidor','urlServidorComentarios'));
+        $kindGaleria = 1;
+        if($detailnew->contentnews->galeria[0] == 'n') 
+           $kindGaleria = 0;
+
+        return view('main_news.detailnew', compact('detailnew', 'publicidadesPrincipal', 'contentNew', 'moreNews', 'labels', 'urlServidor','urlServidorComentarios','kindGaleria'));
     }
 
     /**

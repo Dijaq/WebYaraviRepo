@@ -144,8 +144,78 @@ class AdminNewsController extends Controller
 
         //Creacion del detalle de la noticia
         $contentNew = new ContentNews;
+
+        //Tipo de Galeria
+        if($new->idTipoGaleria == 1)
+            $contentNew->galeria = $directorio;
+        else
+            if($new->idTipoGaleria == 2)//Guardar Carousel
+            {
+                $contentGaleria = "";
+                $contentGaleriaEdit = "";
+
+                 for($i = 1; $i<=$request->input('numeroOpciones'); $i++)
+                 {
+                    $frame = $request->input('fuenteFrame'.$i);
+                    $contentGaleriaEdit .= $request->input('fuenteFrame'.$i).'*';
+
+                    if($i == 1)
+                    {
+                      if($frame[0] == 'h')
+                        $contentGaleria .= '<div class="carousel-item active"><figure class="img-responsive-carousel"><img class="d-block" src="'.$frame.'" alt="First slide"></figure></div>';
+                      else
+                        $contentGaleria.='<div class="carousel-item active"><div class="video-responsive">'.$frame.'</div></div>';
+                    }
+                    else
+                    {
+                      if($frame[0] == 'h')
+                        $contentGaleria .= '<div class="carousel-item"><figure class="img-responsive-carousel"><img class="d-block" src="'.$frame.'" alt="First slide"></figure></div>';
+                      else
+                        $contentGaleria.='<div class="carousel-item"><div class="video-responsive">'.$frame.'</div></div>';
+                    }
+                }
+
+                $contentNumeracion = "";
+                for($i = 1; $i<=$request->input('numeroOpciones'); $i++)
+                {
+                    if($i != 1)
+                    {
+                        $contentNumeracion .= '<li data-target="#carousel-ima" data-slide-to="'.$i.'">'.$i.'</li>';
+                    }
+                    else
+                    {
+                        $contentNumeracion .= '<li data-target="#carousel-ima" data-slide-to="'.$i.'" class="active">'.$i.'</li>';
+                    }
+                    
+                }
+
+                $contentNumeracion = '<ol class="carousel-indicators carousel-indicators-numbers">'.$contentNumeracion.'</ol>';
+
+                $contentGaleria = '<div class="carousel slide" id="carousel-ima" data-ride="carousel" data-interval="false">'.$contentNumeracion.'
+                  <div class="carousel-inner" Id="vcarousel" style="background-color: black;">'
+                    .$contentGaleria.'</div>                
+                <div><a class="carousel-control-prev" href="#carousel-ima" role="button" data-slide="prev">
+                    <div class="carousel-control-prev-style">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </div>
+                </a></div>
+                <div><a class="carousel-control-next" href="#carousel-ima" role="button" data-slide="next">
+                    <div class="carousel-control-next-style">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </div>
+                </a></div></div>';
+
+                $contentNew->galeria = $contentGaleria;
+                $contentNew->galeriaEdit = $contentGaleriaEdit;
+            }
+            else
+            {
+                $contentNew->galeria = $request->input('contenidoIMA');
+            }
+
         $contentNew->idNews = $new->id;
-        $contentNew->galeria = $directorio;
         $contentNew->content = $request->input('contenido');
         $contentNew->estado = Config::get('constantes.estado_habilitado');
         $contentNew->save();

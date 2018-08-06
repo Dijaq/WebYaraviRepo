@@ -70,21 +70,26 @@
           <br>
 
           <div class="col-md-12">
-            <div class="carousel slide" id="carousel-1" data-ride="carousel">
+            <div class="carousel slide" id="carousel-1" data-ride="carousel" data-interval="false">
               <div class="carousel-inner" Id="vcarousel" style="background-color: black;">
                 <!--<div class="carousel-item active">
                   <img class="d-block w-100" src="http://www.radioyaravi.org.pe/storage/news/Fiscalia-20181503.jpg" alt="First slide">
                 </div>-->
               </div>
+            
+              <a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev">
+                <div style="padding: 7px; padding-bottom: 2px; position: absolute; left: 1px; background-color: rgba(42,122,202,0.7);">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </div>
+              </a>
+              <a class="carousel-control-next" href="#carousel-1" role="button" data-slide="next">
+                <div style="padding: 7px; padding-bottom: 2px; position: absolute; right: 1px; background-color: rgba(42,122,202,0.7);">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </div>
+                <span class="sr-only">Next</span>
+              </a>
             </div>
-            <a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carousel-1" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
           </div>
 
           <br>
@@ -94,8 +99,7 @@
           <br>
         
         </form>
-      </div>
-
+      </div> 
       <script type="text/javascript">
         function generarOpciones()
         {
@@ -104,7 +108,7 @@
           let opciones = document.getElementById('Opciones');
           for (i = 1; i <= numeroOpc; i++) { 
             content += '<div class="col-md-4"><label for="fechaFin">Fuente '+i+':</label></div>'+
-            '<div class="col-md-8"><input class="form-control" type="text" name="Opcion'+i+'" id="Opcion'+i+'">{!! $errors->first('fechaFin', '<span class="error">:message</span>') !!}</div>'+
+            '<div class="col-md-8"><textarea rows="3" class="form-control" type="text" name="Opcion'+i+'" id="Opcion'+i+'"></textarea>{!! $errors->first('fechaFin', '<span class="error">:message</span>') !!}</div>'+
             '<br><br>';
           }
           opciones.innerHTML = content;
@@ -121,14 +125,14 @@
             if(i == 1)
             {
               if(im[0] == 'h')
-                content += '<div class="carousel-item active"><img class="d-block w-100" src="'+im+'" alt="First slide"></div>';
+                content += '<div class="carousel-item active"><figure class="img-responsive"><img class="d-block" src="'+im+'" alt="First slide"></figure></div>';
               else
                 content+='<div class="carousel-item active"><div class="video-responsive">'+im+'</div></div>';
             }
             else
             {
               if(im[0] == 'h')
-                content += '<div class="carousel-item"><img class="d-block w-100" src="'+im+'" alt="First slide"></div>';
+                content += '<div class="carousel-item"><figure class="img-responsive"><img class="d-block" src="'+im+'" alt="First slide"></figure></div>';
               else
                 content+='<div class="carousel-item"><div class="video-responsive">'+im+'</div></div>';
             }
@@ -142,3 +146,4 @@
   </div>
 
 @stop
+

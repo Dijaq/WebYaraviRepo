@@ -67,7 +67,7 @@
               <select class="form-control" name="label" required>
                 <option value="">[Seleccion una opción]</option>
                 @foreach($labels as $label)     
-                    <option value="{{$label->id}}" {{old('label') == $label->id ? 'selected':''}}>{{$label->name}}</option>
+                    <option value="{{$label->id}}" {{old('label') == $label->id ? 'selected':''}} >{{$label->name}}</option>
                 @endforeach
               </select>
             </div>
@@ -79,7 +79,7 @@
               </label>
             </div>
             <div class="col-md-3">  
-              <select class="form-control" name="tipogaleria" required>
+              <select onchange="generarGaleria(this.value)" class="form-control" name="tipogaleria" required>
                 <option value="">[Seleccion una opción]</option>
                 @foreach($listTipoGaleria as $tipoGeleria)     
                     <option value="{{$tipoGeleria->id}}" {{old('tipogaleria') == $tipoGeleria->id ? 'selected':''}}>{{$tipoGeleria->name}}</option>
@@ -113,7 +113,17 @@
                 </div>
             </div> 
 
+            <!--Galeria-->
             <br><br>
+
+          <!--Galeria-->
+
+          <!--Imagen diferente, video, audio, u otro iframe-->
+          <div class="col-md-12" style="margin-bottom: 10px">
+            <div class="row" id="galeria">
+              
+            </div>
+          </div>
 
 
             <div class="col-md-3">
@@ -143,11 +153,102 @@
         CKEDITOR.config.width = 'auto';
         CKEDITOR.replace('contenido');
       </script>
+    
       <script>
         Dropzone.options.myAwesomeDropzone = {
           paramName: "file", // Las imágenes se van a usar bajo este nombre de parámetro
           maxFilesize: 2 // Tamaño máximo en MB
         };
+      </script>
+
+       <script type="text/javascript">
+        function generarOpciones()
+        {
+          content = "";
+          let numeroOpc = document.getElementById('numeroOpciones').value;
+          let opciones = document.getElementById('Opciones');
+          for (i = 1; i <= numeroOpc; i++) { 
+            content += '<div class="col-md-3"><label for="fechaFin">Fuente '+i+':</label></div>'+
+            '<div class="col-md-9" style="margin-bottom:10px;"><textarea rows="3" class="form-control" type="text" name="fuenteFrame'+i+'" id="fuenteFrame'+i+'"></textarea>{!! $errors->first('fechaFin', '<span class="error">:message</span>') !!}</div>'+
+            '<br><br>';
+          }
+          opciones.innerHTML = content;
+        }
+
+        function visualizarCarousel()
+        {
+          //Visualizacion carousel
+          content = "";
+          let numeroOpc = document.getElementById('numeroOpciones').value;
+          let opciones = document.getElementById('vcarousel');
+          for (i = 1; i <= numeroOpc; i++) { 
+            let im = document.getElementById('fuenteFrame'+i).value;
+            if(i == 1)
+            {
+              if(im[0] == 'h')
+                content += '<div class="carousel-item active"><figure class="img-responsive-carousel"><img class="d-block" src="'+im+'" alt="First slide"></figure></div>';
+              else
+                content+='<div class="carousel-item active"><div class="video-responsive">'+im+'</div></div>';
+            }
+            else
+            {
+              if(im[0] == 'h')
+                content += '<div class="carousel-item"><figure class="img-responsive-carousel"><img class="d-block" src="'+im+'" alt="First slide"></figure></div>';
+              else
+                content+='<div class="carousel-item"><div class="video-responsive">'+im+'</div></div>';
+            }
+          }
+          opciones.innerHTML = "";
+          opciones.innerHTML += content;
+
+          //Visualizacion Indicators
+          let indicators = document.getElementById('vcarousel-indicators');
+          contentIndicators="";
+          for (i = 1; i <= numeroOpc; i++) { 
+            let im = document.getElementById('fuenteFrame'+i).value;
+            if(i == 1)
+            {
+              contentIndicators += '<li data-target="#carousel-1" data-slide-to="'+i+'" class="active"></li>';
+            }
+            else
+            {
+              contentIndicators += '<li data-target="#carousel-1" data-slide-to="'+i+'"></li>';
+            }
+          }
+          indicators.innerHTML = contentIndicators;
+
+
+          let controlprevnext = document.getElementById('control-prev-next');
+          contentControlprevnext = '<a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev"><div class="carousel-control-prev-style"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></div></a></div><div><a class="carousel-control-next" href="#carousel-1" role="button" data-slide="next"><div class="carousel-control-next-style"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></div></a>';
+
+          controlprevnext.innerHTML = contentControlprevnext;
+        }
+
+        function generarGaleria(option)
+        {
+          let galeria = document.getElementById('galeria');
+          galeria.innerHTML = option;
+
+          content="";
+
+          if(option > 2)
+          {
+            content='<div class="col-md-3"><label for="">Imagen/Video/Audio</label></div><div class="col-md-9" style="margin-bottom:10px;"><textarea rows="10" class="form-control"  name="contenidoIMA">{{old('contenidoIMA')}}</textarea></div>';
+          }
+          else
+            if(option == 2)
+            {
+              content='<div class="col-md-3"><label for="label" style="text-align:left;">Número de Fuentes:</label></div><div class="col-md-3"><select class="form-control" name="numeroOpciones" Id="numeroOpciones">@for ($i = 2; $i <= 20; $i++)<option value="{{$i}}">{{ $i }}</option>@endfor  </select></div><div class="col-md-3"><div class="btn btn-primary" onclick="generarOpciones()">Generar</div></div><br><br>              <div class="col-md-3"><div class="btn btn-success" onclick="visualizarCarousel()">Visualizar</div></div><div class="col-md-12" style="margin-bottom: 10px"><div class="row" Id="Opciones"></div></div><div class="col-md-3"></div><div class="col-md-9" style="margin-bottom: 10px"><div class="carousel slide" id="carousel-1" data-ride="carousel" data-interval="false"><ol class="carousel-indicators" id="vcarousel-indicators"></ol><div class="carousel-inner" Id="vcarousel" style="background-color: black;"></div></div><div id="control-prev-next"></div></div>';
+            }
+
+          galeria.innerHTML = content;
+
+          CKEDITOR.config.height = 400;
+          CKEDITOR.config.width = 'auto';
+          CKEDITOR.replace('contenidoIMA');
+
+        }
+
       </script>
   @endif
   </div>

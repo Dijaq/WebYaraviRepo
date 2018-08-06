@@ -13,6 +13,10 @@
     @endforeach
   </div>
 
+  <nav aria-label="Page navigation example">
+        {!!$imagenes->links()!!}
+  </nav>
+
 	
 
 @stop

@@ -26,10 +26,14 @@
 		</div>
 		<div class="col-md-8">
 			<div class="row">
-				<div class="col-md-12" >						
-					<div class="picture left" style="width:100%;"> 
+				<div class="col-md-12" >
+					@if($kindGaleria == 0)						
+						<div class="picture left" style="width:100%;"> 
 						<img src="{{asset('storage/'.$detailnew->contentnews->galeria)}}" style="width:100%;" alt="No se pudo cargar" /> <br />
-					</div>
+						</div>
+					@else
+						{!!$detailnew->contentnews->galeria!!}
+					@endif
 				</div>
 				
 				<div class="col-md-12">
@@ -55,7 +59,7 @@
 			@foreach($moreNews as $moreNew)
 				<div class="row more_article">					
 					<div class="col-6 col-sm-6 col-md-6" style="">
-						<img class="image" src="{{asset('storage/'.$moreNew->contentnews->galeria)}}" alt="No se pudo cargar" / width="100%">
+						<img class="image" src="{{asset('storage/'.$moreNew->dirImagePortada)}}" alt="No se pudo cargar" / width="100%">
 					</div>
 					<div class="title_more_article col-6 col-sm-6 col-md-6" style="padding-left: 0px;">
 						<a style="color: #34597F; font-weight: bold; font-size: 16px; font-family:'Gremoria';" href="{{route('newcontent.show', [$moreNew->label->name, $moreNew->titleUrl])}}">{{$moreNew->title}}</a>

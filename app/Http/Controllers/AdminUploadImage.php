@@ -21,7 +21,7 @@ class AdminUploadImage extends Controller
      */
     public function index()
     {
-        $imagenes = DirectoryImage::orderBy('created_at','desc')->get();
+        $imagenes = DirectoryImage::orderBy('created_at','desc')->paginate(20);
         $urlServidor = Config::get('constantes.ruta_directorio_archivos');
         return view('uploadImage.index', compact('imagenes', 'urlServidor'));
     }
