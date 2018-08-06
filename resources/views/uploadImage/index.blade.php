@@ -13,7 +13,7 @@
     @endforeach
   </div>
 
-  <nav aria-label="Page navigation example">
+  <nav aria-label="Page navigation example" style="margin-top: 10px;">
         {!!$imagenes->links()!!}
   </nav>
 
