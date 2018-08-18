@@ -8,16 +8,29 @@
 				<ul class="navbar-nav" style="font-weight: bold; font-size: 17px;">
 					<!--<li class="nav-item" class="active"><a class="nav-link nav-link-c" href="#">Nosotros</a></li>-->
 
-					<li class="nav-item dropdown show">
-				        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="color: white;">
+					<li class="nav-item dropdown">
+				        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownYaravi" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
 				          Nosotros
 				        </a>
-				        <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+				        <div class="dropdown-menu" aria-labelledby="navbarDropdownYaravi">
 				          <a class="dropdown-item" href={{route('nosotros.quienessomos')}}>Quienes Somos</a>
 				          <a class="dropdown-item" href={{route('nosotros.historia')}}>Historia</a>
 				          <a class="dropdown-item" href={{route('nosotros.equipotrabajo')}}>Equipo de Trabajo</a>
 				        </div>
 				      </li>
+
+
+				    <li class="nav-item dropdown">
+					  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    Dropdown button
+					  </button>
+					  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					    <a class="dropdown-item" href="#">Action</a>
+					    <a class="dropdown-item" href="#">Another action</a>
+					    <a class="dropdown-item" href="#">Something else here</a>
+					  </div>
+					</li>
+
 					
 					<li class="nav-item"><a class="nav-link nav-link-c" href={{route('servicios.index')}}>Servicios</a></li>
 					<li class="nav-item"><a class="nav-link nav-link-c" href={{route('programacion.index')}}>Programación</a></li>
