@@ -12,7 +12,7 @@ return array(
 	'numero_ultimas_noticias' => 8,
 	'numero_noticias_local' => 3,
 	'numero_noticias_por_label' => 3,
-	'numero_empresariales' => 3,
+	'numero_empresariales' => 5,
 	'numero_noticias_clasificado_label' => 10,
 	'video_finalizado' => 0,
 	'video_nofinalizado' => 1,
