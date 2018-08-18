@@ -167,7 +167,7 @@
 						<strong>Informes Especiales</strong>
 					</div>
 					<br>
-					<div class="carousel slide" id="carousel-e" data-ride="carousel">
+					<div class="carousel slide" id="carousel-i" data-ride="carousel">
 						<div class="carousel-inner">
 							@foreach($informesespeciales as $key => $informeespecial)
 								
@@ -190,13 +190,13 @@
 								
 							@endforeach
 						</div>
-						<a class="carousel-control-prev" href="#carousel-e" role="button" data-slide="prev">
+						<a class="carousel-control-prev" href="#carousel-i" role="button" data-slide="prev">
 						    <div style="padding: 7px; padding-bottom: 2px; position: absolute; left: 1px; background-color: rgba(42,122,202,0.7);">
 							    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 							    <span class="sr-only">Previous</span>
 						    </div>
 						  </a>
-						  <a class="carousel-control-next" href="#carousel-e" role="button" data-slide="next">
+						  <a class="carousel-control-next" href="#carousel-i" role="button" data-slide="next">
 						    <div style="padding: 7px; padding-bottom: 2px; position: absolute; right: 1px; background-color: rgba(42,122,202,0.7);">
 						    	<span class="carousel-control-next-icon" aria-hidden="true"></span>
 						    </div>
