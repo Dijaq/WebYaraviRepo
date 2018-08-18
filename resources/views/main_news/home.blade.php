@@ -101,6 +101,12 @@
 												</i>
 												</a>
 											</div>
+											<div class="redes_etiqueta">
+												<a target="_blank" href={{'https://www.facebook.com/sharer/sharer.php?u='.$urlServidor.'noticia/'.$new->label->name.'/'.$new->titleUrl.'&amp;src=sdkpreparse'}} ><i style=" position: absolute; right: 55px; top: 55px;   text-align: center;">
+													<img src="{{asset('storage/gallery.jpg')}}" class="img-responsive" width="80px">
+												</i>
+												</a>
+											</div>
 											<img src="{{asset('storage/'.$new->dirImagePortada)}}" style="width:100%; height: 180px;" alt="No se pudo cargar" /> <br />
 											<div class="article-contenido"><a style="color: white;" href="{{route('newcontent.show', [$new->label->name, $new->titleUrl])}}">{{$new->title}}</a></div>
 										</div>
@@ -183,18 +189,6 @@
 								
 							@endforeach
 						</div>
-						<!--<a class="carousel-control-prev" href="#carousel-e" role="button" data-slide="prev">
-						    <div style="padding: 7px; padding-bottom: 2px; position: absolute; left: 1px; background-color: rgba(42,122,202,0.7);">
-							    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							    <span class="sr-only">Previous</span>
-						    </div>
-						  </a>
-						  <a class="carousel-control-next" href="#carousel-e" role="button" data-slide="next">
-						    <div style="padding: 7px; padding-bottom: 2px; position: absolute; right: 1px; background-color: rgba(42,122,202,0.7);">
-						    	<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						    </div>
-						    <span class="sr-only">Next</span>
-						  </a>-->
 					</div>
 				</div>
 
