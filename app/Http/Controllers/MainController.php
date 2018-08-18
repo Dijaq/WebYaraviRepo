@@ -85,7 +85,7 @@ class MainController extends Controller
 		return view('main_news.home', compact('publicidades','publicidadesPrincipal', 'contentnews', 'new_principal', 'new_secundaria', 'labels', 'empresariales', 'encuesta', 'listaUltimasNoticias', 'listaNoticiasLocales', 'listaNoticiasPorTipo', 'urlServidor','maxvalueEncuesta','neworvideo','informesespeciales'));
 	}
 
-    //LISTA DE NOTICIAS POR ETIQUETA
+    //LISTA DE NOTICIAS POR ETIQUETA CLASSIFIED
     public function show($labelName)
     {
         $tipoNoticia = Label::findOrFail($labelName);
@@ -145,6 +145,46 @@ class MainController extends Controller
         $encuesta->value += 1;
         $encuesta->update(); 
         return redirect()->route('home')->with('info', 'Gracias por votar.');
+    }
+
+    public function classifiedempresarial()
+    {
+        $tipoNoticia = "EMPRESARIALES";
+        $encuesta = Encuesta::with('encuestaOpciones')->orderBy('created_at','desc')->get()->first();
+         //Publicidad Secundaria
+        $publicidades = Publicidad::where('idDistribucionPublicidad', 2)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
+
+        //Publicidad Principal
+        $publicidadesPrincipal = Publicidad::where('idDistribucionPublicidad', 1)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
+        $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
+
+        //$contentnews = News::with('contentnews')->get();
+        $empresariales = Empresarial::where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion', 'desc')->paginate(Config::get('constantes.numero_noticias_clasificado_label'));
+
+        $listaUltimasNoticias = News::with('label')->with('contentnews')->where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_ultimas_noticias'))->get();
+        $urlServidor = Config::get('constantes.ruta_directorio');
+
+        return view('main_news.classifiedempresarial', compact('publicidades', 'publicidadesPrincipal','empresariales', 'new_principal', 'new_secundaria', 'labels', 'encuesta', 'tipoNoticia', 'listaUltimasNoticias', 'urlServidor'));
+    }
+
+    public function classifiedinformesespeciales()
+    {
+        $tipoNoticia = "INFORMES ESPECIALES";
+        $encuesta = Encuesta::with('encuestaOpciones')->orderBy('created_at','desc')->get()->first();
+         //Publicidad Secundaria
+        $publicidades = Publicidad::where('idDistribucionPublicidad', 2)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
+
+        //Publicidad Principal
+        $publicidadesPrincipal = Publicidad::where('idDistribucionPublicidad', 1)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
+        $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
+
+        //$contentnews = News::with('contentnews')->get();
+        $informesespeciales = InformeEspecial::where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion', 'desc')->paginate(Config::get('constantes.numero_noticias_clasificado_label'));
+
+        $listaUltimasNoticias = News::with('label')->with('contentnews')->where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_ultimas_noticias'))->get();
+        $urlServidor = Config::get('constantes.ruta_directorio');
+
+        return view('main_news.classifiedinformesespeciales', compact('publicidades', 'publicidadesPrincipal','informesespeciales', 'new_principal', 'new_secundaria', 'labels', 'encuesta', 'tipoNoticia', 'listaUltimasNoticias', 'urlServidor'));
     }
 
 }

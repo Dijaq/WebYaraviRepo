@@ -120,7 +120,7 @@
 
 				<div class="col-md-12">
 					<div class="empresarial_etiqueta" style="border-radius: 10px 30px; text-align: center; font-size: 25px;">
-						<strong>Empresariales</strong>
+						<strong><a style="color: white" href={{route('nota.classifiedempresarial')}}>Empresariales</a></strong>
 					</div>
 					<br>
 					<div class="carousel slide" id="carousel-e" data-ride="carousel">
@@ -164,7 +164,7 @@
 
 				<div class="col-md-12">
 					<div class="empresarial_etiqueta" style="border-radius: 10px 30px; text-align: center; font-size: 25px;">
-						<strong>Informes Especiales</strong>
+						<strong><a style="color: white" href={{route('nota.classifiedinformesespeciales')}}>Informes Especiales</a></strong>
 					</div>
 					<br>
 					<div class="carousel slide" id="carousel-i" data-ride="carousel">
