@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layoutNew')
 
 @section('contenido')		
 
@@ -52,7 +52,7 @@
 			<h1>Coméntanos</h1>
 		</div>
 		<div class="col-md-8">
-			<div class="fb-comments" data-href="http://localhost:8000/empresarial/{{$empresarial->id}}"  data-width="100%"  data-numposts="5"></div>
+			<div class="fb-comments" data-href="{{$urlServidor}}/empresarial/{{$empresarial->id}}"  data-width="100%"  data-numposts="5"></div>
 		</div>
 
 

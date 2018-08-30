@@ -119,8 +119,15 @@ class MainController extends Controller
         $publicidades = Publicidad::where('idDistribucionPublicidad', 2)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
         $encuesta = Encuesta::with('encuestaOpciones')->orderBy('created_at','desc')->get()->first();
         $maxvalueEncuesta = EncuestaOpciones::where('idEncuesta', $encuesta->id)->max('value');
+        $urlServidor = Config::get('constantes.ruta_directorio');
 
-        return view('main_news.empresarialdetail', compact('empresarial','labels','publicidadesPrincipal','publicidades','encuesta','maxvalueEncuesta'));
+        $detailNavegador =  new \stdClass();
+        $detailNavegador->title = $empresarial->title;
+        $detailNavegador->summary = $empresarial->summary;
+        $detailNavegador->dirUrl = $urlServidor.'/empresariales/'.$empresarial->titleUrl;
+        $detailNavegador->dirImage = $empresarial->dirImagePortada;
+
+        return view('main_news.empresarialdetail', compact('empresarial','labels','publicidadesPrincipal','publicidades','encuesta','maxvalueEncuesta','urlServidor','detailNavegador'));
     }
 
      //DETALLE DE UN INFORME ESPECIAL
@@ -144,7 +151,7 @@ class MainController extends Controller
         $detailNavegador->dirUrl = $urlServidor.'/informesespeciales/'.$detailnew->titleUrl;
         $detailNavegador->dirImage = $detailnew->dirImagePortada;
 
-        return view('main_news.informeespecialdetail', compact('detailnew','labels','publicidadesPrincipal','publicidades','encuesta','maxvalueEncuesta','detailNavegador'));
+        return view('main_news.informeespecialdetail', compact('detailnew','labels','publicidadesPrincipal','publicidades','encuesta','maxvalueEncuesta','urlServidor','detailNavegador'));
     }
 
     public function votoStore($id, Request $request)
