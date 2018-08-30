@@ -109,7 +109,7 @@ Route::delete('empresariales/deshabilitar/{id}', ['as' => 'empresarial.deshabili
 
 Route::delete('empresariales/habilitar/{id}', ['as' => 'empresarial.habilitar', 'uses' => 'EmpresarialController@habilitar']);
 
-Route::get('empresarial/{id}', ['as' => 'empresarial.detail', 'uses' => 'MainController@empresarialDetail']);
+Route::get('empresarial/{titleUrl}', ['as' => 'empresarial.detail', 'uses' => 'MainController@empresarialDetail']);
 
 
 //Informe especial

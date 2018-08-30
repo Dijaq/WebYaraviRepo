@@ -134,7 +134,7 @@
 											</div>
 											<div class="col-md-7">
 												<div style="font-size: 21px; font-weight: bold; font-family: sans-serif;">
-													<a style="color: black;" href="{{route('empresarial.detail', $empresarial->id)}}">{{$empresarial->title}}</a>
+													<a style="color: black;" href="{{route('empresarial.detail', $empresarial->titleUrl)}}">{{$empresarial->title}}</a>
 												</div>
 												<label>{{$empresarial->summary}}</label>
 												<div class="fecha_article">

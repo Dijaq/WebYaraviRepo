@@ -108,12 +108,12 @@ class MainController extends Controller
     }
 
     //DETALLE DE UNA NOTICIA EMPRESARIAL
-    public function empresarialDetail($id)
+    public function empresarialDetail($titleUrl)
     {
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
         //$empresarial = Empresarial::with('contentEmpresarial')->where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion')->take(Config::get('constantes.numero_empresariales'))->get();
 
-        $empresarial = Empresarial::with('contentEmpresarial')->where('id', $id)->get()->first();
+        $empresarial = Empresarial::with('contentEmpresarial')->where('titleUrl', $titleUrl)->get()->first();
         $publicidadesPrincipal = Publicidad::where('idDistribucionPublicidad', 1)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
         //return $empresarial;
         $publicidades = Publicidad::where('idDistribucionPublicidad', 2)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
