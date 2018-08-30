@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layoutNew')
 
 @section('contenido')		
 
@@ -10,14 +10,14 @@
 				</h3>
 			</div>
 			
-			<div class="title_article"><h1>{{$informeEspecial->title}}</h1></div>
+			<div class="title_article"><h1>{{$detailnew->title}}</h1></div>
 
 			<div class="summary_article">
-				{{$informeEspecial->summary}}
+				{{$detailnew->summary}}
 			</div>
 
 			<div class="fecha_article">
-				{{$informeEspecial->fechaPublicacion}}
+				{{$detailnew->fechaPublicacion}}
 			</div>
 		</div>
 		<div class="col-md-8">
@@ -25,7 +25,7 @@
 				<div class="col-md-12">					
 					
 					<div class="picture left" style="width:100%;"> 
-						<img src="{{asset('storage/'.$informeEspecial->contentInformeEspecial->galeria)}}" style="width:100%;" alt="No se pudo cargar" /> <br />
+						<img src="{{asset('storage/'.$detailnew->contentInformeEspecial->galeria)}}" style="width:100%;" alt="No se pudo cargar" /> <br />
 					</div>
 					
 				</div>					
@@ -33,7 +33,7 @@
 
 			<div class="row">
 				<div class="content_article col-md-12">
-					{!!$informeEspecial->contentInformeEspecial->content!!}
+					{!!$detailnew->contentInformeEspecial->content!!}
 				</div>
 			</div>
 			
@@ -52,7 +52,7 @@
 			<h1>Coméntanos</h1>
 		</div>
 		<div class="col-md-8">
-			<div class="fb-comments" data-href="http://localhost:8000/empresarial/{{$informeEspecial->id}}"  data-width="100%"  data-numposts="5"></div>
+			<div class="fb-comments" data-href="http://localhost:8000/empresarial/{{$detailnew->id}}"  data-width="100%"  data-numposts="5"></div>
 		</div>
 
 

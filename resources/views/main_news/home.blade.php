@@ -178,7 +178,7 @@
 											</div>
 											<div class="col-md-7">
 												<div style="font-size: 21px; font-weight: bold; font-family: sans-serif;">
-													<a style="color: black;" href="{{route('informeespecial.detail', $informeespecial->id)}}">{{$informeespecial->title}}</a>
+													<a style="color: black;" href="{{route('informeespecial.detail', $informeespecial->titleUrl)}}">{{$informeespecial->title}}</a>
 												</div>
 												<label>{{$informeespecial->summary}}</label>
 												<div class="fecha_article">

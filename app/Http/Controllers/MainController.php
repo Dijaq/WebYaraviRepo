@@ -124,19 +124,27 @@ class MainController extends Controller
     }
 
      //DETALLE DE UN INFORME ESPECIAL
-    public function informeEspecialDetail($id)
+    public function informeEspecialDetail($titleUrl)
     {
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
         //$empresarial = Empresarial::with('contentEmpresarial')->where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion')->take(Config::get('constantes.numero_empresariales'))->get();
 
-        $informeEspecial = InformeEspecial::with('contentInformeEspecial')->where('id', $id)->get()->first();
+        $detailnew = InformeEspecial::with('contentInformeEspecial')->get()->where('titleUrl', $titleUrl)->first();
+
         //return $empresarial;
         $publicidadesPrincipal = Publicidad::where('idDistribucionPublicidad', 1)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
         $publicidades = Publicidad::where('idDistribucionPublicidad', 2)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
         $encuesta = Encuesta::with('encuestaOpciones')->orderBy('created_at','desc')->get()->first();
         $maxvalueEncuesta = EncuestaOpciones::where('idEncuesta', $encuesta->id)->max('value');
+        $urlServidor = Config::get('constantes.ruta_directorio');
 
-        return view('main_news.informeespecialdetail', compact('informeEspecial','labels','publicidadesPrincipal','publicidades','encuesta','maxvalueEncuesta'));
+        $detailNavegador =  new \stdClass();
+        $detailNavegador->title = $detailnew->title;
+        $detailNavegador->summary = $detailnew->summary;
+        $detailNavegador->dirUrl = $urlServidor.'/informesespeciales/'.$detailnew->titleUrl;
+        $detailNavegador->dirImage = $detailnew->dirImagePortada;
+
+        return view('main_news.informeespecialdetail', compact('detailnew','labels','publicidadesPrincipal','publicidades','encuesta','maxvalueEncuesta','detailNavegador'));
     }
 
     public function votoStore($id, Request $request)

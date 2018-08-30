@@ -42,7 +42,13 @@ class NewController extends Controller
         if($detailnew->contentnews->galeria[0] == 'n') 
            $kindGaleria = 0;
 
-        return view('main_news.detailnew', compact('detailnew', 'publicidadesPrincipal', 'contentNew', 'moreNews', 'labels', 'urlServidor','urlServidorComentarios','kindGaleria'));
+       $detailNavegador =  new \stdClass();
+       $detailNavegador->title = $detailnew->title;
+       $detailNavegador->summary = $detailnew->summary;
+       $detailNavegador->dirUrl = $urlServidor.'/noticia/'.$detailnew->label->name.'/'.$detailnew->titleUrl;
+       $detailNavegador->dirImage = $detailnew->dirImagePortada;
+
+        return view('main_news.detailnew', compact('detailnew', 'publicidadesPrincipal', 'contentNew', 'moreNews', 'labels', 'urlServidor','urlServidorComentarios','kindGaleria','detailNavegador'));
     }
 
     /**

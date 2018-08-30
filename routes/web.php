@@ -32,6 +32,7 @@ Route::get('notas/informesespeciales', ['as' => 'nota.classifiedinformesespecial
 //Prueba
 Route::get('noticia/{name}/{titleUrl}', ['as' => 'newcontent.show', 'uses' => 'NewController@index']);
 
+
 //Publicidad Contenido
 Route::get('publicidad', ['as' => 'publicity.index', 'uses' => 'PublicityController@index']);
 
@@ -127,7 +128,7 @@ Route::delete('informesespeciales/deshabilitar/{id}', ['as' => 'informeespecial.
 
 Route::delete('informesespeciales/habilitar/{id}', ['as' => 'informeespecial.habilitar', 'uses' => 'InformeEspecialController@habilitar']);
 
-Route::get('informesespeciales/{id}', ['as' => 'informeespecial.detail', 'uses' => 'MainController@informeEspecialDetail']);
+Route::get('informesespeciales/{titleUrl}', ['as' => 'informeespecial.detail', 'uses' => 'MainController@informeEspecialDetail']);
 
 
 
