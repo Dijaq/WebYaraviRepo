@@ -29,17 +29,17 @@ class Data extends Controller
         $distro->name = 'Secundaria';
         $distro->estado = 2;
         $distro->save();
-
+*/
         $user = new User;
-        $user->name = 'Héctor';
-        $user->lastName = 'Tintaya Feria';
-        $user->email = 'elescribidor3@hotmail.com';
+        $user->name = 'Christian Juan';
+        $user->lastName = 'Condori Pari';
+        $user->email = 'cchristianjuan.condori.pari@gmail.com';
         $user->password = bcrypt('123456');
         $user->idRole = 1;
         $user->estado = 2;
         $user->save();
 
-        $user = new User;
+   /*     $user = new User;
         $user->name = 'Carla';
         $user->lastName = 'García Linares';
         $user->email = 'Carla200028@hotmail.com';
@@ -159,13 +159,13 @@ class Data extends Controller
         $tipoDirectorio->name = 'publicity';
         $tipoDirectorio->displayName = 'Publicidad';
         $tipoDirectorio->estado = 2;
-        $tipoDirectorio->save();
+        $tipoDirectorio->save();*/
 
-        return 'Datos cargados';*/
+        return 'Datos cargados';
 
-        $listImagenes = new \stdClass();
+        //$listImagenes = new \stdClass();
 
 
-        return view('main_news.prueba',compact('listImagenes'));
+        //return view('main_news.prueba',compact('listImagenes'));
     }
 }

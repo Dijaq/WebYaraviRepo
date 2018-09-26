@@ -17,7 +17,7 @@
     return view('welcome');
 });*/
 
-//Route::get('data', ['as' => 'data', 'uses' => 'Data@index']);
+Route::get('data', ['as' => 'data', 'uses' => 'Data@index']);
 
 Route::get('/', ['as' => 'home', 'uses' => 'MainController@home']);
 
