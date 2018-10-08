@@ -29,11 +29,15 @@
 			
 			<div class="col-md-3" align="right" style="position: relative;">
 				<div class="row">
-					<div class="col-md-2"></div>
+					<!--<div class="col-md-2"></div>-->
 					<div class="col-md-7"  align="left" style="color: white; font-weight: bold;">
-						En vivo ahora<br>	
-						106.3FM - 930AM
+						<a href="http://radioyaravi.org.pe/yaravi/encuestadoraamakella" target="_blank"><img height="50px" src="{{asset('storage/encuetadoraamakella.PNG')}}" alt=""></a>
+						<br>
+						<!--En vivo ahora<br>	
+						106.3FM - 930AM-->
+
 					</div>
+
 					<div class="play_en_vivo" align="right"  style="position: absolute; right: 20px; top: 0px;">
 						<a href="{{route('audioenvivo.index')}}" target="_blank"><img height="50px" src="{{asset('storage/Playv7.gif')}}" alt=""></a>
 					</div>
