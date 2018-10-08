@@ -7,6 +7,15 @@
 		<div class="information_radio col-md-9">
 			<h1>Resultados Boca de Urna Arequipa 2018</h1>
 
+			<h3>Regional</h3>
+			<p><img alt="" height="600" src="http://www.radioyaravi.org.pe/storage/news/20181008-100138_regional.jpg
+" width="600" /></p>
+			
+			<h4>Provincial</h4>
+			<p>Existe un empate técnico entre los candidatos Omar Candia, Victor Hugo Rivera y Álvaro Mosoco</p>
+			<p><img alt="" height="600" src="http://www.radioyaravi.org.pe/storage/news/20181008-100121_provincial.png" width="600" /></p>
+
+
 			<p>Benigno Cornejo es el virtual alcalde de Cerro Colorado por el movimiento&nbsp;Arequipa Avancemos&nbsp;con 26.4%.</p>
 
 			<p><img alt="" height="600" src="http://www.radioyaravi.org.pe/storage/news/20181008-093850_COLORADO.png" width="600" /></p>
