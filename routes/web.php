@@ -145,6 +145,10 @@ Route::get('yaravi/amakella', ['as' => 'amakella.index', 'uses' => 'MainAmakella
 
 
 
+Route::get('yaravi/encuestadoraamakella', ['as' => 'encuestadoraamakella.index', 'uses' => 'MainEncuestadoraAmakellaController@index']);
+
+
+
 Route::get('yaravi/nosotros/equipodetrabajo', ['as' => 'nosotros.equipotrabajo', 'uses' => 'MainNosotrosController@equipotrabajo']);
 
 Route::get('yaravi/nosotros/historia', ['as' => 'nosotros.historia', 'uses' => 'MainNosotrosController@historia']);

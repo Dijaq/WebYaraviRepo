@@ -23,6 +23,7 @@
 					<li class="nav-item"><a class="nav-link nav-link-c" href={{route('servicios.index')}}>Servicios</a></li>
 					<li class="nav-item"><a class="nav-link nav-link-c" href={{route('programacion.index')}}>Programación</a></li>
 					<li class="nav-item"><a class="nav-link nav-link-c" href={{route('amakella.index')}}>Ama Kella</a></li>
+					<li class="nav-item"><a class="nav-link nav-link-c" href={{route('encuestadoraamakella.index')}}>Encuestadora Amakella</a></li>
 				</ul>
 			</div>
 			
