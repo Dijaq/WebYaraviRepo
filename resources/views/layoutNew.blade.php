@@ -36,7 +36,7 @@
 	  gtag('config', 'UA-121070627-1');
 	</script>
 	
-	<title>Radio Yaraví</title>
+	<title>{{$detailNavegador->title}}</title>
 </head>
 <body>
 	@include('navbarYaravi')
