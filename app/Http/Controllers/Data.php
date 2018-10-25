@@ -31,9 +31,9 @@ class Data extends Controller
         $distro->save();
 */
         $user = new User;
-        $user->name = 'Christian Juan';
-        $user->lastName = 'Condori Pari';
-        $user->email = 'cchristianjuan.condori.pari@gmail.com';
+        $user->name = 'Mirko';
+        $user->lastName = 'Durand';
+        $user->email = 'mdurand2804@gmail.com';
         $user->password = bcrypt('123456');
         $user->idRole = 1;
         $user->estado = 2;

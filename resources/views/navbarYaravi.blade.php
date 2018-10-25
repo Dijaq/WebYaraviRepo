@@ -31,10 +31,10 @@
 				<div class="row">
 					<!--<div class="col-md-2"></div>-->
 					<div class="col-md-7"  align="left" style="color: white; font-weight: bold;">
-						<a href="http://radioyaravi.org.pe/yaravi/encuestadoraamakella" target="_blank"><img height="50px" src="{{asset('storage/25_anios_yaravi_v2.jpg')}}" alt=""></a>
-						<br>
-						<!--En vivo ahora<br>	
-						106.3FM - 930AM-->
+						<!--<a href="http://radioyaravi.org.pe/yaravi/encuestadoraamakella" target="_blank"><img height="50px" src="{{asset('storage/25_anios_yaravi_v2.jpg')}}" alt=""></a>
+						<br>-->
+						En vivo ahora<br>	
+						106.3FM - 930AM
 
 					</div>
 
