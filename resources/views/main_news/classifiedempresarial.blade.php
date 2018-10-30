@@ -22,7 +22,7 @@
 								</a>
 							</div>
 							<img src="{{asset('storage/'.$empresarial->dirImagePortada)}}" style="width:100%; height: 240px;" alt="No se pudo cargar" /> <br />
-							<div class="article-contenido"><a style="color: white;" href="{{route('empresarial.detail', $empresarial->id)}}">{{$empresarial->title}}</a></div>
+							<div class="article-contenido"><a style="color: white;" href="{{route('empresarial.detail', $empresarial->titleUrl)}}">{{$empresarial->title}}</a></div>
 						</div>
 					</article>
 				</div>

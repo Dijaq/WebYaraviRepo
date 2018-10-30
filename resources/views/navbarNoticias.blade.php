@@ -5,9 +5,9 @@
 	</div>
 
 	<nav class="navbar navbar-expand-sm nav-yaravi" role="navigation">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="nav-item" style="border-right: solid 1px #D8D8D8;  font-weight: bold; font-size: 17px; height: 40px;" class="active"><a class="nav-link nav-link-c" href={{route('home')}} style="">Principal</a></div>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navegacion_fm_n" aria-controls="navegacion_fm_n" aria-expanded="false" aria-label="Toggle navigation" >
+			<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navegacion_fm_n" aria-controls="navegacion_fm_n" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon" style="color: black;"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navegacion_fm_n">
