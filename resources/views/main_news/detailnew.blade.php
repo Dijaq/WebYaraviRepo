@@ -51,6 +51,31 @@
 		</div>
 		<!--Seccion de Anuncios-->
 		<div class="col-xs-12 col-sm-12 col-md-4">
+
+			<br>
+			<!--Agregado Publicidad -->
+			<div class="row" style="font-weight: bold;">
+				<div class="col-xs-12 col-sm-12 col-md-12">
+						
+					<div class="publicidad_etiqueta"><h5 style="margin-bottom: 0px; padding: 3px;">Publicidad</h5></div>
+
+					<div class="carousel slide" id="carousel-1" data-ride="carousel">
+					<!--Indicadores-->
+						
+						<!--Contenedor de los slide-->
+						<div class="carousel-inner">
+							@foreach($publicidades as $key => $publicidad)	
+								<div class="carousel-item item{{ $key == 0 ? ' active' : '' }}">
+									<a href="{{$publicidad->url_page}}" target="_blank"><img src="{{Storage::url($publicidad->dir_image)}}" alt="" class="img-responsive" style="width:100%;"></a>
+								</div>
+							@endforeach
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Hasta aqui seccion de publicidad-->
+			<br>
+
 			<div class="row" style="font-weight: bold;">
 				<div class="col-xs-12 col-sm-12 col-md-12">
 					<div style="font-size: 22px; font-family: 'Gremoria';">Más de {{$detailnew->label->name}}</div>

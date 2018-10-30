@@ -47,8 +47,9 @@ class NewController extends Controller
        $detailNavegador->summary = $detailnew->summary;
        $detailNavegador->dirUrl = $urlServidor.'/noticia/'.$detailnew->label->name.'/'.$detailnew->titleUrl;
        $detailNavegador->dirImage = $detailnew->dirImagePortada;
+       $publicidades = Publicidad::where('idDistribucionPublicidad', 2)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
 
-        return view('main_news.detailnew', compact('detailnew', 'publicidadesPrincipal', 'contentNew', 'moreNews', 'labels', 'urlServidor','urlServidorComentarios','kindGaleria','detailNavegador'));
+        return view('main_news.detailnew', compact('publicidades', 'detailnew', 'publicidadesPrincipal', 'contentNew', 'moreNews', 'labels', 'urlServidor','urlServidorComentarios','kindGaleria','detailNavegador'));
     }
 
     /**
