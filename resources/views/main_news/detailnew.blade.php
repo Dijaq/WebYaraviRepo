@@ -52,7 +52,6 @@
 		<!--Seccion de Anuncios-->
 		<div class="col-xs-12 col-sm-12 col-md-4">
 
-			<br>
 			<!--Agregado Publicidad -->
 			<div class="row" style="font-weight: bold;">
 				<div class="col-xs-12 col-sm-12 col-md-12">
