@@ -39,6 +39,17 @@
 
 		};
 	</script>-->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@RadioYaravi">
+	<meta name="twitter:creator" content="@RadioYaravi">
+	<meta name="twitter:domain" content="radioyaravi.org.pe">
+	<meta name="twitter:image" content="https://e.rpp-noticias.io/medium/2018/11/01/382638_703680.jpg">
+	<meta property="twitter:account_id" content="997311201095897089">
+
+
+	<script charset="utf-8" src="https://platform.twitter.com/js/grid~moment~timeline~tweet.a26b00efbad7a82218338ff484d86e56.js"></script>
+	<script charset="utf-8" src="https://platform.twitter.com/js/moment~timeline~tweet.50bff1a04f1f37b6a41fa15859518e07.js"></script>
+	<script charset="utf-8" src="https://platform.twitter.com/js/tweet.7105d49c4a3cba9c5c6727b0e1a9eae8.js"></script>
 
 	<title>Radio Yaraví Arequipa</title>
 </head>

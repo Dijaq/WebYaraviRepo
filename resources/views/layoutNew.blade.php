@@ -12,6 +12,17 @@
     <meta property="og:image" content={{asset('storage/'.$detailNavegador->dirImage)}}/>
     <meta property="og:type" content="article" />
 
+
+    <meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@RadioYaravi">
+	<meta name="twitter:creator" content="@RadioYaravi">
+	<meta name="twitter:domain" content="radioyaravi.org.pe">
+	<meta name="twitter:title" content="{{$detailNavegador->title}}">
+	<meta name="twitter:description" content="{{$detailNavegador->summary}}">
+	<meta name="twitter:image" content={{asset('storage/'.$detailNavegador->dirImage)}}>
+	<meta property="twitter:account_id" content="997311201095897089">
+
+
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <script src="{{asset('js/app.js')}}"></script>
