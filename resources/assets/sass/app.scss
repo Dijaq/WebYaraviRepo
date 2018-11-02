@@ -321,5 +321,16 @@ height: 100%;
 @media(min-width:768px){
 		.nav-yaravi{
 		height: 40px;
+
+		.bd-links{
+		    max-height: calc(100vh - 9rem);
+    		overflow-y: auto;
+    		display: block!important;
+		}
 	}
+}
+
+.bd-links{
+	padding-top: 1rem;
+    padding-bottom: 1rem;
 }
