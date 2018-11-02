@@ -13,10 +13,10 @@
 			<div class="collapse navbar-collapse" id="navegacion_fm_n">
 				<ul class="navbar-nav">
 					@foreach($labels as $label)
-						<li class="nav-item" style="border-right: solid 1px #D8D8D8; font-weight: bold; font-size: 17px; "><a class="nav-link nav-link-c" href={{route('classified.show', $label->id)}}>{{$label->name}}</a></li>
+						<li class="nav-item" style="border-right: solid 1px #D8D8D8; font-weight: bold; font-size: 17px; "><a class="nav-link nav-link-c" style="color: white" href={{route('classified.show', $label->id)}}>{{$label->name}}</a></li>
 					@endforeach
-					<li class="nav-item" style="border-right: solid 1px #D8D8D8; font-weight: bold; font-size: 17px; "><a class="nav-link nav-link-c" href={{route('planesdegobierno2018.index')}}>Elecciones 2018</a></li>
-					<li class="nav-item" style="border-right: solid 1px #D8D8D8; font-weight: bold; font-size: 17px; "><a class="nav-link nav-link-c" href={{route('galeriavideos.index')}}>Videos</a></li>
+					<li class="nav-item" style="border-right: solid 1px #D8D8D8; font-weight: bold; font-size: 17px; "><a class="nav-link nav-link-c" style="color: white" href={{route('planesdegobierno2018.index')}}>Elecciones 2018</a></li>
+					<li class="nav-item" style="border-right: solid 1px #D8D8D8; font-weight: bold; font-size: 17px; "><a class="nav-link nav-link-c" style="color: white" href={{route('galeriavideos.index')}}>Videos</a></li>
 				</ul>
 			</div>
 		</div>
