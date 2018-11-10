@@ -181,4 +181,28 @@ class EmpresarialController extends Controller
     {
         //
     }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function deshabilitar($id)
+    {
+        $label = Empresarial::findOrFail($id);
+        $label->estado = Config::get('constantes.estado_deshabilitado');
+        $label->update();
+
+        return redirect()->route('empresarial.index');
+    }
+
+    public function habilitar($id)
+    {
+        $label = Empresarial::findOrFail($id);
+        $label->estado = Config::get('constantes.estado_habilitado');
+        $label->update();
+
+        return redirect()->route('empresarial.index');
+    }
 }
