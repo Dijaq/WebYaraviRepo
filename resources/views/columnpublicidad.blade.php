@@ -20,7 +20,7 @@
 		<div><img src="{{asset('storage/Elecciones_2018.jpg')}}" style="width:100%;" alt="No se pudo cargar" /> <br /></div></a>
 		</div>
 	<br>-->
-	<div class="publicidad_etiqueta"><h5 style="margin-bottom: 0px; padding: 3px;">Encuesta</h5></div>
+		<div class="publicidad_etiqueta"><h5 style="margin-bottom: 0px; padding: 3px;">Encuesta</h5></div>
 		<div>
 			<form method="POST" action="{{route('encuesta.votoStore', $encuesta->id)}}">
 				{!! method_field('PUT') !!}
@@ -48,7 +48,11 @@
 				</div>
 			</form>
 		</div>
-	<br>
+
+		<br>
+
+	<!--	@include('columnistas')
+	<br>-->
 	
 	<div class="clima">
 		<a class="weatherwidget-io" href="https://forecast7.com/es/n16d41n71d54/arequipa/" data-label_1="AREQUIPA" data-label_2="Clima" data-days="3" data-theme="tile_wood" >AREQUIPA Clima</a>
