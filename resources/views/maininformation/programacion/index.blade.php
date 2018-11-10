@@ -233,7 +233,7 @@
 		</div>-->
 	</div>
 
-	<div class="row">
+	<!--<div class="row">
 		<div class="col-md-8">
 			<br>
 			<br>
@@ -243,7 +243,7 @@
 		<div class="col-md-8">
 			<div class="fb-comments" data-href="http://www.radioyaravi.org.pe/programaci%C3%B3n"  data-width="100%"  data-numposts="5"></div>
 		</div>
-	</div>
+	</div>-->
 	<br>
  
 
