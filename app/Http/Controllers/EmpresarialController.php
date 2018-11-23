@@ -156,7 +156,11 @@ class EmpresarialController extends Controller
      */
     public function edit($id)
     {
-        //
+        $empresarial = Empresarial::with('contentEmpresarial')->where('id', $id)->get()->first();
+        $listUsers = User::all(); 
+        $listTipoGaleria = TipoGaleria::all();
+
+        return view('empresarial.edit', compact('empresarial', 'listUsers', 'listTipoGaleria'));
     }
 
     /**
@@ -168,7 +172,21 @@ class EmpresarialController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $empresarial = Empresarial::findOrFail($id);
+
+        $empresarial->title = $request->input('titulo');
+        $empresarial->summary = $request->input('resumen');
+        $empresarial->nameEditor = $request->input('nombreEditor');
+        $empresarial->idTipoGaleria = $request->input('tipogaleria');
+
+        $empresarialContent = ContentEmpresarial::where('idEmpresarial', $id)->get()->first();
+        $empresarialContent->content = $request->input('contenido');
+
+        $empresarial->update();
+        $empresarialContent->update();
+
+        return redirect()->route('empresarial.index');
+
     }
 
     /**
