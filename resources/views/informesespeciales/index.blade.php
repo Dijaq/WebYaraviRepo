@@ -3,7 +3,7 @@
 @section('contenido')
 
 
-<h1>Empresariales</h1>
+<h1>Informes Especiales</h1>
   <a class="btn btn-primary" href="{{route('informeespecial.create')}}" style="float: right;">Crear Informe Especial</a>
   <br><br>
 	<div class="row">

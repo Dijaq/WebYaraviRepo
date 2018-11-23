@@ -151,7 +151,11 @@ class InformeEspecialController extends Controller
      */
     public function edit($id)
     {
-        //
+        $informeEspecial = InformeEspecial::with('contentInformeEspecial')->where('id', $id)->get()->first();
+        $listUsers = User::all(); 
+        $listTipoGaleria = TipoGaleria::all();
+
+        return view('informesespeciales.edit', compact('informeEspecial', 'listUsers', 'listTipoGaleria'));
     }
 
     /**
@@ -163,7 +167,20 @@ class InformeEspecialController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $informeEspecial = InformeEspecial::findOrFail($id);
+
+        $informeEspecial->title = $request->input('titulo');
+        $informeEspecial->summary = $request->input('resumen');
+        $informeEspecial->nameEditor = $request->input('nombreEditor');
+        $informeEspecial->idTipoGaleria = $request->input('tipogaleria');
+
+        $informeEspecialContent = ContentInformeEspecial::where('idInformeEspecial', $id)->get()->first();
+        $informeEspecialContent->content = $request->input('contenido');
+
+        $informeEspecial->update();
+        $informeEspecialContent->update();
+
+        return redirect()->route('informeespecial.index');
     }
 
     /**

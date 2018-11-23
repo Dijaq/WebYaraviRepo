@@ -3,7 +3,7 @@
 @section('contenido')
 
   <div align="center">
-  <h1 style="text-align:center;">Nuevo Informe Especial</h1>
+  <h1 style="text-align:center;">Editar Informe Especial</h1>
   <br>
   @if(session()->has('info'))
     <h3>{{session('info')}}</h3>
@@ -14,7 +14,9 @@
       </form>-->
 
       <div align="center">
-        <form method="POST"  style="width: 90%;" action="{{route('informeespecial.store')}}" enctype="multipart/form-data">
+        <form method="POST"  style="width: 90%;" action="{{route('informeespecial.update', $informeEspecial->id)}}" enctype="multipart/form-data">
+
+           {!! method_field('PUT') !!}
         
           {!!csrf_field()!!}
         
@@ -25,7 +27,7 @@
                 Titulo: 
               </label>
             </div>
-              <div class="col-md-9"><input class="form-control" type="text" name="titulo" value="{{old('titulo')}}">
+              <div class="col-md-9"><input class="form-control" type="text" name="titulo" value="{{$informeEspecial->title}}">
                 {!! $errors->first('titulo', '<span class="error">:message</span>') !!}</div>
             <br><br>
          
@@ -35,7 +37,7 @@
               </label>
             </div>
             <div class="col-md-9">
-              <input class="form-control" type="text" name="resumen" value="{{old('resumen')}}">
+              <input class="form-control" type="text" name="resumen" value="{{$informeEspecial->summary}}">
               {!! $errors->first('resumen', '<span class="error">:message</span>') !!}
             </div>
                 <br><br>
@@ -47,9 +49,12 @@
             </div>
             <div class="col-md-3">  
               <select class="form-control" name="nombreEditor" required>
-                <option value="">[Seleccion una opción]</option>
-                @foreach($listUsers as $user)     
-                    <option value="{{$user->id}}" {{old('nombreEditor') == $user->id ? 'selected':''}}>{{$user->name}} {{$user->lastName}}</option>
+               @foreach($listUsers as $user) 
+                  @if($informeEspecial->nameEditor === $user->name.' '.$user->lastName)       
+                    <option value="{{$user->name}} {{$user->lastName}}" selected="selected">{{$user->name}} {{$user->lastName}}</option>
+                  @else
+                     <option value="{{$user->name}} {{$user->lastName}}">{{$user->name}} {{$user->lastName}}</option>
+                  @endif
                 @endforeach
               </select>
             </div>
@@ -61,9 +66,12 @@
             </div>
             <div class="col-md-3">  
               <select class="form-control" name="tipogaleria" required>
-                <option value="">[Seleccion una opción]</option>
-                @foreach($listTipoGaleria as $tipoGeleria)     
-                    <option value="{{$tipoGeleria->id}}" {{old('tipogaleria') == $tipoGeleria->id ? 'selected':''}}>{{$tipoGeleria->name}}</option>
+               @foreach($listTipoGaleria as $tipoGeleria)     
+                  @if($informeEspecial->idTipoGaleria == $tipoGeleria->id)    
+                    <option value="{{$tipoGeleria->id}}" selected="selected">{{$tipoGeleria->name}}</option>
+                  @else
+                     <option value="{{$tipoGeleria->id}}">{{$tipoGeleria->name}}</option>
+                  @endif
                 @endforeach
               </select>
             </div>
@@ -91,7 +99,7 @@
               </label>
             </div>
             <div class="col-md-9">
-                <textarea rows="15" class="form-control"  name="contenido">{{old('contenido')}}  
+                <textarea rows="15" class="form-control"  name="contenido">{{$informeEspecial->contentInformeEspecial->content}}  
                 </textarea>
                 {!! $errors->first('contenido', '<span class="error">:message</span>') !!}
             </div> 
