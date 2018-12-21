@@ -16,7 +16,7 @@
     <meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@RadioYaravi">
 	<meta name="twitter:creator" content="@RadioYaravi">
-	<meta name="twitter:domain" content="radioyaravi.org.pe">
+	<meta name="twitter:domain" content="https://radioyaravi.org.pe">
 	<meta name="twitter:title" content="{{$detailNavegador->title}}">
 	<meta name="twitter:description" content="{{$detailNavegador->summary}}">
 	<meta name="twitter:image" content={{asset('storage/'.$detailNavegador->dirImage)}}>

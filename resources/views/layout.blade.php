@@ -42,7 +42,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@RadioYaravi">
 	<meta name="twitter:creator" content="@RadioYaravi">
-	<meta name="twitter:domain" content="radioyaravi.org.pe">
+	<meta name="twitter:domain" content="https://radioyaravi.org.pe">
 	<meta name="twitter:image" content="https://e.rpp-noticias.io/medium/2018/11/01/382638_703680.jpg">
 	<meta property="twitter:account_id" content="997311201095897089">
 

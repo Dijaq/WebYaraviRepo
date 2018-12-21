@@ -17,8 +17,8 @@ return array(
 	'video_finalizado' => 0,
 	'video_nofinalizado' => 1,
 	//'ruta_directorio' => 'https://localhost:8000/'
-	'ruta_directorio' => 'http://www.radioyaravi.org.pe/',
-	'ruta_directorio_archivos' => 'http://www.radioyaravi.org.pe/'
+	'ruta_directorio' => 'https://www.radioyaravi.org.pe/',
+	'ruta_directorio_archivos' => 'https://www.radioyaravi.org.pe/'
 );
 
 ?>
