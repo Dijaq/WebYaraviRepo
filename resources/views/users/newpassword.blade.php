@@ -9,7 +9,7 @@
     <h3>{{session('info')}}</h3>
   @else
 
-      <form method="POST" action="{{route('user.update', $user->id)}}">
+      <form method="POST" action="{{route('user.updatepassword', $user->id)}}">
 
         {!! method_field('PUT') !!}
       
@@ -18,48 +18,31 @@
         <div class="row">
           <div class="col-md-4">
               <label for="nombre">
-                Nombres: 
+                Nueva contraseña: 
               </label>
           </div>
-          <div class="col-md-8"><input class="form-control" type="text" name="nombres" value="{{$user->name}}">
+          <div class="col-md-8"><input class="form-control" type="password" name="password">
             {!! $errors->first('nombre', '<span class="error">:message</span>') !!}</div>
           <br><br>
           <div class="col-md-4">
               <label for="nombre">
-                Apellidos: 
+                Repita la nueva contraseña: 
               </label>
           </div>
-          <div class="col-md-8"><input class="form-control" type="text" name="apellidos" value="{{$user->lastName}}">
+          <div class="col-md-8"><input class="form-control" type="password" name="comparepassword">
             {!! $errors->first('nombre', '<span class="error">:message</span>') !!}</div>
           <br><br>
           <div class="col-md-4">
             <label for="email">
-              Correo Electrónico:
+              Ingrese su contraseña actual:
             </label>
           </div>
           <div class="col-md-8">
-              <input class="form-control" type="text" name="email" value="{{$user->email}}">
+              <input class="form-control" type="password" name="lastpassword">
               {!! $errors->first('email', '<span class="error">:message</span>') !!}
           </div>
                 <br><br>
-          <div class="col-md-4">
-            <label for="color_etiqueta">
-              Rol:
-            </label>
-          </div>
-          <div class="col-md-8">  
-            <select class="form-control" name="role">
-              @foreach($roles as $role)
-                @if($user->idRole === $role->id)
-                  <option value="{{$role->id}}" selected>{{$role->displayName}}</option>
-                @else
-                  <option value="{{$role->id}}">{{$role->displayName}}</option>
-                @endif
-              @endforeach
-            </select>
-          </div>
-          <br><br>
-          
+                    
           <div class="col-md-12"><input class="btn btn-primary" type="submit" value="Editar"></div>
         </div>
       

@@ -25,6 +25,7 @@
           @if($user->estado == 2)
             <td align="center">
               <a class="btn btn-info btn-sm" href="{{route('user.edit', $user->id)}}">Editar</a>
+              <a class="btn btn-primary btn-sm" href="{{route('user.newpassword', $user->id)}}">Cambiar Contraseña</a>
               <form style="display: inline" method="POST" action={{route('user.deshabilitar', $user->id)}}>
                 {!! csrf_field() !!}
                 {!! method_field('DELETE') !!}

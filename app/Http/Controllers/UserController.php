@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use App\User;
 use App\Role;
 use Config;
@@ -81,10 +82,45 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $user = User::findOrFail($id);
-        $user->name = $request->input('nombre');
+        $user->name = $request->input('nombres');
+        $user->lastName = $request->input('apellidos');
         $user->email = $request->input('email');
         $user->idRole = $request->input('role');
         $user->update();
+
+        return redirect()->route('user.index');
+    }
+
+     /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function newpassword($id)
+    {
+        $user = User::findOrFail($id);
+        $roles = Role::all();
+        return view('users.newpassword', compact('user', 'roles'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function updatepassword(Request $request, $id)
+    {
+        $user = User::findOrFail($id);
+        //return bcrypt($user->password);
+        if(($request->input('password') == $request->input('comparepassword')) && (Hash::check(bcrypt($request->input('lastpassword')), $user->password)))
+        {
+            return $user;
+            $user->password = bcrypt($request->input('password'));
+            $user->update();
+        }
 
         return redirect()->route('user.index');
     }

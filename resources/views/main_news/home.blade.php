@@ -73,6 +73,11 @@
 												<img src="https://www.facebook.com/images/fb_icon_325x325.png" class="img-responsive" width="22px">
 											</i>
 											</a>
+											<a target="_blank" href={{'https://twitter.com/share?url='.$urlServidor.'noticia/'.$new->label->name.'/'.$new->titleUrl.'&amp;src=sdkpreparse'}} ><i style=" position: absolute; right: 35px; top: 5px;   text-align: center;">
+												<!--<img src="https://www.facebook.com/images/fb_icon_325x325.png" class="img-responsive" width="22px">-->
+												<img src="https://playbookathlete.com/wp-content/uploads/2016/10/twitter-logo-4.png" class="img-responsive" width="22px">
+											</i>
+											</a>
 										</div>
 										<img src="{{asset('storage/'.$new->dirImagePortada)}}" style="width:100%; height: 180px;" alt="No se pudo cargar" /> <br />
 										<div class="article-contenido"><a style="color: white;" href="{{route('newcontent.show', [$new->label->name, $new->titleUrl])}}">{{$new->title}}</a></div>

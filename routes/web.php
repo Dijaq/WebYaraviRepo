@@ -78,6 +78,10 @@ Route::get('usuarios/{id}/editar', ['as' => 'user.edit', 'uses' => 'UserControll
 
 Route::put('usuarios/{id}', ['as' => 'user.update', 'uses' => 'UserController@update']);
 
+Route::get('usuarios/change/{id}', ['as' => 'user.newpassword', 'uses' => 'UserController@newpassword']);
+
+Route::put('usuarios/change/{id}/password', ['as' => 'user.updatepassword', 'uses' => 'UserController@updatepassword']);
+
 Route::delete('usuarios/deshabilitar/{id}', ['as' => 'user.deshabilitar', 'uses' => 'UserController@deshabilitar']);
 
 Route::delete('usuarios/habilitar/{id}', ['as' => 'user.habilitar', 'uses' => 'UserController@habilitar']);
