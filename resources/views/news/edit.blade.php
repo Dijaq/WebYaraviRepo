@@ -129,7 +129,7 @@
               </label>
             </div>
               <div class="col-md-9">
-                <input class="form-control" type="text" name="resumen" value="{{old('palabrasclave')}}">
+                <input class="form-control" type="text" name="resumen" value="{{$new->keywords}}">
                 {!! $errors->first('resumen', '<span class="error">:message</span>') !!}
               </div>
             <br><br>
