@@ -22,7 +22,7 @@
 	<meta name="twitter:image" content={{asset('storage/'.$detailNavegador->dirImage)}}>
 	<meta property="twitter:account_id" content="997311201095897089">
 
-	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="icon" href={{asset('storage/favicon.ico')}} type="image/x-icon" />
 
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">

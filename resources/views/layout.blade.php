@@ -12,7 +12,7 @@
     <meta name="description" content="Radio Yaravi con Todas las Voces trasmite su señal a través de la Frecuencia Modulada 106.3 (FM) y Amplitud Modulada 930 (AM) y vía internet www.radioyaravi.org.pe con una amplia cobertura además contamos con una variada programación pensada en nuestro público con una diversidad de horarios"/>
     <meta name="og:description" content="Radio Yaravi con Todas las Voces trasmite su señal a través de la Frecuencia Modulada 106.3 (FM) y Amplitud Modulada 930 (AM) y vía internet www.radioyaravi.org.pe con una amplia cobertura además contamos con una variada programación pensada en nuestro público con una diversidad de horarios"/>
 
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href={{asset('storage/favicon.ico')}} type="image/x-icon" />
 
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
