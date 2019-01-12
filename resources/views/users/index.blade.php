@@ -12,7 +12,7 @@
         <th>Apellidos</th>
         <th>Email</th>
         <th>Role</th>
-        <!--<th>Acciones</th>-->
+        <th>Acciones</th>
       </tr>
     </thead>
     <tbody>
@@ -22,6 +22,24 @@
           <td>{{$user->lastName}}</td>
           <td>{{$user->email}}</td>
           <td>{{$user->role->displayName}}</td>
+          @if($user->estado == 2)
+            <td align="center">
+              <a class="btn btn-info btn-sm" href="{{route('user.edit', $user->id)}}">Editar</a>
+              <form style="display: inline" method="POST" action={{route('user.deshabilitar', $user->id)}}>
+                {!! csrf_field() !!}
+                {!! method_field('DELETE') !!}
+                <button class="btn btn-danger btn-sm">Deshabilitar</button>
+              </form>
+            </td>
+          @else
+            <td align="center">
+              <form style="display: inline" method="POST" action={{route('user.habilitar', $user->id)}}>
+                {!! csrf_field() !!}
+                {!! method_field('DELETE') !!}
+                <button class="btn btn-danger btn-sm">Habilitar</button>
+              </form>
+            </td>
+          @endif
           <!--<td>
             <a class="btn btn-info btn-sm" href="{{route('user.edit', $user->id)}}">Editar</a>
             <button class="btn btn-danger btn-sm">Deshabilitar</button>

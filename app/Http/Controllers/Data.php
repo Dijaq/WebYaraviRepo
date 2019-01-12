@@ -168,4 +168,37 @@ class Data extends Controller
 
         //return view('main_news.prueba',compact('listImagenes'));
     }
+
+     /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        $encuesta = Encuesta::findOrFail($id);
+        $encuesta->fechaInicio =  date("Y-m-d", strtotime($encuesta->fechaInicio));
+        $encuesta->fechaFin =  date("Y-m-d", strtotime($encuesta->fechaFin));
+        return view('encuestas.edit', compact('encuesta'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        $encuesta = Encuesta::findOrFail($id);
+        $encuesta->name = $request->input('name');
+        $encuesta->fechaInicio = $request->input('fechaInicio');
+        $encuesta->fechaFin = $request->input('fechaFin');
+
+        $encuesta->update();
+
+        return redirect()->route('encuesta.index');
+    }
 }

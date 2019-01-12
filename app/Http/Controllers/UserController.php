@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Role;
+use Config;
+
 
 class UserController extends Controller
 {
@@ -96,5 +98,31 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+     /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function deshabilitar($id)
+    {
+        $user = User::findOrFail($id);
+        $user->estado = Config::get('constantes.estado_deshabilitado');
+        $user->password = bcrypt('000000');
+        $user->update();
+
+        return redirect()->route('user.index');
+    }
+
+    public function habilitar($id)
+    {
+        $user = User::findOrFail($id);
+        $user->estado = Config::get('constantes.estado_habilitado');
+        $user->password = bcrypt('123456');
+        $user->update();
+
+        return redirect()->route('user.index');
     }
 }

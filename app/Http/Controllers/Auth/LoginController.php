@@ -20,6 +20,8 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
+   //return request()->get('email');
+
     /**
      * Where to redirect users after login.
      *
@@ -37,3 +39,5 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 }
+
+//Usuario Eliminado   Leslie Navinta Alfaro leskarenalfaro@gmail.com

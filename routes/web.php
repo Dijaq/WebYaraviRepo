@@ -78,6 +78,10 @@ Route::get('usuarios/{id}/editar', ['as' => 'user.edit', 'uses' => 'UserControll
 
 Route::put('usuarios/{id}', ['as' => 'user.update', 'uses' => 'UserController@update']);
 
+Route::delete('usuarios/deshabilitar/{id}', ['as' => 'user.deshabilitar', 'uses' => 'UserController@deshabilitar']);
+
+Route::delete('usuarios/habilitar/{id}', ['as' => 'user.habilitar', 'uses' => 'UserController@habilitar']);
+
 
 //News
 Route::get('noticias', ['as' => 'new.index', 'uses' => 'AdminNewsController@index']);
