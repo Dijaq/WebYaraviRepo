@@ -129,8 +129,8 @@
               </label>
             </div>
               <div class="col-md-9">
-                <input class="form-control" type="text" name="resumen" value="{{$new->keywords}}">
-                {!! $errors->first('resumen', '<span class="error">:message</span>') !!}
+                <input class="form-control" type="text" name="palabrasclave" value="{{$new->keywords}}">
+                {!! $errors->first('palabrasclave', '<span class="error">:message</span>') !!}
               </div>
             <br><br>
 
