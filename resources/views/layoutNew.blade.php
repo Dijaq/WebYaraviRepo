@@ -4,6 +4,9 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="keywords" content="{{$detailNavegador->keywords}}">
+
     <meta property="og:url" content="{{$detailNavegador->dirUrl}}"/>
     <meta property="fb:app_id" content="629367300738154" />
     <meta property="og:title" content="{{$detailNavegador->title}}"/>

@@ -44,6 +44,7 @@ class NewController extends Controller
 
        $detailNavegador =  new \stdClass();
        $detailNavegador->title = $detailnew->title;
+       $detailNavegador->keywords = $detailnew->keywords;
        $detailNavegador->summary = $detailnew->summary;
        $detailNavegador->dirUrl = $urlServidor.'/noticia/'.$detailnew->label->name.'/'.$detailnew->titleUrl;
        $detailNavegador->dirImage = $detailnew->dirImagePortada;
