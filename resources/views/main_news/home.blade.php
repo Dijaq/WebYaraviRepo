@@ -19,6 +19,10 @@
 								<img src="https://www.facebook.com/images/fb_icon_325x325.png" class="img-responsive" width="22px">
 							</i>
 							</a>
+							<a target="_blank" href={{'https://twitter.com/share?url='.$urlServidor.'noticia/'.str_slug($new_principal->label->name).'/'.$new_principal->titleUrl.'&amp;src=sdkpreparse'}} ><i style=" position: absolute; right: 35px; top: 5px;   text-align: center;">
+								<img src="https://playbookathlete.com/wp-content/uploads/2016/10/twitter-logo-4.png" class="img-responsive" width="22px">
+							</i>
+							</a>
 						</div>
 						<img src="{{asset('storage/'.$new_principal->dirImagePortada)}}" style="width:100%;" alt="No se pudo cargar" /> <br />
 						<div class="article-principal" style="position: absolute; bottom: 0px; background-color: rgba(171,178,185,0.5); width: 100%">
@@ -39,6 +43,10 @@
 					<div class="redes_etiqueta">
 						<a target="_blank" href={{'https://www.facebook.com/sharer/sharer.php?u='.$urlServidor.'noticia/'.str_slug($new_secundaria->label->name).'/'.$new_secundaria->titleUrl.'&amp;src=sdkpreparse'}} ><i style=" position: absolute; right: 5px; top: 5px;   text-align: center;">
 							<img src="https://www.facebook.com/images/fb_icon_325x325.png" class="img-responsive" width="22px">
+						</i>
+						</a>
+						<a target="_blank" href={{'https://twitter.com/share?url='.$urlServidor.'noticia/'.str_slug($new_secundaria->label->name).'/'.$new_secundaria->titleUrl.'&amp;src=sdkpreparse'}} ><i style=" position: absolute; right: 35px; top: 5px;   text-align: center;">
+							<img src="https://playbookathlete.com/wp-content/uploads/2016/10/twitter-logo-4.png" class="img-responsive" width="22px">
 						</i>
 						</a>
 					</div>
@@ -74,7 +82,6 @@
 											</i>
 											</a>
 											<a target="_blank" href={{'https://twitter.com/share?url='.$urlServidor.'noticia/'.$new->label->name.'/'.$new->titleUrl.'&amp;src=sdkpreparse'}} ><i style=" position: absolute; right: 35px; top: 5px;   text-align: center;">
-												<!--<img src="https://www.facebook.com/images/fb_icon_325x325.png" class="img-responsive" width="22px">-->
 												<img src="https://playbookathlete.com/wp-content/uploads/2016/10/twitter-logo-4.png" class="img-responsive" width="22px">
 											</i>
 											</a>
@@ -103,6 +110,10 @@
 											<div class="redes_etiqueta">
 												<a target="_blank" href={{'https://www.facebook.com/sharer/sharer.php?u='.$urlServidor.'noticia/'."'".str_slug($new->label->name)."'".'/'.$new->titleUrl.'&amp;src=sdkpreparse'}} ><i style=" position: absolute; right: 5px; top: 5px;   text-align: center;">
 													<img src="https://www.facebook.com/images/fb_icon_325x325.png" class="img-responsive" width="22px">
+												</i>
+												</a>
+												<a target="_blank" href={{'https://twitter.com/share?url='.$urlServidor.'noticia/'.str_slug($new->label->name)."'".'/'.$new->titleUrl.'&amp;src=sdkpreparse'}} ><i style=" position: absolute; right: 35px; top: 5px;   text-align: center;">
+													<img src="https://playbookathlete.com/wp-content/uploads/2016/10/twitter-logo-4.png" class="img-responsive" width="22px">
 												</i>
 												</a>
 											</div>
