@@ -111,7 +111,7 @@
                 <input class="form-control" type="text" name="resumen" value="{{$new->summary}}">
                 {!! $errors->first('resumen', '<span class="error">:message</span>') !!}
               </div>
-                  <br><br>
+            <br><br>
             <!--<div class="col-md-3">
               <label for="dir_imagen" style="text-align:left;">
                 Directorio de la imagen:
@@ -123,10 +123,21 @@
                   <br>
             </div>-->
 
-          <div class="col-md-3">
-                <label for="dir_image">
-                  Imagen de Portada:
-                </label>
+             <div class="col-md-3">
+              <label for="palabrasclave" style="text-align:left;">
+                Palabras clave:
+              </label>
+            </div>
+              <div class="col-md-9">
+                <input class="form-control" type="text" name="resumen" value="{{old('palabrasclave')}}">
+                {!! $errors->first('resumen', '<span class="error">:message</span>') !!}
+              </div>
+            <br><br>
+
+            <div class="col-md-3">
+              <label for="dir_image">
+                Imagen de Portada:
+              </label>
             </div>
             <div class="col-md-9">
                 <div class="custom-file">

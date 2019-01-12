@@ -108,6 +108,7 @@ class AdminNewsController extends Controller
         $new->idLabelNews = $request->input('label');
         $new->idPrioridad = $request->input('distribucion');
         $new->idTipoGaleria = $request->input('tipogaleria');
+        $new->keywords = $request->input('palabrasclave');
         $new->dirImagePortada = $directorio;
         $user = User::findOrFail($request->input('nombreEditor'));
         $new->nameEditor = $user->name.' '.$user->lastName;
@@ -268,6 +269,7 @@ class AdminNewsController extends Controller
         $new->idPrioridad = $request->input('distribucion');;
         $new->idLabelNews = $request->input('label');
         $new->idTipoGaleria = $request->input('tipogaleria');
+        $new->keywords = $request->input('palabrasclave');
        
 
         $newContent = ContentNews::where('idNews', $id)->get()->first();
