@@ -46,7 +46,7 @@ class NewController extends Controller
        $detailNavegador->title = $detailnew->title;
        $detailNavegador->keywords = $detailnew->keywords;
        $detailNavegador->summary = $detailnew->summary;
-       $detailNavegador->dirUrl = $urlServidor.'/noticia/'.$detailnew->label->name.'/'.$detailnew->titleUrl;
+       $detailNavegador->dirUrl = $urlServidor.'noticia/'.$detailnew->label->name.'/'.$detailnew->titleUrl;
        $detailNavegador->dirImage = $detailnew->dirImagePortada;
        $publicidades = Publicidad::where('idDistribucionPublicidad', 2)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
 
