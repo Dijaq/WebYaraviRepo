@@ -3,6 +3,10 @@
         Options -MultiViews -Indexes
     </IfModule>
 
+    <IfModule mod_headers.c> 
+        Header set Strict-Transport-Security "max-age=10886400; includeSubDomains; preload" 
+    </IfModule>
+
     RewriteEngine On
 
     # Handle Authorization Header
