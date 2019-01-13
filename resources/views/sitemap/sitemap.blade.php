@@ -10,7 +10,7 @@
     @foreach($news as $new)
         <url>
             <loc>{{$urlServidor.'noticia/'.str_slug($new->label->name).'/'.$new->titleUrl}}</loc>
-            <lastmod>{{$new->fechaPublicacion}}</lastmod>
+            <lastmod>{{date('Y-m-d', strtotime($new->fechaPublicacion))}}</lastmod>
             <changefreq>monthly</changefreq>
             <priority>0.8</priority>
         </url>
