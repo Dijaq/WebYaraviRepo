@@ -4,7 +4,7 @@
     </IfModule>
 
     <IfModule mod_headers.c> 
-        Header set Strict-Transport-Security "max-age=10886400; includeSubDomains; preload" 
+        Header set Strict-Transport-Security "max-age=10886400; includeSubDomains; preload" env=HTTPS
     </IfModule>
 
     RewriteEngine On
