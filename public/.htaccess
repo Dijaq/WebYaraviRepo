@@ -3,15 +3,11 @@
         Options -MultiViews -Indexes
     </IfModule>
 
-    <IfModule mod_headers.c> 
-        Header set Strict-Transport-Security "max-age=10886400; includeSubDomains; preload" env=HTTPS
-    </IfModule>
-
     RewriteEngine On
 
     # Handle Authorization Header
-    RewriteCond %{HTTP:X-Forwarded-Proto} !=https
-    RewriteRule .* https://[E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
