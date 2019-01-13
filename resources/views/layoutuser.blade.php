@@ -9,7 +9,7 @@
     <script src="{{asset('js/dropzone.js')}}"></script>
     <link rel="stylesheet" href="{{asset('css/dropzone.css')}}">
 
-
+	<link rel="icon" href={{asset('storage/favicon.ico')}} type="image/x-icon" />
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">-->
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>

@@ -238,3 +238,5 @@ Route::delete('videos/desfinalizar/{id}', ['as' => 'video.desfinalizar', 'uses' 
 
 //Information General estatica incluida en la web
 Route::get('yaravi/general/elecciones2018/planesdegobierno', ['as' => 'planesdegobierno2018.index', 'uses' => 'GeneralInformationController@planesdegobierno2018']);
+
+Route::get('/sitemap.xml', 'SitemapController@index');
