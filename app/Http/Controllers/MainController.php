@@ -123,6 +123,7 @@ class MainController extends Controller
 
         $detailNavegador =  new \stdClass();
         $detailNavegador->title = $empresarial->title;
+        $detailNavegador->keywords = "keywords";
         $detailNavegador->summary = $empresarial->summary;
         $detailNavegador->dirUrl = $urlServidor.'/empresariales/'.$empresarial->titleUrl;
         $detailNavegador->dirImage = $empresarial->dirImagePortada;
@@ -147,6 +148,7 @@ class MainController extends Controller
 
         $detailNavegador =  new \stdClass();
         $detailNavegador->title = $detailnew->title;
+        $detailNavegador->keywords = "keywords";
         $detailNavegador->summary = $detailnew->summary;
         $detailNavegador->dirUrl = $urlServidor.'/informesespeciales/'.$detailnew->titleUrl;
         $detailNavegador->dirImage = $detailnew->dirImagePortada;
