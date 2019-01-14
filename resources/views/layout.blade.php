@@ -4,6 +4,12 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="keywords" content="Radio Yaraví, Radio Yaravi, Radio, Yaravi, Radio Yaraví Arequipa, Radio Yaravi Arequipa, Arequipa">
+
+	<meta name="robots" content="index, follow">
+	<meta name="googlebot" content="index, follow">
+
     <meta property="fb:app_id" content="629367300738154" />
     <meta property="og:title" content="Radio Yaraví con Todas las Voces"/>
     <meta property="og:type" content="website" />

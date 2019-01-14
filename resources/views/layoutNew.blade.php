@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<meta name="keywords" content="{{$detailNavegador->keywords}}">
+	<meta name="robots" content="index, follow">
+	<meta name="googlebot" content="index, follow">
 
     <meta property="og:url" content="{{$detailNavegador->dirUrl}}"/>
     <meta property="fb:app_id" content="629367300738154" />
