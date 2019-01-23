@@ -48,6 +48,14 @@
 
 	  gtag('config', 'UA-121070627-1');
 	</script>
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+	  (adsbygoogle = window.adsbygoogle || []).push({
+	    google_ad_client: "ca-pub-8281363678805098",
+	    enable_page_level_ads: true
+	  });
+	</script>
 	
 	<title>{{$detailNavegador->title}}</title>
 </head>
