@@ -9,7 +9,7 @@
     <table id="example" class="table table-striped">
         <thead>
           <tr>
-            <th style="width: 15%;">Fecha Publicación</th>
+            <th style="width: 15%;">F. Publicación</th>
             <th style="width: 16%;">Editor</th>
             <th>Títuto</th>
             <th>Etiqueta</th>
