@@ -27,7 +27,7 @@
 			<h1 style="margin-top: 20px;">Coméntanos</h1>
 		</div>
 		<div class="col-md-12">
-			<div class="fb-comments" data-href="{{$urlServidorComentarios}}yaravi/audioenvivo"  data-width="100%"  data-numposts="5" reverse_time="false">
+			<div class="fb-comments" data-href="{{$urlServidorComentarios}}yaravi/audioenvivo"  data-width="100%"  data-numposts="5"  data-order-by="reverse_time">
 				
 			</div>
 		</div>
