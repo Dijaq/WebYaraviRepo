@@ -291,7 +291,7 @@
 								else {
 									url += '&amp;';
 								}
-								url += 'hl=' + (this.getParentEditor().config.language ? this.getParentEditor().config.language : 'en') + '&amp;version=3';
+								url += 'hl=' + (this.getParentEditor().config.language ? this.getParentEditor().config.language : 'es') + '&amp;version=3';
 
 								content += '<object width="' + width + '" height="' + height + '" ' + responsiveStyle + '>';
 								content += '<param name="movie" value="' + url + '"></param>';
