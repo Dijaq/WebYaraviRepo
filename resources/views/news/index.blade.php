@@ -22,7 +22,7 @@
               <td>{{$new->fechaPublicacion}}</td>
               <td>{{$new->nameEditor}}</td>
               <td style="font-weight: bold; font-size: 15px;">{{$new->title}}</td>
-              <td><div style="padding: 3px; background-color: {{$new->label->color}}">{{$new->label->name}}</div></td>       
+              <td><div style="padding: 3px; background-color: {{$new->label->color}}; color: white;">{{$new->label->name}}</div></td>       
                  @if($new->estado == 2)
                   <td align="center">
                     <a class="btn btn-info btn-sm" href="{{route('new.edit', $new->id)}}">Editar</a>
