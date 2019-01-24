@@ -13,7 +13,7 @@
             <th style="width: 16%;">Editor</th>
             <th>Títuto</th>
             <th>Etiqueta</th>
-            <th style="width: 16%;">Acciones</th>
+            <th style="width: 17%;">Acciones</th>
           </tr>
         </thead>
         <tbody>
@@ -21,7 +21,7 @@
             <tr>
               <td>{{$new->fechaPublicacion}}</td>
               <td>{{$new->nameEditor}}</td>
-              <td>{{$new->title}}</td>
+              <td style="font-weight: bold; font-size: 15px;">{{$new->title}}</td>
               <td><div style="padding: 3px; background-color: {{$new->label->color}}">{{$new->label->name}}</div></td>       
                  @if($new->estado == 2)
                   <td align="center">
