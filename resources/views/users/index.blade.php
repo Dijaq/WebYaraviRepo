@@ -2,7 +2,8 @@
 
 @section('contenido')
 
-  <h1>Usuarios  <a href="tel:+959992048">959992048</a></h1>
+  <h1>Usuarios</h1>
+  <!--<a href="tel:+959992048">959992048</a>-->
   <!--<a class="btn btn-primary" href="{{route('user.create')}}" style="float: right;">Crear Usuario</a>-->
   <br><br>
 	<table class="table table-striped">
