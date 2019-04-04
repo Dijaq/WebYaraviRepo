@@ -25,8 +25,8 @@ class MainController extends Controller
     public function home()
     {
         $encuesta = Encuesta::with('encuestaOpciones')->orderBy('created_at','desc')->get()->first();
-        $maxvalueEncuesta = EncuestaOpciones::where('idEncuesta', $encuesta->id)->max('value');
-        return EncuestaOpciones::where('idEncuesta', $encuesta->id)->get();
+        $maxvalueEncuesta = EncuestaOpciones::where('idEncuesta', $encuesta->id)->orderBy('value','desc')->max('value');
+        return $maxvalueEncuesta;
 
         $empresariales = Empresarial::orderBy('fechaPublicacion','desc')->where('estado', Config::get('constantes.estado_habilitado'))->take(Config::get('constantes.numero_empresariales'))->get();
 
