@@ -11,7 +11,7 @@
           <tr>
             <th style="width: 15%;">F. Publicación</th>
             <th style="width: 16%;">Editor</th>
-            <th>Títuto</th>
+            <th>Título</th>
             <th>Etiqueta</th>
             <th style="width: 17%;">Acciones</th>
           </tr>

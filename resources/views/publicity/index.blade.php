@@ -5,7 +5,7 @@
   <h1>Publicidades</h1>
   <a class="btn btn-primary" href="{{route('publicity.create')}}" style="float: right;">Crear Publicidad</a>
   <br><br>
-	<table class="table table-striped">
+	<table id="publicidadTable" class="table table-striped">
     <thead>
       <tr>
         <th>Nombre</th>
@@ -18,7 +18,11 @@
     </thead>
     <tbody>
       @foreach($publicidades as $publicidad)
-        <tr>
+        @if(now() < $publicidad->fechaFin)
+          <tr style="background-color: #5FB404;">
+        @else
+          <tr style="background-color:#BDBDBD;">
+        @endif
           <td>{{$publicidad->name}}</td>
           <td>{{$publicidad->url_page}}</td>
           <!--<td>{{$publicidad->dir_image}}</td>-->
@@ -46,5 +50,14 @@
       @endforeach
     </tbody>
   </table>
+
+   <script>
+      $(document).ready( function () {
+      $('#publicidadTable').DataTable(
+        {
+          "order": [[0, "desc"]]
+        });
+  } );
+  </script>
 
 @stop

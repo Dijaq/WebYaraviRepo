@@ -11,7 +11,7 @@
         <thead>
           <tr>
             <th>Fecha Publicación</th>
-            <th>Títuto</th>
+            <th>Título</th>
             <th style="width: 16%;">Acciones</th>
           </tr>
         </thead>
