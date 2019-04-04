@@ -12,7 +12,7 @@
           <tr>
             <th>Fecha Publicación</th>
             <th>Título</th>
-            <th style="width: 16%;">Acciones</th>
+            <th style="width: 20%;">Acciones</th>
           </tr>
         </thead>
         <tbody>
@@ -44,9 +44,12 @@
       </table>
   </div>
 
-  <script>
+   <script>
       $(document).ready( function () {
-      $('#example').DataTable();
+      $('#example').DataTable(
+        {
+          "order": [[0, "desc"]]
+        });
   } );
   </script>
 
