@@ -23,6 +23,8 @@ Route::get('/', ['as' => 'home', 'uses' => 'MainController@home']);
 
 Route::get('nota/{labelName}', ['as' => 'classified.show', 'uses' => 'MainController@show']);
 
+Route::get('actualidad/{labelName}', ['as' => 'actualidad.show', 'uses' => 'MainController@actualidadshow']);
+
 Route::get('notas/empresariales', ['as' => 'nota.classifiedempresarial', 'uses' => 'MainController@classifiedempresarial']);
 
 Route::get('notas/informesespeciales', ['as' => 'nota.classifiedinformesespeciales', 'uses' => 'MainController@classifiedinformesespeciales']);
