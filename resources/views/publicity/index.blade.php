@@ -2,7 +2,7 @@
 
 @section('contenido')
 
-  <h1>Publicidades <a href="tel:+959992048">959992048</a></h1>
+  <h1>Publicidades</h1>
   <a class="btn btn-primary" href="{{route('publicity.create')}}" style="float: right;">Crear Publicidad</a>
   <br><br>
 	<table id="publicidadTable" class="table table-striped">
