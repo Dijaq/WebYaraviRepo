@@ -32,7 +32,11 @@
 			    		@foreach($encuesta->encuestaOpciones as $encuestaOpcion)
 			    			<label style="padding-left: 5px">{{$encuestaOpcion->nameOption}}</label>
 				    		<div class="progress">
-	    						<div class="progress-bar" style="width:{{100*$encuestaOpcion->value/$maxvalueEncuesta}}%">{{$encuestaOpcion->value}} voto(s)</div>
+	    						<div class="progress-bar" style="width:{{100*$encuestaOpcion->value/$maxvalueEncuesta}}%">{{$encuestaOpcion->value}}
+	    						@if($encuestaOpcion->value > $maxvalueEncuesta/3)
+	    						 voto(s)
+	    						@endif
+	    						</div>
 	  						</div>
 						@endforeach
 			    		
