@@ -11,18 +11,20 @@
 				direccion@radioyaravi.org.pe</p>
 
 			<strong><h3>Prensa</h3></strong>
-			<p>Jefe de Prensa: Maria Luisa Alvarez
-				prensa@radioyaravi.org.pe</p>
+			<p>Jefe de Prensa: Maria Luz Cruz Arrosquipa <br>
+				yaraviaqp@gmail.com / marialuz_ca@hotmail.com</p>
 
 			<ul>	
 				<li>Yolanda Ahumada Machicado</li>
 				<li>Hector Tintaya Feria</li>
-				<li>Maria Luz Cruz Arrosquipa</li>
+				<li>Miguel Ángel Avendaño</li>
+				<li>Karol Macetas Huahuala</li>
 				<li>Juan Cervantes Rivera</li>
 				<li>Christian Lupaca Huamani</li>
 				<li>Hugo Condori Chambilla</li>
 				<li>Alexander Cornejo Mamani</li>
-				<li>Maria Luisa Alvarez</li>
+				<li>Fresia Rosales Castillo</li>
+				<li>Jaime Benavente Huilca</li>
 			</ul>
 
 			<strong><h3>Administración</h3></strong>

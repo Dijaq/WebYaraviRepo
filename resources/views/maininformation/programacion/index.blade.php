@@ -20,12 +20,12 @@
 		          </tr>
 		        </thead>
 		        <tbody>
-	        	<tr>  
+                    <tr>  
                 		<td style="background: black; color: white;">05:00 - 05:30</td>
-                		<td colspan="5" rowspan="6" style="background: #81BEF7"><h1>Yaraví informa - Primera Edición</h1>
-                			<h4>con Hugo Condori y Marialuz Cruz </h4>       
+                		<td colspan="5" rowspan="8" style="background: #81BEF7"><h1>Yaraví informa - Primera Edición</h1>
+                			<h4>con Hugo Condori, Miguel Angel Avendaño y Marialuz Cruz </h4>       
                 		</td>
-                               <td colspan="1" rowspan="6" style="background: #81BEF7"><h1>Yaraví informa - Primera Edición</h1>
+                        <td colspan="1" rowspan="6" style="background: #81BEF7"><h1>Yaraví informa - Primera Edición</h1>
                                         <h4>con Miguel Angel Avendaño y Alexander Cornejo</h4>       
                                 </td>
                                 <td colspan="1" rowspan="8" style="background: #81BEF7"><h1>Yaraví informa - Primera Edición</h1>
@@ -48,31 +48,30 @@
                 	<tr>
                 		<td style="background: black; color: white;">07:30 - 08:00</td>
                 	</tr>
+                    <tr>
+                        <td style="background: black; color: white;">08:00 - 08:30</td>
+                        <td rowspan="4" style="background-color: #7CC8D2"><h1>La Picantería</h1>
+                        <h4>Andres Javier y Hector Tintaya</h4></td>
+                    </tr>
+                    <tr>
+                        <td style="background: black; color: white;">08:30 - 09:00</td>
+                    </tr>
                 	<tr>  
-                		<td style="background: black; color: white;">08:00 - 08:30</td>
-                		<td colspan="5" rowspan="4" style="background-color: #7CC8D2"><h1>Porder Ciudadano</h1>
-                			<h4>con Miguel Angel Avendaño y Yolanda Ahumada</h4>
-                		</td>
-                		<td rowspan="4" style="background-color: #7CC8D2"><h1>La Picantería</h1>
-                		<h4>Andres Javier y Hector Tintaya</h4></td>
-                		
-                	</tr>
-                	<tr>
-                		<td style="background: black; color: white;">08:30 - 09:00</td>  
-                	</tr>
-                	<tr>
                 		<td style="background: black; color: white;">09:00 - 09:30</td>
-                                <td rowspan="4"><h1>Música y Noticias</h1></td>
+                		<td colspan="5" rowspan="2" style="background-color: #7CC8D2"><h1>Poder Ciudadano</h1>
+                			<h4>con Juan Cervantes</h4>
+                		</td>
+                		<td rowspan="4"><h1>Música y Noticias</h1></td>
                 	</tr>
                 	<tr>
-                		<td style="background: black; color: white;">09:30 - 10:00</td>
+                		<td style="background: black; color: white;">09:30 - 10:00</td>  
                 	</tr>
                 	<tr>  
                 		<td style="background: black; color: white;">10:00 - 10:30</td>
                 		<td colspan="5" rowspan="4"><h1>Mil Colores Nueva Temporada</h1>
                 			<h4>con Idalina Naira Tipo</h4>
                 		</td>
-                                <td rowspan="2"><h1>Música Variada</h1></td>
+                        <td rowspan="2"><h1>Música Variada</h1></td>
                 	</tr>
                 	<tr>
                 		<td style="background: black; color: white;">10:30 - 11:00</td> 
@@ -88,7 +87,7 @@
                 	</tr>
                 	<tr>  
                 		<td style="background: black; color: white;">12:00 - 12:30</td>
-                		<td colspan="5" rowspan="4" style="background: #81BEF7"><h1>Yaraví informa - Segunda Edición</h1><h4>con Carla García y Hugo Condori</h4>
+                		<td colspan="5" rowspan="4" style="background: #81BEF7"><h1>Yaraví informa - Segunda Edición</h1><h4>con Yolanda Ahumada y Juan Cervantes</h4>
                 		</td>
                 		<td rowspan="2" style="background: #81BEF7"><h1>Yaraví Informa - Segunda Edición</h1>
                                         <h4>con Alexander y Andrés Javier</h4></td>
