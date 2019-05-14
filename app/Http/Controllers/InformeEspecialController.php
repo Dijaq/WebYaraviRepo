@@ -177,6 +177,50 @@ class InformeEspecialController extends Controller
         $informeEspecialContent = ContentInformeEspecial::where('idInformeEspecial', $id)->get()->first();
         $informeEspecialContent->content = $request->input('contenido');
 
+
+        if(is_file($request->file('dir_image')))
+        {
+            $image       = $request->file('dir_image');
+            $name = "";
+            $nameImage = $image->getClientOriginalName();
+            for($i = 0; $i<strlen($nameImage); $i++)
+            {
+                $vocal = ord(substr($nameImage, $i, 1));
+                if(!(($vocal >= 97 && $vocal<= 122)||($vocal >= 65 && $vocal <= 90) || $vocal == 46))
+                    $name .= '-';
+                else
+                    $name .= substr($nameImage, $i, 1);
+            }
+            $filename    = date("Ymd-His", strtotime(now())).'_'.$name;
+            $image_resize = \Image::make($image->getRealPath());
+            list($width, $height) = getimagesize($image);
+
+            if($width >= 800)
+            {
+                $newWidth = 800;
+                $lessWidth = ($width-$newWidth)/$width;
+                $newHeight = $height-$lessWidth*$height; 
+                $image_resize->resize($newWidth, $newHeight);
+            }
+
+            if (!file_exists(storage_path('app/public/news/')))
+            {
+                 return 'El directorio no existe';
+            }
+
+            $image_resize->save(storage_path('app/public/news/'. $filename));
+
+            $directorio = 'news/'.$filename; 
+
+            //Seccion para guardar el directorio de la imagen actualizada
+            $informeEspecial->dirImagePortada = $directorio;
+            $informeEspecialContent->galeria = $directorio;
+            //$new->dirImagePortada = $directorio;
+            //$newContent->galeria = $directorio;
+        }
+
+
+
         $informeEspecial->update();
         $informeEspecialContent->update();
 

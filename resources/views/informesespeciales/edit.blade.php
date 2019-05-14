@@ -106,7 +106,7 @@
             
           </div>
           <div class="row">
-            <div class="col-md-12"><input class="btn btn-primary" type="submit" value="Crear Informe Especial"></div>
+            <div class="col-md-12"><input class="btn btn-primary" type="submit" value="Editar Informe Especial"></div>
           </div>
         
         </form>
