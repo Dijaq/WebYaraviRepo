@@ -80,6 +80,24 @@
 
 	</div>
 
+	<!-- advertising hJgZtajKuG4Wbsob_yCwAOZOBFS9ySG9NUI2SV5-4oc0HbYLO8mi9y5GJvZPgffykLNKKvEMpwrxRFt_vKXohw==-->
+					<script data-cfasync="false"  id="clevernt" type="text/javascript">
+					 (function (document, window) {
+        var c = document.createElement("script");
+        c.type = "text/javascript"; c.async = !0; c.id = "CleverNTLoader33924";  c.setAttribute("data-target",window.name); c.setAttribute("data-callback","put-your-callback-macro-here");
+        c.src = "//clevernt.com/scripts/92e369e005fdd250dea54fa357d0e424.min.js?20190611=" + Math.floor((new Date).getTime());
+        var a = !1;
+        try {
+            a = parent.document.getElementsByTagName("script")[0] || document.getElementsByTagName("script")[0];
+        } catch (e) {
+            a = !1;
+        }
+        a || ( a = document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]);
+        a.parentNode.insertBefore(c, a);
+    })(document, window);
+                        </script>
+                                <!-- end advertising -->
+
 	<footer id="myFooter">
         @include('footer')
     </footer>
