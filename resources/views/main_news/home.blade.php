@@ -106,7 +106,7 @@
 								<div class="col-md-4" style="margin-bottom: 15px; padding-right: 5px;">
 									<article>
 										<div class="picture left" style="width:100%; position: relative;"> 
-											<div class="nota_etiqueta">{{$new->label->name}}</div>
+											<div class="nota_etiqueta" style="background-color: {{$new->label->color}}">{{$new->label->name}}</div>
 											<div class="redes_etiqueta">
 												<a target="_blank" href={{'https://www.facebook.com/sharer/sharer.php?u='.$urlServidor.'noticia/'."'".str_slug($new->label->name)."'".'/'.$new->titleUrl.'&amp;src=sdkpreparse'}} ><i style=" position: absolute; right: 5px; top: 5px;   text-align: center;">
 													<img src="https://www.facebook.com/images/fb_icon_325x325.png" class="img-responsive" width="22px">
