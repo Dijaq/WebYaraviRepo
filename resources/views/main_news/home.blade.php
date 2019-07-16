@@ -13,7 +13,7 @@
 			@else
 				<article>
 					<div class="picture left" style="width:100%; position: relative;" > 
-						<div class="nota_etiqueta">{{$new_principal->label->name}}</div>
+						<div class="nota_etiqueta" style="background-color: {{$new_principal->label->color}}">{{$new_principal->label->name}}</div>
 						<div class="redes_etiqueta">
 							<a target="_blank" href={{'https://www.facebook.com/sharer/sharer.php?u='.$urlServidor.'noticia/'.str_slug($new_principal->label->name).'/'.$new_principal->titleUrl.'&amp;src=sdkpreparse'}} ><i style=" position: absolute; right: 5px; top: 5px;   text-align: center;">
 								<img src="https://www.facebook.com/images/fb_icon_325x325.png" class="img-responsive" width="22px">
@@ -39,7 +39,7 @@
 		<div class="col-md-5">			
 			<article>
 				<div class="picture left" style="width:100%; position: relative;"> 
-					<div class="nota_etiqueta">{{$new_secundaria->label->name}}</div>
+					<div class="nota_etiqueta" style="background-color: {{$new_secundaria->label->color}}">{{$new_secundaria->label->name}}</div>
 					<div class="redes_etiqueta">
 						<a target="_blank" href={{'https://www.facebook.com/sharer/sharer.php?u='.$urlServidor.'noticia/'.str_slug($new_secundaria->label->name).'/'.$new_secundaria->titleUrl.'&amp;src=sdkpreparse'}} ><i style=" position: absolute; right: 5px; top: 5px;   text-align: center;">
 							<img src="https://www.facebook.com/images/fb_icon_325x325.png" class="img-responsive" width="22px">
