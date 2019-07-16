@@ -6,7 +6,7 @@
 		<div class="col-md-12">
 			<div class="tipo_noticia">
 				<h3>
-					<label for="" style="background-color: #690; color: white; padding: 5px; font-family: Gremoria;">{{$detailnew->label->name}}</label>
+					<label for="" style="background-color: {{$detailnew->label->color}}; color: white; padding: 5px; font-family: Gremoria;">{{$detailnew->label->name}}</label>
 				</h3>
 			</div>
 			
