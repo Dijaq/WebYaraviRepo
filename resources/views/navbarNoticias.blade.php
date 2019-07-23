@@ -1,6 +1,6 @@
 	<div class="row">			
 		<div class="col-md-12">
-			<img src={{asset('storage/PortadaYaravi.jpg')}} style="width:100%;" alt="Radio Yaravi" />
+			<img src={{asset('storage/PortadaYaraviJulio2019.png')}} style="width:100%;" alt="Radio Yaravi" />
 		</div>
 	</div>
 
