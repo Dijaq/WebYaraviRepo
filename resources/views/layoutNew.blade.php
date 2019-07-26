@@ -82,7 +82,7 @@
 		}(document, 'script', 'facebook-jssdk'));</script>	
 
 		<!-- advertising hJgZtajKuG4Wbsob_yCwAOZOBFS9ySG9NUI2SV5-4oc0HbYLO8mi9y5GJvZPgffykLNKKvEMpwrxRFt_vKXohw==-->
-		<script data-cfasync="false"  id="clevernt" type="text/javascript">
+		<!--<script data-cfasync="false"  id="clevernt" type="text/javascript">
 						 (function (document, window) {
 	        var c = document.createElement("script");
 	        c.type = "text/javascript"; c.async = !0; c.id = "CleverNTLoader33924";  c.setAttribute("data-target",window.name); c.setAttribute("data-callback","put-your-callback-macro-here");
@@ -96,7 +96,7 @@
 	        a || ( a = document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]);
 	        a.parentNode.insertBefore(c, a);
 	    })(document, window);
-	                        </script>
+	                        </script>-->
 	                                <!-- end advertising -->
 
 </body>
