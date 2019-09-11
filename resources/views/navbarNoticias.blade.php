@@ -1,6 +1,6 @@
 	<div class="row">			
 		<div class="col-md-12">
-			<img src={{asset('storage/PortadaYaraviAgosto2019.png')}} style="width:100%;" alt="Radio Yaravi" />
+			<img src={{asset('storage/PortadaYaraviSetiembre2019.jpg')}} style="width:100%;" alt="Radio Yaravi" />
 		</div>
 	</div>
 
@@ -15,7 +15,7 @@
 					@foreach($labels as $label)
 						<li class="nav-item" style="border-right: solid 1px #D8D8D8; font-weight: bold; font-size: 17px; "><a class="nav-link nav-link-c" style="color: white" href={{route('classified.show', $label->id)}}>{{$label->name}}</a></li>
 					@endforeach
-					<li class="nav-item" style="border-right: solid 1px #D8D8D8; font-weight: bold; font-size: 17px; "><a class="nav-link nav-link-c" style="color: white" href={{route('planesdegobierno2018.index')}}>Elecciones 2018</a></li>
+					<!--<li class="nav-item" style="border-right: solid 1px #D8D8D8; font-weight: bold; font-size: 17px; "><a class="nav-link nav-link-c" style="color: white" href={{route('planesdegobierno2018.index')}}>Elecciones 2018</a></li>-->
 					<li class="nav-item" style="border-right: solid 1px #D8D8D8; font-weight: bold; font-size: 17px; "><a class="nav-link nav-link-c" style="color: white" href={{route('galeriavideos.index')}}>Videos</a></li>
 				</ul>
 			</div>
