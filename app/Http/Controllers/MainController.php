@@ -37,7 +37,7 @@ class MainController extends Controller
 
         //$publicidades = Publicidad::all()->where('fechaFin','>', now());
         //$labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
-	$labels = Label::orderBy('orden','desc')->where('estado', Config::get('constantes.estado_habilitado'))->get();
+	$labels = Label::orderBy('orden','asc')->where('estado', Config::get('constantes.estado_habilitado'))->get();
     	//$contentnews = News::with('contentnews')->get();
     	$contentnews = News::with('label')->with('contentnews')->get();
 
