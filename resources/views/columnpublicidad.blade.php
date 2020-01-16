@@ -1,4 +1,7 @@
 
+	<div> <img src="/storage/news/20200116-170401_vigilancia-electoral.jpeg" src="https://fundacionmohme.org/especiales/vigilancia-electoral/" alt="Vigilancia Electoral" class="img-responsive" style="width:100%;"> </div>
+	<br>
+	
 	<div class="publicidad_etiqueta"><h5 style="margin-bottom: 0px; padding: 3px;">Publicidad</h5></div>
 
 	<div class="carousel slide" id="carousel-1" data-ride="carousel">
