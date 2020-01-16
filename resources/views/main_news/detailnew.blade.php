@@ -53,6 +53,14 @@
 		<div class="col-xs-12 col-sm-12 col-md-4">
 
 			<!--Agregado Publicidad -->
+			
+			<div> 
+				<a href="https://fundacionmohme.org/especiales/vigilancia-electoral/" target="_blank">
+					<img src="/storage/news/20200116-170401_vigilancia-electoral.jpeg" alt="Vigilancia Electoral" class="img-responsive" style="width:100%;"> 
+				</a>
+			</div>
+
+			
 			<div class="row" style="font-weight: bold;">
 				<div class="col-xs-12 col-sm-12 col-md-12">
 						
