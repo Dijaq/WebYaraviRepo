@@ -70,6 +70,24 @@
 	<script charset="utf-8" src="https://platform.twitter.com/js/tweet.7105d49c4a3cba9c5c6727b0e1a9eae8.js"></script>
 
 	<title>Radio Yaraví Arequipa</title>
+	
+	<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script> 
+
+	<script>
+	  window.googletag = window.googletag || {cmd: []};
+	  googletag.cmd.push(function() {
+	    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_home_top', [[970, 90], [970, 250], [300, 50], [300, 100], [728, 90], [320, 50], [1, 1], [320, 100]], 'gpt_top').addService(googletag.pubads());
+		 googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_home_laterall', [[120, 600], [160, 600]], 'gpt_laterall').addService(googletag.pubads());
+		 googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_home_lateralr', [[120, 600], [160, 600]], 'gpt_lateralr').addService(googletag.pubads());
+		 googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_home_caja1', [[255, 255], [300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja1').addService(googletag.pubads());
+		 googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_home_vslider', [1, 1], 'gpt_vslider').addService(googletag.pubads());
+		 googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_home_zocalo', [[728, 90], [320, 50]], 'gpt_zocalo').addService(googletag.pubads());
+	    googletag.pubads().enableSingleRequest();
+	    googletag.pubads().collapseEmptyDivs();
+	    googletag.pubads().setCentering(true);
+	    googletag.enableServices();
+	  });
+	</script>
 </head>
 <body>
 	@include('navbarYaravi')
