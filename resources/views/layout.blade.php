@@ -92,7 +92,7 @@
 <body>
 	@include('navbarYaravi')
 
-	<div class="container" style="background: #EFF5FB;">
+	<div class="container" style="background: #EFF5FB; max-width: 990px;">
 		@include('navbarNoticias')
 		@yield('contenido')
 
