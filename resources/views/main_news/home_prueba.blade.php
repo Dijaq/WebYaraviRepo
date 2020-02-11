@@ -258,7 +258,14 @@
 				{!!$listaUltimasNoticias->links()!!}
 			</nav>
 		</div>
-	</div>		
+	</div>	
+
+	<!-- /21907083702/yaravi/yaravi_rad_aqp_web_home_zocalo -->
+	<div id='gpt_zocalo'>
+	  <script>
+	    googletag.cmd.push(function() { googletag.display('gpt_zocalo'); });
+	  </script>
+	</div>	
 
 @stop
 	

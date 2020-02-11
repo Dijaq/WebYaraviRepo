@@ -15,7 +15,7 @@ use App\InformeEspecial;
 use App\ContentInformeEspecial;
 use Config;
 
-class MainController extends Controller
+class PruebasController extends Controller
 {
     function __construct()
     {
