@@ -1,6 +1,13 @@
 @extends('layout')
 
 @section('contenido')
+	
+	<!-- /21907083702/yaravi/yaravi_rad_aqp_web_home_laterall -->
+	<div id='gpt_laterall'>
+	  <script>
+	    googletag.cmd.push(function() { googletag.display('gpt_laterall'); });
+	  </script>
+	</div>
 
 	<div class="row">
 		<div class="col-md-12">
@@ -259,6 +266,13 @@
 			</nav>
 		</div>
 	</div>	
+
+	<!-- /21907083702/yaravi/yaravi_rad_aqp_web_home_lateralr -->
+	<div id='gpt_lateralr'>
+	  <script>
+	    googletag.cmd.push(function() { googletag.display('gpt_lateralr'); });
+	  </script>
+	</div>
 
 	<!-- /21907083702/yaravi/yaravi_rad_aqp_web_home_zocalo -->
 	<div id='gpt_zocalo'>
