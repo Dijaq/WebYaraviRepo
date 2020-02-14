@@ -92,19 +92,11 @@
 <body>
 	@include('navbarYaravi')
 
-	<div class="container" style="background: #EFF5FB; max-width: 1000px;">
+	<div class="container-fluid" style="background: #EFF5FB; max-width: 1500px;">
 		@include('navbarNoticias')
 		@yield('contenido')
 
 	</div>
-
-	<!-- /21907083702/yaravi/yaravi_rad_aqp_web_home_zocalo -->
-	<div id='gpt_zocalo'>
-	  <script>
-	    googletag.cmd.push(function() { googletag.display('gpt_zocalo'); });
-	  </script>
-	</div>	
-
 
 	<footer id="myFooter">
         @include('footer')
