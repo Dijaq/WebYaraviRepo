@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layout_prueba')
 
 @section('contenido')
 	
@@ -15,6 +15,9 @@
 		</div>	
 
 		<div class="col-md-8">
+
+			@include('navbarNoticias')
+
 			<div class="row">
 				<div class="col-md-12">
 					<div class="row">
