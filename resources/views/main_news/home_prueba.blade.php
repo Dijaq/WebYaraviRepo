@@ -18,7 +18,7 @@
 
 		<div class="col-md-8">
 
-			@include('navbarNoticias')
+			@include('navbarNoticiasPrueba')
 
 			<div class="row">
 				<div class="col-md-12">
