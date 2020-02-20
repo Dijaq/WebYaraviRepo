@@ -116,6 +116,17 @@
 					@include('navbarNoticiasPrueba')
 					@yield('contenido')
 
+					<div class="row">
+					<!-- /21907083702/yaravi/yaravi_rad_aqp_web_home_zocalo -->
+						<div class="col-md-12">
+							<div id='gpt_zocalo'>
+							  <script>
+							    googletag.cmd.push(function() { googletag.display('gpt_zocalo'); });
+							  </script>
+							</div>	
+						</div>
+
+					</div>	
 				</div>	
 
 				<div class="col-md-2">
