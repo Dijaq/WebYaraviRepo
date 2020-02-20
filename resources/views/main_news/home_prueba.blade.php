@@ -7,10 +7,12 @@
 
 	<div class="row" >
 		<div class="col-md-2">
-			<div id='gpt_laterall' style="position: fixed">
-			  <script>
-			    googletag.cmd.push(function() { googletag.display('gpt_laterall'); });
-			  </script>
+			<div>
+				<div id='gpt_laterall' style="position: fixed">
+				  <script>
+				    googletag.cmd.push(function() { googletag.display('gpt_laterall'); });
+				  </script>
+				</div>
 			</div>		
 		</div>	
 

@@ -25,7 +25,6 @@
 
 			<strong>Producciones radiales</strong>
 			<p>La trayectoria de Radio Yaraví es reconocida por varias instituciones y organizaciones con las cuales se ha trabajado diversas producciones radiales con calidad y eficiencia.
-				Manuelito (hacer un resumen de la producción, si se puede acompañar con un imagen)
 				Contacto: produccion@radioyaravi.org.pe</p>
 
 			<strong>Capacitación</strong>
