@@ -99,7 +99,37 @@
 		@if((new \Jenssegers\Agent\Agent())->isMobile())
 			@yield('contenido')
 		@else
-			<div>111</div>
+			<div class="row" >
+
+				<div class="col-md-2">
+					<div class ="row justify-content-end">
+						<div id='gpt_laterall' style="position: fixed">
+						  <script>
+						    googletag.cmd.push(function() { googletag.display('gpt_laterall'); });
+						  </script>
+						</div>
+					</div>		
+				</div>	
+
+				<div class="col-md-8">
+
+					@include('navbarNoticiasPrueba')
+					@yield('contenido')
+
+				</div>	
+
+				<div class="col-md-2">
+					<!-- /21907083702/yaravi/yaravi_rad_aqp_web_home_lateralr -->
+					<div class ="row justify-content-start">
+						<div id='gpt_lateralr' style="position: fixed">
+					  		<script>
+					    		googletag.cmd.push(function() { googletag.display('gpt_lateralr'); });
+					  		</script>
+						</div>		
+					</div>
+				</div>
+			</div>	
+
 
 		@endif
 
