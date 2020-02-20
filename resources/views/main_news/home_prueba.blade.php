@@ -6,7 +6,10 @@
 	
 
 	<div class="row" >
-		<div class="col-md-2">
+
+		<div class="col-md-1">
+		</div>	
+		<div class="col-md-1">
 			<div>
 				<div id='gpt_laterall' style="position: fixed">
 				  <script>
@@ -248,7 +251,7 @@
 						<!--Seccion de Anuncios-->
 						<div class="col-md-3">
 							<br>
-								@include('columnPublicidadPrueba')
+								@include('columnpublicidad')
 						</div>
 					</div>
 
