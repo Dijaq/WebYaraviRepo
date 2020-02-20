@@ -8,7 +8,7 @@
 	<div class="row" >
 
 		<div class="col-md-2">
-			<div class ="row justify-content-center">
+			<div class ="row justify-content-end">
 				<div id='gpt_laterall' style="position: fixed">
 				  <script>
 				    googletag.cmd.push(function() { googletag.display('gpt_laterall'); });
@@ -298,11 +298,13 @@
 
 		<div class="col-md-2">
 			<!-- /21907083702/yaravi/yaravi_rad_aqp_web_home_lateralr -->
-			<div id='gpt_lateralr' style="position: fixed">
-			  <script>
-			    googletag.cmd.push(function() { googletag.display('gpt_lateralr'); });
-			  </script>
-			</div>		
+			<div class ="row justify-content-start">
+				<div id='gpt_lateralr' style="position: fixed">
+			  		<script>
+			    		googletag.cmd.push(function() { googletag.display('gpt_lateralr'); });
+			  		</script>
+				</div>		
+			</div>
 		</div>
 	</div>	
 
