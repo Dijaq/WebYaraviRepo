@@ -24,7 +24,7 @@
 
 	<div class="carousel slide" id="carousel-1" data-ride="carousel">
 		
-		<div id='gpt_top'>
+		<div id='gpt_top' style="margin-bottom: 10px;">
 			<script>
 				googletag.cmd.push(function() { googletag.display('gpt_top'); });
 			</script>
