@@ -7,10 +7,8 @@
 
 	<div class="row" >
 
-		<div class="col-md-1">
-		</div>	
-		<div class="col-md-1">
-			<div>
+		<div class="col-md-2">
+			<div class ="row justify-content-center">
 				<div id='gpt_laterall' style="position: fixed">
 				  <script>
 				    googletag.cmd.push(function() { googletag.display('gpt_laterall'); });
