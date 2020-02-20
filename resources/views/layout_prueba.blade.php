@@ -92,8 +92,16 @@
 <body>
 	@include('navbarYaravi')
 
+
+
 	<div class="container-fluid" style="background: #EFF5FB; max-width: 1500px;">
-		@yield('contenido')
+
+		@if((new \Jenssegers\Agent\Agent())->isMobile())
+			@yield('contenido')
+		@else
+			<div>111</div>
+
+		@endif
 
 	</div>
 
