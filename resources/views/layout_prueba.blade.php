@@ -97,7 +97,10 @@
 	<div class="container-fluid" style="background: #EFF5FB; max-width: 1500px;">
 
 		@if((new \Jenssegers\Agent\Agent())->isMobile())
+
+			@include('navbarNoticias')
 			@yield('contenido')
+
 		@else
 			<div class="row" >
 
