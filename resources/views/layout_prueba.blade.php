@@ -98,7 +98,7 @@
 
 		@if((new \Jenssegers\Agent\Agent())->isMobile())
 
-			@include('navbarNoticias')
+			@include('navbarNoticiasPrueba')
 			@yield('contenido')
 
 			<div class="row">
@@ -140,7 +140,7 @@
 						</div>	-->
 						<div class="col-md-12">
 							<div class ="row justify-content-center">
-								<div id='gpt_zocalo' style="position: fixed; bottom: 0px; z-index: 99; top: auto; ">
+								<div id='gpt_zocalo' style="position: fixed; bottom: 0px; z-index: 99; top: auto; width: 100%;">
 								  <script>
 								    googletag.cmd.push(function() { googletag.display('gpt_zocalo'); });
 								  </script>
