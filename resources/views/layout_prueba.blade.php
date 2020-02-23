@@ -101,6 +101,19 @@
 			@include('navbarNoticias')
 			@yield('contenido')
 
+			<div class="row">
+				<div class="col-md-12">
+					<div class ="row justify-content-center">
+						<div id='gpt_zocalo' style="position: fixed; bottom: 0px; z-index: 99; top: auto; ">
+						  <script>
+						    googletag.cmd.push(function() { googletag.display('gpt_zocalo'); });
+						  </script>
+						</div>	
+					</div>
+				</div>
+
+			</div>	
+
 		@else
 			<div class="row" >
 
