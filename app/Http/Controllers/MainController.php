@@ -225,4 +225,24 @@ class MainController extends Controller
         return view('main_news.classifiedinformesespeciales', compact('publicidades', 'publicidadesPrincipal','informesespeciales', 'new_principal', 'new_secundaria', 'labels', 'encuesta', 'tipoNoticia', 'listaUltimasNoticias', 'urlServidor'));
     }
 
+     public function classifiedcampanias()
+    {
+        $tipoNoticia = "Campañas";
+        $encuesta = Encuesta::with('encuestaOpciones')->orderBy('created_at','desc')->get()->first();
+         //Publicidad Secundaria
+        $publicidades = Publicidad::where('idDistribucionPublicidad', 2)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
+
+        //Publicidad Principal
+        $publicidadesPrincipal = Publicidad::where('idDistribucionPublicidad', 1)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
+        $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
+
+        //$contentnews = News::with('contentnews')->get();
+        $campanias = Campanias::where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion', 'desc')->paginate(Config::get('constantes.numero_noticias_clasificado_label'));
+
+        $listaUltimasNoticias = News::with('label')->with('contentnews')->where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_ultimas_noticias'))->get();
+        $urlServidor = Config::get('constantes.ruta_directorio');
+
+        return view('main_news.classifiedcampanias', compact('publicidades', 'publicidadesPrincipal','campanias', 'new_principal', 'new_secundaria', 'labels', 'encuesta', 'tipoNoticia', 'listaUltimasNoticias', 'urlServidor'));
+    }
+
 }

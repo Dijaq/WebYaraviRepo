@@ -121,8 +121,12 @@
 
 					<div class="row">
 					<!-- /21907083702/yaravi/yaravi_rad_aqp_web_home_zocalo -->
+						<!--<div style="position: fixed; bottom: 0px; z-index: 99; top: auto; ">
+							<img style="width:100%" src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Tabla-actual-alargada.png" alt="">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Tabla-actual-alargada.png" alt="">
+						</div>	-->
 						<div class="col-md-12">
-							<div id='gpt_zocalo'>
+							<div id='gpt_zocalo' style="position: fixed; bottom: 0px; z-index: 99; top: auto; ">
 							  <script>
 							    googletag.cmd.push(function() { googletag.display('gpt_zocalo'); });
 							  </script>

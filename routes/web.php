@@ -31,6 +31,8 @@ Route::get('notas/empresariales', ['as' => 'nota.classifiedempresarial', 'uses' 
 
 Route::get('notas/informesespeciales', ['as' => 'nota.classifiedinformesespeciales', 'uses' => 'MainController@classifiedinformesespeciales']);
 
+Route::get('notas/campanias', ['as' => 'nota.classifiedcampanias', 'uses' => 'MainController@classifiedcampanias']);
+
 //Route::get('noticias/{kind_of_new}', ['as' => 'kind_of_new.show', 'uses' => 'MainController@show']);
 
 //Prueba
@@ -122,6 +124,25 @@ Route::delete('empresariales/deshabilitar/{id}', ['as' => 'empresarial.deshabili
 Route::delete('empresariales/habilitar/{id}', ['as' => 'empresarial.habilitar', 'uses' => 'EmpresarialController@habilitar']);
 
 Route::get('empresarial/{titleUrl}', ['as' => 'empresarial.detail', 'uses' => 'MainController@empresarialDetail']);
+
+
+
+Route::get('campanias', ['as' => 'campania.index', 'uses' => 'CampaniasController@index']);
+
+Route::get('campanias/crear', ['as' => 'campania.create', 'uses' => 'CampaniasController@create']);
+
+Route::post('campanias', ['as' => 'campania.store', 'uses' => 'CampaniasController@store']);
+
+Route::get('campanias/{id}/editar', ['as' => 'campania.edit', 'uses' => 'CampaniasController@edit']);
+
+Route::put('campanias/{id}', ['as' => 'campania.update', 'uses' => 'CampaniasController@update']);
+
+Route::delete('campanias/deshabilitar/{id}', ['as' => 'campania.deshabilitar', 'uses' => 'CampaniasController@deshabilitar']);
+
+Route::delete('campanias/habilitar/{id}', ['as' => 'campania.habilitar', 'uses' => 'CampaniasController@habilitar']);
+
+Route::get('campania/{titleUrl}', ['as' => 'campania.detail', 'uses' => 'MainController@empresarialDetail']);
+
 
 
 //Informe especial
