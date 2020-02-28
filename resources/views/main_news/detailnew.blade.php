@@ -54,22 +54,26 @@
 
 			<!--Agregado Publicidad -->
 			
-			<div> 
+			<!--<div> 
 				<a href="https://fundacionmohme.org/especiales/vigilancia-electoral/" target="_blank">
 					<img src="/storage/news/20200116-170401_vigilancia-electoral.jpeg" alt="Vigilancia Electoral" class="img-responsive" style="width:100%;"> 
 				</a>
 			</div>
-			<br>
+			<br>-->
 			
 			<div class="row" style="font-weight: bold;">
 				<div class="col-xs-12 col-sm-12 col-md-12">
 						
 					<div class="publicidad_etiqueta"><h5 style="margin-bottom: 0px; padding: 3px;">Publicidad</h5></div>
+					
+					<!-- /21907083702/yaravi/yaravi_rad_aqp_web_home_caja1 -->
+					<div id='gpt_caja1'>
+					  <script>
+					    googletag.cmd.push(function() { googletag.display('gpt_caja1'); });
+					  </script>
+					</div>
 
-					<div class="carousel slide" id="carousel-1" data-ride="carousel">
-					<!--Indicadores-->
-						
-						<!--Contenedor de los slide-->
+					<!--<div class="carousel slide" id="carousel-1" data-ride="carousel">
 						<div class="carousel-inner">
 							@foreach($publicidades as $key => $publicidad)	
 								<div class="carousel-item item{{ $key == 0 ? ' active' : '' }}">
@@ -77,10 +81,10 @@
 								</div>
 							@endforeach
 						</div>
-					</div>
+					</div>-->
 				</div>
 			</div>
-			<!--Hasta aqui seccion de publicidad-->
+	<!--Hasta aqui seccion de publicidad-->
 			<br>
 
 			<div class="row" style="font-weight: bold;">
