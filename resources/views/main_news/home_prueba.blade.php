@@ -67,7 +67,7 @@
 					</div>
 
 					<div class="row">
-						<div class="col-md-9">
+						<div class="col-md-8">
 							
 							<div class="row">
 								<div class="col-md-12">
@@ -231,7 +231,7 @@
 						</div>
 
 						<!--Seccion de Anuncios-->
-						<div class="col-md-3">
+						<div class="col-md-4">
 							<br>
 								@include('columnPublicidadPrueba')
 						</div>
