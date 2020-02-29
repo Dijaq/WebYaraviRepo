@@ -227,8 +227,8 @@ class PruebasController extends Controller
 
     public function onenew()
     {
-        $titleUrl = 'capitán-de-suecia-contó-que-ha-sufrido-amenazas-de-muerte-por-el-caso-guerrero-26';
-        //$titleUrl = 'arequipa--intensas-lluvias-afectaron-350-familias-y-1300-hectáreas-agrícolas-en-yura-5674';
+        //$titleUrl = 'capitán-de-suecia-contó-que-ha-sufrido-amenazas-de-muerte-por-el-caso-guerrero-26';
+        $titleUrl = 'arequipa--intensas-lluvias-afectaron-350-familias-y-1300-hectáreas-agrícolas-en-yura-5674';
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
         $detailnew = News::with('label')->with('contentnews')->get()->where('titleUrl', $titleUrl)->first();
         
