@@ -57,22 +57,25 @@
 	  });
 	</script>
 
+	<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+
 	<script>
 	  window.googletag = window.googletag || {cmd: []};
 	  googletag.cmd.push(function() {
-	    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_home_top', [[970, 90], [970, 250], [300, 50], [300, 100], [728, 90], [320, 50], [1, 1], [320, 100]], 'gpt_top').addService(googletag.pubads());
-		 googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_home_laterall', [[120, 600], [160, 600]], 'gpt_laterall').addService(googletag.pubads());
-		 googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_home_lateralr', [[120, 600], [160, 600]], 'gpt_lateralr').addService(googletag.pubads());
-		 googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_home_caja1', [[255, 255], [300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja1').addService(googletag.pubads());
-		 googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_home_vslider', [1, 1], 'gpt_vslider').addService(googletag.pubads());
-		 googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_home_zocalo', [[728, 90], [320, 50]], 'gpt_zocalo').addService(googletag.pubads());
+	    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_regional_top', [[970, 90], [970, 250], [300, 50], [300, 100], [728, 90], [320, 50], [1, 1], [320, 100]], 'gpt_top').addService(googletag.pubads());
+		  googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_regional_laterall', [[120, 600], [160, 600]], 'gpt_laterall').addService(googletag.pubads());
+	    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_regional_lateralr', [[120, 600], [160, 600]], 'gpt_lateralr').addService(googletag.pubads());
+	    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_regional_caja1', [[255, 255], [300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja1').addService(googletag.pubads());
+	    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_regional_caja2', [[300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja1').addService(googletag.pubads());
+	    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_regional_inline', [1, 1], 'gpt_inline').addService(googletag.pubads());
+	    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_regional_vslider', [1, 1], 'gpt_vslider').addService(googletag.pubads());
+	    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_regional_zocalo', [[728, 90], [320, 50]], 'gpt_zocalo').addService(googletag.pubads());
 	    googletag.pubads().enableSingleRequest();
 	    googletag.pubads().collapseEmptyDivs();
 	    googletag.pubads().setCentering(true);
 	    googletag.enableServices();
 	  });
 	</script>
-	
 	<title>{{$detailNavegador->title}}</title>
 </head>
 <body>
