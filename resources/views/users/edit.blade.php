@@ -7,11 +7,11 @@
   <br>
   @if(session()->has('info'))
     <h3>{{session('info')}}</h3>
-  @else
-
       <form method="POST" action="{{route('user.update', $user->id)}}">
 
         {!! method_field('PUT') !!}
+  @else
+
       
         {!!csrf_field()!!}
       
