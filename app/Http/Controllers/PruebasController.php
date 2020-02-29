@@ -225,4 +225,35 @@ class PruebasController extends Controller
         return view('main_news.classifiedinformesespeciales', compact('publicidades', 'publicidadesPrincipal','informesespeciales', 'new_principal', 'new_secundaria', 'labels', 'encuesta', 'tipoNoticia', 'listaUltimasNoticias', 'urlServidor'));
     }
 
+    public function onenew()
+    {
+        //$titleUrl = 'capitán-de-suecia-contó-que-ha-sufrido-amenazas-de-muerte-por-el-caso-guerrero-26';
+        $titleUrl = 'arequipa--intensas-lluvias-afectaron-350-familias-y-1300-hectáreas-agrícolas-en-yura-5674';
+        $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
+        $detailnew = News::with('label')->with('contentnews')->get()->where('titleUrl', $titleUrl)->first();
+        
+        $publicidadesPrincipal = Publicidad::where('idDistribucionPublicidad', 1)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
+
+        //$fecha = date('l jS \of F Y h:i:s A',strtotime($detailnew->fechaPublicacion));
+        //$fecha = strftime('%A, %d de %B de %Y',strtotime($detailnew->fechaPublicacion));
+        $urlServidor = Config::get('constantes.ruta_directorio');
+        $moreNews = News::with('contentnews')->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_noticias_relacionadas'))->where('estado', Config::get('constantes.estado_habilitado'))->where('idLabelNews', $detailnew->idLabelNews)->get();
+
+        $urlServidorComentarios = Config::get('constantes.ruta_directorio_archivos');
+
+        $kindGaleria = 1;
+        if($detailnew->contentnews->galeria[0] == 'n') 
+           $kindGaleria = 0;
+
+       $detailNavegador =  new \stdClass();
+       $detailNavegador->title = $detailnew->title;
+       $detailNavegador->keywords = $detailnew->keywords;
+       $detailNavegador->summary = $detailnew->summary;
+       $detailNavegador->dirUrl = $urlServidor.'noticia/'.$detailnew->label->name.'/'.$detailnew->titleUrl;
+       $detailNavegador->dirImage = $detailnew->dirImagePortada;
+       $publicidades = Publicidad::where('idDistribucionPublicidad', 2)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
+
+        return view('main_news.detailnew_prueba', compact('publicidades', 'detailnew', 'publicidadesPrincipal', 'contentNew', 'moreNews', 'labels', 'urlServidor','urlServidorComentarios','kindGaleria','detailNavegador'));
+    }
+
 }
