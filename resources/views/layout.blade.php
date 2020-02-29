@@ -99,7 +99,7 @@
 			@include('navbarNoticiasPrueba')
 			@yield('contenido')
 
-			<div class="row">
+			<div class="row" style="padding: 0px;">
 				<div class="col-md-12 col-sm-12">
 					<div class ="row justify-content-center">
 						<div id='gpt_zocalo' style="position: fixed; bottom: 0px; z-index: 99; top: auto; ">
@@ -137,7 +137,7 @@
 							<img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Tabla-actual-alargada.png" alt="">
 						</div>	-->
 						<div class="col-md-12">
-							<div class ="row justify-content-center">
+							<div class ="row justify-content-center" style="padding: 0px;">
 								<div id='gpt_zocalo' style="position: fixed; bottom: 0px; z-index: 99; top: auto; width: 100%;">
 								  <script>
 								    googletag.cmd.push(function() { googletag.display('gpt_zocalo'); });
