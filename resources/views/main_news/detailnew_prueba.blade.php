@@ -52,6 +52,14 @@
 
 						<!--{!!$detailnew->contentnews->content!!}-->
 					</div>
+
+					<!-- /21907083702/yaravi/yaravi_rad_aqp_web_home_vslider -->
+					<div id='gpt_vslider' style='width: 1px; height: 1px;'>
+					  <script>
+					    googletag.cmd.push(function() { googletag.display('gpt_vslider'); });
+					  </script>
+					</div>
+					
 				</div>
 				<div class="col-md-12">
 					<h1 style="margin-top: 20px;">Coméntanos</h1>
