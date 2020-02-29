@@ -92,9 +92,79 @@
 <body>
 	@include('navbarYaravi')
 
+
+
 	<div class="container-fluid" style="background: #EFF5FB; max-width: 1500px;">
-		@include('navbarNoticias')
-		@yield('contenido')
+
+		@if((new \Jenssegers\Agent\Agent())->isMobile())
+
+			@include('navbarNoticiasPrueba')
+			@yield('contenido')
+
+			<div class="row">
+				<div class="col-md-12 col-sm-12">
+					<div class ="row justify-content-center">
+						<div id='gpt_zocalo' style="position: fixed; bottom: 0px; z-index: 99; top: auto; ">
+						  <script>
+						    googletag.cmd.push(function() { googletag.display('gpt_zocalo'); });
+						  </script>
+						</div>	
+					</div>
+				</div>
+
+			</div>	
+
+		@else
+			<div class="row" >
+
+				<div class="col-md-2">
+					<div class ="row justify-content-end">
+						<div id='gpt_laterall' style="position: fixed">
+						  <script>
+						    googletag.cmd.push(function() { googletag.display('gpt_laterall'); });
+						  </script>
+						</div>
+					</div>		
+				</div>	
+
+				<div class="col-md-8">
+
+					@include('navbarNoticiasPrueba')
+					@yield('contenido')
+
+					<div class="row">
+					<!-- /21907083702/yaravi/yaravi_rad_aqp_web_home_zocalo -->
+						<!--<div style="position: fixed; bottom: 0px; z-index: 99; top: auto; ">
+							<img style="width:100%" src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Tabla-actual-alargada.png" alt="">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Tabla-actual-alargada.png" alt="">
+						</div>	-->
+						<div class="col-md-12">
+							<div class ="row justify-content-center">
+								<div id='gpt_zocalo' style="position: fixed; bottom: 0px; z-index: 99; top: auto; width: 100%;">
+								  <script>
+								    googletag.cmd.push(function() { googletag.display('gpt_zocalo'); });
+								  </script>
+								</div>	
+							</div>
+						</div>
+
+					</div>	
+				</div>	
+
+				<div class="col-md-2">
+					<!-- /21907083702/yaravi/yaravi_rad_aqp_web_home_lateralr -->
+					<div class ="row justify-content-start">
+						<div id='gpt_lateralr' style="position: fixed">
+					  		<script>
+					    		googletag.cmd.push(function() { googletag.display('gpt_lateralr'); });
+					  		</script>
+						</div>		
+					</div>
+				</div>
+			</div>	
+
+
+		@endif
 
 	</div>
 
