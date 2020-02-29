@@ -9,10 +9,7 @@
 	
 	<div class="publicidad_etiqueta"><h5 style="margin-bottom: 0px; padding: 3px;">Publicidad</h5></div>
 
-	<!--<div class="carousel slide" id="carousel-1" data-ride="carousel">
-	Indicadores
-		
-		Contenedor de los slide
+	<div class="carousel slide" id="carousel-1" data-ride="carousel">
 		<div class="carousel-inner">
 			@foreach($publicidades as $key => $publicidad)	
 				<div class="carousel-item item{{ $key == 0 ? ' active' : '' }}">
@@ -20,14 +17,14 @@
 				</div>
 			@endforeach
 		</div>
-	</div>-->
+	</div>
 	<!-- /21907083702/yaravi/yaravi_rad_aqp_web_home_caja1 -->
-	<div id='gpt_caja1'>
+	<!--<div id='gpt_caja1'>
 	  <script>
 	    googletag.cmd.push(function() { googletag.display('gpt_caja1'); });
 	  </script>
 	</div>
-	<br>
+	<br>-->
 	<!--Plan de Gobierno de todos los candidatos-->
 	<!-- 
 		<div style=" background-color: #BD2A2A; color: white; font-family: Gremoria; padding: 5px; font-size: 22px; border-radius: 5px;"><a style="color: white;" href="{{route('planesdegobierno2018.index')}}">
