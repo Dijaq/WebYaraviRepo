@@ -75,7 +75,7 @@
 										<strong><a style="color: white" href={{route('actualidad.show', 3)}}>Actualidad</a></strong>
 									</div>
 									<br>
-									<div class="row">
+									<!--<div class="row">-->
 										@foreach($listaNoticiasLocales as $new)
 											<div class="col-md-4" style="margin-bottom: 15px; padding-right: 0px;">
 												<article>
@@ -97,7 +97,7 @@
 												</article>
 											</div>
 										@endforeach
-									</div>
+									<!--</div>-->
 								</div>
 
 								@foreach($listaNoticiasPorTipo as $NoticiasPorTipo)
@@ -106,7 +106,7 @@
 											<strong><a style="color: white" href={{route('classified.show', $NoticiasPorTipo->idLabel)}}>{{$NoticiasPorTipo->labelName}}</a></strong>
 										</div>
 										<br>
-										<div class="row">
+										<!--<div class="row">-->
 											@foreach($NoticiasPorTipo->noticias as $new)
 												<div class="col-md-4" style="margin-bottom: 15px; padding-right: 0px;">
 													<article>
@@ -135,7 +135,7 @@
 													</article>
 												</div>
 											@endforeach
-										</div>
+										<!--</div>-->
 									</div>
 								@endforeach
 
