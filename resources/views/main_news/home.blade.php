@@ -77,7 +77,7 @@
 									<br>
 									<div class="row">
 										@foreach($listaNoticiasLocales as $new)
-											<div class="col-md-4" style="margin-bottom: 15px; padding-right: 0px; padding-left: 0px;">
+											<div class="col-md-4" style="margin-bottom: 15px;">
 												<article>
 													<div class="picture left" style="width:100%; position: relative;"> 
 														<div class="nota_etiqueta">{{$new->label->name}}</div>
@@ -108,7 +108,7 @@
 										<br>
 										<div class="row">
 											@foreach($NoticiasPorTipo->noticias as $new)
-												<div class="col-md-4" style="margin-bottom: 15px; padding-right: 0px; padding-left: 0px;">
+												<div class="col-md-4" style="margin-bottom: 15px;">
 													<article>
 														<div class="picture left" style="width:100%; position: relative;"> 
 															<div class="nota_etiqueta" style="background-color: {{$new->label->color}}">{{$new->label->name}}</div>
