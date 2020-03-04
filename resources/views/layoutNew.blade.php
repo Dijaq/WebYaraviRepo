@@ -56,17 +56,164 @@
 	    enable_page_level_ads: true
 	  });
 	</script>
+
+	@if($detailnew->label->name == 'Policial')
+
+		<!--ADS: Nota - policial-->
+
+		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+
+		<script>
+		  window.googletag = window.googletag || {cmd: []};
+		  googletag.cmd.push(function() {
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_policial_top', [[970, 90], [970, 250], [300, 50], [300, 100], [728, 90], [320, 50], [1, 1], [320, 100]], 'gpt_top').addService(googletag.pubads());
+			  googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_policial_laterall', [[120, 600], [160, 600]], 'gpt_laterall').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_policial_lateralr', [[120, 600], [160, 600]], 'gpt_lateralr').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_policial_caja1', [[255, 255], [300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja1').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_policial_caja2', [[300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja1').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_policial_inline', [1, 1], 'gpt_inline').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_policial_vslider', [1, 1], 'gpt_vslider').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_policial_zocalo', [[728, 90], [320, 50]], 'gpt_zocalo').addService(googletag.pubads());
+		    googletag.pubads().enableSingleRequest();
+		    googletag.pubads().collapseEmptyDivs();
+		    googletag.pubads().setCentering(true);
+		    googletag.enableServices();
+		  });
+		</script>
+		
+	@elseif($detailnew->label->name == 'Internacional')
+
+		<!--ADS: Nota - internacional-->
+
+		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+
+		<script>
+		  window.googletag = window.googletag || {cmd: []};
+		  googletag.cmd.push(function() {
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_internacional_top', [[970, 90], [970, 250], [300, 50], [300, 100], [728, 90], [320, 50], [1, 1], [320, 100]], 'gpt_top').addService(googletag.pubads());
+			  googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_internacional_laterall', [[120, 600], [160, 600]], 'gpt_laterall').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_internacional_lateralr', [[120, 600], [160, 600]], 'gpt_lateralr').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_internacional_caja1', [[255, 255], [300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja1').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_internacional_caja2', [[300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja1').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_internacional_inline', [1, 1], 'gpt_inline').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_internacional_vslider', [1, 1], 'gpt_vslider').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_internacional_zocalo', [[728, 90], [320, 50]], 'gpt_zocalo').addService(googletag.pubads());
+		    googletag.pubads().enableSingleRequest();
+		    googletag.pubads().collapseEmptyDivs();
+		    googletag.pubads().setCentering(true);
+		    googletag.enableServices();
+		  });
+		</script>
+
+
+	@elseif($detailnew->label->name == 'Deporte')	
+
+		<!--ADS: Nota - deportes-->
+
+		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+
+		<script>
+		  window.googletag = window.googletag || {cmd: []};
+		  googletag.cmd.push(function() {
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_deportes_top', [[970, 90], [970, 250], [300, 50], [300, 100], [728, 90], [320, 50], [1, 1], [320, 100]], 'gpt_top').addService(googletag.pubads());
+			  googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_deportes_laterall', [[120, 600], [160, 600]], 'gpt_laterall').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_deportes_lateralr', [[120, 600], [160, 600]], 'gpt_lateralr').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_deportes_caja1', [[255, 255], [300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja1').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_deportes_caja2', [[300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja1').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_deportes_inline', [1, 1], 'gpt_inline').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_deportes_vslider', [1, 1], 'gpt_vslider').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_deportes_zocalo', [[728, 90], [320, 50]], 'gpt_zocalo').addService(googletag.pubads());
+		    googletag.pubads().enableSingleRequest();
+		    googletag.pubads().collapseEmptyDivs();
+		    googletag.pubads().setCentering(true);
+		    googletag.enableServices();
+		  });
+		</script>
+	@else
+		Don't function
+	@endif
+
+
 	
 	<title>{{$detailNavegador->title}}</title>
 </head>
 <body>
-	@include('navbarYaravi')
+		@include('navbarYaravi')
 
-	<div class="container" style="background: #EFF5FB;">
-		@include('navbarNoticias')
-		@yield('contenido')
+	<div class="container-fluid" style="background: #EFF5FB; max-width: 1500px;">
+
+		@if((new \Jenssegers\Agent\Agent())->isMobile())
+
+			@include('navbarNoticias')
+			@yield('contenido')
+
+			<div class="row">
+				<div class="col-md-12 col-sm-12">
+					<div class ="row justify-content-center">
+						<div id='gpt_zocalo' style="position: fixed; bottom: 0px; z-index: 99; top: auto; ">
+						  <script>
+						    googletag.cmd.push(function() { googletag.display('gpt_zocalo'); });
+						  </script>
+						</div>	
+					</div>
+				</div>
+
+			</div>	
+
+		@else
+			<div class="row" >
+
+				<div class="col-md-2">
+					<div class ="row justify-content-end">
+						<div id='gpt_laterall' style="position: fixed">
+						  <script>
+						    googletag.cmd.push(function() { googletag.display('gpt_laterall'); });
+						  </script>
+						</div>
+					</div>		
+				</div>	
+
+				<div class="col-md-8">
+
+					@include('navbarNoticias')
+					@yield('contenido')
+
+					<div class="row">
+					<!-- /21907083702/yaravi/yaravi_rad_aqp_web_home_zocalo -->
+						<!--<div style="position: fixed; bottom: 0px; z-index: 99; top: auto; ">
+							<img style="width:100%" src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Tabla-actual-alargada.png" alt="">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Tabla-actual-alargada.png" alt="">
+						</div>	-->
+						<div class="col-md-12">
+							<div class ="row justify-content-center">
+								<div id='gpt_zocalo' style="position: fixed; bottom: 0px; z-index: 99; top: auto; width: 100%;">
+								  <script>
+								    googletag.cmd.push(function() { googletag.display('gpt_zocalo'); });
+								  </script>
+								</div>	
+							</div>
+						</div>
+
+					</div>	
+				</div>	
+
+				<div class="col-md-2">
+					<!-- /21907083702/yaravi/yaravi_rad_aqp_web_home_lateralr -->
+					<div class ="row justify-content-start">
+						<div id='gpt_lateralr' style="position: fixed">
+					  		<script>
+					    		googletag.cmd.push(function() { googletag.display('gpt_lateralr'); });
+					  		</script>
+						</div>		
+					</div>
+				</div>
+			</div>	
+
+
+		@endif
 
 	</div>
+
 
 	<footer id="myFooter">
         @include('footer')
