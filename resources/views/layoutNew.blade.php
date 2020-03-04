@@ -166,7 +166,7 @@
 
 		@if((new \Jenssegers\Agent\Agent())->isMobile())
 
-			@include('navbarNoticias')
+			@include('navbarNoticiasPrueba')
 			@yield('contenido')
 
 			<div class="row">
@@ -197,7 +197,7 @@
 
 				<div class="col-md-8">
 
-					@include('navbarNoticias')
+					@include('navbarNoticiasPrueba')
 					@yield('contenido')
 
 					<div class="row">
