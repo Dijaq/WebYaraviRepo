@@ -10,13 +10,13 @@
 				</h3>
 			</div>
 			
-			<div class="title_article"><h1>{{$detailnew->title}}</h1></div>
+			<div class="title_article" style="margin: 10px;"><h1>{{$detailnew->title}}</h1></div>
 
-			<div class="summary_article" style="margin-bottom: 10px;">
+			<div class="summary_article" style="margin: 10px;">
 				{{$detailnew->summary}}
 			</div>
 
-			<div class="fecha_article" style="font-weight: bold; ">
+			<div class="fecha_article" style="font-weight: bold; margin: 10px;" ">
 				<label for="">{{$detailnew->fechaPublicacion}} / Publicado por: {{$detailnew->nameEditor}}</label>
 				<!--<label for="">
 				<div >
@@ -37,7 +37,7 @@
 				</div>
 				
 				<div class="col-md-12">
-					<div class="content_article">
+					<div class="content_article" style="margin: 10px;">
 						{!!$detailnew->contentnews->content!!}
 					</div>
 				</div>
