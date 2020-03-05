@@ -185,7 +185,7 @@
 <body>
 		@include('navbarYaravi')
 
-	<div class="container-fluid" style="background: #EFF5FB; max-width: 1500px;">
+	<div class="container-fluid" style="background: #EFF5FB; max-width: 1500px; padding: 0px;">
 
 		@if((new \Jenssegers\Agent\Agent())->isMobile())
 
