@@ -34,7 +34,7 @@
 											<!--opacity: 0.4;-->
 										<h3><a style="color: white;" href="{{route('newcontent.show', [$new_principal->label->name, $new_principal->titleUrl])}}">{{$new_principal->title}}</a></h3></div>
 									</div>
-									<div>
+									<div style="margin: 10px;">
 											{{$new_principal->summary}}
 									</div>
 								</article>
@@ -58,7 +58,7 @@
 									<img src="{{asset('storage/'.$new_secundaria->dirImagePortada)}}" style="width:100%;" alt="No se pudo cargar" /> <br />
 									<div class="article-contenido"><a style="color: white;" href="{{route('newcontent.show', [$new_secundaria->label->name, $new_secundaria->titleUrl])}}">{{$new_secundaria->title}}</a></div>
 								</div>
-								<div>
+								<div style="margin: 10px;">
 									{{$new_secundaria->summary}}
 								</div>
 							</article>
