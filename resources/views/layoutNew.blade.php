@@ -175,6 +175,11 @@
 		  });
 		</script>
 	@elseif($detailnew->label->name == 'Conflicto Social')
+		<!--ADS: Nota - tiamaria-->
+
+		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+
+	
 		<script>
 		  window.googletag = window.googletag || {cmd: []};
 		  googletag.cmd.push(function() {
