@@ -129,7 +129,7 @@
 		</script>
 
 
-	@elseif($detailnew->label->name == 'Deporte')	
+	@elseif($detailnew->label->name == 'Deportes')	
 
 		<!--ADS: Nota - deportes-->
 
