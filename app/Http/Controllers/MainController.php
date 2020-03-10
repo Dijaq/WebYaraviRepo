@@ -30,7 +30,7 @@ class MainController extends Controller
         
         $empresariales = Empresarial::orderBy('fechaPublicacion','desc')->where('estado', Config::get('constantes.estado_habilitado'))->take(Config::get('constantes.numero_empresariales'))->get();
 
-        $campanias = Campanias::orderBy('fechaPublicacion','desc')->where('estado', Config::get('constantes.estado_habilitado'))->take(Config::get('constantes.numero_empresariales'))->get();
+        //$campanias = Campanias::orderBy('fechaPublicacion','desc')->where('estado', Config::get('constantes.estado_habilitado'))->take(Config::get('constantes.numero_empresariales'))->get();
 
         $informesespeciales = InformeEspecial::orderBy('fechaPublicacion','desc')->where('estado', Config::get('constantes.estado_habilitado'))->take(5)->get();
 
@@ -88,7 +88,7 @@ class MainController extends Controller
         
 
         $urlServidor = Config::get('constantes.ruta_directorio');
-		return view('main_news.home', compact('publicidades','publicidadesPrincipal', 'contentnews', 'new_principal', 'new_secundaria', 'labels', 'empresariales', 'encuesta', 'listaUltimasNoticias', 'listaNoticiasLocales', 'listaNoticiasPorTipo', 'urlServidor','maxvalueEncuesta','neworvideo','informesespeciales', 'campanias'));
+		return view('main_news.home', compact('publicidades','publicidadesPrincipal', 'contentnews', 'new_principal', 'new_secundaria', 'labels', 'empresariales', 'encuesta', 'listaUltimasNoticias', 'listaNoticiasLocales', 'listaNoticiasPorTipo', 'urlServidor','maxvalueEncuesta','neworvideo','informesespeciales'));
 	}
 
     //LISTA DE NOTICIAS POR ETIQUETA CLASSIFIED
