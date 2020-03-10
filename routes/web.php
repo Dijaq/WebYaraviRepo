@@ -143,7 +143,7 @@ Route::delete('campanias/deshabilitar/{id}', ['as' => 'campania.deshabilitar', '
 
 Route::delete('campanias/habilitar/{id}', ['as' => 'campania.habilitar', 'uses' => 'CampaniasController@habilitar']);
 
-Route::get('campania/{titleUrl}', ['as' => 'campania.detail', 'uses' => 'MainController@empresarialDetail']);
+Route::get('campania/{titleUrl}', ['as' => 'campania.detail', 'uses' => 'MainController@campaniaDetail']);
 
 
 

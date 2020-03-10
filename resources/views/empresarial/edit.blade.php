@@ -3,7 +3,7 @@
 @section('contenido')
 
   <div align="center">
-  <h1 style="text-align:center;">Nueva Empresarial</h1>
+  <h1 style="text-align:center;">Editar Empresarial</h1>
   <br>
   @if(session()->has('info'))
     <h3>{{session('info')}}</h3>
@@ -106,7 +106,7 @@
             
           </div>
           <div class="row">
-            <div class="col-md-12"><input class="btn btn-primary" type="submit" value="Crear Empresarial"></div>
+            <div class="col-md-12" style="margin: 15px;><input class="btn btn-primary" type="submit" value="Editar Empresarial"></div>
           </div>
         
         </form>

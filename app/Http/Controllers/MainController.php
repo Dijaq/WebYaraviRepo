@@ -7,6 +7,7 @@ use App\Publicidad;
 use App\News;
 use App\Label;
 use App\Empresarial;
+use App\Campanias;
 use App\Encuesta;
 use App\EncuestaOpciones;
 use App\EstructuraNoticia;
@@ -28,6 +29,10 @@ class MainController extends Controller
         $maxvalueEncuesta = EncuestaOpciones::where('idEncuesta', $encuesta->id)->max('value');
         
         $empresariales = Empresarial::orderBy('fechaPublicacion','desc')->where('estado', Config::get('constantes.estado_habilitado'))->take(Config::get('constantes.numero_empresariales'))->get();
+
+        $campanias = Campanias::orderBy('fechaPublicacion','desc')->where('estado', Config::get('constantes.estado_habilitado'))->take(Config::get('constantes.numero_empresariales'))->get();
+
+        $informesespeciales = InformeEspecial::orderBy('fechaPublicacion','desc')->where('estado', Config::get('constantes.estado_habilitado'))->take(5)->get();
 
         //Publicidad Secundaria
     	$publicidades = Publicidad::where('idDistribucionPublicidad', 2)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
@@ -80,10 +85,10 @@ class MainController extends Controller
 
         $new_secundaria = News::with('label')->with('contentnews')->where('idPrioridad', Config::get('constantes.prioridad_secundaria'))->where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion', 'desc')->get()->first();
 
-        $informesespeciales = InformeEspecial::orderBy('fechaPublicacion','desc')->where('estado', Config::get('constantes.estado_habilitado'))->take(5)->get();
+        
 
         $urlServidor = Config::get('constantes.ruta_directorio');
-		return view('main_news.home', compact('publicidades','publicidadesPrincipal', 'contentnews', 'new_principal', 'new_secundaria', 'labels', 'empresariales', 'encuesta', 'listaUltimasNoticias', 'listaNoticiasLocales', 'listaNoticiasPorTipo', 'urlServidor','maxvalueEncuesta','neworvideo','informesespeciales'));
+		return view('main_news.home', compact('publicidades','publicidadesPrincipal', 'contentnews', 'new_principal', 'new_secundaria', 'labels', 'empresariales', 'encuesta', 'listaUltimasNoticias', 'listaNoticiasLocales', 'listaNoticiasPorTipo', 'urlServidor','maxvalueEncuesta','neworvideo','informesespeciales', 'campanias'));
 	}
 
     //LISTA DE NOTICIAS POR ETIQUETA CLASSIFIED
@@ -148,6 +153,7 @@ class MainController extends Controller
         $detailNavegador->summary = $empresarial->summary;
         $detailNavegador->dirUrl = $urlServidor.'/empresariales/'.$empresarial->titleUrl;
         $detailNavegador->dirImage = $empresarial->dirImagePortada;
+        $detailNavegador->label = 'Home'; 
 
         return view('main_news.empresarialdetail', compact('empresarial','labels','publicidadesPrincipal','publicidades','encuesta','maxvalueEncuesta','urlServidor','detailNavegador'));
     }
@@ -173,8 +179,34 @@ class MainController extends Controller
         $detailNavegador->summary = $detailnew->summary;
         $detailNavegador->dirUrl = $urlServidor.'/informesespeciales/'.$detailnew->titleUrl;
         $detailNavegador->dirImage = $detailnew->dirImagePortada;
+        $detailNavegador->label = 'Home';
 
         return view('main_news.informeespecialdetail', compact('detailnew','labels','publicidadesPrincipal','publicidades','encuesta','maxvalueEncuesta','urlServidor','detailNavegador'));
+    }
+
+      //DETALLE DE UNA CAMAPAÑ
+    public function campaniaDetail($titleUrl)
+    {
+        $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
+        //$empresarial = Empresarial::with('contentEmpresarial')->where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion')->take(Config::get('constantes.numero_empresariales'))->get();
+
+        $campania = Campanias::with('contentCampanias')->where('titleUrl', $titleUrl)->get()->first();
+        $publicidadesPrincipal = Publicidad::where('idDistribucionPublicidad', 1)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
+        //return $empresarial;
+        $publicidades = Publicidad::where('idDistribucionPublicidad', 2)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
+        $encuesta = Encuesta::with('encuestaOpciones')->orderBy('created_at','desc')->get()->first();
+        $maxvalueEncuesta = EncuestaOpciones::where('idEncuesta', $encuesta->id)->max('value');
+        $urlServidor = Config::get('constantes.ruta_directorio');
+
+        $detailNavegador =  new \stdClass();
+        $detailNavegador->title = $campania->title;
+        $detailNavegador->keywords = "keywords";
+        $detailNavegador->summary = $campania->summary;
+        $detailNavegador->dirUrl = $urlServidor.'/empresariales/'.$campania->titleUrl;
+        $detailNavegador->dirImage = $campania->dirImagePortada;
+        $detailNavegador->label = 'Home';
+
+        return view('main_news.campaniadetail', compact('campania','labels','publicidadesPrincipal','publicidades','encuesta','maxvalueEncuesta','urlServidor','detailNavegador'));
     }
 
     public function votoStore($id, Request $request)

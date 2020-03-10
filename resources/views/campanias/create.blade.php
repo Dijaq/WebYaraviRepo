@@ -99,7 +99,7 @@
             
           </div>
           <div class="row">
-            <div class="col-md-12"><input class="btn btn-primary" type="submit" value="Crear Empresarial"></div>
+            <div class="col-md-12"><input class="btn btn-primary" type="submit" value="Crear Campaña"></div>
           </div>
         
         </form>

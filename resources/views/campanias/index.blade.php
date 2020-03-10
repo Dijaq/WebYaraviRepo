@@ -3,8 +3,8 @@
 @section('contenido')
 
 
-<h1>Empresariales</h1>
-  <a class="btn btn-primary" href="{{route('campania.create')}}" style="float: right;">Crear Empresarial</a>
+<h1>Campañas</h1>
+  <a class="btn btn-primary" href="{{route('campania.create')}}" style="float: right;">Crear Campaña</a>
   <br><br>
 	<div class="row">
     <table id="example" class="table table-striped">
@@ -16,7 +16,7 @@
           </tr>
         </thead>
         <tbody>
-          @foreach($empresariales as $campania)
+          @foreach($campanias as $campania)
             <tr>
               <td>{{$campania->fechaPublicacion}}</td>
               <td>{{$campania->title}}</td>

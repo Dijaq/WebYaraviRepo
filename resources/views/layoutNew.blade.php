@@ -57,7 +57,7 @@
 	  });
 	</script>
 
-	@if($detailnew->label->name == 'Regional')
+	@if($detailNavegador->label == 'Regional')
 		<!--ADS: Nota - regional-->
 
 		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
@@ -80,7 +80,7 @@
 		  });
 		</script>
 
-	@elseif($detailnew->label->name == 'Policial')
+	@elseif($detailNavegador->label == 'Policial')
 
 		<!--ADS: Nota - policial-->
 
@@ -104,7 +104,7 @@
 		  });
 		</script>
 		
-	@elseif($detailnew->label->name == 'Internacional')
+	@elseif($detailNavegador->label == 'Internacional')
 
 		<!--ADS: Nota - internacional-->
 
@@ -129,7 +129,7 @@
 		</script>
 
 
-	@elseif($detailnew->label->name == 'Deporte')	
+	@elseif($detailNavegador->label == 'Deporte')	
 
 		<!--ADS: Nota - deportes-->
 
@@ -152,7 +152,7 @@
 		    googletag.enableServices();
 		  });
 		</script>
-	@elseif($detailnew->label->name == 'Nacional')
+	@elseif($detailNavegador->label == 'Nacional')
 		<!--ADS: Nota - nacional-->
 
 		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
@@ -231,7 +231,7 @@
 						</div>	-->
 						<div class="col-md-12">
 							<div class ="row justify-content-center">
-								<div id='gpt_zocalo' style="position: fixed; bottom: 0px; z-index: 99; top: auto; width: 100%;">
+								<div id='gpt_zocalo' style="position: fixed; bottom: 0px; z-index: 99; top: auto;">
 								  <script>
 								    googletag.cmd.push(function() { googletag.display('gpt_zocalo'); });
 								  </script>

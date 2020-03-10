@@ -47,7 +47,7 @@ class CampaniasController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CreateEmpresarialRequest $request)
+    public function store(CreateCampaniasRequest $request)
     {
          //return $request;
         $image       = $request->file('dir_image');
@@ -127,14 +127,14 @@ class CampaniasController extends Controller
         $campanias->update();
         //Termino de creacion de ruta de la noticia
 
-        $contentCampanias = new ContentEmpresarial;
-        $contentCampanias->idEmpresarial = $campanias->id;
+        $contentCampanias = new ContentCampanias;
+        $contentCampanias->idCampanias = $campanias->id;
         $contentCampanias->galeria = $directorio;
         $contentCampanias->content = $request->input('contenido');
         $contentCampanias->estado = Config::get('constantes.estado_habilitado');
         $contentCampanias->save();
 
-        return redirect()->route('campanias.index')->with('info', 'Se creo la noticia campanias correctamente');
+        return redirect()->route('campania.index')->with('info', 'Se creo la noticia campanias correctamente');
     }
 
     /**
@@ -156,11 +156,14 @@ class CampaniasController extends Controller
      */
     public function edit($id)
     {
-        $campanias = Campanias::with('contentCampanias')->where('id', $id)->get()->first();
+
+        $campania = Campanias::with('contentCampanias')->where('id', $id)->get()->first();
         $listUsers = User::all(); 
         $listTipoGaleria = TipoGaleria::all();
 
-        return view('campanias.edit', compact('campanias', 'listUsers', 'listTipoGaleria'));
+        //return $campania->contentCampanias->content;
+
+        return view('campanias.edit', compact('campania', 'listUsers', 'listTipoGaleria'));
     }
 
     /**
@@ -179,13 +182,13 @@ class CampaniasController extends Controller
         $campanias->nameEditor = $request->input('nombreEditor');
         $campanias->idTipoGaleria = $request->input('tipogaleria');
 
-        $empresarialContent = ContentEmpresarial::where('idEmpresarial', $id)->get()->first();
-        $empresarialContent->content = $request->input('contenido');
+        $campaniasContent = ContentEmpresarial::where('idCampanias', $id)->get()->first();
+        $campaniasContent->content = $request->input('contenido');
 
         $campanias->update();
-        $empresarialContent->update();
+        $campaniasContent->update();
 
-        return redirect()->route('campanias.index');
+        return redirect()->route('campania.index');
 
     }
 
@@ -212,7 +215,7 @@ class CampaniasController extends Controller
         $label->estado = Config::get('constantes.estado_deshabilitado');
         $label->update();
 
-        return redirect()->route('campanias.index');
+        return redirect()->route('campania.index');
     }
 
     public function habilitar($id)
@@ -221,6 +224,6 @@ class CampaniasController extends Controller
         $label->estado = Config::get('constantes.estado_habilitado');
         $label->update();
 
-        return redirect()->route('campanias.index');
+        return redirect()->route('campania.index');
     }
 }
