@@ -91,6 +91,18 @@
 				<div class="col-xs-12 col-sm-12 col-md-12">
 					<div style="font-size: 22px; font-family: 'Gremoria';">Más de {{$detailnew->label->name}}</div>
 				</div>
+
+
+				<div class="col-xs-12 col-sm-12 col-md-12">
+				<!-- /21907083702/yaravi/yaravi_rad_aqp_web_home_caja1 -->
+					<div id='gpt_caja2'>
+						<script>
+							googletag.cmd.push(function() { googletag.display('gpt_caja2'); });
+						</script>
+					</div>
+				</div>
+
+
 			</div>
 			@foreach($moreNews as $moreNew)
 				<div class="row more_article">					
