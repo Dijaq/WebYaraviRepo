@@ -12,10 +12,10 @@ use Config;
 
 class CampaniasController extends Controller
 {
-    //function __construct()
-    //{
-    //    $this->middleware('auth');
-   //}
+    function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -91,8 +91,7 @@ class CampaniasController extends Controller
         $campanias->title = $request->input('titulo');
         $campanias->titleUrl = "";
         $campanias->summary = $request->input('resumen');
-        //$campanias->idUser = auth()->user()->id;
-        $campanias->idUser = 1;
+        $campanias->idUser = auth()->user()->id;
         $campanias->idTipoGaleria = $request->input('tipogaleria');
         $user = User::findOrFail($request->input('nombreEditor'));
         $campanias->nameEditor = $user->name.' '.$user->lastName;
