@@ -10,8 +10,8 @@
 				<div>
 					<audio allow="autoplay" preload controls style="width: 100%;" id="myAudio" >
 						<!-- playsinline loop played allow="autoplay"-->
-						<source src="http://99.198.110.162:7012/;stream.nsv&amp;type=mp3" type="audio/mp3">
-						<source src="http://99.198.110.162:7012/;stream.nsv&amp;type=ogg" type="audio/ogg">
+						<source src="https://99.198.110.162:7012/;stream.nsv&amp;type=mp3" type="audio/mp3">
+						<source src="https://99.198.110.162:7012/;stream.nsv&amp;type=ogg" type="audio/ogg">
 					</audio>
 				</div>
 				<br>
