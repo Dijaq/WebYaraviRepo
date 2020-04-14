@@ -173,7 +173,7 @@
 		    googletag.enableServices();
 		  });
 		</script>
-	@elseif($detailnew->label->name == 'Conflicto Social')
+	@elseif($detailNavegador->label == 'Conflicto Social')
 		<!--ADS: Nota - tiamaria-->
 
 		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
@@ -196,7 +196,7 @@
 		    googletag.enableServices();
 		  });
 		</script>
-	@elseif($detailnew->label->name == 'Político')
+	@elseif($detailNavegador->label == 'Político')
 		<!--ADS: Nota - politico-->
 
 		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
