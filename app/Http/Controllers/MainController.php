@@ -110,7 +110,7 @@ class MainController extends Controller
         $listaUltimasNoticias = News::with('label')->with('contentnews')->where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_ultimas_noticias'))->get();
         $urlServidor = Config::get('constantes.ruta_directorio');
 	    
-	$tipo_go_publicidad = tipoNoticia->name;    
+	$tipo_go_publicidad = $tipoNoticia->name;    
 
         return view('main_news.classified', compact('publicidades', 'publicidadesPrincipal','contentnews', 'new_principal', 'new_secundaria', 'labels', 'encuesta', 'tipoNoticia', 'listaUltimasNoticias', 'urlServidor', 'tipo_go_publicidad'));
     }
