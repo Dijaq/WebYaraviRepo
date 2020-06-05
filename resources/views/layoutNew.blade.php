@@ -79,7 +79,8 @@
 		    googletag.enableServices();
 		  });
 		</script>
-
+	@elseif($detailNavegador->label == 'Policial')
+		<-- Don't show -->
 	@elseif($detailNavegador->label == 'Policial')
 
 		<!--ADS: Nota - policial-->
