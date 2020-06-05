@@ -73,7 +73,7 @@
 	
 	<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script> 
 
-	@if($tipo->go->publicidad == 'HOME')
+	@if($tipo_go_publicidad == 'HOME')
 		<script>
 		  window.googletag = window.googletag || {cmd: []};
 		  googletag.cmd.push(function() {
@@ -90,7 +90,7 @@
 		  });
 		</script>
 	
-	@elseif($tipo->go->publicidad == 'REGIONAL')
+	@elseif($tipo_go_publicidad == 'REGIONAL')
 		<!--ADS: Nota - regional-->
 
 		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
@@ -112,9 +112,9 @@
 		    googletag.enableServices();
 		  });
 		</script>
-	@elseif($detailNavegador->label == 'POLICIAL')
+	@elseif($tipo_go_publicidad == 'POLICIAL')
 		<!-- Don't show -->
-	@elseif($detailNavegador->label == 'POLICIAL')
+	@elseif($tipo_go_publicidad == 'POLICIAL')
 
 		<!--ADS: Nota - policial-->
 
@@ -138,7 +138,7 @@
 		  });
 		</script>
 		
-	@elseif($detailNavegador->label == 'INTERNACIONAL')
+	@elseif($tipo_go_publicidad == 'INTERNACIONAL')
 
 		<!--ADS: Nota - internacional-->
 
@@ -162,7 +162,7 @@
 		  });
 		</script>
 
-	@elseif($detailNavegador->label == 'DEPORTES')	
+	@elseif($tipo_go_publicidad == 'DEPORTES')	
 	
 		<!--ADS: Nota - deportes-->
 
@@ -185,7 +185,7 @@
 		    googletag.enableServices();
 		  });
 		</script>
-	@elseif($detailNavegador->label == 'NACIONAL')
+	@elseif($tipo_go_publicidad == 'NACIONAL')
 		<!--ADS: Nota - nacional-->
 
 		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
@@ -207,7 +207,7 @@
 		    googletag.enableServices();
 		  });
 		</script>
-	@elseif($detailNavegador->label == 'CONFLICTO SOCIAL')
+	@elseif($tipo_go_publicidad == 'CONFLICTO SOCIAL')
 		<!--ADS: Nota - tiamaria-->
 
 		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
@@ -230,7 +230,7 @@
 		    googletag.enableServices();
 		  });
 		</script>
-	@elseif($detailNavegador->label == 'POLÍTICO')
+	@elseif($tipo_go_publicidad == 'POLÍTICO')
 		<!--ADS: Nota - politico-->
 
 		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
