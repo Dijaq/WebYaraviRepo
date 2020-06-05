@@ -90,7 +90,7 @@
 		  });
 		</script>
 	
-	@if($tipo->go->publicidad == 'REGIONAL')
+	@elseif($tipo->go->publicidad == 'REGIONAL')
 		<!--ADS: Nota - regional-->
 
 		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
