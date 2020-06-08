@@ -26,8 +26,10 @@ class MainAudioEnVivo extends Controller
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
 
         $urlServidorComentarios = Config::get('constantes.ruta_directorio_archivos');
+        
+        $tipo_go_publicidad = 'HOME';
 
-        return view('maininformation.audioenvivo.index', compact('publicidades', 'publicidadesPrincipal','labels', 'encuesta','urlServidorComentarios'));
+        return view('maininformation.audioenvivo.index', compact('publicidades', 'publicidadesPrincipal','labels', 'encuesta','urlServidorComentarios', 'tipo_go_publicidad'));
     }
 
     /**
