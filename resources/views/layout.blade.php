@@ -73,21 +73,188 @@
 	
 	<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script> 
 
-	<script>
-	  window.googletag = window.googletag || {cmd: []};
-	  googletag.cmd.push(function() {
-	    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_home_top', [[970, 90], [970, 250], [300, 50], [300, 100], [728, 90], [320, 50], [1, 1], [320, 100]], 'gpt_top').addService(googletag.pubads());
-		 googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_home_laterall', [[120, 600], [160, 600]], 'gpt_laterall').addService(googletag.pubads());
-		 googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_home_lateralr', [[120, 600], [160, 600]], 'gpt_lateralr').addService(googletag.pubads());
-		 googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_home_caja1', [[255, 255], [300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja1').addService(googletag.pubads());
-		 googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_home_vslider', [1, 1], 'gpt_vslider').addService(googletag.pubads());
-		 googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_home_zocalo', [[728, 90], [320, 50]], 'gpt_zocalo').addService(googletag.pubads());
-	    googletag.pubads().enableSingleRequest();
-	    googletag.pubads().collapseEmptyDivs();
-	    googletag.pubads().setCentering(true);
-	    googletag.enableServices();
-	  });
-	</script>
+	@if($tipo_go_publicidad == 'HOME')
+		<script>
+		  window.googletag = window.googletag || {cmd: []};
+		  googletag.cmd.push(function() {
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_home_top', [[970, 90], [970, 250], [300, 50], [300, 100], [728, 90], [320, 50], [1, 1], [320, 100]], 'gpt_top').addService(googletag.pubads());
+			 googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_home_laterall', [[120, 600], [160, 600]], 'gpt_laterall').addService(googletag.pubads());
+			 googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_home_lateralr', [[120, 600], [160, 600]], 'gpt_lateralr').addService(googletag.pubads());
+			 googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_home_caja1', [[255, 255], [300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja1').addService(googletag.pubads());
+			 googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_home_vslider', [1, 1], 'gpt_vslider').addService(googletag.pubads());
+			 googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_home_zocalo', [[728, 90], [320, 50]], 'gpt_zocalo').addService(googletag.pubads());
+		    googletag.pubads().enableSingleRequest();
+		    googletag.pubads().collapseEmptyDivs();
+		    googletag.pubads().setCentering(true);
+		    googletag.enableServices();
+		  });
+		</script>
+	
+	@elseif($tipo_go_publicidad == 'REGIONAL')
+		<!--ADS: Nota - regional-->
+
+		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+
+		<script>
+		  window.googletag = window.googletag || {cmd: []};
+		  googletag.cmd.push(function() {
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_regional_top', [[970, 90], [970, 250], [300, 50], [300, 100], [728, 90], [320, 50], [1, 1], [320, 100]], 'gpt_top').addService(googletag.pubads());
+			  googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_regional_laterall', [[120, 600], [160, 600]], 'gpt_laterall').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_regional_lateralr', [[120, 600], [160, 600]], 'gpt_lateralr').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_regional_caja1', [[255, 255], [300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja1').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_regional_caja2', [[300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja2').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_regional_inline', [1, 1], 'gpt_inline').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_regional_vslider', [1, 1], 'gpt_vslider').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_regional_zocalo', [[728, 90], [320, 50]], 'gpt_zocalo').addService(googletag.pubads());
+		    googletag.pubads().enableSingleRequest();
+		    googletag.pubads().collapseEmptyDivs();
+		    googletag.pubads().setCentering(true);
+		    googletag.enableServices();
+		  });
+		</script>
+	@elseif($tipo_go_publicidad == 'POLICIAL')
+		<!-- Don't show -->
+	@elseif($tipo_go_publicidad == 'POLICIAL')
+
+		<!--ADS: Nota - policial-->
+
+		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+
+		<script>
+		  window.googletag = window.googletag || {cmd: []};
+		  googletag.cmd.push(function() {
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_policial_top', [[970, 90], [970, 250], [300, 50], [300, 100], [728, 90], [320, 50], [1, 1], [320, 100]], 'gpt_top').addService(googletag.pubads());
+			  googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_policial_laterall', [[120, 600], [160, 600]], 'gpt_laterall').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_policial_lateralr', [[120, 600], [160, 600]], 'gpt_lateralr').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_policial_caja1', [[255, 255], [300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja1').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_policial_caja2', [[300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja2').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_policial_inline', [1, 1], 'gpt_inline').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_policial_vslider', [1, 1], 'gpt_vslider').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_policial_zocalo', [[728, 90], [320, 50]], 'gpt_zocalo').addService(googletag.pubads());
+		    googletag.pubads().enableSingleRequest();
+		    googletag.pubads().collapseEmptyDivs();
+		    googletag.pubads().setCentering(true);
+		    googletag.enableServices();
+		  });
+		</script>
+		
+	@elseif($tipo_go_publicidad == 'INTERNACIONAL')
+
+		<!--ADS: Nota - internacional-->
+
+		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+
+		<script>
+		  window.googletag = window.googletag || {cmd: []};
+		  googletag.cmd.push(function() {
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_internacional_top', [[970, 90], [970, 250], [300, 50], [300, 100], [728, 90], [320, 50], [1, 1], [320, 100]], 'gpt_top').addService(googletag.pubads());
+			  googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_internacional_laterall', [[120, 600], [160, 600]], 'gpt_laterall').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_internacional_lateralr', [[120, 600], [160, 600]], 'gpt_lateralr').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_internacional_caja1', [[255, 255], [300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja1').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_internacional_caja2', [[300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja2').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_internacional_inline', [1, 1], 'gpt_inline').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_internacional_vslider', [1, 1], 'gpt_vslider').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_internacional_zocalo', [[728, 90], [320, 50]], 'gpt_zocalo').addService(googletag.pubads());
+		    googletag.pubads().enableSingleRequest();
+		    googletag.pubads().collapseEmptyDivs();
+		    googletag.pubads().setCentering(true);
+		    googletag.enableServices();
+		  });
+		</script>
+
+	@elseif($tipo_go_publicidad == 'DEPORTES')	
+	
+		<!--ADS: Nota - deportes-->
+
+		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+
+		<script>
+		  window.googletag = window.googletag || {cmd: []};
+		  googletag.cmd.push(function() {
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_deportes_top', [[970, 90], [970, 250], [300, 50], [300, 100], [728, 90], [320, 50], [1, 1], [320, 100]], 'gpt_top').addService(googletag.pubads());
+			  googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_deportes_laterall', [[120, 600], [160, 600]], 'gpt_laterall').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_deportes_lateralr', [[120, 600], [160, 600]], 'gpt_lateralr').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_deportes_caja1', [[255, 255], [300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja1').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_deportes_caja2', [[300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja2').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_deportes_inline', [1, 1], 'gpt_inline').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_deportes_vslider', [1, 1], 'gpt_vslider').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_deportes_zocalo', [[728, 90], [320, 50]], 'gpt_zocalo').addService(googletag.pubads());
+		    googletag.pubads().enableSingleRequest();
+		    googletag.pubads().collapseEmptyDivs();
+		    googletag.pubads().setCentering(true);
+		    googletag.enableServices();
+		  });
+		</script>
+	@elseif($tipo_go_publicidad == 'NACIONAL')
+		<!--ADS: Nota - nacional-->
+
+		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+
+		<script>
+		  window.googletag = window.googletag || {cmd: []};
+		  googletag.cmd.push(function() {
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_nacional_top', [[970, 90], [970, 250], [300, 50], [300, 100], [728, 90], [320, 50], [1, 1], [320, 100]], 'gpt_top').addService(googletag.pubads());
+			  googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_nacional_laterall', [[120, 600], [160, 600]], 'gpt_laterall').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_nacional_lateralr', [[120, 600], [160, 600]], 'gpt_lateralr').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_nacional_caja1', [[255, 255], [300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja1').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_nacional_caja2', [[300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja2').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_nacional_inline', [1, 1], 'gpt_inline').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_nacional_vslider', [1, 1], 'gpt_vslider').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_nacional_zocalo', [[728, 90], [320, 50]], 'gpt_zocalo').addService(googletag.pubads());
+		    googletag.pubads().enableSingleRequest();
+		    googletag.pubads().collapseEmptyDivs();
+		    googletag.pubads().setCentering(true);
+		    googletag.enableServices();
+		  });
+		</script>
+	@elseif($tipo_go_publicidad == 'CONFLICTO SOCIAL')
+		<!--ADS: Nota - tiamaria-->
+
+		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+
+	
+		<script>
+		  window.googletag = window.googletag || {cmd: []};
+		  googletag.cmd.push(function() {
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_tiamaria_top', [[970, 90], [970, 250], [300, 50], [300, 100], [728, 90], [320, 50], [1, 1], [320, 100]], 'gpt_top').addService(googletag.pubads());
+			  googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_tiamaria_laterall', [[120, 600], [160, 600]], 'gpt_laterall').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_tiamaria_lateralr', [[120, 600], [160, 600]], 'gpt_lateralr').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_tiamaria_caja1', [[255, 255], [300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja1').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_tiamaria_caja2', [[300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja2').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_tiamaria_inline', [1, 1], 'gpt_inline').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_tiamaria_vslider', [1, 1], 'gpt_vslider').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_tiamaria_zocalo', [[728, 90], [320, 50]], 'gpt_zocalo').addService(googletag.pubads());
+		    googletag.pubads().enableSingleRequest();
+		    googletag.pubads().collapseEmptyDivs();
+		    googletag.pubads().setCentering(true);
+		    googletag.enableServices();
+		  });
+		</script>
+	@elseif($tipo_go_publicidad == 'POLÍTICO')
+		<!--ADS: Nota - politico-->
+
+		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+
+		<script>
+		  window.googletag = window.googletag || {cmd: []};
+		  googletag.cmd.push(function() {
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_politico_top', [[970, 90], [970, 250], [300, 50], [300, 100], [728, 90], [320, 50], [1, 1], [320, 100]], 'gpt_top').addService(googletag.pubads());
+			  googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_politico_laterall', [[120, 600], [160, 600]], 'gpt_laterall').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_politico_lateralr', [[120, 600], [160, 600]], 'gpt_lateralr').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_politico_caja1', [[255, 255], [300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja1').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_politico_caja2', [[300, 250], [300, 100], [320, 100], [300, 50], [320, 50], [300, 600]], 'gpt_caja2').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_politico_inline', [1, 1], 'gpt_inline').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_politico_vslider', [1, 1], 'gpt_vslider').addService(googletag.pubads());
+		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_politico_zocalo', [[728, 90], [320, 50]], 'gpt_zocalo').addService(googletag.pubads());
+		    googletag.pubads().enableSingleRequest();
+		    googletag.pubads().collapseEmptyDivs();
+		    googletag.pubads().setCentering(true);
+		    googletag.enableServices();
+		  });
+		</script>
+	@else
+		<!--No incluido-->
+	@endif
 </head>
 <body>
 	@include('navbarYaravi')

@@ -39,7 +39,9 @@
 					</div>
 
 					<div class="play_en_vivo" align="right"  style="position: absolute; right: 20px; top: 0px;">
-						<a href="{{route('audioenvivo.index')}}" target="_blank"><img height="50px" src="{{asset('storage/Playv7.gif')}}" alt=""></a>
+						<!--<a href="{{route('audioenvivo.index')}}" target="_blank"><img height="50px" src="{{asset('storage/Playv7.gif')}}" alt=""></a>-->
+						<a href="http://www.radioyaravi.org.pe/yaravi/audioenvivo" target="_blank"><img height="50px" src="{{asset('storage/Playv7.gif')}}" alt=""></a>
+						
 					</div>
 				</div>
 			</div>			

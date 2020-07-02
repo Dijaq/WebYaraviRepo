@@ -85,10 +85,10 @@ class MainController extends Controller
 
         $new_secundaria = News::with('label')->with('contentnews')->where('idPrioridad', Config::get('constantes.prioridad_secundaria'))->where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion', 'desc')->get()->first();
 
-        
+        $tipo_go_publicidad = 'HOME';
 
         $urlServidor = Config::get('constantes.ruta_directorio');
-		return view('main_news.home', compact('publicidades','publicidadesPrincipal', 'contentnews', 'new_principal', 'new_secundaria', 'labels', 'empresariales', 'encuesta', 'listaUltimasNoticias', 'listaNoticiasLocales', 'listaNoticiasPorTipo', 'urlServidor','maxvalueEncuesta','neworvideo','informesespeciales'));
+		return view('main_news.home', compact('publicidades','publicidadesPrincipal', 'contentnews', 'new_principal', 'new_secundaria', 'labels', 'empresariales', 'encuesta', 'listaUltimasNoticias', 'listaNoticiasLocales', 'listaNoticiasPorTipo', 'urlServidor','maxvalueEncuesta','neworvideo','informesespeciales', 'tipo_go_publicidad'));
 	}
 
     //LISTA DE NOTICIAS POR ETIQUETA CLASSIFIED
@@ -109,8 +109,10 @@ class MainController extends Controller
 
         $listaUltimasNoticias = News::with('label')->with('contentnews')->where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_ultimas_noticias'))->get();
         $urlServidor = Config::get('constantes.ruta_directorio');
+	    
+	$tipo_go_publicidad = $tipoNoticia->name;    
 
-        return view('main_news.classified', compact('publicidades', 'publicidadesPrincipal','contentnews', 'new_principal', 'new_secundaria', 'labels', 'encuesta', 'tipoNoticia', 'listaUltimasNoticias', 'urlServidor'));
+        return view('main_news.classified', compact('publicidades', 'publicidadesPrincipal','contentnews', 'new_principal', 'new_secundaria', 'labels', 'encuesta', 'tipoNoticia', 'listaUltimasNoticias', 'urlServidor', 'tipo_go_publicidad'));
     }
 
     //LISTA DE NOTICIAS POR DE ACTUALIDAD
