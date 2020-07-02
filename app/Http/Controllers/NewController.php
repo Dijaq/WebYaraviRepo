@@ -46,8 +46,10 @@ class NewController extends Controller
        $detailNavegador->keywords = $detailnew->keywords;
        $detailNavegador->summary = $detailnew->summary;
        $detailNavegador->dirUrl = $urlServidor.'noticia/'.$detailnew->label->name.'/'.$detailnew->titleUrl;
-       $detailNavegador->dirImage = $detailnew->dirImagePortada;
+       //$detailNavegador->dirImage = $detailnew->dirImagePortada;
        $detailNavegador->label = $detailnew->label->name;
+       if($detailnew->label->name == 'Policial')
+            $detailNavegador->dirImage =  asset('storage/'.'news/20200702-170245_logo-temporal.png');
        $publicidades = Publicidad::where('idDistribucionPublicidad', 2)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
 
         return view('main_news.detailnew', compact('publicidades', 'detailnew', 'publicidadesPrincipal', 'contentNew', 'moreNews', 'labels', 'urlServidor','urlServidorComentarios','kindGaleria','detailNavegador'));
