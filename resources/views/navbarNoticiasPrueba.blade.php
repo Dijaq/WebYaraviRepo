@@ -1,10 +1,10 @@
 	<div class="row">			
 		<div class="col-md-12">
-			<img src={{asset('storage/PortadaYaraviJulio2020.png')}} style="width:100%;" alt="Radio Yaravi" />
+			<img src={{asset('storage/PortadaYaraviJulio2020_V2.png')}} style="width:100%;" alt="Radio Yaravi" />
 		</div>
 	</div>
 
-	<nav class="navbar navbar-expand-lg navbar-expand-lg navbar-light nav-yaravi bd-links" style="padding-top: 2px; padding-bottom: 2px; padding-right: 8px; background: #5b5b5d" role="navigation">
+	<nav class="navbar navbar-expand-lg navbar-expand-lg navbar-light nav-yaravi bd-links" style="padding-top: 2px; padding-bottom: 2px; padding-right: 8px;" role="navigation">
 		<div class="container-fluid">
 			<div class="nav-item" style="border-right: solid 1px #D8D8D8;  font-weight: bold; font-size: 17px; height: 40px;" class="active"><a style="padding: 0px;" class="nav-link nav-link-c" href={{route('home')}} style="">Principal</a></div>
 			<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navegacion_fm_n" aria-controls="navegacion_fm_n" aria-expanded="false" aria-label="Toggle navigation">
