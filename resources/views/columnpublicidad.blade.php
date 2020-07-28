@@ -7,7 +7,7 @@
 	
 	<br>-->
 	
-	<div class="publicidad_etiqueta"><h5 style="margin-bottom: 0px; padding: 3px;">Publicidad</h5></div>
+	<!--<div class="publicidad_etiqueta"><h5 style="margin-bottom: 0px; padding: 3px;">Publicidad</h5></div>-->
 
 	<div class="carousel slide" id="carousel-1" data-ride="carousel">
 		<div class="carousel-inner">
