@@ -26,7 +26,8 @@ class MainNosotrosController extends Controller
         $publicidadesPrincipal = Publicidad::where('idDistribucionPublicidad', 1)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
 
-        return view('maininformation.nosotros.quienessomos', compact('publicidades', 'publicidadesPrincipal','labels', 'encuesta'));
+        $tipo_go_publicidad = 'HOME';
+        return view('maininformation.nosotros.quienessomos', compact('publicidades', 'publicidadesPrincipal','labels', 'encuesta', 'tipo_go_publicidad'));
     }
 
     public function historia()
@@ -39,7 +40,9 @@ class MainNosotrosController extends Controller
         $publicidadesPrincipal = Publicidad::where('idDistribucionPublicidad', 1)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
 
-        return view('maininformation.nosotros.historia', compact('publicidades', 'publicidadesPrincipal', 'labels', 'encuesta'));
+        $tipo_go_publicidad = 'HOME';
+
+        return view('maininformation.nosotros.historia', compact('publicidades', 'publicidadesPrincipal', 'labels', 'encuesta', 'tipo_go_publicidad'));
     }
 
     public function equipotrabajo()
@@ -51,8 +54,10 @@ class MainNosotrosController extends Controller
         //Publicidad Principal
         $publicidadesPrincipal = Publicidad::where('idDistribucionPublicidad', 1)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
+
+        $tipo_go_publicidad = 'HOME';
         
-        return view('maininformation.nosotros.equipotrabajo', compact('publicidades', 'publicidadesPrincipal', 'labels','encuesta'));
+        return view('maininformation.nosotros.equipotrabajo', compact('publicidades', 'publicidadesPrincipal', 'labels','encuesta', 'tipo_go_publicidad'));
     }
 
     public function index()

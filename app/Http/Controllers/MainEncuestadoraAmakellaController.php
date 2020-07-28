@@ -24,8 +24,10 @@ class MainEncuestadoraAmakellaController extends Controller
         //Publicidad Principal
         $publicidadesPrincipal = Publicidad::where('idDistribucionPublicidad', 1)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
+
+        $tipo_go_publicidad = 'HOME';
     
-        return view('maininformation.encuestadoraamakella.index', compact('publicidades', 'publicidadesPrincipal','labels', 'encuesta'));
+        return view('maininformation.encuestadoraamakella.index', compact('publicidades', 'publicidadesPrincipal','labels', 'encuesta', 'tipo_go_publicidad'));
     }
 
     /**
