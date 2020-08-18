@@ -29,11 +29,12 @@
 				<div class="col-md-12" >
 					@if($kindGaleria == 0)						
 						<div class="picture left" style="width:100%;"> 
-						@if($detailnew->label->name == "Policial")
+							<img src="{{asset('storage/'.$detailnew->contentnews->galeria)}}" style="width:100%;" alt="No se pudo cargar" /> <br />
+						<!--@if($detailnew->label->name == "Policial")
 							<img src="{{asset('storage/'.'news/20200702-170245_logo-temporal.png')}}" style="width:100%;" alt="No se pudo cargar" /> <br />
 						@else
 							<img src="{{asset('storage/'.$detailnew->contentnews->galeria)}}" style="width:100%;" alt="No se pudo cargar" /> <br />
-						@endif
+						@endif-->
 						</div>
 					@else
 						{!!$detailnew->contentnews->galeria!!}

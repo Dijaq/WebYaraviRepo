@@ -19,6 +19,8 @@
 
 //Route::get('data', ['as' => 'data', 'uses' => 'Data@index']);
 
+Route::get('imprimir', 'MainController@imprimir');
+
 Route::get('/', ['as' => 'home', 'uses' => 'MainController@home']);
 
 Route::get('/pruebas', ['as' => 'homes', 'uses' => 'PruebasController@home']);

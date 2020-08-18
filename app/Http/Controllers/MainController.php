@@ -23,6 +23,12 @@ class MainController extends Controller
         $this->middleware('verifypage');
     }
     
+    public function imprimir()
+    {
+        return view('imprimir');
+
+    }
+
     public function home()
     {
         $encuesta = Encuesta::with('encuestaOpciones')->orderBy('created_at','desc')->get()->first();
@@ -112,7 +118,7 @@ class MainController extends Controller
 	    
 	$tipo_go_publicidad = $tipoNoticia->name;    
 
-        return view('main_news.classified', compact('publicidades', 'publicidadesPrincipal','contentnews', 'new_principal', 'new_secundaria', 'labels', 'encuesta', 'tipoNoticia', 'listaUltimasNoticias', 'urlServidor', 'tipo_go_publicidad'));
+        return view('main_news.classified', compact('publicidades', 'publicidadesPrincipal','contentnews', 'labels', 'encuesta', 'tipoNoticia', 'listaUltimasNoticias', 'urlServidor', 'tipo_go_publicidad'));
     }
 
     //LISTA DE NOTICIAS POR DE ACTUALIDAD
