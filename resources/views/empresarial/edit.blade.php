@@ -106,7 +106,7 @@
             
           </div>
           <div class="row">
-            <div class="col-md-12" style="margin: 15px;><input class="btn btn-primary" type="submit" value="Editar Empresarial"></div>
+            <div class="col-md-12" style="margin: 15px;"><input class="btn btn-primary" type="submit" value="Editar Empresarial"></div>
           </div>
         
         </form>
