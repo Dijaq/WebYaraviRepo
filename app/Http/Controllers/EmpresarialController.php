@@ -174,13 +174,49 @@ class EmpresarialController extends Controller
     {
         $empresarial = Empresarial::findOrFail($id);
 
+        // UPLOAD IMAGEN
+        $image       = $request->file('dir_image');
+        $name = "";
+        $nameImage    = $image->getClientOriginalName();
+        for($i = 0; $i<strlen($nameImage); $i++)
+        {
+            $vocal = ord(substr($nameImage, $i, 1));
+            if(!(($vocal >= 97 && $vocal<= 122)||($vocal >= 65 && $vocal <= 90) ||($vocal >= 48 && $vocal <= 57) || $vocal == 46))
+                $name .= '-';
+            else
+                $name .= substr($nameImage, $i, 1);
+        }
+        $filename    = date("Ymd-His", strtotime(now())).'_'.$name;
+        
+        $image_resize = \Image::make($image->getRealPath());
+        list($width, $height) = getimagesize($image);
+
+        if($width >= 800)
+        {
+            $newWidth = 800;
+            $lessWidth = ($width-$newWidth)/$width;
+            $newHeight = $height-$lessWidth*$height; 
+            $image_resize->resize($newWidth, $newHeight);
+        }
+
+        if (!file_exists(storage_path('app/public/business/')))
+        {
+             return 'El directorio no existe';
+        }
+        $image_resize->save(storage_path('app/public/business/'. $filename));
+        $directorio = 'business/'.$filename; 
+
+
+
         $empresarial->title = $request->input('titulo');
         $empresarial->summary = $request->input('resumen');
         $empresarial->nameEditor = $request->input('nombreEditor');
         $empresarial->idTipoGaleria = $request->input('tipogaleria');
+        $empresarial->dirImagePortada = $directorio;
 
         $empresarialContent = ContentEmpresarial::where('idEmpresarial', $id)->get()->first();
         $empresarialContent->content = $request->input('contenido');
+        $empresarialContent->galeria = $directorio;
 
         $empresarial->update();
         $empresarialContent->update();
