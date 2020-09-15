@@ -50,6 +50,24 @@
             <br><br>
 
             <div class="col-md-3">
+              <label for="distribucion" style="text-align:left;">
+                Tipo:
+              </label>
+            </div>
+            <div class="col-md-9">  
+              <select class="form-control" name="tipo" required>
+                @foreach($tipos as $tipo)    
+                  @if($video->idTipo == $tipo['id'])    
+                    <option value="{{$tipo['id']}}" selected>{{$tipo['nombre']}}</option>
+                  @else
+                    <option value="{{$tipo['id']}}">{{$tipo['nombre']}}</option>
+                  @endif
+                @endforeach
+              </select>
+            </div>
+            <br><br>
+
+            <div class="col-md-3">
               <label for="contenido" style="text-align:left;">
                 Contenido:
               </label>

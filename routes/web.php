@@ -247,6 +247,7 @@ Route::get('logout', 'Auth\LoginController@logout');
 Route::get('videos', ['as' => 'video.index', 'uses' => 'VideosController@index']);
 
 Route::get('galeriavideos', ['as' => 'galeriavideos.index', 'uses' => 'VideosController@publicindex']);
+Route::get('nuestro_heroes', ['as' => 'nuestroHeroes.index', 'uses' => 'VideosController@nuestros_heroes_index']);
 
 Route::get('videos/crear', ['as' => 'video.create', 'uses' => 'VideosController@create']);
 

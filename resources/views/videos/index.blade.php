@@ -11,6 +11,7 @@
           <tr>
             <th>Id</th>
             <th>Título</th>
+            <th>Tipo</th>
             <th style="text-align: center">En vivo</th>
             <th style="text-align: center">Acciones</th>
           </tr>
@@ -20,6 +21,11 @@
             <tr>  
                 <td>{{$video->id}}</td>
                 <td>{{$video->title}}</td>
+              @if($video->idTipo == 2)
+                <td>NUESTROS HÉROES</td>
+              @else
+                <td>GENERAL</td>
+              @endif
               @if($video->finalizado == 1)
                 <td align="center">
                   <form style="display: inline" method="POST" action={{route('video.finalizar', $video->id)}}>

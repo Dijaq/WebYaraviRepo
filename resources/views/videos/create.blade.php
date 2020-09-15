@@ -36,9 +36,25 @@
             </div>
             <div class="col-md-9">  
               <select class="form-control" name="distribucion" required>
-                <option value="">[Seleccion una opción]</option>
+                <option value="">[Seleccione una opción]</option>
                 @foreach($prioridades as $distribucion)     
                     <option value="{{$distribucion->id}}" {{old('distribucion') == $distribucion->id ? 'selected':''}}>{{$distribucion->name}}</option>
+                @endforeach
+              </select>
+            </div>
+            <br><br>
+
+            <div class="col-md-3">
+              <label for="distribucion" style="text-align:left;">
+                Tipo:
+              </label>
+            </div>
+
+            <div class="col-md-9">  
+              <select class="form-control" name="tipo" required>
+                <option value="">[Seleccione una opción]</option>
+                @foreach($tipos as $tipo)     
+                    <option value="{{$tipo['id']}}" {{old('distribucion') == $tipo['id'] ? 'selected':''}}>{{$tipo['nombre']}}</option>
                 @endforeach
               </select>
             </div>

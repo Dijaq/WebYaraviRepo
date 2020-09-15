@@ -39,6 +39,21 @@ class VideosController extends Controller
         return view('videos.publicindex', compact('videos','publicidades', 'publicidadesPrincipal', 'labels','encuesta', 'tipo_go_publicidad'));
     }
 
+    public function nuestros_heroes_index()
+    {
+        $videos = Videos::where('idTipo', 2)->orderBy('created_at','desc')->get();
+        $tipo_go_publicidad = 'HOME';
+
+        $encuesta = Encuesta::with('encuestaOpciones')->orderBy('created_at','desc')->get()->first();
+        //Publicidad Secundaria
+        $publicidades = Publicidad::where('idDistribucionPublicidad', 2)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
+
+        //Publicidad Principal
+        $publicidadesPrincipal = Publicidad::where('idDistribucionPublicidad', 1)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
+        $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
+        return view('videos.nuestros_heroes', compact('videos','publicidades', 'publicidadesPrincipal', 'labels','encuesta', 'tipo_go_publicidad'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -47,7 +62,11 @@ class VideosController extends Controller
     public function create()
     {
         $prioridades = Prioridad::take(1)->get();
-        return view('videos.create', compact('prioridades'));
+        $tipos = collect([
+            ['id' => 1, 'nombre' => 'GENERAL'],
+            ['id' => 2, 'nombre' => 'NUESTROS HÉROES'],
+        ]);
+        return view('videos.create', compact('prioridades', 'tipos'));
     }
 
     /**
@@ -61,11 +80,12 @@ class VideosController extends Controller
         $video = new Videos;
         $video->title = $request->input('titulo');
         $video->idPrioridad = $request->input('distribucion');
+        $video->idTipo = $request->input('tipo');
         $video->embebedVideo = $request->input('contenido');
         $video->finalizado = 1;
         $video->estado = Config::get('constantes.estado_habilitado');
         $video->fechaPublicacion = now();
-
+        //return $video;
         $video->save();
 
         return redirect()->route('video.index')->with('info', 'Se creo la etiqueta correctamente');
@@ -90,9 +110,14 @@ class VideosController extends Controller
      */
     public function edit($id)
     {
+         $tipos = collect([
+            ['id' => 1, 'nombre' => 'GENERAL'],
+            ['id' => 2, 'nombre' => 'NUESTROS HÉROES'],
+        ]);
+
         $video = Videos::findOrFail($id);
         $prioridades = Prioridad::take(1)->get();
-        return view('videos.edit', compact('video','prioridades'));
+        return view('videos.edit', compact('video','prioridades', 'tipos'));
     }
 
     /**
@@ -108,6 +133,7 @@ class VideosController extends Controller
         $video->title = $request->input('titulo');
         $video->idPrioridad = $request->input('distribucion');
         $video->embebedVideo = $request->input('contenido');
+        $video->idTipo = $request->input('tipo');
         $video->update();
         return redirect()->route('video.index');
     }
