@@ -138,7 +138,7 @@ class MainController extends Controller
         $listaUltimasNoticias = News::with('label')->with('contentnews')->where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_ultimas_noticias'))->get();
         $urlServidor = Config::get('constantes.ruta_directorio');
 
-        return view('main_news.classifiedActualidad', compact('publicidades', 'publicidadesPrincipal','contentnews', 'new_principal', 'new_secundaria', 'labels', 'encuesta', 'listaUltimasNoticias', 'urlServidor'));
+        return view('main_news.classifiedActualidad', compact('publicidadefs', 'publicidadesPrincipal','contentnews', 'new_principal', 'new_secundaria', 'labels', 'encuesta', 'listaUltimasNoticias', 'urlServidor'));
     }
 
     //DETALLE DE UNA NOTICIA EMPRESARIAL

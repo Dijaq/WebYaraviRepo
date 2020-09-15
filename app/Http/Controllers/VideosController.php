@@ -19,6 +19,7 @@ class VideosController extends Controller
      */
     public function index()
     {
+        
         $videos = Videos::orderBy('created_at','desc')->get();
         return view('videos.index', compact('videos'));
     }
@@ -26,6 +27,7 @@ class VideosController extends Controller
     public function publicindex()
     {
         $videos = Videos::orderBy('created_at','desc')->get();
+        $tipo_go_publicidad = 'HOME';
 
         $encuesta = Encuesta::with('encuestaOpciones')->orderBy('created_at','desc')->get()->first();
         //Publicidad Secundaria
@@ -34,7 +36,7 @@ class VideosController extends Controller
         //Publicidad Principal
         $publicidadesPrincipal = Publicidad::where('idDistribucionPublicidad', 1)->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now())->get();
         $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
-        return view('videos.publicindex', compact('videos','publicidades', 'publicidadesPrincipal', 'labels','encuesta'));
+        return view('videos.publicindex', compact('videos','publicidades', 'publicidadesPrincipal', 'labels','encuesta', 'tipo_go_publicidad'));
     }
 
     /**
