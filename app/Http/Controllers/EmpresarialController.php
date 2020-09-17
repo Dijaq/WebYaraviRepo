@@ -175,6 +175,7 @@ class EmpresarialController extends Controller
         $empresarial = Empresarial::findOrFail($id);
 
         // UPLOAD IMAGEN
+        //return $request->file('dir_image') == '';
         if(is_file($request->file('dir_image')))
         {
             $image       = $request->file('dir_image');
