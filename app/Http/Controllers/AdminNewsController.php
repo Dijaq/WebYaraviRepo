@@ -28,7 +28,7 @@ class AdminNewsController extends Controller
      */
     public function index()
     {
-        $news = News::with('label')->orderBy('fechaPublicacion','dsc')->get();
+        $news = News::with('label')->orderBy('fechaPublicacion','dsc')->paginate(10);
        // return $news;
         return view('news.index', compact('news'));
     }

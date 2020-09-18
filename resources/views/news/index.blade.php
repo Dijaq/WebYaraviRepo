@@ -6,7 +6,7 @@
   <a class="btn btn-primary" href="{{route('new.create')}}" style="float: right;">Crear Noticia</a>
   <br><br>
 	<div class="row">
-    <table id="example" class="table table-striped">
+    <table id="" class="table table-striped">
         <thead>
           <tr>
             <th style="width: 15%;">F. Publicación</th>
@@ -45,6 +45,11 @@
           @endforeach
         </tbody>
       </table>
+      <div>
+        <nav aria-label="Page navigation example" style="align-items: center; justify-content: center;  display:flex;">
+          {!!$news->links()!!}
+        </nav>
+      </div>
   </div>
       <br>
       <br>
