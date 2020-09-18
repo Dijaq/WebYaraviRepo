@@ -184,7 +184,7 @@
 
 								<div class="col-md-12">
 									<div class="empresarial_etiqueta" style="border-radius: 10px 30px; text-align: center; font-size: 25px;">
-										<strong><a style="color: white" href={{route('nota.classifiedempresarial')}}>Nuestros Héroes</a></strong>
+										<strong><a style="color: white" href={{route('nuestroHeroes.index')}}>Nuestros Héroes</a></strong>
 									</div>
 									<br>
 									<div class="carousel slide" id="carousel-v" data-ride="carousel">
@@ -200,7 +200,7 @@
 															</div>
 															<div class="col-md-5">
 																<div style="font-size: 21px; font-weight: bold; font-family: sans-serif;">
-																	<a style="color: black;" href="">{{$vid->title}}</a>
+																	<a style="color: black;" href={{route('nuestroHeroes.index')}}>{{$vid->title}}</a>
 																</div>
 																
 															</div>
