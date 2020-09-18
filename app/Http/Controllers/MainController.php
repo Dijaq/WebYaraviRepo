@@ -79,6 +79,8 @@ class MainController extends Controller
         //Incluir video en la sección Principal
         $video = Videos::where('estado', Config::get('constantes.estado_habilitado'))->where('finalizado', Config::get('constantes.video_nofinalizado'))->orderBy('created_at','desc')->get()->first();
 
+        $videos = Videos::where('estado', Config::get('constantes.estado_habilitado'))->where('idTipo', 2)->orderBy('created_at','desc')->get();
+
         //return $video;
         $neworvideo = 1;
 
@@ -94,7 +96,7 @@ class MainController extends Controller
         $tipo_go_publicidad = 'HOME';
 
         $urlServidor = Config::get('constantes.ruta_directorio');
-		return view('main_news.home', compact('publicidades','publicidadesPrincipal', 'contentnews', 'new_principal', 'new_secundaria', 'labels', 'empresariales', 'encuesta', 'listaUltimasNoticias', 'listaNoticiasLocales', 'listaNoticiasPorTipo', 'urlServidor','maxvalueEncuesta','neworvideo','informesespeciales', 'tipo_go_publicidad', 'campanias'));
+		return view('main_news.home', compact('publicidades','publicidadesPrincipal', 'contentnews', 'new_principal', 'new_secundaria', 'labels', 'empresariales', 'encuesta', 'listaUltimasNoticias', 'listaNoticiasLocales', 'listaNoticiasPorTipo', 'urlServidor','maxvalueEncuesta','neworvideo','informesespeciales', 'tipo_go_publicidad', 'campanias', 'videos'));
 	}
 
     //LISTA DE NOTICIAS POR ETIQUETA CLASSIFIED
