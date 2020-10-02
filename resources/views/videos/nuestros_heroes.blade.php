@@ -15,7 +15,7 @@
 						<div class="video-responsive pt-2">
 							{!!$video->embebedVideo!!}
 						</div>
-						<div class="article-contenido">{{$video->title}} {{ $key }}</div>
+						<div class="article-contenido">{{$video->title}}</div>
 					</div>
 					@if(($key+1)%2==0 && $key != 0)
 					<div class="col-md-12" style="margin: 10px">
