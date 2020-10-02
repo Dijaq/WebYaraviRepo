@@ -10,13 +10,17 @@
 	<div class="row">
 		<div class="information_radio col-md-9" >
 			<div class="row">
-				@foreach($videos as $video)
+				@foreach($videos as $key => $video)
 					<div class="col-md-6">
-						<div class="article-contenido">{{$video->title}}</div>
 						<div class="video-responsive pt-2">
 							{!!$video->embebedVideo!!}
 						</div>
+						<div class="article-contenido">{{$video->title}} {{ $key }}</div>
 					</div>
+					@if(($key+1)%2==0 && $key != 0)
+					<div class="col-md-12" style="margin: 10px">
+					</div>
+					@endif
 				@endforeach
 			</div>			
 		</div>
