@@ -14,7 +14,7 @@
     <meta property="og:title" content="{{$detailNavegador->title}}"/>
     <meta property="og:description" content="{{$detailNavegador->summary}}"/>
     <meta property="og:type" content="article" />
-    <meta property="og:image" content={{asset('storage/'.$detailNavegador->dirImage)}}/>
+    <meta property="og:image" itemprop="image" content={{asset('storage/'.$detailNavegador->dirImage)}}/>
     <meta property="og:type" content="article" />
 
 
