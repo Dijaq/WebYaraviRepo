@@ -13,7 +13,7 @@
     <meta property="fb:app_id" content="629367300738154" />
     <meta property="og:title" content="Radio Yaraví con Todas las Voces"/>
     <meta property="og:type" content="website" />
-    <meta property="og:image" itemprop="image" content={{asset('storage/PortadaYaraviJulio2019.png')}}/>
+    <meta property="og:image" itemprop="image" content={{asset('storage/RadioYaravi.jpg')}}/>
     <meta property="og:site_name" content="Radio Yaraví" />
     <meta name="description" content="Radio Yaravi con Todas las Voces trasmite su señal a través de la Frecuencia Modulada 106.3 (FM) y Amplitud Modulada 930 (AM) y vía internet www.radioyaravi.org.pe con una amplia cobertura además contamos con una variada programación pensada en nuestro público con una diversidad de horarios"/>
     <meta name="og:description" content="Radio Yaravi con Todas las Voces trasmite su señal a través de la Frecuencia Modulada 106.3 (FM) y Amplitud Modulada 930 (AM) y vía internet www.radioyaravi.org.pe con una amplia cobertura además contamos con una variada programación pensada en nuestro público con una diversidad de horarios"/>
