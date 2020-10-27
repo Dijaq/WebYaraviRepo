@@ -243,8 +243,9 @@ class MainController extends Controller
 
         $listaUltimasNoticias = News::with('label')->with('contentnews')->where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_ultimas_noticias'))->get();
         $urlServidor = Config::get('constantes.ruta_directorio');
+        $tipo_go_publicidad = 'HOME';
 
-        return view('main_news.classifiedempresarial', compact('publicidades', 'publicidadesPrincipal','empresariales', 'new_principal', 'new_secundaria', 'labels', 'encuesta', 'tipoNoticia', 'listaUltimasNoticias', 'urlServidor'));
+        return view('main_news.classifiedempresarial', compact('publicidades', 'publicidadesPrincipal','empresariales', 'new_principal', 'new_secundaria', 'labels', 'encuesta', 'tipoNoticia', 'listaUltimasNoticias', 'urlServidor', 'tipo_go_publicidad'));
     }
 
     public function classifiedinformesespeciales()
@@ -263,8 +264,9 @@ class MainController extends Controller
 
         $listaUltimasNoticias = News::with('label')->with('contentnews')->where('estado', Config::get('constantes.estado_habilitado'))->orderBy('fechaPublicacion', 'desc')->take(Config::get('constantes.numero_ultimas_noticias'))->get();
         $urlServidor = Config::get('constantes.ruta_directorio');
+        $tipo_go_publicidad = 'HOME';
 
-        return view('main_news.classifiedinformesespeciales', compact('publicidades', 'publicidadesPrincipal','informesespeciales', 'new_principal', 'new_secundaria', 'labels', 'encuesta', 'tipoNoticia', 'listaUltimasNoticias', 'urlServidor'));
+        return view('main_news.classifiedinformesespeciales', compact('publicidades', 'publicidadesPrincipal','informesespeciales', 'new_principal', 'new_secundaria', 'labels', 'encuesta', 'tipoNoticia', 'listaUltimasNoticias', 'urlServidor', 'tipo_go_publicidad'));
     }
 
      public function classifiedcampanias()
