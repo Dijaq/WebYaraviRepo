@@ -31,6 +31,10 @@
 		<div><img src="{{asset('storage/Elecciones_2018.jpg')}}" style="width:100%;" alt="No se pudo cargar" /> <br /></div></a>
 		</div>
 	<br>-->
+		<div>
+			<a href="https://www.historiaspandemicas.com" target="_blank"><img style="width: 100%; margin-bottom: 10px;" src="{{asset('storage/img/historias_pandemincas.jpg')}}" alt=""></a>
+			<a href="https://coordinadoracomunicacionescnc.org/noticias/cnc-redes-contra-la-pandemia/" target="_blank"><img style="width: 100%; margin-bottom: 10px;" src="{{asset('storage/img/redes_pandemia.jpg')}}" alt=""></a>
+		</div>
 		<div class="publicidad_etiqueta"><h5 style="margin-bottom: 0px; padding: 3px;">Encuesta</h5></div>
 		<div>
 			<form method="POST" action="{{route('encuesta.votoStore', $encuesta->id)}}">
