@@ -45,6 +45,7 @@ class LabelController extends Controller
         $label = new Label;
         $label->name = $request->input('nombre');
         $label->color = $request->input('color_etiqueta');
+
         $label->orden = 1;
         $label->estado = Config::get('constantes.estado_habilitado');
 
