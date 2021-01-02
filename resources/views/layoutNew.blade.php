@@ -60,7 +60,7 @@
 	@if($detailNavegador->label == 'Regional')
 		<!--ADS: Nota - regional-->
 
-		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+		<!--<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 
 		<script>
 		  window.googletag = window.googletag || {cmd: []};
@@ -78,14 +78,14 @@
 		    googletag.pubads().setCentering(true);
 		    googletag.enableServices();
 		  });
-		</script>
+		</script>-->
 	@elseif($detailNavegador->label == 'Policial')
 		<!-- Don't show -->
 	@elseif($detailNavegador->label == 'Policial')
 
 		<!--ADS: Nota - policial-->
 
-		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+		<!--<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 
 		<script>
 		  window.googletag = window.googletag || {cmd: []};
@@ -103,13 +103,13 @@
 		    googletag.pubads().setCentering(true);
 		    googletag.enableServices();
 		  });
-		</script>
+		</script>-->
 		
 	@elseif($detailNavegador->label == 'Internacional')
 
 		<!--ADS: Nota - internacional-->
 
-		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+		<!--<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 
 		<script>
 		  window.googletag = window.googletag || {cmd: []};
@@ -127,13 +127,13 @@
 		    googletag.pubads().setCentering(true);
 		    googletag.enableServices();
 		  });
-		</script>
+		</script>-->
 
 	@elseif($detailNavegador->label == 'Deportes')	
 	
 		<!--ADS: Nota - deportes-->
 
-		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+		<!--<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 
 		<script>
 		  window.googletag = window.googletag || {cmd: []};
@@ -151,11 +151,11 @@
 		    googletag.pubads().setCentering(true);
 		    googletag.enableServices();
 		  });
-		</script>
+		</script>-->
 	@elseif($detailNavegador->label == 'Nacional')
 		<!--ADS: Nota - nacional-->
 
-		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+		<!--<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 
 		<script>
 		  window.googletag = window.googletag || {cmd: []};
@@ -173,11 +173,11 @@
 		    googletag.pubads().setCentering(true);
 		    googletag.enableServices();
 		  });
-		</script>
+		</script>-->
 	@elseif($detailNavegador->label == 'Conflicto Social')
 		<!--ADS: Nota - tiamaria-->
 
-		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+		<!--<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 
 	
 		<script>
@@ -196,11 +196,11 @@
 		    googletag.pubads().setCentering(true);
 		    googletag.enableServices();
 		  });
-		</script>
+		</script>-->
 	@elseif($detailNavegador->label == 'Político')
 		<!--ADS: Nota - politico-->
 
-		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+		<!--<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 
 		<script>
 		  window.googletag = window.googletag || {cmd: []};
@@ -218,7 +218,7 @@
 		    googletag.pubads().setCentering(true);
 		    googletag.enableServices();
 		  });
-		</script>
+		</script>-->
 	@else
 		<!--No incluido-->
 	@endif

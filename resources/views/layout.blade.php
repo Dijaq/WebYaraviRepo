@@ -74,7 +74,7 @@
 	<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script> 
 
 	@if($tipo_go_publicidad == 'HOME')
-		<script>
+		<!--<script>
 		  window.googletag = window.googletag || {cmd: []};
 		  googletag.cmd.push(function() {
 		    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_home_top', [[970, 90], [970, 250], [300, 50], [300, 100], [728, 90], [320, 50], [1, 1], [320, 100]], 'gpt_top').addService(googletag.pubads());
@@ -88,12 +88,12 @@
 		    googletag.pubads().setCentering(true);
 		    googletag.enableServices();
 		  });
-		</script>
+		</script>-->
 	
 	@elseif($tipo_go_publicidad == 'REGIONAL')
 		<!--ADS: Nota - regional-->
 
-		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+		<!--<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 
 		<script>
 		  window.googletag = window.googletag || {cmd: []};
@@ -111,14 +111,14 @@
 		    googletag.pubads().setCentering(true);
 		    googletag.enableServices();
 		  });
-		</script>
+		</script>-->
 	@elseif($tipo_go_publicidad == 'POLICIAL')
 		<!-- Don't show -->
 	@elseif($tipo_go_publicidad == 'POLICIAL')
 
 		<!--ADS: Nota - policial-->
 
-		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+		<!--<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 
 		<script>
 		  window.googletag = window.googletag || {cmd: []};
@@ -136,13 +136,13 @@
 		    googletag.pubads().setCentering(true);
 		    googletag.enableServices();
 		  });
-		</script>
+		</script>-->
 		
 	@elseif($tipo_go_publicidad == 'INTERNACIONAL')
 
 		<!--ADS: Nota - internacional-->
 
-		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+		<!--<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 
 		<script>
 		  window.googletag = window.googletag || {cmd: []};
@@ -160,13 +160,13 @@
 		    googletag.pubads().setCentering(true);
 		    googletag.enableServices();
 		  });
-		</script>
+		</script>-->
 
 	@elseif($tipo_go_publicidad == 'DEPORTES')	
 	
 		<!--ADS: Nota - deportes-->
 
-		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+		<!--<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 
 		<script>
 		  window.googletag = window.googletag || {cmd: []};
@@ -184,11 +184,11 @@
 		    googletag.pubads().setCentering(true);
 		    googletag.enableServices();
 		  });
-		</script>
+		</script>-->
 	@elseif($tipo_go_publicidad == 'NACIONAL')
 		<!--ADS: Nota - nacional-->
 
-		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+		<!--<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 
 		<script>
 		  window.googletag = window.googletag || {cmd: []};
@@ -206,11 +206,11 @@
 		    googletag.pubads().setCentering(true);
 		    googletag.enableServices();
 		  });
-		</script>
+		</script>-->
 	@elseif($tipo_go_publicidad == 'CONFLICTO SOCIAL')
 		<!--ADS: Nota - tiamaria-->
 
-		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+		<!--<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 
 	
 		<script>
@@ -229,11 +229,11 @@
 		    googletag.pubads().setCentering(true);
 		    googletag.enableServices();
 		  });
-		</script>
+		</script>-->
 	@elseif($tipo_go_publicidad == 'POLÍTICO')
 		<!--ADS: Nota - politico-->
 
-		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+		<!--<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 
 		<script>
 		  window.googletag = window.googletag || {cmd: []};
@@ -251,7 +251,7 @@
 		    googletag.pubads().setCentering(true);
 		    googletag.enableServices();
 		  });
-		</script>
+		</script>-->
 	@else
 		<!--No incluido-->
 	@endif
