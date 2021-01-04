@@ -48,6 +48,11 @@
 	  });
 	</script>-->
 
+	<script 
+		data-ad-client="ca-pub-8047009650931790" 
+		async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+	</script>
+
 	<!--<script type="text/javascript">
 		function enableAutplay()
 		{
