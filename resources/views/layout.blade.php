@@ -292,9 +292,20 @@
 				<div class="col-md-2">
 					<div class ="row justify-content-end">
 						<div id='gpt_laterall' style="position: fixed">
-						  <script>
+							<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+								<!-- yaravi_lateral_left -->
+								<ins class="adsbygoogle"
+									style="display:block"
+									data-ad-client="ca-pub-8047009650931790"
+									data-ad-slot="6093549727"
+									data-ad-format="auto"
+									data-full-width-responsive="true"></ins>
+								<script>
+									(adsbygoogle = window.adsbygoogle || []).push({});
+								</script>
+						  <!--<script>
 						    googletag.cmd.push(function() { googletag.display('gpt_laterall'); });
-						  </script>
+						  </script>-->
 						</div>
 					</div>		
 				</div>	
@@ -327,9 +338,20 @@
 					<!-- /21907083702/yaravi/yaravi_rad_aqp_web_home_lateralr -->
 					<div class ="row justify-content-start">
 						<div id='gpt_lateralr' style="position: fixed">
-					  		<script>
+					  		<!--<script>
 					    		googletag.cmd.push(function() { googletag.display('gpt_lateralr'); });
-					  		</script>
+					  		</script>-->
+							  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+								<!-- yaravi_lateral_right -->
+								<ins class="adsbygoogle"
+									style="display:block"
+									data-ad-client="ca-pub-8047009650931790"
+									data-ad-slot="2980301223"
+									data-ad-format="auto"
+									data-full-width-responsive="true"></ins>
+								<script>
+									(adsbygoogle = window.adsbygoogle || []).push({});
+								</script>
 						</div>		
 					</div>
 				</div>
