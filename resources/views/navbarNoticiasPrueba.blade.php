@@ -27,8 +27,19 @@
 	<div class="carousel slide" id="carousel-1" data-ride="carousel">
 		
 		<div id='gpt_top' style="margin-bottom: 10px; ">
-			<script>
+			<!--<script>
 				googletag.cmd.push(function() { googletag.display('gpt_top'); });
+			</script>-->
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- yaravi_top -->
+			<ins class="adsbygoogle"
+				style="display:block"
+				data-ad-client="ca-pub-8047009650931790"
+				data-ad-slot="6469966009"
+				data-ad-format="auto"
+				data-full-width-responsive="true"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
 			</script>
 		</div>
 		<!--<div class="carousel-inner">
