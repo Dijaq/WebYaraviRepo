@@ -49,7 +49,7 @@
 	  gtag('config', 'UA-121070627-1');
 	</script>
 
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
 	<script 
 		data-ad-client="ca-pub-8047009650931790" 
 		async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
