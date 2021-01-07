@@ -73,9 +73,9 @@
 					
 					<!-- /21907083702/yaravi/yaravi_rad_aqp_web_home_caja1 -->
 					<div id='gpt_caja1'>
-					  <script>
+					  <!--<script>
 					    googletag.cmd.push(function() { googletag.display('gpt_caja1'); });
-					  </script>
+					  </script>-->
 					</div>
 
 					<!--<div class="carousel slide" id="carousel-1" data-ride="carousel">
@@ -114,9 +114,9 @@
 				<div class="col-xs-12 col-sm-12 col-md-12">
 				<!-- /21907083702/yaravi/yaravi_rad_aqp_web_home_caja1 -->
 					<div id='gpt_caja2'>
-						<script>
+						<!--<script>
 							googletag.cmd.push(function() { googletag.display('gpt_caja2'); });
-						</script>
+						</script>-->
 					</div>
 				</div>
 			</div>

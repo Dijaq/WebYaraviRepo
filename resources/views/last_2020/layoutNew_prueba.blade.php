@@ -58,8 +58,11 @@
 	</script>-->
 
 	<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
-
-	<script>
+	<script 
+		data-ad-client="ca-pub-8047009650931790" 
+		async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+	</script>
+	<!--<script>
 	  window.googletag = window.googletag || {cmd: []};
 	  googletag.cmd.push(function() {
 	    googletag.defineSlot('/21907083702/yaravi/yaravi_rad_aqp_web_post_regional_top', [[970, 90], [970, 250], [300, 50], [300, 100], [728, 90], [320, 50], [1, 1], [320, 100]], 'gpt_top').addService(googletag.pubads());
@@ -75,7 +78,7 @@
 	    googletag.pubads().setCentering(true);
 	    googletag.enableServices();
 	  });
-	</script>
+	</script>-->
 	<title>{{$detailNavegador->title}}</title>
 </head>
 <body>
