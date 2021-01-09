@@ -73,17 +73,17 @@
 			<div class="row">
 				<div class="col-md-12 col-sm-12">
 					<div class ="row justify-content-center">
-						<div id='gpt_zocalo' style="position: fixed; bottom: 0px; z-index: 99; top: auto;">
-						<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-						<ins class="adsbygoogle"
-							style="display:block"
-							data-ad-format="fluid"
-							data-ad-layout-key="-gw-3+1f-3d+2z"
-							data-ad-client="ca-pub-8047009650931790"
-							data-ad-slot="2487199401"></ins>
-						<script>
-							(adsbygoogle = window.adsbygoogle || []).push({});
-						</script>
+						<div id='gpt_zocalo' style="position: fixed; bottom: 0px; ">
+							<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+							<ins class="adsbygoogle"
+								style="display:block"
+								data-ad-format="fluid"
+								data-ad-layout-key="-gw-3+1f-3d+2z"
+								data-ad-client="ca-pub-8047009650931790"
+								data-ad-slot="2487199401"></ins>
+							<script>
+								(adsbygoogle = window.adsbygoogle || []).push({});
+							</script>
 						</div>	
 					</div>
 				</div>
