@@ -73,10 +73,18 @@
 			<div class="row">
 				<div class="col-md-12 col-sm-12">
 					<div class ="row justify-content-center">
-						<div id='gpt_zocalo' style="position: fixed; bottom: 0px; z-index: 99; top: auto; ">
-						  <!--<script>
-						    googletag.cmd.push(function() { googletag.display('gpt_zocalo'); });
-						  </script>-->
+						<div id='gpt_zocalo' style="position: fixed; bottom: 0px; z-index: 99; top: auto; max-height: 90px;">
+							<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+							<!-- yaravi_zocalo -->
+							<ins class="adsbygoogle"
+								style="display:block"
+								data-ad-client="ca-pub-8047009650931790"
+								data-ad-slot="9230918766"
+								data-ad-format="auto"
+								data-full-width-responsive="true"></ins>
+							<script>
+								(adsbygoogle = window.adsbygoogle || []).push({});
+							</script>
 						</div>	
 					</div>
 				</div>
