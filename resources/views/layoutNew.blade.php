@@ -95,7 +95,7 @@
 								style="display:block"
 								data-ad-client="ca-pub-8047009650931790"
 								data-ad-slot="6093549727"
-								data-ad-format="auto"
+								
 								data-full-width-responsive="true"></ins>
 							<script>
 								(adsbygoogle = window.adsbygoogle || []).push({});
@@ -144,7 +144,7 @@
 									style="display:block"
 									data-ad-client="ca-pub-8047009650931790"
 									data-ad-slot="2980301223"
-									data-ad-format="auto"
+									
 									data-full-width-responsive="true"></ins>
 								<script>
 									(adsbygoogle = window.adsbygoogle || []).push({});
