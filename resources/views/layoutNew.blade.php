@@ -73,7 +73,7 @@
 			<div class="row">
 				<div class="col-md-12 col-sm-12">
 					<div class ="row justify-content-center">
-						<div id='gpt_zocalo' style="position: fixed; bottom: 0px; z-index: 99; top: auto; max-height: 90px;">
+						<div id='gpt_zocalo' style="position: fixed; bottom: 0px; z-index: 99; top: auto; max-height: 90px; max-width: 320px;">
 							<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 							<!-- yaravi_zocalo -->
 							<ins class="adsbygoogle"
