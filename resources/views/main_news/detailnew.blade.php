@@ -72,7 +72,18 @@
 					<div class="publicidad_etiqueta"><h5 style="margin-bottom: 0px; padding: 3px;">Publicidad</h5></div>
 					
 					<!-- /21907083702/yaravi/yaravi_rad_aqp_web_home_caja1 -->
-					<div id='gpt_caja1'>
+					<div id='gpt_caja1' style="max-width: 247px;">
+						<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+						<!-- yaravi_caja1 -->
+						<ins class="adsbygoogle"
+							style="display:block"
+							data-ad-client="ca-pub-8047009650931790"
+							data-ad-slot="6093549727"
+							data-ad-format="auto"
+							data-full-width-responsive="true"></ins>
+						<script>
+							(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
 					  <!--<script>
 					    googletag.cmd.push(function() { googletag.display('gpt_caja1'); });
 					  </script>-->
