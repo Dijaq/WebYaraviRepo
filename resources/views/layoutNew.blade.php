@@ -88,7 +88,7 @@
 
 				<div class="col-md-2">
 					<div class ="row justify-content-end">
-						<div id='gpt_laterall' style="position: fixed">
+						<div id='gpt_laterall' style="position: fixed; width: 100%">
 							<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 							<!-- yaravi_lateral_left -->
 							<ins class="adsbygoogle"
@@ -134,7 +134,7 @@
 				<div class="col-md-2">
 					<!-- /21907083702/yaravi/yaravi_rad_aqp_web_home_lateralr -->
 					<div class ="row justify-content-start">
-						<div id='gpt_lateralr' style="position: fixed">
+						<div id='gpt_lateralr' style="position: fixed; width: 100%">
 					  		<!--<script>
 					    		googletag.cmd.push(function() { googletag.display('gpt_lateralr'); });
 					  		</script>-->
