@@ -30,8 +30,8 @@
 			<!--<script>
 				googletag.cmd.push(function() { googletag.display('gpt_top'); });
 			</script>-->
-			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-			<!-- yaravi_top -->
+			
+			<!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<ins class="adsbygoogle"
 				style="display:block"
 				data-ad-client="ca-pub-8047009650931790"
@@ -40,7 +40,18 @@
 				data-full-width-responsive="true"></ins>
 			<script>
 				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>-->
+
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- yaravi_top -->
+			<ins class="adsbygoogle"
+				style="display:inline-block;width:970px;height:150px"
+				data-ad-client="ca-pub-8047009650931790"
+				data-ad-slot="6469966009"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
 			</script>
+
 		</div>
 		<!--<div class="carousel-inner">
 			@foreach($publicidadesPrincipal as $key => $publicidad)	
